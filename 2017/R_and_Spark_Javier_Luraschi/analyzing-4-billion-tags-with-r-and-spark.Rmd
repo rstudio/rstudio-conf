@@ -1,0 +1,159 @@
+---
+title: "Analyzing 4 Billion Tags with R and Spark"
+output:
+  html_document:
+    df_print: paged
+---
+
+Lets start with two interesting questions:
+
+ * What is the most used **keyword** in the web?
+ * What is the most used **javascript** library?
+
+If we assume there are more than trillion pages in the web, each of about 10KB per page, that's 10PB total. With 1TB disks we would need 10K machines to store this, but hard disks would be too slow for interactive analysis. One approach would be sampling down to 0.01%, or about 100 million pages. With 10GB in memory, we would need 100 about machines to cache this.
+
+Now that we've have sketched this approach, we can introduce [Apache Spark](http://spark.apache.org/), a fast and general engine for large-scale data processing with support for in-memory datasets. To work from [R](http://www.r-lang.org), we can use [sparklyr](http://spark.rstudio.com) to install, connect and analize data in Apache Spark.
+
+# Analysis (dry-run)
+
+Before attempting to run in a 100 nodes cluster, it's sensible to start with a local run. We can accomplish this from the R console or [RStudio](https://www.rstudio.com/products/rstudio/download/) as follows:
+
+```{r eval=FALSE}
+library(sparkwarc)                                  # Load extension to read warc files
+library(sparklyr)                                   # Load sparklyr to use Spark from R
+library(dplyr)                                      # Load dplyr to perform analysis
+
+spark_install()                                     # Install Apache Spark
+
+config <- spark_config()                            # Create a config to tune memory
+config[["sparklyr.shell.driver-memory"]] <- "10G"   # Set driver memory to 10GB
+
+sc <- spark_connect(master = "local",               # Connecto to local cluster
+                    config = config)                # using custom configs
+
+file <- gsub("s3n://commoncrawl/",                  # mapping the S3 bucket url
+             "http://commoncrawl.amazonaws.com/",   # into a adownloadable url
+             sparkwarc::cc_warc(1)), "warc.gz")     # from the first archive file
+
+spark_read_warc(                                    # Read the warc file
+  sc,                                               # into the sc Spark connection
+  "warc",                                           # save into 'warc' table
+  "warc.gz",                                        # loading from remote gz file
+  repartition = 8,                                  # partition into 8 to maximize MBP cores
+  parse = TRUE)                                     # parse tags and attributes
+)
+
+tbl(sc, "warc") %>% summarize(count = n())          # Count tags and attributes
+```
+
+# Analysis (full-run)
+
+Now that we have a local run working we can focus on running this at scale.
+
+First step first, we need to find a cluster with 100 machines, ideally. While there are multiple on-demand providers of Spark Clusters ([IBM Bluemix](http://www.ibm.com/bluemix), [Databricks](https://databricks.com/product/databricks), [Google ataproc](https://cloud.google.com/dataproc/), [Microsoft HDInsight](https://azure.microsoft.com/en-us/services/hdinsight/), etc.) we will use in this post [Amazon AMR](http://aws.amazonaws.com).
+
+To set up this cluster you can read [Using sparklyr with an Apache Spark EMR cluster](http://spark.rstudio.com/examples-emr.html) or from the Amazon EMR team [Running sparklyr in EMR](https://aws.amazon.com/blogs/big-data/running-sparklyr-rstudios-r-interface-to-spark-on-amazon-emr/).
+
+While following the EMR walkthroughs, there are a couple suggestions worth mentioning:
+
+ 1. With a new account in EMR, cluster instances are limited and therefore, starting with 50 [m3.xlarge](https://aws.amazon.com/ec2/instance-types/) instances it's an easier start. Otherwise, you can request a [limit increase](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-resource-limits.html).
+
+ 2. Specify the following `maximizeResourceAllocation` config to maximize memory usage in Spark:
+
+```{}
+[
+  {
+    "Classification": "spark",
+    "Properties": {
+      "maximizeResourceAllocation": "true"
+    }
+  }
+]
+```
+
+ 3. Scope the feature parameters as follows for the boostrap action:
+
+```{}
+s3://aws-bigdata-blog/artifacts/aws-blog-emr-rstudio-sparklyr/rstudio_sparklyr_emr5.sh
+--sparklyr --rstudio
+```
+
+Alright, at this point you should be all set to run the following R code in EMR by connecting through SSH or opening RStudio from http://<emr-driver-url>:8787.
+
+```{r message=F, warning=F}
+devtools::install_github("javierluraschi/sparkwarc")   # Install sparkwarc from CRAN
+
+library(sparkwarc)                                     # Load extension to read warc files
+library(sparklyr)                                      # Load sparklyr to use Spark from R
+library(dplyr)                                         # Load dplyr to perform analysis
+
+config <- spark_config()                               # Create a config to tune memory
+config[["spark.memory.fraction"]] <- "0.9"             # Increase memory allocated to storage
+
+sc <- spark_connect(                                   # Connect to Apache Spark
+  master = "local",        #$#                      # as yarn-client (EMR default)
+  config = config, version = "2.0.1")            #$#                         # using custom config settings
+
+warc_small <- system.file("samples/sample.warc",    # Find a sample.warc file 
+                          package = "sparkwarc")    # from the sparkwarch package
+
+spark_read_warc(                                       # Read the warc file
+  sc,                                                  # into the sc Spark connection
+  "warc",                                              # save into 'warc' table
+  warc_small, #paste(cc_warc(1, 50), collapse = ","),               # load 100 ~5GB files
+  parse = TRUE,                                        # maximize cores
+  repartition = 8)      #$#                             # load tags as table
+```
+
+To warm up, lets count how many attribute tags we have:
+
+```{r}
+tbl(sc, "warc") %>%
+  summarize(count = n())
+```
+
+That's 4,020,411,053 total, this verifies that the cluster is working appropiately and ready to answer our original questions next.
+
+# What is the most used **javascript** library?
+
+We can find this out by applying a regular expression to the `<script>` tag:
+
+```{r}
+tbl(sc, "warc") %>%
+  filter(tag == "script", attribute == "src") %>%
+  transmute(js = regexp_extract(value, "[^/]+[.]js", 0)) %>%
+  group_by(js) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>%
+  transmute(
+      js = substr(js, 1, 30),
+      count = count) %>%
+  filter(js != "", !js %like% "%�%") 
+```
+
+# What is the most used **keyword** in the web?
+
+This time, we can use the `<meta>` tag but we also need to explode the comma saprated values using the [explode](https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF#LanguageManualUDF-explode) function as follows:
+
+```{r}
+tbl(sc, "warc") %>%
+  filter(tag == "meta", attribute == "content", original %like% "%keywords%") %>%
+  transmute(keyword = explode(split(
+    value, ","
+  ))) %>%
+  transmute(keyword = trim(substr(keyword, 1, 30))) %>%
+  group_by(keyword) %>%
+  summarize(count = n()) %>%
+  arrange(desc(count)) %>%
+  filter(keyword != "", !keyword %like% "%�%") 
+```
+
+# Cleanup
+
+Last but not least, disconnect terminate and terminate your cluster!
+
+```{r}
+spark_disconnect(sc)
+```
+
+Thank for reading this far. For more information on [sparklyr](https://github.com/rstudio/sparklyr) you can take a look at [spark.rstudio.com](http://spark.rstudio.com)
