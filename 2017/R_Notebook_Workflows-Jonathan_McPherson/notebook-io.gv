@@ -1,0 +1,25 @@
+
+digraph notebookio {
+  node [shape="box", fontname="Helvetica", fillcolor=lightgrey];
+  doc [label="R Markdown (.Rmd)"];
+  cache [label="Local Output Cache"];
+  edoc [label="R Markdown"];
+  ecache [label="Embedded Output Cache"];
+  rs [label="RStudio"];
+  save [label="Save", shape="ellipse"]
+  execute [label="Execute Chunks", shape="ellipse"]
+  subgraph cluster0 {
+    edoc;
+    ecache;
+    label="Notebook HTML (.nb.html)";
+    labelloc=b;
+  }
+  doc -> save;
+  doc -> execute;
+  cache -> save;
+  save -> edoc;
+  save -> ecache;
+  execute -> cache;
+  doc -> rs;
+  cache -> rs;
+}

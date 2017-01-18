@@ -1,0 +1,23 @@
+
+digraph notebookio {
+  compound = true;
+  node [shape="box", fontname="Helvetica", fillcolor=lightgrey];
+  doc [label="R Markdown (.Rmd)"];
+  cache [label="Local Output Cache"];
+  edoc [label="R Markdown"];
+  ecache [label="Embedded Output Cache"];
+  rs [label="RStudio"];
+  open [label="Open in RStudio", shape="ellipse"]
+  view [label="View in Browser", shape="ellipse"]
+  subgraph cluster0 {
+    edoc;
+    ecache;
+    label="Notebook HTML (.nb.html)";
+  }
+  edoc -> open [ltail=cluster0];
+  ecache -> view [ltail=cluster0];
+  doc -> rs;
+  cache -> rs;
+  open -> doc;
+  open -> cache;
+}

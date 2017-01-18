@@ -1,0 +1,16 @@
+
+.reveal section img {
+  border: 0;
+  box-shadow: none;
+  margin: 0;
+  background: none;
+}
+
+.reveal .html-widget {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.reveal pre code {
+  padding: 15px;
+}

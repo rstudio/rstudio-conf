@@ -1,0 +1,29 @@
+
+digraph notebookio {
+  node [shape="box", fontname="Helvetica", fillcolor=lightgrey];
+  doc [label="R Markdown (.Rmd)"];
+  cache [label="Local Output Cache"];
+  nb [label="Compiled Notebook (.nb.html)"];
+  pdf [label="PDF Publication"]
+  save [label="Save", shape="ellipse"]
+  execute [label="Execute Chunks", shape="ellipse"]
+  knit [label="Knit", shape="ellipse"]
+  subgraph cluster1 {
+    execute;
+    cache;
+    save;
+    nb;
+    label="Develop";
+  }
+  subgraph cluster2 {
+    knit;
+    pdf;
+    label="Present";
+  }
+  doc -> execute;
+  doc -> knit;
+  knit -> pdf;
+  cache -> save;
+  save -> nb;
+  execute -> cache;
+}
