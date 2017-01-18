@@ -1,0 +1,6945 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/topojson.v1.min.js' type='text/javascript'></script>
+    <script src='http://datamaps.github.io/scripts/datamaps.all.min.js' type='text/javascript'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.min.js' type='text/javascript'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body ng-app ng-controller='rChartsCtrl'>
+    
+    
+            <div class='container'>
+              <input id='slider' type='range' min=1999 max=2015 ng-model='year' width=200>
+              <span ng-bind='year'></span>
+              <div id='chartdfa63941322a' class='rChart datamaps'></div>          
+            </div>
+            <script>
+              function rChartsCtrl($scope){
+                $scope.year = 1999;
+                $scope.$watch('year', function(newYear){
+                  mapchartdfa63941322a.updateChoropleth(chartParams.newData[newYear]);
+                })
+              }
+           </script>    
+    <script id='popup-template' type='text/x-handlebars-template'>
+    
+</script>
+<script>
+  var chartParams = {
+ "dom": "chartdfa63941322a",
+"width":    800,
+"height":    400,
+"scope": "usa",
+"fills": {
+ "(27.9,31.5]": "#EFF3FF",
+"(31.5,32.7]": "#BDD7E7",
+"(32.7,34]": "#6BAED6",
+"(34,35.6]": "#3182BD",
+"(35.6,43.4]": "#08519C" 
+},
+"legend": true,
+"labels": true,
+"geographyConfig": {
+ "popupTemplate": function(geo, data) {
+                                         return '<div class=\"hoverinfo\"><strong>'+
+                                         data.state + '<br>' + 'Average DTI in  '+ data.year + ': ' +
+                                         data.ave_dti.toFixed(2)+
+                                         '</strong></div>';} 
+},
+"bodyattrs": "ng-app ng-controller='rChartsCtrl'",
+"newData": {
+ "1999": {
+ "MS": {
+ "orig_year": "1999",
+"state": "MS",
+"ave_dti": 31.542,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"KY": {
+ "orig_year": "1999",
+"state": "KY",
+"ave_dti": 31.649,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"AL": {
+ "orig_year": "1999",
+"state": "AL",
+"ave_dti": 33.065,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"SD": {
+ "orig_year": "1999",
+"state": "SD",
+"ave_dti":  31.93,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NC": {
+ "orig_year": "1999",
+"state": "NC",
+"ave_dti": 32.883,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"LA": {
+ "orig_year": "1999",
+"state": "LA",
+"ave_dti": 30.715,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "1999",
+"state": "NE",
+"ave_dti": 31.385,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "1999",
+"state": "ME",
+"ave_dti": 32.591,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"MI": {
+ "orig_year": "1999",
+"state": "MI",
+"ave_dti": 32.556,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NY": {
+ "orig_year": "1999",
+"state": "NY",
+"ave_dti": 33.714,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"MA": {
+ "orig_year": "1999",
+"state": "MA",
+"ave_dti": 32.595,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"IA": {
+ "orig_year": "1999",
+"state": "IA",
+"ave_dti":  31.77,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"DC": {
+ "orig_year": "1999",
+"state": "DC",
+"ave_dti":  30.74,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"OR": {
+ "orig_year": "1999",
+"state": "OR",
+"ave_dti":  33.62,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"GU": {
+ "orig_year": "1999",
+"state": "GU",
+"ave_dti": 31.784,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"FL": {
+ "orig_year": "1999",
+"state": "FL",
+"ave_dti": 32.745,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"AR": {
+ "orig_year": "1999",
+"state": "AR",
+"ave_dti": 30.704,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "1999",
+"state": "NH",
+"ave_dti": 33.945,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"GA": {
+ "orig_year": "1999",
+"state": "GA",
+"ave_dti": 32.394,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"PR": {
+ "orig_year": "1999",
+"state": "PR",
+"ave_dti":  36.53,
+"year":   1999,
+"fillKey": "(35.6,43.4]" 
+},
+"CT": {
+ "orig_year": "1999",
+"state": "CT",
+"ave_dti": 32.741,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"RI": {
+ "orig_year": "1999",
+"state": "RI",
+"ave_dti": 32.549,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "1999",
+"state": "HI",
+"ave_dti": 34.632,
+"year":   1999,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "1999",
+"state": "UT",
+"ave_dti": 34.298,
+"year":   1999,
+"fillKey": "(34,35.6]" 
+},
+"MD": {
+ "orig_year": "1999",
+"state": "MD",
+"ave_dti": 32.193,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NM": {
+ "orig_year": "1999",
+"state": "NM",
+"ave_dti": 32.683,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"WV": {
+ "orig_year": "1999",
+"state": "WV",
+"ave_dti": 31.459,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"TX": {
+ "orig_year": "1999",
+"state": "TX",
+"ave_dti": 32.671,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "1999",
+"state": "WA",
+"ave_dti": 33.737,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"CO": {
+ "orig_year": "1999",
+"state": "CO",
+"ave_dti": 33.229,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"MT": {
+ "orig_year": "1999",
+"state": "MT",
+"ave_dti": 31.991,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"AK": {
+ "orig_year": "1999",
+"state": "AK",
+"ave_dti": 33.369,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"ND": {
+ "orig_year": "1999",
+"state": "ND",
+"ave_dti": 30.987,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"OK": {
+ "orig_year": "1999",
+"state": "OK",
+"ave_dti": 31.221,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"IL": {
+ "orig_year": "1999",
+"state": "IL",
+"ave_dti": 32.876,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"AZ": {
+ "orig_year": "1999",
+"state": "AZ",
+"ave_dti":  32.06,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"VT": {
+ "orig_year": "1999",
+"state": "VT",
+"ave_dti": 34.138,
+"year":   1999,
+"fillKey": "(34,35.6]" 
+},
+"WI": {
+ "orig_year": "1999",
+"state": "WI",
+"ave_dti": 32.304,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "1999",
+"state": "IN",
+"ave_dti": 31.627,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"MN": {
+ "orig_year": "1999",
+"state": "MN",
+"ave_dti": 32.059,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NJ": {
+ "orig_year": "1999",
+"state": "NJ",
+"ave_dti": 33.117,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "1999",
+"state": "DE",
+"ave_dti": 31.889,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"VI": {
+ "orig_year": "1999",
+"state": "VI",
+"ave_dti":     36,
+"year":   1999,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "1999",
+"state": "NV",
+"ave_dti": 33.151,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "1999",
+"state": "VA",
+"ave_dti": 32.018,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"WY": {
+ "orig_year": "1999",
+"state": "WY",
+"ave_dti": 32.429,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"KS": {
+ "orig_year": "1999",
+"state": "KS",
+"ave_dti": 30.962,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"ID": {
+ "orig_year": "1999",
+"state": "ID",
+"ave_dti": 32.746,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "1999",
+"state": "PA",
+"ave_dti": 32.229,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"SC": {
+ "orig_year": "1999",
+"state": "SC",
+"ave_dti": 32.727,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"OH": {
+ "orig_year": "1999",
+"state": "OH",
+"ave_dti": 32.305,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"CA": {
+ "orig_year": "1999",
+"state": "CA",
+"ave_dti": 33.715,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"MO": {
+ "orig_year": "1999",
+"state": "MO",
+"ave_dti": 31.667,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"TN": {
+ "orig_year": "1999",
+"state": "TN",
+"ave_dti": 32.812,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+} 
+},
+"2000": {
+ "GA": {
+ "orig_year": "2000",
+"state": "GA",
+"ave_dti": 34.643,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"IA": {
+ "orig_year": "2000",
+"state": "IA",
+"ave_dti": 34.225,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"MS": {
+ "orig_year": "2000",
+"state": "MS",
+"ave_dti": 33.666,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"KS": {
+ "orig_year": "2000",
+"state": "KS",
+"ave_dti":  33.34,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"CA": {
+ "orig_year": "2000",
+"state": "CA",
+"ave_dti": 36.043,
+"year":   2000,
+"fillKey": "(35.6,43.4]" 
+},
+"OH": {
+ "orig_year": "2000",
+"state": "OH",
+"ave_dti": 34.201,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"MD": {
+ "orig_year": "2000",
+"state": "MD",
+"ave_dti": 34.593,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"VI": {
+ "orig_year": "2000",
+"state": "VI",
+"ave_dti":   35.5,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"NH": {
+ "orig_year": "2000",
+"state": "NH",
+"ave_dti":  35.26,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"KY": {
+ "orig_year": "2000",
+"state": "KY",
+"ave_dti": 33.263,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "2000",
+"state": "VA",
+"ave_dti": 34.157,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"IN": {
+ "orig_year": "2000",
+"state": "IN",
+"ave_dti": 33.325,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"OR": {
+ "orig_year": "2000",
+"state": "OR",
+"ave_dti": 35.849,
+"year":   2000,
+"fillKey": "(35.6,43.4]" 
+},
+"WV": {
+ "orig_year": "2000",
+"state": "WV",
+"ave_dti": 32.833,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"AR": {
+ "orig_year": "2000",
+"state": "AR",
+"ave_dti":  32.67,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"CT": {
+ "orig_year": "2000",
+"state": "CT",
+"ave_dti": 34.726,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"NJ": {
+ "orig_year": "2000",
+"state": "NJ",
+"ave_dti": 34.987,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"CO": {
+ "orig_year": "2000",
+"state": "CO",
+"ave_dti": 35.494,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"HI": {
+ "orig_year": "2000",
+"state": "HI",
+"ave_dti": 36.914,
+"year":   2000,
+"fillKey": "(35.6,43.4]" 
+},
+"NY": {
+ "orig_year": "2000",
+"state": "NY",
+"ave_dti": 35.178,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"ID": {
+ "orig_year": "2000",
+"state": "ID",
+"ave_dti": 34.976,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"NE": {
+ "orig_year": "2000",
+"state": "NE",
+"ave_dti": 34.116,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"NV": {
+ "orig_year": "2000",
+"state": "NV",
+"ave_dti": 35.451,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"VT": {
+ "orig_year": "2000",
+"state": "VT",
+"ave_dti": 35.253,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"DE": {
+ "orig_year": "2000",
+"state": "DE",
+"ave_dti": 33.197,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2000",
+"state": "TX",
+"ave_dti": 34.505,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"AK": {
+ "orig_year": "2000",
+"state": "AK",
+"ave_dti": 35.194,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"SC": {
+ "orig_year": "2000",
+"state": "SC",
+"ave_dti": 34.043,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"FL": {
+ "orig_year": "2000",
+"state": "FL",
+"ave_dti": 34.047,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"WY": {
+ "orig_year": "2000",
+"state": "WY",
+"ave_dti": 33.722,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"MI": {
+ "orig_year": "2000",
+"state": "MI",
+"ave_dti":  34.33,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"PR": {
+ "orig_year": "2000",
+"state": "PR",
+"ave_dti": 36.767,
+"year":   2000,
+"fillKey": "(35.6,43.4]" 
+},
+"ME": {
+ "orig_year": "2000",
+"state": "ME",
+"ave_dti": 34.432,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"WI": {
+ "orig_year": "2000",
+"state": "WI",
+"ave_dti": 34.447,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"TN": {
+ "orig_year": "2000",
+"state": "TN",
+"ave_dti": 34.737,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"GU": {
+ "orig_year": "2000",
+"state": "GU",
+"ave_dti": 32.691,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"MA": {
+ "orig_year": "2000",
+"state": "MA",
+"ave_dti": 35.252,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"MN": {
+ "orig_year": "2000",
+"state": "MN",
+"ave_dti": 34.631,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"AL": {
+ "orig_year": "2000",
+"state": "AL",
+"ave_dti": 34.071,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"OK": {
+ "orig_year": "2000",
+"state": "OK",
+"ave_dti":  33.04,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"RI": {
+ "orig_year": "2000",
+"state": "RI",
+"ave_dti": 34.976,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"WA": {
+ "orig_year": "2000",
+"state": "WA",
+"ave_dti": 36.066,
+"year":   2000,
+"fillKey": "(35.6,43.4]" 
+},
+"IL": {
+ "orig_year": "2000",
+"state": "IL",
+"ave_dti": 34.749,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"MT": {
+ "orig_year": "2000",
+"state": "MT",
+"ave_dti": 34.593,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "2000",
+"state": "UT",
+"ave_dti": 35.913,
+"year":   2000,
+"fillKey": "(35.6,43.4]" 
+},
+"ND": {
+ "orig_year": "2000",
+"state": "ND",
+"ave_dti": 32.682,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"SD": {
+ "orig_year": "2000",
+"state": "SD",
+"ave_dti":  35.17,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"PA": {
+ "orig_year": "2000",
+"state": "PA",
+"ave_dti": 33.884,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"NC": {
+ "orig_year": "2000",
+"state": "NC",
+"ave_dti": 34.417,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"MO": {
+ "orig_year": "2000",
+"state": "MO",
+"ave_dti": 33.809,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"DC": {
+ "orig_year": "2000",
+"state": "DC",
+"ave_dti": 32.857,
+"year":   2000,
+"fillKey": "(32.7,34]" 
+},
+"AZ": {
+ "orig_year": "2000",
+"state": "AZ",
+"ave_dti": 34.337,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"NM": {
+ "orig_year": "2000",
+"state": "NM",
+"ave_dti": 34.125,
+"year":   2000,
+"fillKey": "(34,35.6]" 
+},
+"LA": {
+ "orig_year": "2000",
+"state": "LA",
+"ave_dti": 32.668,
+"year":   2000,
+"fillKey": "(31.5,32.7]" 
+} 
+},
+"2001": {
+ "MS": {
+ "orig_year": "2001",
+"state": "MS",
+"ave_dti": 33.169,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"CO": {
+ "orig_year": "2001",
+"state": "CO",
+"ave_dti":  34.35,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"NY": {
+ "orig_year": "2001",
+"state": "NY",
+"ave_dti": 34.202,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"NC": {
+ "orig_year": "2001",
+"state": "NC",
+"ave_dti": 32.643,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"MN": {
+ "orig_year": "2001",
+"state": "MN",
+"ave_dti":  32.86,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"OR": {
+ "orig_year": "2001",
+"state": "OR",
+"ave_dti":  33.58,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"ME": {
+ "orig_year": "2001",
+"state": "ME",
+"ave_dti": 33.597,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"MO": {
+ "orig_year": "2001",
+"state": "MO",
+"ave_dti": 32.005,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"AK": {
+ "orig_year": "2001",
+"state": "AK",
+"ave_dti": 33.958,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"NE": {
+ "orig_year": "2001",
+"state": "NE",
+"ave_dti": 32.235,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"ID": {
+ "orig_year": "2001",
+"state": "ID",
+"ave_dti": 33.315,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"NH": {
+ "orig_year": "2001",
+"state": "NH",
+"ave_dti": 34.207,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "2001",
+"state": "UT",
+"ave_dti": 34.796,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"AZ": {
+ "orig_year": "2001",
+"state": "AZ",
+"ave_dti": 32.729,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"MT": {
+ "orig_year": "2001",
+"state": "MT",
+"ave_dti":  32.98,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"AL": {
+ "orig_year": "2001",
+"state": "AL",
+"ave_dti": 32.717,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "2001",
+"state": "WA",
+"ave_dti": 34.087,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"GA": {
+ "orig_year": "2001",
+"state": "GA",
+"ave_dti": 33.004,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"NJ": {
+ "orig_year": "2001",
+"state": "NJ",
+"ave_dti": 33.414,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"KS": {
+ "orig_year": "2001",
+"state": "KS",
+"ave_dti": 31.937,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"SC": {
+ "orig_year": "2001",
+"state": "SC",
+"ave_dti": 32.934,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"OK": {
+ "orig_year": "2001",
+"state": "OK",
+"ave_dti": 31.519,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"CT": {
+ "orig_year": "2001",
+"state": "CT",
+"ave_dti":  33.54,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"ND": {
+ "orig_year": "2001",
+"state": "ND",
+"ave_dti":  32.01,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"PR": {
+ "orig_year": "2001",
+"state": "PR",
+"ave_dti": 36.089,
+"year":   2001,
+"fillKey": "(35.6,43.4]" 
+},
+"TN": {
+ "orig_year": "2001",
+"state": "TN",
+"ave_dti": 33.565,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2001",
+"state": "TX",
+"ave_dti": 33.483,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"MD": {
+ "orig_year": "2001",
+"state": "MD",
+"ave_dti": 32.853,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"NV": {
+ "orig_year": "2001",
+"state": "NV",
+"ave_dti": 34.425,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"DC": {
+ "orig_year": "2001",
+"state": "DC",
+"ave_dti": 31.399,
+"year":   2001,
+"fillKey": "(27.9,31.5]" 
+},
+"CA": {
+ "orig_year": "2001",
+"state": "CA",
+"ave_dti": 34.778,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"GU": {
+ "orig_year": "2001",
+"state": "GU",
+"ave_dti": 33.062,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "2001",
+"state": "VA",
+"ave_dti": 32.748,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"FL": {
+ "orig_year": "2001",
+"state": "FL",
+"ave_dti": 33.536,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"WI": {
+ "orig_year": "2001",
+"state": "WI",
+"ave_dti": 32.814,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"WV": {
+ "orig_year": "2001",
+"state": "WV",
+"ave_dti":  32.04,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"IA": {
+ "orig_year": "2001",
+"state": "IA",
+"ave_dti": 32.424,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"DE": {
+ "orig_year": "2001",
+"state": "DE",
+"ave_dti": 32.542,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"RI": {
+ "orig_year": "2001",
+"state": "RI",
+"ave_dti": 33.675,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"NM": {
+ "orig_year": "2001",
+"state": "NM",
+"ave_dti": 33.006,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "2001",
+"state": "PA",
+"ave_dti": 32.346,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"IL": {
+ "orig_year": "2001",
+"state": "IL",
+"ave_dti": 32.969,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"OH": {
+ "orig_year": "2001",
+"state": "OH",
+"ave_dti": 32.325,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"VT": {
+ "orig_year": "2001",
+"state": "VT",
+"ave_dti": 33.966,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"IN": {
+ "orig_year": "2001",
+"state": "IN",
+"ave_dti": 31.642,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"AR": {
+ "orig_year": "2001",
+"state": "AR",
+"ave_dti": 31.558,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"MA": {
+ "orig_year": "2001",
+"state": "MA",
+"ave_dti": 33.557,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+},
+"KY": {
+ "orig_year": "2001",
+"state": "KY",
+"ave_dti": 31.455,
+"year":   2001,
+"fillKey": "(27.9,31.5]" 
+},
+"SD": {
+ "orig_year": "2001",
+"state": "SD",
+"ave_dti": 34.359,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"LA": {
+ "orig_year": "2001",
+"state": "LA",
+"ave_dti": 31.816,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"MI": {
+ "orig_year": "2001",
+"state": "MI",
+"ave_dti": 32.017,
+"year":   2001,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "2001",
+"state": "HI",
+"ave_dti": 35.242,
+"year":   2001,
+"fillKey": "(34,35.6]" 
+},
+"WY": {
+ "orig_year": "2001",
+"state": "WY",
+"ave_dti": 33.661,
+"year":   2001,
+"fillKey": "(32.7,34]" 
+} 
+},
+"2002": {
+ "KY": {
+ "orig_year": "2002",
+"state": "KY",
+"ave_dti": 32.316,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"NV": {
+ "orig_year": "2002",
+"state": "NV",
+"ave_dti": 35.209,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"TN": {
+ "orig_year": "2002",
+"state": "TN",
+"ave_dti": 33.841,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2002",
+"state": "DE",
+"ave_dti": 32.533,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"AR": {
+ "orig_year": "2002",
+"state": "AR",
+"ave_dti":  31.92,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"MD": {
+ "orig_year": "2002",
+"state": "MD",
+"ave_dti": 32.746,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"MI": {
+ "orig_year": "2002",
+"state": "MI",
+"ave_dti": 31.835,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"MN": {
+ "orig_year": "2002",
+"state": "MN",
+"ave_dti": 33.518,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"FL": {
+ "orig_year": "2002",
+"state": "FL",
+"ave_dti":  33.47,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "2002",
+"state": "PA",
+"ave_dti": 33.006,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"AL": {
+ "orig_year": "2002",
+"state": "AL",
+"ave_dti": 30.804,
+"year":   2002,
+"fillKey": "(27.9,31.5]" 
+},
+"ND": {
+ "orig_year": "2002",
+"state": "ND",
+"ave_dti": 33.423,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"VT": {
+ "orig_year": "2002",
+"state": "VT",
+"ave_dti": 34.463,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"RI": {
+ "orig_year": "2002",
+"state": "RI",
+"ave_dti": 34.252,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"IA": {
+ "orig_year": "2002",
+"state": "IA",
+"ave_dti": 32.519,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "2002",
+"state": "HI",
+"ave_dti": 36.069,
+"year":   2002,
+"fillKey": "(35.6,43.4]" 
+},
+"NE": {
+ "orig_year": "2002",
+"state": "NE",
+"ave_dti": 32.322,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"NY": {
+ "orig_year": "2002",
+"state": "NY",
+"ave_dti": 34.294,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"TX": {
+ "orig_year": "2002",
+"state": "TX",
+"ave_dti": 34.302,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"GU": {
+ "orig_year": "2002",
+"state": "GU",
+"ave_dti": 34.135,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"MS": {
+ "orig_year": "2002",
+"state": "MS",
+"ave_dti": 32.415,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"VA": {
+ "orig_year": "2002",
+"state": "VA",
+"ave_dti": 32.398,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"KS": {
+ "orig_year": "2002",
+"state": "KS",
+"ave_dti": 32.219,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"NJ": {
+ "orig_year": "2002",
+"state": "NJ",
+"ave_dti": 34.199,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"DC": {
+ "orig_year": "2002",
+"state": "DC",
+"ave_dti": 31.557,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"WI": {
+ "orig_year": "2002",
+"state": "WI",
+"ave_dti": 33.516,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"NC": {
+ "orig_year": "2002",
+"state": "NC",
+"ave_dti": 32.556,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"LA": {
+ "orig_year": "2002",
+"state": "LA",
+"ave_dti": 33.153,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"MT": {
+ "orig_year": "2002",
+"state": "MT",
+"ave_dti": 33.872,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"WV": {
+ "orig_year": "2002",
+"state": "WV",
+"ave_dti": 31.907,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"NM": {
+ "orig_year": "2002",
+"state": "NM",
+"ave_dti": 33.133,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"PR": {
+ "orig_year": "2002",
+"state": "PR",
+"ave_dti": 36.378,
+"year":   2002,
+"fillKey": "(35.6,43.4]" 
+},
+"OK": {
+ "orig_year": "2002",
+"state": "OK",
+"ave_dti": 32.144,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"CO": {
+ "orig_year": "2002",
+"state": "CO",
+"ave_dti": 34.626,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"SD": {
+ "orig_year": "2002",
+"state": "SD",
+"ave_dti": 34.191,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"IL": {
+ "orig_year": "2002",
+"state": "IL",
+"ave_dti": 33.282,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"MA": {
+ "orig_year": "2002",
+"state": "MA",
+"ave_dti": 33.615,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"CA": {
+ "orig_year": "2002",
+"state": "CA",
+"ave_dti": 35.066,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"VI": {
+ "orig_year": "2002",
+"state": "VI",
+"ave_dti": 28.889,
+"year":   2002,
+"fillKey": "(27.9,31.5]" 
+},
+"AZ": {
+ "orig_year": "2002",
+"state": "AZ",
+"ave_dti": 33.293,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"NH": {
+ "orig_year": "2002",
+"state": "NH",
+"ave_dti": 34.977,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"GA": {
+ "orig_year": "2002",
+"state": "GA",
+"ave_dti": 32.809,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"SC": {
+ "orig_year": "2002",
+"state": "SC",
+"ave_dti": 32.971,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"ME": {
+ "orig_year": "2002",
+"state": "ME",
+"ave_dti": 33.963,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"AK": {
+ "orig_year": "2002",
+"state": "AK",
+"ave_dti": 34.414,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"CT": {
+ "orig_year": "2002",
+"state": "CT",
+"ave_dti": 33.658,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "2002",
+"state": "WA",
+"ave_dti": 34.418,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"MO": {
+ "orig_year": "2002",
+"state": "MO",
+"ave_dti": 32.329,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2002",
+"state": "IN",
+"ave_dti": 31.948,
+"year":   2002,
+"fillKey": "(31.5,32.7]" 
+},
+"OH": {
+ "orig_year": "2002",
+"state": "OH",
+"ave_dti":   32.9,
+"year":   2002,
+"fillKey": "(32.7,34]" 
+},
+"OR": {
+ "orig_year": "2002",
+"state": "OR",
+"ave_dti": 34.322,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"ID": {
+ "orig_year": "2002",
+"state": "ID",
+"ave_dti": 34.015,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"WY": {
+ "orig_year": "2002",
+"state": "WY",
+"ave_dti": 34.362,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "2002",
+"state": "UT",
+"ave_dti": 34.987,
+"year":   2002,
+"fillKey": "(34,35.6]" 
+} 
+},
+"2003": {
+ "SD": {
+ "orig_year": "2003",
+"state": "SD",
+"ave_dti": 32.803,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"ND": {
+ "orig_year": "2003",
+"state": "ND",
+"ave_dti": 33.806,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"WY": {
+ "orig_year": "2003",
+"state": "WY",
+"ave_dti": 33.496,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "2003",
+"state": "VA",
+"ave_dti":   30.7,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "2003",
+"state": "ME",
+"ave_dti": 33.055,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"CT": {
+ "orig_year": "2003",
+"state": "CT",
+"ave_dti": 31.559,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"CO": {
+ "orig_year": "2003",
+"state": "CO",
+"ave_dti": 31.878,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"NV": {
+ "orig_year": "2003",
+"state": "NV",
+"ave_dti": 33.039,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2003",
+"state": "TX",
+"ave_dti":  33.96,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "2003",
+"state": "WA",
+"ave_dti": 32.868,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2003",
+"state": "DE",
+"ave_dti": 32.201,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"GA": {
+ "orig_year": "2003",
+"state": "GA",
+"ave_dti": 31.177,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"AZ": {
+ "orig_year": "2003",
+"state": "AZ",
+"ave_dti": 30.919,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"MT": {
+ "orig_year": "2003",
+"state": "MT",
+"ave_dti": 33.659,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"HI": {
+ "orig_year": "2003",
+"state": "HI",
+"ave_dti": 34.962,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+},
+"WV": {
+ "orig_year": "2003",
+"state": "WV",
+"ave_dti": 31.865,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2003",
+"state": "IN",
+"ave_dti": 31.572,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"OH": {
+ "orig_year": "2003",
+"state": "OH",
+"ave_dti": 32.106,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"AR": {
+ "orig_year": "2003",
+"state": "AR",
+"ave_dti": 29.783,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"KS": {
+ "orig_year": "2003",
+"state": "KS",
+"ave_dti": 31.143,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"MA": {
+ "orig_year": "2003",
+"state": "MA",
+"ave_dti":  33.84,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"CA": {
+ "orig_year": "2003",
+"state": "CA",
+"ave_dti": 33.491,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"VT": {
+ "orig_year": "2003",
+"state": "VT",
+"ave_dti": 34.211,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+},
+"FL": {
+ "orig_year": "2003",
+"state": "FL",
+"ave_dti": 32.307,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"OR": {
+ "orig_year": "2003",
+"state": "OR",
+"ave_dti": 32.259,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"VI": {
+ "orig_year": "2003",
+"state": "VI",
+"ave_dti": 34.962,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+},
+"WI": {
+ "orig_year": "2003",
+"state": "WI",
+"ave_dti": 32.725,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"MI": {
+ "orig_year": "2003",
+"state": "MI",
+"ave_dti":  31.48,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"IL": {
+ "orig_year": "2003",
+"state": "IL",
+"ave_dti": 31.782,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"UT": {
+ "orig_year": "2003",
+"state": "UT",
+"ave_dti": 33.122,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"OK": {
+ "orig_year": "2003",
+"state": "OK",
+"ave_dti": 31.117,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"SC": {
+ "orig_year": "2003",
+"state": "SC",
+"ave_dti": 32.532,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"PR": {
+ "orig_year": "2003",
+"state": "PR",
+"ave_dti": 35.432,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+},
+"LA": {
+ "orig_year": "2003",
+"state": "LA",
+"ave_dti": 32.408,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"RI": {
+ "orig_year": "2003",
+"state": "RI",
+"ave_dti": 33.655,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"MD": {
+ "orig_year": "2003",
+"state": "MD",
+"ave_dti": 31.551,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"MN": {
+ "orig_year": "2003",
+"state": "MN",
+"ave_dti": 31.816,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"PA": {
+ "orig_year": "2003",
+"state": "PA",
+"ave_dti": 31.381,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "2003",
+"state": "NE",
+"ave_dti": 30.612,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"DC": {
+ "orig_year": "2003",
+"state": "DC",
+"ave_dti": 31.002,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"TN": {
+ "orig_year": "2003",
+"state": "TN",
+"ave_dti": 32.343,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"MS": {
+ "orig_year": "2003",
+"state": "MS",
+"ave_dti": 31.556,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"IA": {
+ "orig_year": "2003",
+"state": "IA",
+"ave_dti": 31.059,
+"year":   2003,
+"fillKey": "(27.9,31.5]" 
+},
+"MO": {
+ "orig_year": "2003",
+"state": "MO",
+"ave_dti":  31.53,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"ID": {
+ "orig_year": "2003",
+"state": "ID",
+"ave_dti": 34.054,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+},
+"NM": {
+ "orig_year": "2003",
+"state": "NM",
+"ave_dti": 32.423,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"AK": {
+ "orig_year": "2003",
+"state": "AK",
+"ave_dti": 33.698,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"NC": {
+ "orig_year": "2003",
+"state": "NC",
+"ave_dti": 31.776,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"GU": {
+ "orig_year": "2003",
+"state": "GU",
+"ave_dti": 34.292,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+},
+"AL": {
+ "orig_year": "2003",
+"state": "AL",
+"ave_dti": 31.804,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"KY": {
+ "orig_year": "2003",
+"state": "KY",
+"ave_dti": 31.997,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"NY": {
+ "orig_year": "2003",
+"state": "NY",
+"ave_dti": 32.879,
+"year":   2003,
+"fillKey": "(32.7,34]" 
+},
+"NJ": {
+ "orig_year": "2003",
+"state": "NJ",
+"ave_dti":  31.97,
+"year":   2003,
+"fillKey": "(31.5,32.7]" 
+},
+"NH": {
+ "orig_year": "2003",
+"state": "NH",
+"ave_dti": 34.273,
+"year":   2003,
+"fillKey": "(34,35.6]" 
+} 
+},
+"2004": {
+ "ND": {
+ "orig_year": "2004",
+"state": "ND",
+"ave_dti": 35.317,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"CT": {
+ "orig_year": "2004",
+"state": "CT",
+"ave_dti": 35.322,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"MA": {
+ "orig_year": "2004",
+"state": "MA",
+"ave_dti": 36.814,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"NM": {
+ "orig_year": "2004",
+"state": "NM",
+"ave_dti": 34.294,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"AK": {
+ "orig_year": "2004",
+"state": "AK",
+"ave_dti": 36.162,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"NY": {
+ "orig_year": "2004",
+"state": "NY",
+"ave_dti": 34.592,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"SD": {
+ "orig_year": "2004",
+"state": "SD",
+"ave_dti": 35.906,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"CA": {
+ "orig_year": "2004",
+"state": "CA",
+"ave_dti": 36.662,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"HI": {
+ "orig_year": "2004",
+"state": "HI",
+"ave_dti": 37.536,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"WI": {
+ "orig_year": "2004",
+"state": "WI",
+"ave_dti": 35.642,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"UT": {
+ "orig_year": "2004",
+"state": "UT",
+"ave_dti": 35.204,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"AR": {
+ "orig_year": "2004",
+"state": "AR",
+"ave_dti": 33.348,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"AZ": {
+ "orig_year": "2004",
+"state": "AZ",
+"ave_dti": 34.553,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"DE": {
+ "orig_year": "2004",
+"state": "DE",
+"ave_dti": 34.044,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"RI": {
+ "orig_year": "2004",
+"state": "RI",
+"ave_dti": 37.372,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"TX": {
+ "orig_year": "2004",
+"state": "TX",
+"ave_dti": 35.046,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"LA": {
+ "orig_year": "2004",
+"state": "LA",
+"ave_dti": 33.831,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"WV": {
+ "orig_year": "2004",
+"state": "WV",
+"ave_dti": 33.378,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "2004",
+"state": "PA",
+"ave_dti": 34.628,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"ME": {
+ "orig_year": "2004",
+"state": "ME",
+"ave_dti": 35.791,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"NH": {
+ "orig_year": "2004",
+"state": "NH",
+"ave_dti": 37.383,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"MT": {
+ "orig_year": "2004",
+"state": "MT",
+"ave_dti": 35.624,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"TN": {
+ "orig_year": "2004",
+"state": "TN",
+"ave_dti": 34.483,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"IL": {
+ "orig_year": "2004",
+"state": "IL",
+"ave_dti": 35.287,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"OR": {
+ "orig_year": "2004",
+"state": "OR",
+"ave_dti": 35.239,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"AL": {
+ "orig_year": "2004",
+"state": "AL",
+"ave_dti": 33.738,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"MN": {
+ "orig_year": "2004",
+"state": "MN",
+"ave_dti": 35.004,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"OH": {
+ "orig_year": "2004",
+"state": "OH",
+"ave_dti": 34.191,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"GU": {
+ "orig_year": "2004",
+"state": "GU",
+"ave_dti": 34.727,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"IA": {
+ "orig_year": "2004",
+"state": "IA",
+"ave_dti": 34.146,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"SC": {
+ "orig_year": "2004",
+"state": "SC",
+"ave_dti": 34.179,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"KS": {
+ "orig_year": "2004",
+"state": "KS",
+"ave_dti": 34.268,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"FL": {
+ "orig_year": "2004",
+"state": "FL",
+"ave_dti": 34.308,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"KY": {
+ "orig_year": "2004",
+"state": "KY",
+"ave_dti": 33.934,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "2004",
+"state": "WA",
+"ave_dti":   35.8,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"NJ": {
+ "orig_year": "2004",
+"state": "NJ",
+"ave_dti": 36.193,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"GA": {
+ "orig_year": "2004",
+"state": "GA",
+"ave_dti": 35.068,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"DC": {
+ "orig_year": "2004",
+"state": "DC",
+"ave_dti": 34.106,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"VT": {
+ "orig_year": "2004",
+"state": "VT",
+"ave_dti": 37.024,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"MS": {
+ "orig_year": "2004",
+"state": "MS",
+"ave_dti": 34.012,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"WY": {
+ "orig_year": "2004",
+"state": "WY",
+"ave_dti": 34.999,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"ID": {
+ "orig_year": "2004",
+"state": "ID",
+"ave_dti": 35.082,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"NE": {
+ "orig_year": "2004",
+"state": "NE",
+"ave_dti": 34.337,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"VI": {
+ "orig_year": "2004",
+"state": "VI",
+"ave_dti":  37.78,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"CO": {
+ "orig_year": "2004",
+"state": "CO",
+"ave_dti": 34.583,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"NC": {
+ "orig_year": "2004",
+"state": "NC",
+"ave_dti": 33.774,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"PR": {
+ "orig_year": "2004",
+"state": "PR",
+"ave_dti": 35.946,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "2004",
+"state": "NV",
+"ave_dti": 36.702,
+"year":   2004,
+"fillKey": "(35.6,43.4]" 
+},
+"MO": {
+ "orig_year": "2004",
+"state": "MO",
+"ave_dti": 34.624,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"VA": {
+ "orig_year": "2004",
+"state": "VA",
+"ave_dti": 34.333,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"OK": {
+ "orig_year": "2004",
+"state": "OK",
+"ave_dti": 32.519,
+"year":   2004,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2004",
+"state": "IN",
+"ave_dti": 33.702,
+"year":   2004,
+"fillKey": "(32.7,34]" 
+},
+"MD": {
+ "orig_year": "2004",
+"state": "MD",
+"ave_dti":  34.77,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+},
+"MI": {
+ "orig_year": "2004",
+"state": "MI",
+"ave_dti": 34.343,
+"year":   2004,
+"fillKey": "(34,35.6]" 
+} 
+},
+"2005": {
+ "WV": {
+ "orig_year": "2005",
+"state": "WV",
+"ave_dti": 33.898,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2005",
+"state": "DE",
+"ave_dti": 35.331,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"CT": {
+ "orig_year": "2005",
+"state": "CT",
+"ave_dti": 35.777,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"MO": {
+ "orig_year": "2005",
+"state": "MO",
+"ave_dti":  34.76,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"GA": {
+ "orig_year": "2005",
+"state": "GA",
+"ave_dti": 35.352,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"VI": {
+ "orig_year": "2005",
+"state": "VI",
+"ave_dti": 40.159,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"MN": {
+ "orig_year": "2005",
+"state": "MN",
+"ave_dti":  35.06,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "2005",
+"state": "UT",
+"ave_dti":  35.25,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"SC": {
+ "orig_year": "2005",
+"state": "SC",
+"ave_dti": 34.916,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"NC": {
+ "orig_year": "2005",
+"state": "NC",
+"ave_dti": 33.973,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"MA": {
+ "orig_year": "2005",
+"state": "MA",
+"ave_dti": 37.459,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"MD": {
+ "orig_year": "2005",
+"state": "MD",
+"ave_dti": 35.755,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"DC": {
+ "orig_year": "2005",
+"state": "DC",
+"ave_dti": 35.797,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"IL": {
+ "orig_year": "2005",
+"state": "IL",
+"ave_dti": 35.959,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"IN": {
+ "orig_year": "2005",
+"state": "IN",
+"ave_dti": 33.368,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2005",
+"state": "TX",
+"ave_dti":  34.41,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"PA": {
+ "orig_year": "2005",
+"state": "PA",
+"ave_dti": 34.914,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"VT": {
+ "orig_year": "2005",
+"state": "VT",
+"ave_dti": 37.512,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"OR": {
+ "orig_year": "2005",
+"state": "OR",
+"ave_dti":   35.5,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"NH": {
+ "orig_year": "2005",
+"state": "NH",
+"ave_dti": 38.398,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"RI": {
+ "orig_year": "2005",
+"state": "RI",
+"ave_dti": 38.084,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"OK": {
+ "orig_year": "2005",
+"state": "OK",
+"ave_dti": 32.688,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"GU": {
+ "orig_year": "2005",
+"state": "GU",
+"ave_dti": 34.604,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"CO": {
+ "orig_year": "2005",
+"state": "CO",
+"ave_dti": 34.984,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"MI": {
+ "orig_year": "2005",
+"state": "MI",
+"ave_dti": 35.138,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"NV": {
+ "orig_year": "2005",
+"state": "NV",
+"ave_dti": 36.592,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"AL": {
+ "orig_year": "2005",
+"state": "AL",
+"ave_dti": 34.009,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"HI": {
+ "orig_year": "2005",
+"state": "HI",
+"ave_dti": 39.177,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"CA": {
+ "orig_year": "2005",
+"state": "CA",
+"ave_dti": 36.847,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"PR": {
+ "orig_year": "2005",
+"state": "PR",
+"ave_dti": 36.625,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"NM": {
+ "orig_year": "2005",
+"state": "NM",
+"ave_dti": 34.406,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"WY": {
+ "orig_year": "2005",
+"state": "WY",
+"ave_dti": 35.623,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"WI": {
+ "orig_year": "2005",
+"state": "WI",
+"ave_dti": 35.422,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"IA": {
+ "orig_year": "2005",
+"state": "IA",
+"ave_dti": 33.891,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "2005",
+"state": "VA",
+"ave_dti": 35.267,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"KS": {
+ "orig_year": "2005",
+"state": "KS",
+"ave_dti": 34.278,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"FL": {
+ "orig_year": "2005",
+"state": "FL",
+"ave_dti": 35.409,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"AR": {
+ "orig_year": "2005",
+"state": "AR",
+"ave_dti": 33.992,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"OH": {
+ "orig_year": "2005",
+"state": "OH",
+"ave_dti": 34.563,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"ID": {
+ "orig_year": "2005",
+"state": "ID",
+"ave_dti": 34.794,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"ME": {
+ "orig_year": "2005",
+"state": "ME",
+"ave_dti": 36.408,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"AK": {
+ "orig_year": "2005",
+"state": "AK",
+"ave_dti": 35.746,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"ND": {
+ "orig_year": "2005",
+"state": "ND",
+"ave_dti": 35.448,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"MT": {
+ "orig_year": "2005",
+"state": "MT",
+"ave_dti": 35.502,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"NY": {
+ "orig_year": "2005",
+"state": "NY",
+"ave_dti": 34.965,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"AZ": {
+ "orig_year": "2005",
+"state": "AZ",
+"ave_dti": 35.421,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"LA": {
+ "orig_year": "2005",
+"state": "LA",
+"ave_dti": 33.818,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"MS": {
+ "orig_year": "2005",
+"state": "MS",
+"ave_dti": 34.034,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"NE": {
+ "orig_year": "2005",
+"state": "NE",
+"ave_dti":  34.94,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"TN": {
+ "orig_year": "2005",
+"state": "TN",
+"ave_dti": 34.429,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"KY": {
+ "orig_year": "2005",
+"state": "KY",
+"ave_dti": 33.779,
+"year":   2005,
+"fillKey": "(32.7,34]" 
+},
+"NJ": {
+ "orig_year": "2005",
+"state": "NJ",
+"ave_dti":  37.04,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+},
+"WA": {
+ "orig_year": "2005",
+"state": "WA",
+"ave_dti": 35.316,
+"year":   2005,
+"fillKey": "(34,35.6]" 
+},
+"SD": {
+ "orig_year": "2005",
+"state": "SD",
+"ave_dti": 35.894,
+"year":   2005,
+"fillKey": "(35.6,43.4]" 
+} 
+},
+"2006": {
+ "KY": {
+ "orig_year": "2006",
+"state": "KY",
+"ave_dti": 34.514,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"NE": {
+ "orig_year": "2006",
+"state": "NE",
+"ave_dti": 36.141,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"FL": {
+ "orig_year": "2006",
+"state": "FL",
+"ave_dti": 37.472,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "2006",
+"state": "NV",
+"ave_dti": 37.793,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"PA": {
+ "orig_year": "2006",
+"state": "PA",
+"ave_dti": 36.631,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"AZ": {
+ "orig_year": "2006",
+"state": "AZ",
+"ave_dti": 37.284,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"SD": {
+ "orig_year": "2006",
+"state": "SD",
+"ave_dti":  37.02,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"DC": {
+ "orig_year": "2006",
+"state": "DC",
+"ave_dti": 37.421,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"VA": {
+ "orig_year": "2006",
+"state": "VA",
+"ave_dti": 37.046,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"NC": {
+ "orig_year": "2006",
+"state": "NC",
+"ave_dti": 35.566,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"HI": {
+ "orig_year": "2006",
+"state": "HI",
+"ave_dti": 40.648,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"CT": {
+ "orig_year": "2006",
+"state": "CT",
+"ave_dti": 37.336,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"TX": {
+ "orig_year": "2006",
+"state": "TX",
+"ave_dti":  35.96,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"NY": {
+ "orig_year": "2006",
+"state": "NY",
+"ave_dti": 36.545,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"MO": {
+ "orig_year": "2006",
+"state": "MO",
+"ave_dti": 35.518,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"MA": {
+ "orig_year": "2006",
+"state": "MA",
+"ave_dti": 38.339,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"IN": {
+ "orig_year": "2006",
+"state": "IN",
+"ave_dti":   34.5,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"WI": {
+ "orig_year": "2006",
+"state": "WI",
+"ave_dti": 36.509,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"KS": {
+ "orig_year": "2006",
+"state": "KS",
+"ave_dti": 34.916,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"GA": {
+ "orig_year": "2006",
+"state": "GA",
+"ave_dti": 36.244,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"ID": {
+ "orig_year": "2006",
+"state": "ID",
+"ave_dti": 37.491,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"OK": {
+ "orig_year": "2006",
+"state": "OK",
+"ave_dti": 33.424,
+"year":   2006,
+"fillKey": "(32.7,34]" 
+},
+"MN": {
+ "orig_year": "2006",
+"state": "MN",
+"ave_dti": 37.106,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"OR": {
+ "orig_year": "2006",
+"state": "OR",
+"ave_dti": 37.445,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"VT": {
+ "orig_year": "2006",
+"state": "VT",
+"ave_dti": 38.363,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"NH": {
+ "orig_year": "2006",
+"state": "NH",
+"ave_dti":  39.54,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"TN": {
+ "orig_year": "2006",
+"state": "TN",
+"ave_dti": 35.615,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"WV": {
+ "orig_year": "2006",
+"state": "WV",
+"ave_dti": 34.372,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"IL": {
+ "orig_year": "2006",
+"state": "IL",
+"ave_dti": 36.942,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"RI": {
+ "orig_year": "2006",
+"state": "RI",
+"ave_dti": 38.636,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"SC": {
+ "orig_year": "2006",
+"state": "SC",
+"ave_dti": 36.247,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"MI": {
+ "orig_year": "2006",
+"state": "MI",
+"ave_dti": 35.976,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"NJ": {
+ "orig_year": "2006",
+"state": "NJ",
+"ave_dti": 38.679,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"AL": {
+ "orig_year": "2006",
+"state": "AL",
+"ave_dti": 34.803,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"VI": {
+ "orig_year": "2006",
+"state": "VI",
+"ave_dti": 43.388,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"AR": {
+ "orig_year": "2006",
+"state": "AR",
+"ave_dti": 33.966,
+"year":   2006,
+"fillKey": "(32.7,34]" 
+},
+"LA": {
+ "orig_year": "2006",
+"state": "LA",
+"ave_dti": 35.467,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"WA": {
+ "orig_year": "2006",
+"state": "WA",
+"ave_dti": 37.354,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"CA": {
+ "orig_year": "2006",
+"state": "CA",
+"ave_dti": 38.026,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"WY": {
+ "orig_year": "2006",
+"state": "WY",
+"ave_dti": 36.936,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"MT": {
+ "orig_year": "2006",
+"state": "MT",
+"ave_dti": 36.973,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"GU": {
+ "orig_year": "2006",
+"state": "GU",
+"ave_dti": 35.444,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"CO": {
+ "orig_year": "2006",
+"state": "CO",
+"ave_dti": 36.389,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"AK": {
+ "orig_year": "2006",
+"state": "AK",
+"ave_dti":  38.64,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"PR": {
+ "orig_year": "2006",
+"state": "PR",
+"ave_dti": 37.609,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"MS": {
+ "orig_year": "2006",
+"state": "MS",
+"ave_dti": 35.564,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"IA": {
+ "orig_year": "2006",
+"state": "IA",
+"ave_dti": 35.114,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"OH": {
+ "orig_year": "2006",
+"state": "OH",
+"ave_dti": 35.414,
+"year":   2006,
+"fillKey": "(34,35.6]" 
+},
+"NM": {
+ "orig_year": "2006",
+"state": "NM",
+"ave_dti": 36.021,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"MD": {
+ "orig_year": "2006",
+"state": "MD",
+"ave_dti": 37.449,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"UT": {
+ "orig_year": "2006",
+"state": "UT",
+"ave_dti": 36.923,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"ND": {
+ "orig_year": "2006",
+"state": "ND",
+"ave_dti": 36.869,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"ME": {
+ "orig_year": "2006",
+"state": "ME",
+"ave_dti": 37.683,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+},
+"DE": {
+ "orig_year": "2006",
+"state": "DE",
+"ave_dti": 36.983,
+"year":   2006,
+"fillKey": "(35.6,43.4]" 
+} 
+},
+"2007": {
+ "WV": {
+ "orig_year": "2007",
+"state": "WV",
+"ave_dti": 34.436,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"CA": {
+ "orig_year": "2007",
+"state": "CA",
+"ave_dti": 38.151,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"IN": {
+ "orig_year": "2007",
+"state": "IN",
+"ave_dti": 34.721,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"IL": {
+ "orig_year": "2007",
+"state": "IL",
+"ave_dti": 37.007,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"ME": {
+ "orig_year": "2007",
+"state": "ME",
+"ave_dti": 37.247,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"IA": {
+ "orig_year": "2007",
+"state": "IA",
+"ave_dti": 35.191,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"GA": {
+ "orig_year": "2007",
+"state": "GA",
+"ave_dti": 36.788,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NY": {
+ "orig_year": "2007",
+"state": "NY",
+"ave_dti": 37.095,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"FL": {
+ "orig_year": "2007",
+"state": "FL",
+"ave_dti": 37.843,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NM": {
+ "orig_year": "2007",
+"state": "NM",
+"ave_dti": 36.435,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"DC": {
+ "orig_year": "2007",
+"state": "DC",
+"ave_dti": 37.353,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"OR": {
+ "orig_year": "2007",
+"state": "OR",
+"ave_dti": 37.588,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"VI": {
+ "orig_year": "2007",
+"state": "VI",
+"ave_dti": 40.993,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"AR": {
+ "orig_year": "2007",
+"state": "AR",
+"ave_dti": 34.467,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"LA": {
+ "orig_year": "2007",
+"state": "LA",
+"ave_dti": 36.063,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"MA": {
+ "orig_year": "2007",
+"state": "MA",
+"ave_dti": 38.503,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"AK": {
+ "orig_year": "2007",
+"state": "AK",
+"ave_dti": 38.259,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NJ": {
+ "orig_year": "2007",
+"state": "NJ",
+"ave_dti": 38.863,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"TN": {
+ "orig_year": "2007",
+"state": "TN",
+"ave_dti": 35.967,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"MS": {
+ "orig_year": "2007",
+"state": "MS",
+"ave_dti": 35.899,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"OK": {
+ "orig_year": "2007",
+"state": "OK",
+"ave_dti": 34.122,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"CT": {
+ "orig_year": "2007",
+"state": "CT",
+"ave_dti": 37.954,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"PA": {
+ "orig_year": "2007",
+"state": "PA",
+"ave_dti": 36.987,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"MT": {
+ "orig_year": "2007",
+"state": "MT",
+"ave_dti": 37.171,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"AZ": {
+ "orig_year": "2007",
+"state": "AZ",
+"ave_dti": 36.886,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"AL": {
+ "orig_year": "2007",
+"state": "AL",
+"ave_dti": 35.483,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"HI": {
+ "orig_year": "2007",
+"state": "HI",
+"ave_dti": 41.867,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"PR": {
+ "orig_year": "2007",
+"state": "PR",
+"ave_dti": 39.191,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"MN": {
+ "orig_year": "2007",
+"state": "MN",
+"ave_dti": 37.173,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"SC": {
+ "orig_year": "2007",
+"state": "SC",
+"ave_dti": 36.031,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"MD": {
+ "orig_year": "2007",
+"state": "MD",
+"ave_dti": 37.822,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"CO": {
+ "orig_year": "2007",
+"state": "CO",
+"ave_dti":  36.93,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"ND": {
+ "orig_year": "2007",
+"state": "ND",
+"ave_dti": 36.625,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"ID": {
+ "orig_year": "2007",
+"state": "ID",
+"ave_dti": 36.933,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NH": {
+ "orig_year": "2007",
+"state": "NH",
+"ave_dti": 39.328,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"UT": {
+ "orig_year": "2007",
+"state": "UT",
+"ave_dti": 37.816,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"TX": {
+ "orig_year": "2007",
+"state": "TX",
+"ave_dti": 35.957,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"MO": {
+ "orig_year": "2007",
+"state": "MO",
+"ave_dti": 35.381,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"DE": {
+ "orig_year": "2007",
+"state": "DE",
+"ave_dti": 37.389,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"WA": {
+ "orig_year": "2007",
+"state": "WA",
+"ave_dti": 37.639,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "2007",
+"state": "NV",
+"ave_dti": 38.293,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NE": {
+ "orig_year": "2007",
+"state": "NE",
+"ave_dti": 35.538,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"MI": {
+ "orig_year": "2007",
+"state": "MI",
+"ave_dti": 36.033,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"WI": {
+ "orig_year": "2007",
+"state": "WI",
+"ave_dti":  36.56,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"OH": {
+ "orig_year": "2007",
+"state": "OH",
+"ave_dti":  35.88,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"VA": {
+ "orig_year": "2007",
+"state": "VA",
+"ave_dti": 37.217,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"WY": {
+ "orig_year": "2007",
+"state": "WY",
+"ave_dti": 37.735,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"KY": {
+ "orig_year": "2007",
+"state": "KY",
+"ave_dti": 34.468,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"SD": {
+ "orig_year": "2007",
+"state": "SD",
+"ave_dti": 37.023,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"KS": {
+ "orig_year": "2007",
+"state": "KS",
+"ave_dti": 34.574,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+},
+"GU": {
+ "orig_year": "2007",
+"state": "GU",
+"ave_dti": 36.795,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"VT": {
+ "orig_year": "2007",
+"state": "VT",
+"ave_dti": 38.513,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"RI": {
+ "orig_year": "2007",
+"state": "RI",
+"ave_dti": 39.064,
+"year":   2007,
+"fillKey": "(35.6,43.4]" 
+},
+"NC": {
+ "orig_year": "2007",
+"state": "NC",
+"ave_dti":  35.55,
+"year":   2007,
+"fillKey": "(34,35.6]" 
+} 
+},
+"2008": {
+ "WI": {
+ "orig_year": "2008",
+"state": "WI",
+"ave_dti": 34.685,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"AR": {
+ "orig_year": "2008",
+"state": "AR",
+"ave_dti": 33.525,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "2008",
+"state": "PA",
+"ave_dti": 36.645,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"MT": {
+ "orig_year": "2008",
+"state": "MT",
+"ave_dti": 36.622,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"VI": {
+ "orig_year": "2008",
+"state": "VI",
+"ave_dti": 43.045,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NY": {
+ "orig_year": "2008",
+"state": "NY",
+"ave_dti": 37.801,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"OR": {
+ "orig_year": "2008",
+"state": "OR",
+"ave_dti": 37.351,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"OH": {
+ "orig_year": "2008",
+"state": "OH",
+"ave_dti": 34.625,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"MI": {
+ "orig_year": "2008",
+"state": "MI",
+"ave_dti":  34.98,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"TN": {
+ "orig_year": "2008",
+"state": "TN",
+"ave_dti":  35.25,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"AZ": {
+ "orig_year": "2008",
+"state": "AZ",
+"ave_dti": 36.355,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"CA": {
+ "orig_year": "2008",
+"state": "CA",
+"ave_dti": 38.179,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"ID": {
+ "orig_year": "2008",
+"state": "ID",
+"ave_dti":  36.57,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NM": {
+ "orig_year": "2008",
+"state": "NM",
+"ave_dti": 36.914,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"CO": {
+ "orig_year": "2008",
+"state": "CO",
+"ave_dti": 36.365,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"LA": {
+ "orig_year": "2008",
+"state": "LA",
+"ave_dti": 36.536,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"KS": {
+ "orig_year": "2008",
+"state": "KS",
+"ave_dti": 33.585,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"SC": {
+ "orig_year": "2008",
+"state": "SC",
+"ave_dti": 35.479,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"VT": {
+ "orig_year": "2008",
+"state": "VT",
+"ave_dti": 37.234,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NE": {
+ "orig_year": "2008",
+"state": "NE",
+"ave_dti": 33.974,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"IN": {
+ "orig_year": "2008",
+"state": "IN",
+"ave_dti": 32.883,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"PR": {
+ "orig_year": "2008",
+"state": "PR",
+"ave_dti": 39.101,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"MO": {
+ "orig_year": "2008",
+"state": "MO",
+"ave_dti": 34.207,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"ME": {
+ "orig_year": "2008",
+"state": "ME",
+"ave_dti": 36.836,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NH": {
+ "orig_year": "2008",
+"state": "NH",
+"ave_dti": 38.391,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"IL": {
+ "orig_year": "2008",
+"state": "IL",
+"ave_dti": 36.599,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"WY": {
+ "orig_year": "2008",
+"state": "WY",
+"ave_dti": 37.021,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"DC": {
+ "orig_year": "2008",
+"state": "DC",
+"ave_dti":  36.23,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NC": {
+ "orig_year": "2008",
+"state": "NC",
+"ave_dti": 34.791,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"OK": {
+ "orig_year": "2008",
+"state": "OK",
+"ave_dti": 34.318,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"WA": {
+ "orig_year": "2008",
+"state": "WA",
+"ave_dti": 37.316,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"MD": {
+ "orig_year": "2008",
+"state": "MD",
+"ave_dti": 36.692,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"VA": {
+ "orig_year": "2008",
+"state": "VA",
+"ave_dti": 35.908,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NJ": {
+ "orig_year": "2008",
+"state": "NJ",
+"ave_dti":  38.44,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"MN": {
+ "orig_year": "2008",
+"state": "MN",
+"ave_dti": 35.628,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"WV": {
+ "orig_year": "2008",
+"state": "WV",
+"ave_dti": 33.495,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2008",
+"state": "TX",
+"ave_dti": 36.172,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"RI": {
+ "orig_year": "2008",
+"state": "RI",
+"ave_dti": 38.615,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"MS": {
+ "orig_year": "2008",
+"state": "MS",
+"ave_dti": 36.014,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"AL": {
+ "orig_year": "2008",
+"state": "AL",
+"ave_dti": 35.203,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"DE": {
+ "orig_year": "2008",
+"state": "DE",
+"ave_dti": 36.545,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"ND": {
+ "orig_year": "2008",
+"state": "ND",
+"ave_dti":  35.87,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"GU": {
+ "orig_year": "2008",
+"state": "GU",
+"ave_dti": 36.958,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"AK": {
+ "orig_year": "2008",
+"state": "AK",
+"ave_dti": 35.936,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "2008",
+"state": "NV",
+"ave_dti": 37.772,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"FL": {
+ "orig_year": "2008",
+"state": "FL",
+"ave_dti": 37.595,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"MA": {
+ "orig_year": "2008",
+"state": "MA",
+"ave_dti": 37.123,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"SD": {
+ "orig_year": "2008",
+"state": "SD",
+"ave_dti": 35.416,
+"year":   2008,
+"fillKey": "(34,35.6]" 
+},
+"GA": {
+ "orig_year": "2008",
+"state": "GA",
+"ave_dti": 36.393,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"KY": {
+ "orig_year": "2008",
+"state": "KY",
+"ave_dti": 33.086,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"UT": {
+ "orig_year": "2008",
+"state": "UT",
+"ave_dti":  37.44,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"CT": {
+ "orig_year": "2008",
+"state": "CT",
+"ave_dti": 37.464,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+},
+"IA": {
+ "orig_year": "2008",
+"state": "IA",
+"ave_dti": 32.949,
+"year":   2008,
+"fillKey": "(32.7,34]" 
+},
+"HI": {
+ "orig_year": "2008",
+"state": "HI",
+"ave_dti": 42.506,
+"year":   2008,
+"fillKey": "(35.6,43.4]" 
+} 
+},
+"2009": {
+ "WY": {
+ "orig_year": "2009",
+"state": "WY",
+"ave_dti": 32.059,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"MT": {
+ "orig_year": "2009",
+"state": "MT",
+"ave_dti": 31.993,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"ND": {
+ "orig_year": "2009",
+"state": "ND",
+"ave_dti": 31.513,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2009",
+"state": "IN",
+"ave_dti": 28.118,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"AK": {
+ "orig_year": "2009",
+"state": "AK",
+"ave_dti": 31.857,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"CO": {
+ "orig_year": "2009",
+"state": "CO",
+"ave_dti": 31.591,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"VI": {
+ "orig_year": "2009",
+"state": "VI",
+"ave_dti": 38.302,
+"year":   2009,
+"fillKey": "(35.6,43.4]" 
+},
+"MA": {
+ "orig_year": "2009",
+"state": "MA",
+"ave_dti": 32.546,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"AR": {
+ "orig_year": "2009",
+"state": "AR",
+"ave_dti": 30.212,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"MI": {
+ "orig_year": "2009",
+"state": "MI",
+"ave_dti": 30.636,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "2009",
+"state": "ME",
+"ave_dti": 32.167,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"KS": {
+ "orig_year": "2009",
+"state": "KS",
+"ave_dti": 29.328,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"PA": {
+ "orig_year": "2009",
+"state": "PA",
+"ave_dti": 31.487,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"SC": {
+ "orig_year": "2009",
+"state": "SC",
+"ave_dti": 31.012,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"NC": {
+ "orig_year": "2009",
+"state": "NC",
+"ave_dti": 30.206,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"AZ": {
+ "orig_year": "2009",
+"state": "AZ",
+"ave_dti": 31.649,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"VT": {
+ "orig_year": "2009",
+"state": "VT",
+"ave_dti": 33.371,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"NY": {
+ "orig_year": "2009",
+"state": "NY",
+"ave_dti":  33.78,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2009",
+"state": "DE",
+"ave_dti": 31.148,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"WV": {
+ "orig_year": "2009",
+"state": "WV",
+"ave_dti": 29.139,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"NJ": {
+ "orig_year": "2009",
+"state": "NJ",
+"ave_dti": 33.561,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"MO": {
+ "orig_year": "2009",
+"state": "MO",
+"ave_dti": 29.978,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"GU": {
+ "orig_year": "2009",
+"state": "GU",
+"ave_dti": 33.938,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"DC": {
+ "orig_year": "2009",
+"state": "DC",
+"ave_dti": 31.049,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"TN": {
+ "orig_year": "2009",
+"state": "TN",
+"ave_dti": 30.761,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"MN": {
+ "orig_year": "2009",
+"state": "MN",
+"ave_dti": 30.601,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"MS": {
+ "orig_year": "2009",
+"state": "MS",
+"ave_dti": 31.133,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"OH": {
+ "orig_year": "2009",
+"state": "OH",
+"ave_dti": 29.522,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"PR": {
+ "orig_year": "2009",
+"state": "PR",
+"ave_dti": 36.656,
+"year":   2009,
+"fillKey": "(35.6,43.4]" 
+},
+"GA": {
+ "orig_year": "2009",
+"state": "GA",
+"ave_dti": 31.043,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"IA": {
+ "orig_year": "2009",
+"state": "IA",
+"ave_dti": 28.925,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"WA": {
+ "orig_year": "2009",
+"state": "WA",
+"ave_dti": 32.349,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"WI": {
+ "orig_year": "2009",
+"state": "WI",
+"ave_dti": 30.504,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"IL": {
+ "orig_year": "2009",
+"state": "IL",
+"ave_dti": 31.662,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"AL": {
+ "orig_year": "2009",
+"state": "AL",
+"ave_dti": 30.611,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"NM": {
+ "orig_year": "2009",
+"state": "NM",
+"ave_dti": 31.639,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"NV": {
+ "orig_year": "2009",
+"state": "NV",
+"ave_dti": 33.243,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "2009",
+"state": "VA",
+"ave_dti": 30.873,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"TX": {
+ "orig_year": "2009",
+"state": "TX",
+"ave_dti": 31.988,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"NH": {
+ "orig_year": "2009",
+"state": "NH",
+"ave_dti":  33.48,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"CT": {
+ "orig_year": "2009",
+"state": "CT",
+"ave_dti":   32.1,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"NE": {
+ "orig_year": "2009",
+"state": "NE",
+"ave_dti": 29.422,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"SD": {
+ "orig_year": "2009",
+"state": "SD",
+"ave_dti": 30.763,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"UT": {
+ "orig_year": "2009",
+"state": "UT",
+"ave_dti": 31.855,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"OK": {
+ "orig_year": "2009",
+"state": "OK",
+"ave_dti": 30.428,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"RI": {
+ "orig_year": "2009",
+"state": "RI",
+"ave_dti": 33.543,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"LA": {
+ "orig_year": "2009",
+"state": "LA",
+"ave_dti": 32.087,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"MD": {
+ "orig_year": "2009",
+"state": "MD",
+"ave_dti": 31.475,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"CA": {
+ "orig_year": "2009",
+"state": "CA",
+"ave_dti":  33.73,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+},
+"KY": {
+ "orig_year": "2009",
+"state": "KY",
+"ave_dti": 29.318,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"HI": {
+ "orig_year": "2009",
+"state": "HI",
+"ave_dti": 36.748,
+"year":   2009,
+"fillKey": "(35.6,43.4]" 
+},
+"ID": {
+ "orig_year": "2009",
+"state": "ID",
+"ave_dti": 30.899,
+"year":   2009,
+"fillKey": "(27.9,31.5]" 
+},
+"OR": {
+ "orig_year": "2009",
+"state": "OR",
+"ave_dti":  32.11,
+"year":   2009,
+"fillKey": "(31.5,32.7]" 
+},
+"FL": {
+ "orig_year": "2009",
+"state": "FL",
+"ave_dti": 33.371,
+"year":   2009,
+"fillKey": "(32.7,34]" 
+} 
+},
+"2010": {
+ "VA": {
+ "orig_year": "2010",
+"state": "VA",
+"ave_dti": 30.669,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"WY": {
+ "orig_year": "2010",
+"state": "WY",
+"ave_dti": 31.137,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"IA": {
+ "orig_year": "2010",
+"state": "IA",
+"ave_dti": 29.004,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"PA": {
+ "orig_year": "2010",
+"state": "PA",
+"ave_dti": 31.272,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"OH": {
+ "orig_year": "2010",
+"state": "OH",
+"ave_dti": 28.424,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"LA": {
+ "orig_year": "2010",
+"state": "LA",
+"ave_dti": 31.197,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"CT": {
+ "orig_year": "2010",
+"state": "CT",
+"ave_dti": 31.952,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"KY": {
+ "orig_year": "2010",
+"state": "KY",
+"ave_dti": 28.517,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"NJ": {
+ "orig_year": "2010",
+"state": "NJ",
+"ave_dti": 33.819,
+"year":   2010,
+"fillKey": "(32.7,34]" 
+},
+"NY": {
+ "orig_year": "2010",
+"state": "NY",
+"ave_dti": 34.001,
+"year":   2010,
+"fillKey": "(34,35.6]" 
+},
+"CO": {
+ "orig_year": "2010",
+"state": "CO",
+"ave_dti": 31.553,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"DC": {
+ "orig_year": "2010",
+"state": "DC",
+"ave_dti": 30.592,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"NM": {
+ "orig_year": "2010",
+"state": "NM",
+"ave_dti": 30.599,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"IN": {
+ "orig_year": "2010",
+"state": "IN",
+"ave_dti": 27.853,
+"year":   2010,
+"fillKey": null 
+},
+"OR": {
+ "orig_year": "2010",
+"state": "OR",
+"ave_dti": 32.269,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"IL": {
+ "orig_year": "2010",
+"state": "IL",
+"ave_dti": 31.479,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"UT": {
+ "orig_year": "2010",
+"state": "UT",
+"ave_dti": 31.548,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"VI": {
+ "orig_year": "2010",
+"state": "VI",
+"ave_dti": 42.235,
+"year":   2010,
+"fillKey": "(35.6,43.4]" 
+},
+"GU": {
+ "orig_year": "2010",
+"state": "GU",
+"ave_dti": 33.056,
+"year":   2010,
+"fillKey": "(32.7,34]" 
+},
+"MN": {
+ "orig_year": "2010",
+"state": "MN",
+"ave_dti": 30.611,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"DE": {
+ "orig_year": "2010",
+"state": "DE",
+"ave_dti": 30.495,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"SC": {
+ "orig_year": "2010",
+"state": "SC",
+"ave_dti": 30.632,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "2010",
+"state": "NH",
+"ave_dti": 33.162,
+"year":   2010,
+"fillKey": "(32.7,34]" 
+},
+"SD": {
+ "orig_year": "2010",
+"state": "SD",
+"ave_dti": 30.546,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"KS": {
+ "orig_year": "2010",
+"state": "KS",
+"ave_dti": 29.421,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"ID": {
+ "orig_year": "2010",
+"state": "ID",
+"ave_dti": 30.901,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"GA": {
+ "orig_year": "2010",
+"state": "GA",
+"ave_dti": 30.623,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"MT": {
+ "orig_year": "2010",
+"state": "MT",
+"ave_dti":  31.68,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"NV": {
+ "orig_year": "2010",
+"state": "NV",
+"ave_dti": 32.614,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"NC": {
+ "orig_year": "2010",
+"state": "NC",
+"ave_dti": 30.376,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"FL": {
+ "orig_year": "2010",
+"state": "FL",
+"ave_dti": 33.126,
+"year":   2010,
+"fillKey": "(32.7,34]" 
+},
+"OK": {
+ "orig_year": "2010",
+"state": "OK",
+"ave_dti": 29.856,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"AR": {
+ "orig_year": "2010",
+"state": "AR",
+"ave_dti":  29.92,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"MO": {
+ "orig_year": "2010",
+"state": "MO",
+"ave_dti": 30.068,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"CA": {
+ "orig_year": "2010",
+"state": "CA",
+"ave_dti": 33.992,
+"year":   2010,
+"fillKey": "(34,35.6]" 
+},
+"WI": {
+ "orig_year": "2010",
+"state": "WI",
+"ave_dti": 30.479,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"AK": {
+ "orig_year": "2010",
+"state": "AK",
+"ave_dti": 31.651,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"MA": {
+ "orig_year": "2010",
+"state": "MA",
+"ave_dti": 32.026,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"TX": {
+ "orig_year": "2010",
+"state": "TX",
+"ave_dti": 32.497,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"ND": {
+ "orig_year": "2010",
+"state": "ND",
+"ave_dti": 30.782,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"AL": {
+ "orig_year": "2010",
+"state": "AL",
+"ave_dti": 30.303,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"MI": {
+ "orig_year": "2010",
+"state": "MI",
+"ave_dti": 30.206,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "2010",
+"state": "NE",
+"ave_dti":  28.89,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"WA": {
+ "orig_year": "2010",
+"state": "WA",
+"ave_dti": 32.226,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"RI": {
+ "orig_year": "2010",
+"state": "RI",
+"ave_dti":  32.83,
+"year":   2010,
+"fillKey": "(32.7,34]" 
+},
+"AZ": {
+ "orig_year": "2010",
+"state": "AZ",
+"ave_dti": 32.008,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+},
+"PR": {
+ "orig_year": "2010",
+"state": "PR",
+"ave_dti": 36.818,
+"year":   2010,
+"fillKey": "(35.6,43.4]" 
+},
+"TN": {
+ "orig_year": "2010",
+"state": "TN",
+"ave_dti": 30.456,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"HI": {
+ "orig_year": "2010",
+"state": "HI",
+"ave_dti": 36.332,
+"year":   2010,
+"fillKey": "(35.6,43.4]" 
+},
+"WV": {
+ "orig_year": "2010",
+"state": "WV",
+"ave_dti": 28.963,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"VT": {
+ "orig_year": "2010",
+"state": "VT",
+"ave_dti":   33.3,
+"year":   2010,
+"fillKey": "(32.7,34]" 
+},
+"MD": {
+ "orig_year": "2010",
+"state": "MD",
+"ave_dti": 31.005,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"MS": {
+ "orig_year": "2010",
+"state": "MS",
+"ave_dti": 30.487,
+"year":   2010,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "2010",
+"state": "ME",
+"ave_dti": 31.619,
+"year":   2010,
+"fillKey": "(31.5,32.7]" 
+} 
+},
+"2011": {
+ "IA": {
+ "orig_year": "2011",
+"state": "IA",
+"ave_dti": 29.532,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"NJ": {
+ "orig_year": "2011",
+"state": "NJ",
+"ave_dti":  33.53,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"MO": {
+ "orig_year": "2011",
+"state": "MO",
+"ave_dti": 30.066,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"TN": {
+ "orig_year": "2011",
+"state": "TN",
+"ave_dti": 30.708,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "2011",
+"state": "NE",
+"ave_dti": 30.033,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"NV": {
+ "orig_year": "2011",
+"state": "NV",
+"ave_dti": 32.702,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"IL": {
+ "orig_year": "2011",
+"state": "IL",
+"ave_dti": 31.478,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"WA": {
+ "orig_year": "2011",
+"state": "WA",
+"ave_dti": 31.982,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"NM": {
+ "orig_year": "2011",
+"state": "NM",
+"ave_dti": 30.733,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"OK": {
+ "orig_year": "2011",
+"state": "OK",
+"ave_dti": 30.594,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"MD": {
+ "orig_year": "2011",
+"state": "MD",
+"ave_dti": 31.188,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "2011",
+"state": "ME",
+"ave_dti": 31.865,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"OR": {
+ "orig_year": "2011",
+"state": "OR",
+"ave_dti": 31.943,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"LA": {
+ "orig_year": "2011",
+"state": "LA",
+"ave_dti": 31.774,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"MI": {
+ "orig_year": "2011",
+"state": "MI",
+"ave_dti": 30.149,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"HI": {
+ "orig_year": "2011",
+"state": "HI",
+"ave_dti": 36.279,
+"year":   2011,
+"fillKey": "(35.6,43.4]" 
+},
+"AR": {
+ "orig_year": "2011",
+"state": "AR",
+"ave_dti":  30.35,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"KY": {
+ "orig_year": "2011",
+"state": "KY",
+"ave_dti": 29.208,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"WV": {
+ "orig_year": "2011",
+"state": "WV",
+"ave_dti": 29.002,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"NC": {
+ "orig_year": "2011",
+"state": "NC",
+"ave_dti": 30.468,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"UT": {
+ "orig_year": "2011",
+"state": "UT",
+"ave_dti": 31.707,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"GA": {
+ "orig_year": "2011",
+"state": "GA",
+"ave_dti": 30.808,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"RI": {
+ "orig_year": "2011",
+"state": "RI",
+"ave_dti": 33.074,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"DC": {
+ "orig_year": "2011",
+"state": "DC",
+"ave_dti":  30.33,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"CO": {
+ "orig_year": "2011",
+"state": "CO",
+"ave_dti":  31.72,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"MA": {
+ "orig_year": "2011",
+"state": "MA",
+"ave_dti": 31.946,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"WY": {
+ "orig_year": "2011",
+"state": "WY",
+"ave_dti": 30.864,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"SD": {
+ "orig_year": "2011",
+"state": "SD",
+"ave_dti": 31.263,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"MN": {
+ "orig_year": "2011",
+"state": "MN",
+"ave_dti": 30.633,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"AL": {
+ "orig_year": "2011",
+"state": "AL",
+"ave_dti": 30.281,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"VA": {
+ "orig_year": "2011",
+"state": "VA",
+"ave_dti": 31.093,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"PA": {
+ "orig_year": "2011",
+"state": "PA",
+"ave_dti": 31.586,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"NY": {
+ "orig_year": "2011",
+"state": "NY",
+"ave_dti": 34.248,
+"year":   2011,
+"fillKey": "(34,35.6]" 
+},
+"MT": {
+ "orig_year": "2011",
+"state": "MT",
+"ave_dti": 31.568,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"VT": {
+ "orig_year": "2011",
+"state": "VT",
+"ave_dti":  32.67,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2011",
+"state": "TX",
+"ave_dti": 32.274,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2011",
+"state": "IN",
+"ave_dti": 28.232,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"AZ": {
+ "orig_year": "2011",
+"state": "AZ",
+"ave_dti": 31.828,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"ND": {
+ "orig_year": "2011",
+"state": "ND",
+"ave_dti": 31.442,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "2011",
+"state": "NH",
+"ave_dti": 33.237,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"ID": {
+ "orig_year": "2011",
+"state": "ID",
+"ave_dti": 30.581,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"CA": {
+ "orig_year": "2011",
+"state": "CA",
+"ave_dti": 33.881,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"AK": {
+ "orig_year": "2011",
+"state": "AK",
+"ave_dti": 31.981,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"SC": {
+ "orig_year": "2011",
+"state": "SC",
+"ave_dti": 30.755,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"VI": {
+ "orig_year": "2011",
+"state": "VI",
+"ave_dti": 42.778,
+"year":   2011,
+"fillKey": "(35.6,43.4]" 
+},
+"GU": {
+ "orig_year": "2011",
+"state": "GU",
+"ave_dti": 33.192,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"KS": {
+ "orig_year": "2011",
+"state": "KS",
+"ave_dti": 29.833,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"PR": {
+ "orig_year": "2011",
+"state": "PR",
+"ave_dti": 38.872,
+"year":   2011,
+"fillKey": "(35.6,43.4]" 
+},
+"CT": {
+ "orig_year": "2011",
+"state": "CT",
+"ave_dti": 32.225,
+"year":   2011,
+"fillKey": "(31.5,32.7]" 
+},
+"OH": {
+ "orig_year": "2011",
+"state": "OH",
+"ave_dti": 29.053,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"MS": {
+ "orig_year": "2011",
+"state": "MS",
+"ave_dti": 30.794,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"FL": {
+ "orig_year": "2011",
+"state": "FL",
+"ave_dti": 33.184,
+"year":   2011,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2011",
+"state": "DE",
+"ave_dti":   30.5,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+},
+"WI": {
+ "orig_year": "2011",
+"state": "WI",
+"ave_dti": 30.329,
+"year":   2011,
+"fillKey": "(27.9,31.5]" 
+} 
+},
+"2012": {
+ "LA": {
+ "orig_year": "2012",
+"state": "LA",
+"ave_dti": 30.707,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"MA": {
+ "orig_year": "2012",
+"state": "MA",
+"ave_dti": 31.207,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"WY": {
+ "orig_year": "2012",
+"state": "WY",
+"ave_dti": 30.734,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NY": {
+ "orig_year": "2012",
+"state": "NY",
+"ave_dti": 33.425,
+"year":   2012,
+"fillKey": "(32.7,34]" 
+},
+"TX": {
+ "orig_year": "2012",
+"state": "TX",
+"ave_dti": 31.325,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "2012",
+"state": "NH",
+"ave_dti": 32.142,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"OK": {
+ "orig_year": "2012",
+"state": "OK",
+"ave_dti": 29.887,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"AR": {
+ "orig_year": "2012",
+"state": "AR",
+"ave_dti": 29.432,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"DC": {
+ "orig_year": "2012",
+"state": "DC",
+"ave_dti": 29.801,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"CT": {
+ "orig_year": "2012",
+"state": "CT",
+"ave_dti": 31.494,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"PA": {
+ "orig_year": "2012",
+"state": "PA",
+"ave_dti": 30.727,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"DE": {
+ "orig_year": "2012",
+"state": "DE",
+"ave_dti": 30.031,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"KS": {
+ "orig_year": "2012",
+"state": "KS",
+"ave_dti":  29.28,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"IL": {
+ "orig_year": "2012",
+"state": "IL",
+"ave_dti": 30.742,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"AK": {
+ "orig_year": "2012",
+"state": "AK",
+"ave_dti": 30.773,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"MT": {
+ "orig_year": "2012",
+"state": "MT",
+"ave_dti": 30.954,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"WV": {
+ "orig_year": "2012",
+"state": "WV",
+"ave_dti": 28.164,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"MD": {
+ "orig_year": "2012",
+"state": "MD",
+"ave_dti": 30.422,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"MS": {
+ "orig_year": "2012",
+"state": "MS",
+"ave_dti": 29.854,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"GU": {
+ "orig_year": "2012",
+"state": "GU",
+"ave_dti": 31.617,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"AL": {
+ "orig_year": "2012",
+"state": "AL",
+"ave_dti": 29.358,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"PR": {
+ "orig_year": "2012",
+"state": "PR",
+"ave_dti": 38.668,
+"year":   2012,
+"fillKey": "(35.6,43.4]" 
+},
+"OH": {
+ "orig_year": "2012",
+"state": "OH",
+"ave_dti": 28.071,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NC": {
+ "orig_year": "2012",
+"state": "NC",
+"ave_dti": 29.543,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "2012",
+"state": "NE",
+"ave_dti": 29.352,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"WI": {
+ "orig_year": "2012",
+"state": "WI",
+"ave_dti": 29.604,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"IN": {
+ "orig_year": "2012",
+"state": "IN",
+"ave_dti": 28.127,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"TN": {
+ "orig_year": "2012",
+"state": "TN",
+"ave_dti": 30.093,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"OR": {
+ "orig_year": "2012",
+"state": "OR",
+"ave_dti": 31.069,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"ID": {
+ "orig_year": "2012",
+"state": "ID",
+"ave_dti": 30.001,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"KY": {
+ "orig_year": "2012",
+"state": "KY",
+"ave_dti": 27.955,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"ND": {
+ "orig_year": "2012",
+"state": "ND",
+"ave_dti": 31.281,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"AZ": {
+ "orig_year": "2012",
+"state": "AZ",
+"ave_dti": 30.755,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NJ": {
+ "orig_year": "2012",
+"state": "NJ",
+"ave_dti": 32.993,
+"year":   2012,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "2012",
+"state": "WA",
+"ave_dti": 31.021,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"SC": {
+ "orig_year": "2012",
+"state": "SC",
+"ave_dti": 29.987,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"SD": {
+ "orig_year": "2012",
+"state": "SD",
+"ave_dti": 30.645,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"RI": {
+ "orig_year": "2012",
+"state": "RI",
+"ave_dti": 31.907,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"GA": {
+ "orig_year": "2012",
+"state": "GA",
+"ave_dti": 29.817,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"FL": {
+ "orig_year": "2012",
+"state": "FL",
+"ave_dti": 32.538,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"VT": {
+ "orig_year": "2012",
+"state": "VT",
+"ave_dti": 32.017,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "2012",
+"state": "HI",
+"ave_dti": 34.893,
+"year":   2012,
+"fillKey": "(34,35.6]" 
+},
+"MN": {
+ "orig_year": "2012",
+"state": "MN",
+"ave_dti": 29.861,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NV": {
+ "orig_year": "2012",
+"state": "NV",
+"ave_dti": 31.626,
+"year":   2012,
+"fillKey": "(31.5,32.7]" 
+},
+"IA": {
+ "orig_year": "2012",
+"state": "IA",
+"ave_dti": 28.875,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"MI": {
+ "orig_year": "2012",
+"state": "MI",
+"ave_dti": 29.638,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"NM": {
+ "orig_year": "2012",
+"state": "NM",
+"ave_dti": 29.901,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "2012",
+"state": "ME",
+"ave_dti": 31.188,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"MO": {
+ "orig_year": "2012",
+"state": "MO",
+"ave_dti": 29.522,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"CA": {
+ "orig_year": "2012",
+"state": "CA",
+"ave_dti": 33.052,
+"year":   2012,
+"fillKey": "(32.7,34]" 
+},
+"UT": {
+ "orig_year": "2012",
+"state": "UT",
+"ave_dti": 30.879,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"VI": {
+ "orig_year": "2012",
+"state": "VI",
+"ave_dti":  40.65,
+"year":   2012,
+"fillKey": "(35.6,43.4]" 
+},
+"VA": {
+ "orig_year": "2012",
+"state": "VA",
+"ave_dti": 30.213,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+},
+"CO": {
+ "orig_year": "2012",
+"state": "CO",
+"ave_dti": 30.563,
+"year":   2012,
+"fillKey": "(27.9,31.5]" 
+} 
+},
+"2013": {
+ "AK": {
+ "orig_year": "2013",
+"state": "AK",
+"ave_dti": 31.592,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"OH": {
+ "orig_year": "2013",
+"state": "OH",
+"ave_dti": 29.692,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"MN": {
+ "orig_year": "2013",
+"state": "MN",
+"ave_dti": 31.217,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"CT": {
+ "orig_year": "2013",
+"state": "CT",
+"ave_dti": 32.646,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"ME": {
+ "orig_year": "2013",
+"state": "ME",
+"ave_dti": 32.211,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"PR": {
+ "orig_year": "2013",
+"state": "PR",
+"ave_dti": 38.748,
+"year":   2013,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "2013",
+"state": "NV",
+"ave_dti": 32.596,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2013",
+"state": "IN",
+"ave_dti": 29.575,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "2013",
+"state": "NH",
+"ave_dti": 32.701,
+"year":   2013,
+"fillKey": "(32.7,34]" 
+},
+"CO": {
+ "orig_year": "2013",
+"state": "CO",
+"ave_dti":  31.89,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"MA": {
+ "orig_year": "2013",
+"state": "MA",
+"ave_dti": 32.291,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"AZ": {
+ "orig_year": "2013",
+"state": "AZ",
+"ave_dti": 31.644,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"AR": {
+ "orig_year": "2013",
+"state": "AR",
+"ave_dti": 30.185,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"MT": {
+ "orig_year": "2013",
+"state": "MT",
+"ave_dti": 31.924,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"WI": {
+ "orig_year": "2013",
+"state": "WI",
+"ave_dti":  30.63,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"GU": {
+ "orig_year": "2013",
+"state": "GU",
+"ave_dti": 32.504,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"NY": {
+ "orig_year": "2013",
+"state": "NY",
+"ave_dti": 33.937,
+"year":   2013,
+"fillKey": "(32.7,34]" 
+},
+"GA": {
+ "orig_year": "2013",
+"state": "GA",
+"ave_dti": 30.757,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"ND": {
+ "orig_year": "2013",
+"state": "ND",
+"ave_dti": 32.128,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"CA": {
+ "orig_year": "2013",
+"state": "CA",
+"ave_dti": 34.383,
+"year":   2013,
+"fillKey": "(34,35.6]" 
+},
+"NM": {
+ "orig_year": "2013",
+"state": "NM",
+"ave_dti": 31.063,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"SC": {
+ "orig_year": "2013",
+"state": "SC",
+"ave_dti": 30.836,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"AL": {
+ "orig_year": "2013",
+"state": "AL",
+"ave_dti": 30.279,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"IA": {
+ "orig_year": "2013",
+"state": "IA",
+"ave_dti": 30.188,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"FL": {
+ "orig_year": "2013",
+"state": "FL",
+"ave_dti": 33.409,
+"year":   2013,
+"fillKey": "(32.7,34]" 
+},
+"MD": {
+ "orig_year": "2013",
+"state": "MD",
+"ave_dti": 31.684,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"IL": {
+ "orig_year": "2013",
+"state": "IL",
+"ave_dti": 32.109,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"UT": {
+ "orig_year": "2013",
+"state": "UT",
+"ave_dti": 32.255,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "2013",
+"state": "HI",
+"ave_dti": 35.302,
+"year":   2013,
+"fillKey": "(34,35.6]" 
+},
+"NE": {
+ "orig_year": "2013",
+"state": "NE",
+"ave_dti": 30.494,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"NJ": {
+ "orig_year": "2013",
+"state": "NJ",
+"ave_dti": 33.863,
+"year":   2013,
+"fillKey": "(32.7,34]" 
+},
+"ID": {
+ "orig_year": "2013",
+"state": "ID",
+"ave_dti": 31.485,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"OK": {
+ "orig_year": "2013",
+"state": "OK",
+"ave_dti": 30.541,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"OR": {
+ "orig_year": "2013",
+"state": "OR",
+"ave_dti":   32.3,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"RI": {
+ "orig_year": "2013",
+"state": "RI",
+"ave_dti": 32.887,
+"year":   2013,
+"fillKey": "(32.7,34]" 
+},
+"MI": {
+ "orig_year": "2013",
+"state": "MI",
+"ave_dti": 30.629,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"NC": {
+ "orig_year": "2013",
+"state": "NC",
+"ave_dti":  30.31,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"VA": {
+ "orig_year": "2013",
+"state": "VA",
+"ave_dti": 31.431,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"TN": {
+ "orig_year": "2013",
+"state": "TN",
+"ave_dti": 30.883,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"DE": {
+ "orig_year": "2013",
+"state": "DE",
+"ave_dti": 30.981,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"KS": {
+ "orig_year": "2013",
+"state": "KS",
+"ave_dti": 30.209,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"KY": {
+ "orig_year": "2013",
+"state": "KY",
+"ave_dti": 29.211,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"VT": {
+ "orig_year": "2013",
+"state": "VT",
+"ave_dti":  32.55,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"WV": {
+ "orig_year": "2013",
+"state": "WV",
+"ave_dti": 28.805,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"MO": {
+ "orig_year": "2013",
+"state": "MO",
+"ave_dti": 30.695,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"VI": {
+ "orig_year": "2013",
+"state": "VI",
+"ave_dti": 31.739,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"SD": {
+ "orig_year": "2013",
+"state": "SD",
+"ave_dti": 31.477,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"DC": {
+ "orig_year": "2013",
+"state": "DC",
+"ave_dti": 31.074,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"WY": {
+ "orig_year": "2013",
+"state": "WY",
+"ave_dti": 31.787,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"TX": {
+ "orig_year": "2013",
+"state": "TX",
+"ave_dti": 32.044,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"PA": {
+ "orig_year": "2013",
+"state": "PA",
+"ave_dti": 31.622,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"MS": {
+ "orig_year": "2013",
+"state": "MS",
+"ave_dti": 30.817,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+},
+"WA": {
+ "orig_year": "2013",
+"state": "WA",
+"ave_dti": 32.036,
+"year":   2013,
+"fillKey": "(31.5,32.7]" 
+},
+"LA": {
+ "orig_year": "2013",
+"state": "LA",
+"ave_dti": 31.266,
+"year":   2013,
+"fillKey": "(27.9,31.5]" 
+} 
+},
+"2014": {
+ "MD": {
+ "orig_year": "2014",
+"state": "MD",
+"ave_dti":  33.72,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"HI": {
+ "orig_year": "2014",
+"state": "HI",
+"ave_dti": 37.329,
+"year":   2014,
+"fillKey": "(35.6,43.4]" 
+},
+"PA": {
+ "orig_year": "2014",
+"state": "PA",
+"ave_dti": 33.177,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2014",
+"state": "DE",
+"ave_dti": 33.072,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"AK": {
+ "orig_year": "2014",
+"state": "AK",
+"ave_dti": 32.931,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"WY": {
+ "orig_year": "2014",
+"state": "WY",
+"ave_dti": 32.611,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"DC": {
+ "orig_year": "2014",
+"state": "DC",
+"ave_dti": 33.215,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"CO": {
+ "orig_year": "2014",
+"state": "CO",
+"ave_dti": 34.032,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"ID": {
+ "orig_year": "2014",
+"state": "ID",
+"ave_dti": 32.894,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"FL": {
+ "orig_year": "2014",
+"state": "FL",
+"ave_dti": 34.823,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"VI": {
+ "orig_year": "2014",
+"state": "VI",
+"ave_dti": 33.045,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"AR": {
+ "orig_year": "2014",
+"state": "AR",
+"ave_dti": 31.079,
+"year":   2014,
+"fillKey": "(27.9,31.5]" 
+},
+"WA": {
+ "orig_year": "2014",
+"state": "WA",
+"ave_dti":  34.07,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"NM": {
+ "orig_year": "2014",
+"state": "NM",
+"ave_dti": 32.497,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"WI": {
+ "orig_year": "2014",
+"state": "WI",
+"ave_dti": 32.175,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"VA": {
+ "orig_year": "2014",
+"state": "VA",
+"ave_dti": 33.423,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"MI": {
+ "orig_year": "2014",
+"state": "MI",
+"ave_dti": 32.272,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"GA": {
+ "orig_year": "2014",
+"state": "GA",
+"ave_dti": 32.557,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"WV": {
+ "orig_year": "2014",
+"state": "WV",
+"ave_dti":  30.68,
+"year":   2014,
+"fillKey": "(27.9,31.5]" 
+},
+"MO": {
+ "orig_year": "2014",
+"state": "MO",
+"ave_dti": 31.951,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"CT": {
+ "orig_year": "2014",
+"state": "CT",
+"ave_dti": 34.335,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"NC": {
+ "orig_year": "2014",
+"state": "NC",
+"ave_dti": 31.981,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"IA": {
+ "orig_year": "2014",
+"state": "IA",
+"ave_dti": 31.656,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"MA": {
+ "orig_year": "2014",
+"state": "MA",
+"ave_dti": 34.158,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"MS": {
+ "orig_year": "2014",
+"state": "MS",
+"ave_dti": 31.455,
+"year":   2014,
+"fillKey": "(27.9,31.5]" 
+},
+"SC": {
+ "orig_year": "2014",
+"state": "SC",
+"ave_dti": 32.311,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"LA": {
+ "orig_year": "2014",
+"state": "LA",
+"ave_dti": 32.697,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"NV": {
+ "orig_year": "2014",
+"state": "NV",
+"ave_dti": 34.242,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"RI": {
+ "orig_year": "2014",
+"state": "RI",
+"ave_dti": 34.478,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"AZ": {
+ "orig_year": "2014",
+"state": "AZ",
+"ave_dti": 33.589,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"AL": {
+ "orig_year": "2014",
+"state": "AL",
+"ave_dti": 31.375,
+"year":   2014,
+"fillKey": "(27.9,31.5]" 
+},
+"MT": {
+ "orig_year": "2014",
+"state": "MT",
+"ave_dti": 33.083,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"KS": {
+ "orig_year": "2014",
+"state": "KS",
+"ave_dti":  31.62,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"OH": {
+ "orig_year": "2014",
+"state": "OH",
+"ave_dti": 31.906,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"OK": {
+ "orig_year": "2014",
+"state": "OK",
+"ave_dti": 31.708,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"NE": {
+ "orig_year": "2014",
+"state": "NE",
+"ave_dti": 32.396,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"GU": {
+ "orig_year": "2014",
+"state": "GU",
+"ave_dti": 33.829,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"VT": {
+ "orig_year": "2014",
+"state": "VT",
+"ave_dti": 34.078,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "2014",
+"state": "UT",
+"ave_dti": 33.731,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"ND": {
+ "orig_year": "2014",
+"state": "ND",
+"ave_dti": 33.121,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"IN": {
+ "orig_year": "2014",
+"state": "IN",
+"ave_dti": 30.975,
+"year":   2014,
+"fillKey": "(27.9,31.5]" 
+},
+"IL": {
+ "orig_year": "2014",
+"state": "IL",
+"ave_dti": 33.464,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"ME": {
+ "orig_year": "2014",
+"state": "ME",
+"ave_dti":  33.67,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"KY": {
+ "orig_year": "2014",
+"state": "KY",
+"ave_dti": 31.007,
+"year":   2014,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "2014",
+"state": "NH",
+"ave_dti": 34.531,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"SD": {
+ "orig_year": "2014",
+"state": "SD",
+"ave_dti": 33.843,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"MN": {
+ "orig_year": "2014",
+"state": "MN",
+"ave_dti": 32.901,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"PR": {
+ "orig_year": "2014",
+"state": "PR",
+"ave_dti": 39.084,
+"year":   2014,
+"fillKey": "(35.6,43.4]" 
+},
+"NJ": {
+ "orig_year": "2014",
+"state": "NJ",
+"ave_dti": 35.501,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"TX": {
+ "orig_year": "2014",
+"state": "TX",
+"ave_dti": 33.727,
+"year":   2014,
+"fillKey": "(32.7,34]" 
+},
+"TN": {
+ "orig_year": "2014",
+"state": "TN",
+"ave_dti": 32.192,
+"year":   2014,
+"fillKey": "(31.5,32.7]" 
+},
+"OR": {
+ "orig_year": "2014",
+"state": "OR",
+"ave_dti": 34.141,
+"year":   2014,
+"fillKey": "(34,35.6]" 
+},
+"CA": {
+ "orig_year": "2014",
+"state": "CA",
+"ave_dti": 36.493,
+"year":   2014,
+"fillKey": "(35.6,43.4]" 
+},
+"NY": {
+ "orig_year": "2014",
+"state": "NY",
+"ave_dti": 35.797,
+"year":   2014,
+"fillKey": "(35.6,43.4]" 
+} 
+},
+"2015": {
+ "NV": {
+ "orig_year": "2015",
+"state": "NV",
+"ave_dti": 33.999,
+"year":   2015,
+"fillKey": "(34,35.6]" 
+},
+"PR": {
+ "orig_year": "2015",
+"state": "PR",
+"ave_dti": 37.863,
+"year":   2015,
+"fillKey": "(35.6,43.4]" 
+},
+"SD": {
+ "orig_year": "2015",
+"state": "SD",
+"ave_dti": 32.198,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"OH": {
+ "orig_year": "2015",
+"state": "OH",
+"ave_dti": 31.194,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"ID": {
+ "orig_year": "2015",
+"state": "ID",
+"ave_dti": 32.683,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"OK": {
+ "orig_year": "2015",
+"state": "OK",
+"ave_dti": 31.492,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"KY": {
+ "orig_year": "2015",
+"state": "KY",
+"ave_dti": 30.384,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"VA": {
+ "orig_year": "2015",
+"state": "VA",
+"ave_dti": 32.581,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"MS": {
+ "orig_year": "2015",
+"state": "MS",
+"ave_dti": 30.921,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"WV": {
+ "orig_year": "2015",
+"state": "WV",
+"ave_dti": 30.291,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"WY": {
+ "orig_year": "2015",
+"state": "WY",
+"ave_dti": 32.689,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"VT": {
+ "orig_year": "2015",
+"state": "VT",
+"ave_dti":  33.04,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"NC": {
+ "orig_year": "2015",
+"state": "NC",
+"ave_dti": 31.497,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"GA": {
+ "orig_year": "2015",
+"state": "GA",
+"ave_dti": 32.109,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"MA": {
+ "orig_year": "2015",
+"state": "MA",
+"ave_dti":  33.44,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"MT": {
+ "orig_year": "2015",
+"state": "MT",
+"ave_dti": 32.643,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"MD": {
+ "orig_year": "2015",
+"state": "MD",
+"ave_dti": 32.754,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"CT": {
+ "orig_year": "2015",
+"state": "CT",
+"ave_dti": 33.282,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"MI": {
+ "orig_year": "2015",
+"state": "MI",
+"ave_dti": 32.036,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "2015",
+"state": "IN",
+"ave_dti": 30.456,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"SC": {
+ "orig_year": "2015",
+"state": "SC",
+"ave_dti": 31.786,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"ND": {
+ "orig_year": "2015",
+"state": "ND",
+"ave_dti": 32.505,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"IL": {
+ "orig_year": "2015",
+"state": "IL",
+"ave_dti": 32.766,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "2015",
+"state": "DE",
+"ave_dti": 32.558,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"UT": {
+ "orig_year": "2015",
+"state": "UT",
+"ave_dti": 33.209,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"RI": {
+ "orig_year": "2015",
+"state": "RI",
+"ave_dti": 33.209,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"WI": {
+ "orig_year": "2015",
+"state": "WI",
+"ave_dti": 31.239,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "2015",
+"state": "NE",
+"ave_dti": 31.565,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"VI": {
+ "orig_year": "2015",
+"state": "VI",
+"ave_dti": 34.684,
+"year":   2015,
+"fillKey": "(34,35.6]" 
+},
+"OR": {
+ "orig_year": "2015",
+"state": "OR",
+"ave_dti": 33.488,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "2015",
+"state": "PA",
+"ave_dti": 32.736,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"CA": {
+ "orig_year": "2015",
+"state": "CA",
+"ave_dti":  35.75,
+"year":   2015,
+"fillKey": "(35.6,43.4]" 
+},
+"AK": {
+ "orig_year": "2015",
+"state": "AK",
+"ave_dti":  32.28,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "2015",
+"state": "HI",
+"ave_dti": 36.618,
+"year":   2015,
+"fillKey": "(35.6,43.4]" 
+},
+"MO": {
+ "orig_year": "2015",
+"state": "MO",
+"ave_dti": 31.464,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"AZ": {
+ "orig_year": "2015",
+"state": "AZ",
+"ave_dti": 32.959,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"AL": {
+ "orig_year": "2015",
+"state": "AL",
+"ave_dti": 31.098,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"FL": {
+ "orig_year": "2015",
+"state": "FL",
+"ave_dti":  34.86,
+"year":   2015,
+"fillKey": "(34,35.6]" 
+},
+"NJ": {
+ "orig_year": "2015",
+"state": "NJ",
+"ave_dti": 35.118,
+"year":   2015,
+"fillKey": "(34,35.6]" 
+},
+"NH": {
+ "orig_year": "2015",
+"state": "NH",
+"ave_dti": 33.721,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"DC": {
+ "orig_year": "2015",
+"state": "DC",
+"ave_dti": 31.603,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"LA": {
+ "orig_year": "2015",
+"state": "LA",
+"ave_dti": 31.989,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"NM": {
+ "orig_year": "2015",
+"state": "NM",
+"ave_dti": 32.026,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"GU": {
+ "orig_year": "2015",
+"state": "GU",
+"ave_dti":  35.25,
+"year":   2015,
+"fillKey": "(34,35.6]" 
+},
+"TN": {
+ "orig_year": "2015",
+"state": "TN",
+"ave_dti": 31.805,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"TX": {
+ "orig_year": "2015",
+"state": "TX",
+"ave_dti": 33.541,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "2015",
+"state": "WA",
+"ave_dti": 33.448,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"IA": {
+ "orig_year": "2015",
+"state": "IA",
+"ave_dti": 30.539,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"MN": {
+ "orig_year": "2015",
+"state": "MN",
+"ave_dti": 32.145,
+"year":   2015,
+"fillKey": "(31.5,32.7]" 
+},
+"CO": {
+ "orig_year": "2015",
+"state": "CO",
+"ave_dti": 33.322,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"NY": {
+ "orig_year": "2015",
+"state": "NY",
+"ave_dti": 35.455,
+"year":   2015,
+"fillKey": "(34,35.6]" 
+},
+"ME": {
+ "orig_year": "2015",
+"state": "ME",
+"ave_dti":  33.18,
+"year":   2015,
+"fillKey": "(32.7,34]" 
+},
+"AR": {
+ "orig_year": "2015",
+"state": "AR",
+"ave_dti": 30.605,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+},
+"KS": {
+ "orig_year": "2015",
+"state": "KS",
+"ave_dti": 31.161,
+"year":   2015,
+"fillKey": "(27.9,31.5]" 
+} 
+} 
+},
+"data": {
+ "MS": {
+ "orig_year": "1999",
+"state": "MS",
+"ave_dti": 31.542,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"KY": {
+ "orig_year": "1999",
+"state": "KY",
+"ave_dti": 31.649,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"AL": {
+ "orig_year": "1999",
+"state": "AL",
+"ave_dti": 33.065,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"SD": {
+ "orig_year": "1999",
+"state": "SD",
+"ave_dti":  31.93,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NC": {
+ "orig_year": "1999",
+"state": "NC",
+"ave_dti": 32.883,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"LA": {
+ "orig_year": "1999",
+"state": "LA",
+"ave_dti": 30.715,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"NE": {
+ "orig_year": "1999",
+"state": "NE",
+"ave_dti": 31.385,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"ME": {
+ "orig_year": "1999",
+"state": "ME",
+"ave_dti": 32.591,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"MI": {
+ "orig_year": "1999",
+"state": "MI",
+"ave_dti": 32.556,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NY": {
+ "orig_year": "1999",
+"state": "NY",
+"ave_dti": 33.714,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"MA": {
+ "orig_year": "1999",
+"state": "MA",
+"ave_dti": 32.595,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"IA": {
+ "orig_year": "1999",
+"state": "IA",
+"ave_dti":  31.77,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"DC": {
+ "orig_year": "1999",
+"state": "DC",
+"ave_dti":  30.74,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"OR": {
+ "orig_year": "1999",
+"state": "OR",
+"ave_dti":  33.62,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"GU": {
+ "orig_year": "1999",
+"state": "GU",
+"ave_dti": 31.784,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"FL": {
+ "orig_year": "1999",
+"state": "FL",
+"ave_dti": 32.745,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"AR": {
+ "orig_year": "1999",
+"state": "AR",
+"ave_dti": 30.704,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"NH": {
+ "orig_year": "1999",
+"state": "NH",
+"ave_dti": 33.945,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"GA": {
+ "orig_year": "1999",
+"state": "GA",
+"ave_dti": 32.394,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"PR": {
+ "orig_year": "1999",
+"state": "PR",
+"ave_dti":  36.53,
+"year":   1999,
+"fillKey": "(35.6,43.4]" 
+},
+"CT": {
+ "orig_year": "1999",
+"state": "CT",
+"ave_dti": 32.741,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"RI": {
+ "orig_year": "1999",
+"state": "RI",
+"ave_dti": 32.549,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"HI": {
+ "orig_year": "1999",
+"state": "HI",
+"ave_dti": 34.632,
+"year":   1999,
+"fillKey": "(34,35.6]" 
+},
+"UT": {
+ "orig_year": "1999",
+"state": "UT",
+"ave_dti": 34.298,
+"year":   1999,
+"fillKey": "(34,35.6]" 
+},
+"MD": {
+ "orig_year": "1999",
+"state": "MD",
+"ave_dti": 32.193,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NM": {
+ "orig_year": "1999",
+"state": "NM",
+"ave_dti": 32.683,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"WV": {
+ "orig_year": "1999",
+"state": "WV",
+"ave_dti": 31.459,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"TX": {
+ "orig_year": "1999",
+"state": "TX",
+"ave_dti": 32.671,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"WA": {
+ "orig_year": "1999",
+"state": "WA",
+"ave_dti": 33.737,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"CO": {
+ "orig_year": "1999",
+"state": "CO",
+"ave_dti": 33.229,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"MT": {
+ "orig_year": "1999",
+"state": "MT",
+"ave_dti": 31.991,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"AK": {
+ "orig_year": "1999",
+"state": "AK",
+"ave_dti": 33.369,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"ND": {
+ "orig_year": "1999",
+"state": "ND",
+"ave_dti": 30.987,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"OK": {
+ "orig_year": "1999",
+"state": "OK",
+"ave_dti": 31.221,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"IL": {
+ "orig_year": "1999",
+"state": "IL",
+"ave_dti": 32.876,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"AZ": {
+ "orig_year": "1999",
+"state": "AZ",
+"ave_dti":  32.06,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"VT": {
+ "orig_year": "1999",
+"state": "VT",
+"ave_dti": 34.138,
+"year":   1999,
+"fillKey": "(34,35.6]" 
+},
+"WI": {
+ "orig_year": "1999",
+"state": "WI",
+"ave_dti": 32.304,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"IN": {
+ "orig_year": "1999",
+"state": "IN",
+"ave_dti": 31.627,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"MN": {
+ "orig_year": "1999",
+"state": "MN",
+"ave_dti": 32.059,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"NJ": {
+ "orig_year": "1999",
+"state": "NJ",
+"ave_dti": 33.117,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"DE": {
+ "orig_year": "1999",
+"state": "DE",
+"ave_dti": 31.889,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"VI": {
+ "orig_year": "1999",
+"state": "VI",
+"ave_dti":     36,
+"year":   1999,
+"fillKey": "(35.6,43.4]" 
+},
+"NV": {
+ "orig_year": "1999",
+"state": "NV",
+"ave_dti": 33.151,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"VA": {
+ "orig_year": "1999",
+"state": "VA",
+"ave_dti": 32.018,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"WY": {
+ "orig_year": "1999",
+"state": "WY",
+"ave_dti": 32.429,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"KS": {
+ "orig_year": "1999",
+"state": "KS",
+"ave_dti": 30.962,
+"year":   1999,
+"fillKey": "(27.9,31.5]" 
+},
+"ID": {
+ "orig_year": "1999",
+"state": "ID",
+"ave_dti": 32.746,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"PA": {
+ "orig_year": "1999",
+"state": "PA",
+"ave_dti": 32.229,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"SC": {
+ "orig_year": "1999",
+"state": "SC",
+"ave_dti": 32.727,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"OH": {
+ "orig_year": "1999",
+"state": "OH",
+"ave_dti": 32.305,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"CA": {
+ "orig_year": "1999",
+"state": "CA",
+"ave_dti": 33.715,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+},
+"MO": {
+ "orig_year": "1999",
+"state": "MO",
+"ave_dti": 31.667,
+"year":   1999,
+"fillKey": "(31.5,32.7]" 
+},
+"TN": {
+ "orig_year": "1999",
+"state": "TN",
+"ave_dti": 32.812,
+"year":   1999,
+"fillKey": "(32.7,34]" 
+} 
+},
+"id": "chartdfa63941322a" 
+}
+  chartParams.element = document.getElementById('chartdfa63941322a')
+  
+  
+  var mapchartdfa63941322a = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchartdfa63941322a.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchartdfa63941322a.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchartdfa63941322a.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+    <script></script>    
+  </body>
+</html>

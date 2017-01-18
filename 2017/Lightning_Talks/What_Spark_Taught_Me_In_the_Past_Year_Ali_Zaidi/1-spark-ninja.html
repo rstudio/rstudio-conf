@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What Spark Taught Me In the Past Year</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Ali_Zaidi %&gt;% lightning_talk %&gt;% rstudio::conf" />
+    <link href="libs/remark-css/example.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# What Spark Taught Me In the Past Year
+## How I Learned to Stop Worrying and Enjoy Being Lazy
+### Ali_Zaidi %&gt;% lightning_talk %&gt;% rstudio::conf
+### 2017/01/07
+
+---
+
+
+
+
+&lt;style type="text/css"&gt;
+.callout-bold strong {
+  font-weight: normal;
+  color: #444444;
+  background-color: #FFFFAA;
+}
+.hljs-keyword {
+  font-weight: normal !important;
+}
+th {
+  text-align: left;
+}
+td, th {
+  padding: 3px 20px 3px 0;
+}
+&lt;/style&gt;
+
+
+## Apache Spark Core
+
+![](img/spark-core-apis.png)
+
+---
+
+## R and Spark Became Intimate Friends in 2016
+
++ Last year was an exciting year for the R APIs for Spark:
+
+--
+
+1. [`SparkR`, 1.6 -&gt; 2.0](https://spark.apache.org/docs/2.0.0/sparkr.html)
+  - Greater adoption of SparkML algorithms
+  - Introduction of user-defined functions/functionals
+      * `spark.lapply`, `dapply`, `gapply`, `gapply.collect`
+      * apply a user-defined function to each partition or group of a Spark DataFrame
+      * each group _must_ fit in the driver memory
+  - Issues: Doesn't play well with `dplyr`
+--
+
+2. [`sparklyr`](spark.rstudio.com)
+  - A complete _tidy_ interface to Spark
+  - Works seamlessly with `dplyr`
+  - IDE support to view Spark DataFrames and manage Spark connections
+  - Custom R UDFs are still in development ([#81](https://github.com/rstudio/sparklyr/issues/81))
+  - Awesome extension mechanism
+--
+
+3. [R Server on Spark](https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-r-server-get-started)
+  - Fully managed Hadoop/Spark on the cloud
+  - Deploy `RevoScaleR` algorithms into Spark clusters
+      * Complete support for all the PEMA modeling functions in `RevoScaleR`
+---
+
+## Azure HDInsight
+### Full Managed Hadoop/Spark on the Cloud
+
++ With Azure HDInsight, you don't have to choose between the APIs
++ Can use any combination of the APIs for your data science application
++ Focus less on optimizing code, rewriting your functions, and focus more on developing applications
++ HDInsight R Server clusters ship with RStudio Server
++ You can add additional nodes to scale your cluster out, shrink it down when you don't need the extra resources
++ Run your own R functions across your cluster in paralle using `rxDataStep`, `rxExec` and `foreach`
+
+---
+
+## Understanding Spark as an R User
+
+Core components of Spark (left) and how to think about them as R programmers (right):
+--
+
+.pull-left[
+1. RDD;
+
+1. DataFrame;
+
+1. Transformers;
+  - a function that takes a RDD/DataFrame in and pushes another RDD/DataFrame out
+
+1. Actions;
+  - a function that takes a RDD/DataFrame in, and puts anything else out
+
+]
+--
+
+.pull-right[
+1. Distributed immutable `list`;
+
+1. Distributed `data.frame`;
+
+1. Lazy Computations;
+
+  &lt;br&gt;
+  &lt;br&gt;
+  &lt;br&gt;
+  &lt;br&gt;
+  
+1. Eager Queries;
+
+]
+---
+
+background-image: url(http://i.imgur.com/5GbW690.gif)
+background-size: 1200px
+background-position: 50% 50%
+class: center, bottom, inverse
+
+
+# The Art of Being Lazy
+---
+
+## How To Use Spark Effectively with R
+
+
+1. Apache Spark's core computational framework is a functional programming paradigm for building DAGs (distributed acyclical graphs) for the data processing job at hand
+--
+
+  - DAGs contain the logical flow of how data is used to compute the result
+  - Spark optimizes computations within a Spark job by __caching__ data
+--
+
+1. Every job in Spark is split into:
+  - _stages_
+      * basic physical unit of operation
+--
+      * combination of as many transformations as possible into a single action, but no shuffles
+--
+      * unlike mapreduce, which only supports two-stages (map and reduce), any Spark job could have multiple stages that can run concurrently
+--
+  - _tasks_
+      * basic unit of operation per partition
+--
+1. When you need to reuse data across different Spark jobs, __cache__ the Spark DataFrame so you can reuse it
+--
+
+1. When you have data you have worked hard on tidying, save it to an efficient format, like _parquet_
+
+---
+
+## `sparklyr` 
+### Tidy Data Manipulation in Spark
+
+* `sparklyr` makes common `tidyverse` operations very simple
+    - also, `spark_install` will save you from hair-loss!
+* Full support for `SparkML`
+
+
+
+```r
+origins &lt;- file.path("wasb://mrs-spark@alizaidi.blob.core.windows.net",
+                     "user/RevoShare/alizaidi/Freddie/Acquisition")
+library(sparklyr)
+sc &lt;- spark_connect("yarn-client")
+freddie_origins &lt;- spark_read_csv(sc,
+                                  path = origins,
+                                  name = 'freddie_origins',
+                                  header = FALSE,
+                                  delimiter = "|"
+                                  )
+```
+---
+
+## `sparklyr` 
+### Tidy Data Manipulation in Spark
+
+
+```r
+freddie_origins
+```
+
+```
+## Source:   query [2.184e+07 x 25]
+## Database: spark connection master=yarn-client app=sparklyr local=FALSE
+## 
+##       V1     V2    V3     V4    V5    V6    V7    V8    V9   V10    V11
+##    &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;int&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt;
+## 1    715 200906     N 203905 16974   000     1     O    80    39 412000
+## 2    784 200907     N 203906 16974   000     1     O    49    42 154000
+## 3    764 200906     N 203905 19780   000     1     O    80    37 417000
+## 4    792 200907     N 203906    NA   000     1     O    80    31  78000
+## 5    716 200906     N 203905 16974   000     1     O    59    18 144000
+## 6    780 200908     N 203907 16974   000     1     O    73    33 148000
+## 7    781 200905     N 203904    NA   000     1     O    80    19 140000
+## 8    776 200907     N 203612 33460   000     1     O    77    49 252000
+## 9    710 200906     N 203905    NA   000     1     O    80    34 140000
+## 10   803 200906     N 203905    NA   000     1     O    74    17 125000
+## # ... with 2.184e+07 more rows, and 14 more variables: V12 &lt;int&gt;,
+## #   V13 &lt;dbl&gt;, V14 &lt;chr&gt;, V15 &lt;chr&gt;, V16 &lt;chr&gt;, V17 &lt;chr&gt;, V18 &lt;chr&gt;,
+## #   V19 &lt;int&gt;, V20 &lt;chr&gt;, V21 &lt;chr&gt;, V22 &lt;int&gt;, V23 &lt;int&gt;, V24 &lt;chr&gt;,
+## #   V25 &lt;chr&gt;
+```
+
+---
+## `sparklyr` 
+### Tidy Data Manipulation in Spark
+
+
+```r
+class(freddie_origins)
+```
+
+```
+## [1] "tbl_spark" "tbl_sql"   "tbl_lazy"  "tbl"
+```
+
+--
+
++ `tbl_spark` inherits `dplyr` methods from `tbl_sql`
++ Spark SQL supports a subset of the SQL-92 language, so not all your SQL statements will work
+    - actually using the Hive Context, which supports a richer subset
+  
+---
+
+## `sparklyr` 
+### Using `dplyr` with `tbl_spark`
+
+
+```r
+library(dplyr)
+freddie_rename &lt;- freddie_origins %&gt;% rename(
+                          credit_score = V1,
+                          first_payment = V2,
+                          first_home = V3,
+                          maturity = V4,
+                          msa = V5,
+                          mi_perc = V6,
+                          num_units = V7,
+                          occ_status = V8,
+                          cltv = V9,
+                          dti = V10,
+                          upb = V11,
+                          ltv = V12,
+                          orig_rate = V13,
+                          channel = V14,
+                          ppm = V15,
+                          prod_type = V16,
+                          state = V17,
+                          prop_type = V18,
+                          post_code = V19,
+                          loan_number = V20,
+                          loan_purpose = V21,
+                          orig_term = V22,
+                          num_borrowers = V23,
+                          seller = V24,
+                          servicer = V25
+                          )
+freddie_rename %&gt;% head
+```
+
+```
+## Source:   query [6 x 25]
+## Database: spark connection master=yarn-client app=sparklyr local=FALSE
+## 
+##   credit_score first_payment first_home maturity   msa mi_perc num_units
+##          &lt;chr&gt;         &lt;int&gt;      &lt;chr&gt;    &lt;int&gt; &lt;int&gt;   &lt;chr&gt;     &lt;int&gt;
+## 1          715        200906          N   203905 16974     000         1
+## 2          784        200907          N   203906 16974     000         1
+## 3          764        200906          N   203905 19780     000         1
+## 4          792        200907          N   203906    NA     000         1
+## 5          716        200906          N   203905 16974     000         1
+## 6          780        200908          N   203907 16974     000         1
+## # ... with 18 more variables: occ_status &lt;chr&gt;, cltv &lt;dbl&gt;, dti &lt;chr&gt;,
+## #   upb &lt;int&gt;, ltv &lt;int&gt;, orig_rate &lt;dbl&gt;, channel &lt;chr&gt;, ppm &lt;chr&gt;,
+## #   prod_type &lt;chr&gt;, state &lt;chr&gt;, prop_type &lt;chr&gt;, post_code &lt;int&gt;,
+## #   loan_number &lt;chr&gt;, loan_purpose &lt;chr&gt;, orig_term &lt;int&gt;,
+## #   num_borrowers &lt;int&gt;, seller &lt;chr&gt;, servicer &lt;chr&gt;
+```
+---
+
+## Create Date Fields
+
+The origination date is buried inside the loan number field. We will pick it out by indexing the loan number substring:
+
+
+```r
+freddie_rename %&gt;% select(loan_number)
+```
+
+```
+## Source:   query [2.184e+07 x 1]
+## Database: spark connection master=yarn-client app=sparklyr local=FALSE
+## 
+##     loan_number
+##           &lt;chr&gt;
+## 1  F109Q2000001
+## 2  F109Q2000002
+## 3  F109Q2000003
+## 4  F109Q2000004
+## 5  F109Q2000005
+## 6  F109Q2000006
+## 7  F109Q2000007
+## 8  F109Q2000008
+## 9  F109Q2000009
+## 10 F109Q2000010
+## # ... with 2.184e+07 more rows
+```
+---
+
+## Substring Operations
+
+
+```r
+freddie_rename &lt;- freddie_rename %&gt;% 
+  mutate(orig_date = substr(loan_number, 3, 4),
+         year = as.numeric(substr(loan_number, 3, 2)))
+
+freddie &lt;- freddie_rename %&gt;% 
+  mutate(orig_year = paste0(ifelse(year &lt; 10, "200", 
+                                   ifelse(year &gt; 16, "19",
+                                          "20")), year))
+
+freddie &lt;- freddie %&gt;% 
+  mutate(orig_year = substr(orig_year, 1, 4))
+
+freddie %&gt;% head
+```
+
+```
+## Source:   query [6 x 28]
+## Database: spark connection master=yarn-client app=sparklyr local=FALSE
+## 
+##   credit_score first_payment first_home maturity   msa mi_perc num_units
+##          &lt;chr&gt;         &lt;int&gt;      &lt;chr&gt;    &lt;int&gt; &lt;int&gt;   &lt;chr&gt;     &lt;int&gt;
+## 1          715        200906          N   203905 16974     000         1
+## 2          784        200907          N   203906 16974     000         1
+## 3          764        200906          N   203905 19780     000         1
+## 4          792        200907          N   203906    NA     000         1
+## 5          716        200906          N   203905 16974     000         1
+## 6          780        200908          N   203907 16974     000         1
+## # ... with 21 more variables: occ_status &lt;chr&gt;, cltv &lt;dbl&gt;, dti &lt;chr&gt;,
+## #   upb &lt;int&gt;, ltv &lt;int&gt;, orig_rate &lt;dbl&gt;, channel &lt;chr&gt;, ppm &lt;chr&gt;,
+## #   prod_type &lt;chr&gt;, state &lt;chr&gt;, prop_type &lt;chr&gt;, post_code &lt;int&gt;,
+## #   loan_number &lt;chr&gt;, loan_purpose &lt;chr&gt;, orig_term &lt;int&gt;,
+## #   num_borrowers &lt;int&gt;, seller &lt;chr&gt;, servicer &lt;chr&gt;, orig_date &lt;chr&gt;,
+## #   year &lt;dbl&gt;, orig_year &lt;chr&gt;
+```
+---
+
+## Calculate Average Credit Score by Year
+
+
+
+```r
+fico_year &lt;- freddie %&gt;% group_by(orig_year, state) %&gt;% 
+  summarise(ave_fico = mean(credit_score)) %&gt;% collect
+fico_year %&gt;% head
+```
+
+```
+## Source: local data frame [6 x 3]
+## Groups: orig_year [5]
+## 
+##   orig_year state ave_fico
+##       &lt;chr&gt; &lt;chr&gt;    &lt;dbl&gt;
+## 1      2002    KY 714.1898
+## 2      2010    VA 766.1142
+## 3      2011    IA 764.5864
+## 4      2003    SD 730.4037
+## 5      2003    ND 730.9264
+## 6      2000    GA 709.1952
+```
+---
+
+## Summarize In a Function
+
+
+```r
+year_state_sum &lt;- function(val = "credit_score") {
+  
+  library(lazyeval)
+  
+  year_state &lt;- freddie %&gt;% group_by(orig_year, state) %&gt;% 
+    summarise_(sum_val = interp(~mean(var), var = as.name(val)))
+  
+  year_state &lt;- year_state %&gt;% collect
+  
+  names(year_state)[3] &lt;- paste0("ave_", val)
+  
+  return(year_state)
+  
+}
+```
+---
+
+## Plot
+
+
+```r
+library(rMaps)
+year_state_sum("dti") %&gt;% 
+  mutate(year = as.numeric(orig_year)) %&gt;% 
+  rMaps::ichoropleth(ave_dti ~ state, data = .,
+                     animate = "year",
+                     geographyConfig = list(popupTemplate = "#!function(geo, data) {
+                                         return '&lt;div class=\"hoverinfo\"&gt;&lt;strong&gt;'+
+                                         data.state + '&lt;br&gt;' + 'Average DTI in  '+ data.year + ': ' +
+                                         data.ave_dti.toFixed(2)+
+                                         '&lt;/strong&gt;&lt;/div&gt;';}!#")) -&gt; state_map
+```
+---
+
+class: inverse
+
+## Thanks!
+
++ [spark.rstudio.com](spark.rstudio.com)
++ [github.com/Azure/mr4ds](https://github.com/Azure/mr4ds)
++ [Spark bookdown](https://bookdown.org/alizaidi/mrs-spark-ml/)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true
+});
+if (window.HTMLWidgets) slideshow.on('showSlide', function (slide) {setTimeout(function() {window.dispatchEvent(new Event('resize'));}, 100)});</script>
+
+  </body>
+</html>

@@ -1,0 +1,144 @@
+---
+title: "ggedit RStudio::conf 2017 Presentation"
+author: "Jonathan Sidi"
+date: "January 13, 2017"
+output: pdf_document
+classoption: landscape
+---
+
+Metrum Research Group [\@MetrumRG](https://twitter.com/MetrumRG)
+
+Jonathan Sidi [\@yoniceedee](https://twitter.com/yoniceedee)
+
+[ggedit github dev repo](https://github.com/metrumresearchgroup/ggedit)
+
+[Metrum open source tools](http://metrumrg.com/opensourcetools.html)
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=7, fig.path='RstudioConf/Figs/', warning=FALSE, message=FALSE)
+```
+
+```{r}
+#devtools::install_github("metrumresearchgroup/ggedit",subdir="ggedit")
+rm(list=ls())
+library(ggedit)
+#?ggedit
+
+p0=list(
+  Scatter=iris%>%ggplot(aes(x =Sepal.Length,y=Sepal.Width))+
+    geom_point(aes(colour=Species),size=6),
+  
+  ScatterFacet=iris%>%ggplot(aes(x =Sepal.Length,y=Sepal.Width))+
+    geom_point(aes(colour=Species),size=6)+
+      geom_line(linetype=2)+
+    facet_wrap(~Species,scales='free')+
+    labs(title='Some Title')
+  )
+
+#a=ggedit(p.in = p0,verbose = T) #run ggedit
+dat_url <- paste0("https://raw.githubusercontent.com/metrumresearchgroup/ggedit/master/RstudioExampleObj.rda")
+load(url(dat_url)) #pre-run example
+
+ldply(a,names)
+
+plot(a)
+
+comparePlots=c(p0,a$UpdatedPlots)
+names(comparePlots)[c(3:4)]=paste0(names(comparePlots)[c(3:4)],"Updated")
+```
+
+#Initial Comparison Plot
+```{r}
+plot(as.ggedit(comparePlots))
+```
+
+#Apply updated theme of first plot to second plot
+```{r}
+comparePlots$ScatterFacetNewTheme=p0$ScatterFacet+a$UpdatedThemes$Scatter
+
+plot(as.ggedit(comparePlots[c("ScatterFacet","ScatterFacetNewTheme")]),
+      plot.layout = list(list(rows=1,cols=1),list(rows=2,cols=1))
+     )
+```
+#Using Remove and Replace Function
+##Overlay two layers of same geom
+```{r}
+(comparePlots$ScatterMistake=p0$Scatter+a$UpdatedLayers$ScatterFacet[[1]])
+```
+
+##Remove
+```{r}
+(comparePlots$ScatterNoLayer=p0$Scatter%>%
+  rgg(oldGeom = 'point'))
+```
+
+##Replace Geom_Point layer on Scatter Plot
+```{r}
+(comparePlots$ScatterNewLayer=p0$Scatter%>%
+  rgg(oldGeom = 'point',
+      oldGeomIdx = 1,
+      newLayer = a$UpdatedLayers$ScatterFacet[[1]]))
+```
+
+##Remove and Replace Geom_Point layer and add the new theme
+```{r}
+(comparePlots$ScatterNewLayerTheme=p0$Scatter%>%
+  rgg(oldGeom = 'point',
+      newLayer = a$UpdatedLayers$ScatterFacet[[1]])+
+  a$UpdatedThemes$Scatter)
+```
+
+#Cloning Layers
+##A geom_point layer
+```{r}
+(l=p0$Scatter$layers[[1]])
+```
+
+##Clone the layer
+```{r}
+(l1=cloneLayer(l))
+```
+
+###Test that all is equal
+```{r}
+all.equal(l,l1)
+```
+
+##Verbose copy of layer
+```{r}
+(l1.txt=cloneLayer(l,verbose = T))
+```
+
+###Parse the text
+```{r}
+(l2=eval(parse(text=l1.txt)))
+```
+
+###Test that all is equal
+```{r}
+all.equal(l,l2)
+```
+
+#Back to our example
+```{r}
+  #Original geom_point layer
+  parse(text=cloneLayer(p0$ScatterFacet$layers[[1]],verbose = T))
+  #new Layer
+  parse(text=a$UpdatedLayerCalls$ScatterFacet[[1]])
+```
+
+#Visualize Themes
+```{r}
+pTheme=list()
+(pTheme$Base=plot(a$UpdatedThemes$Scatter))
+```
+
+##Visualize Part of Themes
+```{r}
+(pTheme$Select=plot(a$UpdatedThemes$Scatter,themePart = c('plot','legend'),fnt = 18))
+```
+
+##Visually Compare Theme
+```{r}
+(pTheme$Compare=plot(obj=a$UpdatedThemes$Scatter,obj2 = ggplot2:::theme_get()))
+```
