@@ -1,0 +1,213 @@
+---
+output:
+  revealjs::revealjs_presentation:
+    reveal_plugins: ["zoom"]
+    self_contained: false
+    theme: "solarized"
+    center: true
+    smart: false
+    slide_level: 2
+---
+
+<h1>Database Best Practices</h1>
+<h2>DBI, odbc and pool</h2>
+<h3>Jim Hester</h3>
+
+## Databases
+
+![](main_databases.jpg)
+
+- [RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system) - **R**elational **D**ata**base** **M**anagement **S**ystem
+- [SQL](https://en.wikipedia.org/wiki/SQL) - **S**trucured **Q**uery **L**anguage
+- Lots of data
+- Many types exist
+- Each has proprietary API / SQL Dialect
+
+## [ODBC](https://msdn.microsoft.com/en-us/library/ms710252(v=vs.85).aspx) - <u>O</u>pen <u>D</u>ata<u>b</u>ase <u>C</u>onnectivity
+
+- Standard Interface (API)
+- Connection Configuration / Strings
+- Widely adopted (Drivers)
+- Cross Platform (Linux, MacOS, Windows)
+
+## [DBI](https://cran.r-project.org/package=DBI) - <u>D</u>ata<u>b</u>ase <u>I</u>nterface
+- DBs <-> R/S
+- First CRAN release (2001-12-05), also S-PLUS
+- David A. James - (2001), Hadley Wickham (2014), Kirill Müller (2016)
+- [DBItest](https://github.com/rstats-db/DBItest) - comprehensive compatability testing
+- Next dplyr release, generic DBI backend
+
+---
+
+<section>
+<h2>[odbc](https://www.github.com/rstats-db/odbc#readme)</h2>
+
+- `devtools::install_github("rstats-db/odbc")`
+- DBI compatible
+- Complete Rewrite of RODBC
+- C++ / Rcpp
+- Well tested ![](https://img.shields.io/codecov/c/github/rstats-db/odbc/master.svg)
+- Support for dates / timestamps / raw binary types
+- Batched queries
+  - Faster (3-4X Reading, 2x Writing than RODBC)
+- Parameterized queries
+
+---
+
+<section>
+<h2>Reading</h2>
+
+```r
+# First using RODBC / RODBCDBI
+library(DBI)
+library(RODBCDBI)
+rodbc <- dbConnect(RODBCDBI::ODBC(), dsn = "PostgreSQL")
+system.time(rodbc_result <- dbReadTable(rodbc, "flights"))
+#> Warning: closing unused RODBC handle 2
+#>    user  system elapsed 
+#>  19.203   1.356  21.724
+
+# Now using odbc
+odbc <- dbConnect(odbc::odbc(), dsn = "PostgreSQL")
+system.time(odbc_result <- dbReadTable(odbc, "flights"))
+#>    user  system elapsed 
+#>   5.119   0.290   6.771
+```
+</section>
+
+---
+
+<section>
+<h2>Writing</h2>
+
+```r
+library(nycflights13)
+# rodbc does not support writing timestamps natively.
+rodbc <- dbConnect(RODBCDBI::ODBC(), dsn = "PostgreSQL")
+system.time(dbWriteTable(rodbc, "flights2", as.data.frame(flights[, names(flights) != "time_hour"])))
+#>    user  system elapsed 
+#>   6.693   3.786  48.423
+
+# Now using odbc
+odbc <- dbConnect(odbc::odbc(), dsn = "PostgreSQL")
+system.time(dbWriteTable(odbc, "flights3", as.data.frame(flights)))
+#>    user  system elapsed 
+#>   7.802   3.703  26.016
+```
+</section>
+</section>
+
+## Avoiding SQL Injection (Stopping little bobby tables)
+![](http://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+
+- Very bad!!! - Users could erase entire tables!
+- DBI
+    - `sqlInterpolate()`, `dbQuoteString()`, `dbQuoteIdentifier()`
+    - `dbBind()` - Parameterized Queries
+
+## Parameterized Queries
+- `INSERT INTO XYZ (?, ?)`, `dbBind()`
+- `dbWriteTable()` (automatic)
+
+## Parameterized Queries
+
+```{r, results = "hide"}
+library(DBI);con <- dbConnect(odbc::odbc(), "PostgreSQL");dbWriteTable(con, "iris", iris, overwrite = TRUE)
+```
+```{r}
+iris_result <- dbSendQuery(con,
+  "SELECT * FROM iris WHERE \"Petal.Width\"> ?")
+dbBind(iris_result, 2.3)
+dbFetch(iris_result)
+dbBind(iris_result, 2.4)
+dbFetch(iris_result)
+dbClearResult(iris_result); dbDisconnect(con)
+```
+
+## Demo
+
+## [Pool](https://github.com/rstudio/pool#readme)
+
+- General Object Pooling, reuse objects from pool
+- DBI Connections - Use Case
+- Problem - Shiny Applications
+    - Single R process
+    - Multiple Users
+    - Establishing Connections
+        - Takes time
+        - Limited #
+        - Failure?
+
+## [Pool](https://github.com/rstudio/pool#readme)
+
+```{r, eval = FALSE}
+library(shiny)
+library(DBI)
+library(pool)
+
+pool <- dbPool(
+  drv = RMySQL::MySQL(),
+  dbname = "shinydemo",
+  host = "shiny-demo.csa7qlmguqrf.us-east-1.rds.amazonaws.com",
+  username = "guest",
+  password = "guest"
+)
+
+ui <- fluidPage(
+  textInput("ID", "Enter your ID:", "5"),
+  tableOutput("tbl"),
+  numericInput("nrows", "How many cities to show?", 10),
+  plotOutput("popPlot")
+)
+
+server <- function(input, output, session) {
+  output$tbl <- renderTable({
+    sql <- "SELECT * FROM City WHERE ID = ?id;"
+    query <- sqlInterpolate(pool, sql, id = input$ID)
+    dbGetQuery(pool, query)
+  })
+  output$popPlot <- renderPlot({
+    query <- paste0("SELECT * FROM City LIMIT ",
+                    as.integer(input$nrows)[1], ";")
+    df <- dbGetQuery(pool, query)
+    pop <- df$Population
+    names(pop) <- df$Name
+    barplot(pop)
+  })
+}
+
+shinyApp(ui, server)
+```
+
+## Future Work
+
+## Generic Connections Tab
+ - Like sparklyr tab in RStudio IDE 1.0
+ - Connections Dialog - Easy connection creation
+ - Re-establish previously used connections
+ - View available Drivers / Data Source Names (DSN)
+ - View Tables / Schemas
+ - Will be included in RStudio IDE 1.1
+
+## RStudio Server Pro - Bundled ODBC Drivers
+ - Easy setup for a wide variety of DB (50+)
+ - Improved performance
+ - Improved error messaging
+ - Kerberos support
+ 
+---
+
+### [DBI](https://cran.r-project.org/package=DBI) 
+**`install.packages("DBI")`**
+
+`sqlIterpolate()`, `dbQuoteString()`, `dbQuoteIdentifier()`
+
+### [odbc](https://www.github.com/rstats-db/odbc#readme) 
+**`devtools::install_github("rstats-db/odbc")`**
+
+`dbConnect(odbc::odbc(), ...)`, `dbGetQuery()`, `dbReadTable()`, `dbWriteTable()`
+
+### [pool](https://www.github.com/rstudio/pool#readme)
+**`devtools::install_github("rstudio/pool")`**
+
+`dbPool()`, `sqlInterpolate()`

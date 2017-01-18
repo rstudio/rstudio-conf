@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/css/reveal.css"/>
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/css/theme/solarized.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/css/print/pdf.css' : '2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section class="slide level2">
+
+<h1>
+Database Best Practices
+</h1>
+<h2>
+DBI, odbc and pool
+</h2>
+<h3>
+Jim Hester
+</h3>
+</section>
+<section id="databases" class="slide level2">
+<h1>Databases</h1>
+<p><img src="main_databases.jpg" /></p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a> - <strong>R</strong>elational <strong>D</strong>ata<strong>base</strong> <strong>M</strong>anagement <strong>S</strong>ystem</li>
+<li><a href="https://en.wikipedia.org/wiki/SQL">SQL</a> - <strong>S</strong>trucured <strong>Q</strong>uery <strong>L</strong>anguage</li>
+<li>Lots of data</li>
+<li>Many types exist</li>
+<li>Each has proprietary API / SQL Dialect</li>
+</ul>
+</section>
+<section id="odbc---open-database-connectivity" class="slide level2">
+<h1><a href="https://msdn.microsoft.com/en-us/library/ms710252(v=vs.85).aspx">ODBC</a> - <u>O</u>pen <u>D</u>ata<u>b</u>ase <u>C</u>onnectivity</h1>
+<ul>
+<li>Standard Interface (API)</li>
+<li>Connection Configuration / Strings</li>
+<li>Widely adopted (Drivers)</li>
+<li>Cross Platform (Linux, MacOS, Windows)</li>
+</ul>
+</section>
+<section id="dbi---database-interface" class="slide level2">
+<h1><a href="https://cran.r-project.org/package=DBI">DBI</a> - <u>D</u>ata<u>b</u>ase <u>I</u>nterface</h1>
+<ul>
+<li>DBs &lt;-&gt; R/S</li>
+<li>First CRAN release (2001-12-05), also S-PLUS</li>
+<li>David A. James - (2001), Hadley Wickham (2014), Kirill Müller (2016)</li>
+<li><a href="https://github.com/rstats-db/DBItest">DBItest</a> - comprehensive compatability testing</li>
+<li>Next dplyr release, generic DBI backend</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<section>
+<h2>
+<a href="https://www.github.com/rstats-db/odbc#readme">odbc</a>
+</h2>
+<ul>
+<li><code>devtools::install_github(&quot;rstats-db/odbc&quot;)</code></li>
+<li>DBI compatible</li>
+<li>Complete Rewrite of RODBC</li>
+<li>C++ / Rcpp</li>
+<li>Well tested <img src="https://img.shields.io/codecov/c/github/rstats-db/odbc/master.svg" /></li>
+<li>Support for dates / timestamps / raw binary types</li>
+<li>Batched queries</li>
+<li>Faster (3-4X Reading, 2x Writing than RODBC)</li>
+<li>Parameterized queries</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<section>
+<h2>
+Reading
+</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># First using RODBC / RODBCDBI</span>
+<span class="kw">library</span>(DBI)
+<span class="kw">library</span>(RODBCDBI)
+rodbc &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(RODBCDBI::<span class="kw">ODBC</span>(), <span class="dt">dsn =</span> <span class="st">&quot;PostgreSQL&quot;</span>)
+<span class="kw">system.time</span>(rodbc_result &lt;-<span class="st"> </span><span class="kw">dbReadTable</span>(rodbc, <span class="st">&quot;flights&quot;</span>))
+<span class="co">#&gt; Warning: closing unused RODBC handle 2</span>
+<span class="co">#&gt;    user  system elapsed </span>
+<span class="co">#&gt;  19.203   1.356  21.724</span>
+
+<span class="co"># Now using odbc</span>
+odbc &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(odbc::<span class="kw">odbc</span>(), <span class="dt">dsn =</span> <span class="st">&quot;PostgreSQL&quot;</span>)
+<span class="kw">system.time</span>(odbc_result &lt;-<span class="st"> </span><span class="kw">dbReadTable</span>(odbc, <span class="st">&quot;flights&quot;</span>))
+<span class="co">#&gt;    user  system elapsed </span>
+<span class="co">#&gt;   5.119   0.290   6.771</span></code></pre></div>
+</section>
+</section>
+<section class="slide level2">
+
+<section>
+<h2>
+Writing
+</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(nycflights13)
+<span class="co"># rodbc does not support writing timestamps natively.</span>
+rodbc &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(RODBCDBI::<span class="kw">ODBC</span>(), <span class="dt">dsn =</span> <span class="st">&quot;PostgreSQL&quot;</span>)
+<span class="kw">system.time</span>(<span class="kw">dbWriteTable</span>(rodbc, <span class="st">&quot;flights2&quot;</span>, <span class="kw">as.data.frame</span>(flights[, <span class="kw">names</span>(flights) !=<span class="st"> &quot;time_hour&quot;</span>])))
+<span class="co">#&gt;    user  system elapsed </span>
+<span class="co">#&gt;   6.693   3.786  48.423</span>
+
+<span class="co"># Now using odbc</span>
+odbc &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(odbc::<span class="kw">odbc</span>(), <span class="dt">dsn =</span> <span class="st">&quot;PostgreSQL&quot;</span>)
+<span class="kw">system.time</span>(<span class="kw">dbWriteTable</span>(odbc, <span class="st">&quot;flights3&quot;</span>, <span class="kw">as.data.frame</span>(flights)))
+<span class="co">#&gt;    user  system elapsed </span>
+<span class="co">#&gt;   7.802   3.703  26.016</span></code></pre></div>
+</section>
+</section>
+</section>
+<section id="avoiding-sql-injection-stopping-little-bobby-tables" class="slide level2">
+<h1>Avoiding SQL Injection (Stopping little bobby tables)</h1>
+<p><img src="http://imgs.xkcd.com/comics/exploits_of_a_mom.png" /></p>
+<ul>
+<li>Very bad!!! - Users could erase entire tables!</li>
+<li>DBI
+<ul>
+<li><code>sqlInterpolate()</code>, <code>dbQuoteString()</code>, <code>dbQuoteIdentifier()</code></li>
+<li><code>dbBind()</code> - Parameterized Queries</li>
+</ul></li>
+</ul>
+</section>
+<section id="parameterized-queries" class="slide level2">
+<h1>Parameterized Queries</h1>
+<ul>
+<li><code>INSERT INTO XYZ (?, ?)</code>, <code>dbBind()</code></li>
+<li><code>dbWriteTable()</code> (automatic)</li>
+</ul>
+</section>
+<section id="parameterized-queries-1" class="slide level2">
+<h1>Parameterized Queries</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(DBI);con &lt;-<span class="st"> </span><span class="kw">dbConnect</span>(odbc::<span class="kw">odbc</span>(), <span class="st">&quot;PostgreSQL&quot;</span>);<span class="kw">dbWriteTable</span>(con, <span class="st">&quot;iris&quot;</span>, iris, <span class="dt">overwrite =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">iris_result &lt;-<span class="st"> </span><span class="kw">dbSendQuery</span>(con,
+  <span class="st">&quot;SELECT * FROM iris WHERE </span><span class="ch">\&quot;</span><span class="st">Petal.Width</span><span class="ch">\&quot;</span><span class="st">&gt; ?&quot;</span>)
+<span class="kw">dbBind</span>(iris_result, <span class="fl">2.3</span>)
+<span class="kw">dbFetch</span>(iris_result)</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          6.3         3.3          6.0         2.5 virginica
+## 2          7.2         3.6          6.1         2.5 virginica
+## 3          5.8         2.8          5.1         2.4 virginica
+## 4          6.3         3.4          5.6         2.4 virginica
+## 5          6.7         3.1          5.6         2.4 virginica
+## 6          6.7         3.3          5.7         2.5 virginica</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dbBind</span>(iris_result, <span class="fl">2.4</span>)
+<span class="kw">dbFetch</span>(iris_result)</code></pre></div>
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          6.3         3.3          6.0         2.5 virginica
+## 2          7.2         3.6          6.1         2.5 virginica
+## 3          6.7         3.3          5.7         2.5 virginica</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dbClearResult</span>(iris_result); <span class="kw">dbDisconnect</span>(con)</code></pre></div>
+</section>
+<section id="demo" class="slide level2">
+<h1>Demo</h1>
+</section>
+<section id="pool" class="slide level2">
+<h1><a href="https://github.com/rstudio/pool#readme">Pool</a></h1>
+<ul>
+<li>General Object Pooling, reuse objects from pool</li>
+<li>DBI Connections - Use Case</li>
+<li>Problem - Shiny Applications
+<ul>
+<li>Single R process</li>
+<li>Multiple Users</li>
+<li>Establishing Connections
+<ul>
+<li>Takes time</li>
+<li>Limited #</li>
+<li>Failure?</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
+<section id="pool-1" class="slide level2">
+<h1><a href="https://github.com/rstudio/pool#readme">Pool</a></h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(shiny)
+<span class="kw">library</span>(DBI)
+<span class="kw">library</span>(pool)
+
+pool &lt;-<span class="st"> </span><span class="kw">dbPool</span>(
+  <span class="dt">drv =</span> RMySQL::<span class="kw">MySQL</span>(),
+  <span class="dt">dbname =</span> <span class="st">&quot;shinydemo&quot;</span>,
+  <span class="dt">host =</span> <span class="st">&quot;shiny-demo.csa7qlmguqrf.us-east-1.rds.amazonaws.com&quot;</span>,
+  <span class="dt">username =</span> <span class="st">&quot;guest&quot;</span>,
+  <span class="dt">password =</span> <span class="st">&quot;guest&quot;</span>
+)
+
+ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(
+  <span class="kw">textInput</span>(<span class="st">&quot;ID&quot;</span>, <span class="st">&quot;Enter your ID:&quot;</span>, <span class="st">&quot;5&quot;</span>),
+  <span class="kw">tableOutput</span>(<span class="st">&quot;tbl&quot;</span>),
+  <span class="kw">numericInput</span>(<span class="st">&quot;nrows&quot;</span>, <span class="st">&quot;How many cities to show?&quot;</span>, <span class="dv">10</span>),
+  <span class="kw">plotOutput</span>(<span class="st">&quot;popPlot&quot;</span>)
+)
+
+server &lt;-<span class="st"> </span>function(input, output, session) {
+  output$tbl &lt;-<span class="st"> </span><span class="kw">renderTable</span>({
+    sql &lt;-<span class="st"> &quot;SELECT * FROM City WHERE ID = ?id;&quot;</span>
+    query &lt;-<span class="st"> </span><span class="kw">sqlInterpolate</span>(pool, sql, <span class="dt">id =</span> input$ID)
+    <span class="kw">dbGetQuery</span>(pool, query)
+  })
+  output$popPlot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({
+    query &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;SELECT * FROM City LIMIT &quot;</span>,
+                    <span class="kw">as.integer</span>(input$nrows)[<span class="dv">1</span>], <span class="st">&quot;;&quot;</span>)
+    df &lt;-<span class="st"> </span><span class="kw">dbGetQuery</span>(pool, query)
+    pop &lt;-<span class="st"> </span>df$Population
+    <span class="kw">names</span>(pop) &lt;-<span class="st"> </span>df$Name
+    <span class="kw">barplot</span>(pop)
+  })
+}
+
+<span class="kw">shinyApp</span>(ui, server)</code></pre></div>
+</section>
+<section id="future-work" class="slide level2">
+<h1>Future Work</h1>
+</section>
+<section id="generic-connections-tab" class="slide level2">
+<h1>Generic Connections Tab</h1>
+<ul>
+<li>Like sparklyr tab in RStudio IDE 1.0</li>
+<li>Connections Dialog - Easy connection creation</li>
+<li>Re-establish previously used connections</li>
+<li>View available Drivers / Data Source Names (DSN)</li>
+<li>View Tables / Schemas</li>
+<li>Will be included in RStudio IDE 1.1</li>
+</ul>
+</section>
+<section id="rstudio-server-pro---bundled-odbc-drivers" class="slide level2">
+<h1>RStudio Server Pro - Bundled ODBC Drivers</h1>
+<ul>
+<li>Easy setup for a wide variety of DB (50+)</li>
+<li>Improved performance</li>
+<li>Improved error messaging</li>
+<li>Kerberos support</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="dbi"><a href="https://cran.r-project.org/package=DBI">DBI</a></h3>
+<p><strong><code>install.packages(&quot;DBI&quot;)</code></strong></p>
+<p><code>sqlIterpolate()</code>, <code>dbQuoteString()</code>, <code>dbQuoteIdentifier()</code></p>
+<h3 id="odbc"><a href="https://www.github.com/rstats-db/odbc#readme">odbc</a></h3>
+<p><strong><code>devtools::install_github(&quot;rstats-db/odbc&quot;)</code></strong></p>
+<p><code>dbConnect(odbc::odbc(), ...)</code>, <code>dbGetQuery()</code>, <code>dbReadTable()</code>, <code>dbWriteTable()</code></p>
+<h3 id="pool-2"><a href="https://www.github.com/rstudio/pool#readme">pool</a></h3>
+<p><strong><code>devtools::install_github(&quot;rstudio/pool&quot;)</code></strong></p>
+<p><code>dbPool()</code>, <code>sqlInterpolate()</code></p>
+</section>
+    </div>
+  </div>
+
+  <script src="2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/lib/js/head.min.js"></script>
+  <script src="2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: true,
+        // Transition style
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '2017_01_13-RStudio_conf-Database_Best_Practices_files/reveal.js-3.3.0/plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

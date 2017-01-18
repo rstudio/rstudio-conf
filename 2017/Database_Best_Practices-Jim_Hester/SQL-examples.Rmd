@@ -1,0 +1,76 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r setup, echo = FALSE}
+library(DBI)
+con <- dbConnect(odbc::odbc(), "PostgreSQL")
+knitr::opts_chunk$set(connection = 'con')
+```
+
+```{r}
+dbListTables(con)
+```
+
+```{sql}
+SELECT * FROM weather
+```
+```{sql}
+SELECT * FROM 
+  (SELECT month, AVG(wind_speed) AS "wind speed"
+    FROM weather
+    GROUP BY month
+    ORDER BY month) AS grouped
+WHERE "wind speed" > 10
+```
+```{r}
+sql <- 'SELECT * FROM   (SELECT month, AVG(wind_speed) AS "wind speed"
+    FROM weather
+    GROUP BY month
+    ORDER BY month) AS grouped
+WHERE "wind speed" > ?'
+res <- dbSendQuery(con, sql)
+dbBind(res, 10)
+dbFetch(res)
+dbBind(res, 5)
+dbFetch(res)
+dbClearResult(res)
+```
+
+```{r}
+grouped_speed <- function(mph) {
+  sql <- 'SELECT * FROM 
+    (SELECT month, AVG(wind_speed) AS "wind speed"
+      FROM weather
+      GROUP BY month
+      ORDER BY month) AS grouped
+    WHERE "wind speed" > ?'
+  res <- dbSendQuery(con, sql)
+  out <- lapply(mph, function(x) {
+    dbBind(res, x)
+    dbFetch(res)
+  })
+  dbClearResult(res)
+  out
+}
+
+grouped_speed(c(8, 10, 12))
+```
+
+```{r}
+library(shiny)
+ui <- fluidPage(
+  numericInput("MPH", "Enter MPH to filter:", "10"),
+  tableOutput("tbl")
+)
+
+server <- function(input, output, session) {
+  output$tbl <- renderTable({
+    grouped_speed(input$MPH)
+  })
+}
+
+shinyApp(ui, server)
+```
+
