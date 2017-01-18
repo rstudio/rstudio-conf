@@ -1,0 +1,29 @@
+digraph cityhash {
+  aa [label="Analyst A", style="dotted"];
+  ab [label="Analyst B", style="dotted"];
+  ac [label="Analyst C", style="dotted"];
+  aa2 [label="Analyst A", style="dotted"];
+  ab2 [label="Analyst B", style="dotted"];
+  ac2 [label="Analyst C", style="dotted"];
+  rspa [label="RStudio Server A"];
+  rspb [label="RStudio Server B"];
+  rspa2 [label="RStudio Server A"];
+  rspb2 [label="RStudio Server B"];
+  
+  subgraph cluster0 {
+    aa -> rspa;
+    ab -> rspa;
+    ac -> rspa;
+    aa -> rspb;
+    ab -> rspb;
+    ac -> rspb;
+    label="Traditional";
+  }
+  
+  subgraph cluster1 {
+    aa2 -> rspa2;
+    ab2 -> rspa2;
+    ac2 -> rspb2;
+    label="Stable";
+  }
+}

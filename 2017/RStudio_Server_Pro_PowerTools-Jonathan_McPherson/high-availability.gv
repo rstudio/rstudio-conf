@@ -1,0 +1,22 @@
+digraph availability {
+  analysta [label="Analyst A", style="dotted"];
+  analystb [label="Analyst B", style="dotted"];
+  analystc [label="Analyst C", style="dotted"];
+  nginx [label="NGinx", shape="rect", fontsize="20"];
+  rspa [label="RSP Server A", group="RSP", fillcolor="lightgray", style="filled"];
+  rspb [label="RSP Server B", group="RSP", fillcolor="lightgray", style="filled"];
+  rspc [label="RSP Server C", group="RSP", fontcolor="gray", color="gray"];
+  { rank = "source"; analysta; analystb; analystc; }
+  analysta -> nginx;
+  analystb -> nginx;
+  analystc -> nginx;
+  nginx -> rspa;
+  nginx -> rspb;
+  nginx -> rspc [color="grey", fillcolor="lightgrey"];
+  rspa -> rspb;
+  rspb -> rspc [color="grey", fillcolor="lightgrey"];
+  rspc -> rspa [color="grey", fillcolor="lightgrey"];
+  rspb -> rspa;
+  rspc -> rspb [color="grey", fillcolor="lightgrey"];
+  rspa -> rspc [color="grey", fillcolor="lightgrey"];
+}
