@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Indie+Flower|Roboto+Slab');
+
+body {font-family: 'Roboto Slab', serif;}
+
+.remark-slide-content {
+  font-size: 24px;  
+  background-color: #ffffff;
+}
+
+.remark-code, .remark-inline-code {font-family: 'Inconsolata', monospace;}
+h3 {font-family: 'Indie Flower', cursive;
+    color: #f4a34b;
+}
+
+h2 {
+  color: #2c62ba;
+}
+
+.inverse {
+  background-color: #2c62ba;
+  color: #ffffff;
+}
+

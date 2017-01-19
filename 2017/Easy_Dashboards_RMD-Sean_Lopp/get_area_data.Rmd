@@ -1,0 +1,19 @@
+---
+output: html_document
+---
+
+This R Markdown document runs on a scheduled basis to update the single_area_dashboard_shiny and final_dashboard. The R Markdown document generates a file, area.rds, containing the daily area usage statistics.
+
+One benefit of having a scheduled Rmd instead of a scheduled .R file is a self-documenting log of the scheduled job!
+
+Document run at: `r Sys.time()`.
+
+```{r}
+library(jsonlite)
+source("utils.R")
+areas <- getKnownAreas()
+resorts <- areas$resorts
+area <- lapply(resorts, getAreaData)
+saveRDS(area, file = "/tmp_shared/area.rds")
+```
+
