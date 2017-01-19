@@ -1,0 +1,106 @@
+---
+output: 
+  html_document:
+    includes:
+      after_body: acknowledge.html
+    theme: journal
+    css: styles.css
+    stand_alone: TRUE 
+params:
+  resort:
+    label: "Select Resort:"
+    input: select
+    value: Abasin
+    choices: !r source("utils.R"); . <- getKnownAreas(); .$resorts
+---
+
+
+```{r setup, warning=FALSE, echo=FALSE,message=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, echo=FALSE)
+library(ggplot2)
+source("utils.R")
+library(jsonlite)
+area <- getAreaData(params$resort)
+weather <- getCurrentWeather(params$resort)
+Sys.sleep(0.2)
+```
+
+<center>![](`r area$logo`)</center>
+
+## `r area$resortName` on `r Sys.Date()` at `r format(Sys.time(), "%r")`
+
+
+### `r area$secondarySurfaceCondition` 
+Last 48 Hours: `r area$snowLast48Hours`" 
+Base: `r area$avgBaseDepthMax`"
+
+ 
+### `r weather$weather` <br>
+`r weather$temperature_string` <br>
+Feels Like `r weather$feelslike_string`  
+
+### Snow Forecast
+```{r}
+f <- data.frame(
+    label=c("24 Hours", "48 Hours","72 Hours"),
+    value = c(area$predictedSnowFall_24Hours,
+              area$predictedSnowFall_48Hours,
+              area$predictedSnowFall_72Hours),
+    stringsAsFactors = FALSE
+  )
+f$value <- as.numeric(f$value)
+ggplot(data=f) + geom_bar(aes(x=factor(1:3), y=value), stat="identity", fill = "#96b9f2") +
+  scale_x_discrete(labels=f$label, breaks=1:3) +
+  scale_y_continuous(limits=c(0, max(f$value))) + 
+  xlab("") +
+  ylab("")+
+  theme_minimal() 
+```
+
+
+### Runs
+
+```{r}
+
+## Grab data on open runs and lifts (mostly interesting in the pre-season)
+runs <- data.frame(
+  cur = c(area$openDownHillTrails, area$openDownHillLifts),
+  max = c(area$maxOpenDownHillTrails, area$maxOpenDownHillLifts),
+  pos = 1:2,
+  stringsAsFactors = FALSE
+)
+
+## Add some computed metrics to prepare for plot
+runs <- lapply(runs, as.numeric)
+runs$labels <- c("Runs", "Lifts")
+runs$percent <- round((runs$cur / runs$max)*100, digits=0)
+runs$lab <- paste0(runs$cur, "/", runs$max, " ", runs$percent, "%")
+runs$labloc <- runs$percent+10
+runs$col <- ifelse(runs$percent < 80, ifelse(runs$percent < 50, 1, 2), 3)
+runs <- as.data.frame(runs)
+
+## Plot
+ggplot(runs, aes(x=factor(pos))) + 
+         geom_bar(aes(y=100), fill="lightgrey", stat="identity") +
+         geom_bar(aes(y=percent, fill=factor(col)), stat="identity") + 
+         geom_text(aes(y=labloc, label=lab)) +
+  xlab("") + ylab("") +
+  scale_x_discrete(labels=c("Trails", "Lifts")) +
+  scale_y_continuous(labels=NULL, breaks = NULL) +
+  scale_fill_manual(values=c("firebrick", "orange", "green"), guide=FALSE) +
+  theme_minimal() +
+  coord_flip()
+
+```
+
+
+
+
+
+
+
+
+
+
+
+

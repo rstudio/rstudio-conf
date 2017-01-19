@@ -1,0 +1,174 @@
+---
+title: Current Conditions
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    theme: journal
+    css: styles_dashboard.css
+runtime: shiny
+---
+
+```{r setup}
+library(ggplot2)
+source("utils.R")
+library(jsonlite)
+library(flexdashboard)
+library(shiny)
+opts <- getKnownAreas()
+resorts <- opts$resorts
+```
+
+Sidebar {.sidebar}
+--------------------
+```{r}
+
+# area.rds is updated daily based on a schedule run of the 
+# get_area_data.Rmd file
+# this could be put in the data chunk of shiny pre-rendered
+areas <- reactiveFileReader(5000,
+                            session = NULL,
+                            filePath = "/tmp_shared/area.rds",
+                            readFunc = readRDS)
+
+# check the weather for all resorts every minute
+weather <- reactive({
+  invalidateLater(60000, session = NULL)
+  w <- lapply(resorts, getCurrentWeather)
+  Sys.sleep(0.1) #ensures API results are returned successfully
+  w
+})
+
+selectInput("resort", "", choices = resorts, selected = "Abasin")
+
+# get weather for the selected resort
+curArea <- reactive({
+  ind <- which(resorts==input$resort)
+  areas()[[ind]]
+})
+
+# get weather for the selected report
+areaWeather <- reactive({
+  ind <- which(resorts==input$resort)
+  weather()[[ind]]
+})
+
+renderUI({tags$img(src=curArea()$logo)})
+```
+
+
+
+Summary {data-height=30}
+----------
+
+
+### Last 48 Hours {data-width=30}
+```{r}
+renderValueBox({
+valueBox(caption = curArea()$secondarySurfaceCondition,
+                 
+         value = paste0(curArea()$snowLast48Hours,'"'),
+         icon="ion-ios-snowy")
+})
+```
+
+### Base {data-width=30}
+
+```{r} 
+renderValueBox({
+  valueBox(value = paste0(curArea()$avgBaseDepthMax, '"'),
+           caption = "Base",
+           color="warning",
+           icon="fa-map-signs")
+})
+```
+
+### Weather {data-width=30}
+
+```{r} 
+renderValueBox({
+  weather_icon <- mapDescIcon(areaWeather()$weather)
+  valueBox(caption = areaWeather()$weather,
+           value =  areaWeather()$feelslike_string,
+           icon=weather_icon,
+           color="primary")
+})
+```
+
+
+Charts {data-height=70}
+------------
+
+### Snow Forecast
+```{r}
+
+renderPlot({
+  #get forecasted data
+  f <- data.frame(
+    label=c("24 Hours", "48 Hours","72 Hours"),
+    value = as.numeric(
+            c(curArea()$predictedSnowFall_24Hours,
+              curArea()$predictedSnowFall_48Hours,
+              curArea()$predictedSnowFall_72Hours)),
+    stringsAsFactors = FALSE
+  )
+  
+  #generate plot  
+  ggplot(f) + 
+    geom_bar(
+      aes(x = factor(1:3), y = value), 
+      stat="identity", 
+      fill = "#f4a34b") +
+    scale_x_discrete(labels = f$label, breaks = 1:3) +
+    scale_y_continuous(limits = c(0, max(f$value))) + 
+    xlab("") +
+    ylab("")+
+    theme_minimal() 
+})
+```
+
+### Runs
+
+```{r}
+d <- reactive({
+  tmp <- data.frame(
+    cur = as.numeric(c(curArea()$openDownHillTrails,
+                     curArea()$openDownHillLifts)),
+    max = as.numeric(c(curArea()$maxOpenDownHillTrails,
+                     curArea()$maxOpenDownHillLifts)),
+    labels = c("Trails", "Lifts"),
+    stringsAsFactors = FALSE
+  )
+  tmp$percent <- round((tmp$cur / tmp$max)*100, digits=0)
+  tmp
+})
+
+# Trails
+renderGauge({
+  p <- d()$percent[1]
+  createPercentGauge(p,"Trails Open")
+  })
+
+# Lifts 
+renderGauge({
+  p <- d()$percent[2]
+  createPercentGauge(p,"Lifts Open")
+  })
+
+```
+
+
+Acknowledgement {data-height=2}
+------------
+![](sclogo.png) ![](wulogo.jpg) ![](rslogo.png) <br>
+Data Courtesy of Snocountry and Weather Underground. Report by RStudio. <br>
+Not to be used for commercial purposes.
+
+###
+```{r}
+renderText({
+  curArea()
+  areaWeather()
+  paste0("Last Updated on: ",Sys.Date(), " at ", format(Sys.time(), '%r'))
+})
+```
+

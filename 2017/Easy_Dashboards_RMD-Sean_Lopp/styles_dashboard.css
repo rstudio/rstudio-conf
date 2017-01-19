@@ -1,0 +1,73 @@
+.navbar-inverse {
+    background-color: #2c62ba;
+    border-color: #2c62ba;
+}
+
+.bg-primary {
+    background-color: #2c62ba;
+}
+
+.bg-danger {
+    background-color: #f4a34b;
+}
+
+.bg-warning {
+   background-color: #4bbcf4;
+   color: #ffffff;
+}
+
+.section.sidebar {
+    background-color: #4bbcf4;
+}
+
+.section.sidebar {
+  color: #ffffff;
+}
+
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #ffffff;
+  background-color: #f4a34b;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #f4a34b;
+}
+.navbar-inverse .navbar-nav > .disabled > a,
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #f4a34b;
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: #f4a34b;
+  color: #ffffff;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #f4a34b;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+  background-color: #f4a34b;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #ffffff;
+  background-color: #f4a34b;
+}

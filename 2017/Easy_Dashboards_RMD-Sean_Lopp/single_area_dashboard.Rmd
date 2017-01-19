@@ -1,0 +1,118 @@
+---
+title: Current Conditions
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    theme: journal
+    css: styles_dashboard.css
+params:
+  resort:
+    label: "Select Resort:"
+    input: select
+    value: Abasin
+    choices: !r source("utils.R"); . <- getKnownAreas(); .$resorts
+---
+
+```{r setup}
+library(ggplot2)
+source("utils.R")
+library(jsonlite)
+library(flexdashboard)
+
+
+area <- getAreaData(params$resort)
+weather <- getCurrentWeather(params$resort)
+```
+
+
+Summary {data-height=15}
+----------
+
+### {data-width=10} 
+![](`r area$logo`)
+
+### Last 48 Hours {data-width=30}
+```{r}
+valueBox(caption = area$secondarySurfaceCondition,
+         value = paste0(area$snowLast48Hours,'"'),
+         icon = "ion-ios-snowy",
+         color = "primary")
+```
+
+### Base {data-width=20}
+
+```{r} 
+valueBox( value = paste0(area$avgBaseDepthMax, '"'),
+          caption = "Base", 
+          color="warning", 
+          icon="fa-map-signs")
+```
+
+### Weather {data-width=30}
+
+```{r} 
+weather_icon <- mapDescIcon(weather$weather)
+valueBox(caption = weather$weather,
+         value = weather$feelslike_string,
+         icon=weather_icon, 
+         color="primary")
+```
+
+
+Charts {data-height=70}
+------------
+
+### Snow Forecast
+```{r}
+#get forecasted data
+f <- data.frame(
+    label=c("24 Hours", "48 Hours","72 Hours"),
+    value = c(area$predictedSnowFall_24Hours,
+              area$predictedSnowFall_48Hours,
+              area$predictedSnowFall_72Hours),
+    stringsAsFactors = FALSE
+  )
+f$value <- as.numeric(f$value)
+
+#plot
+ggplot(f) + 
+  geom_bar(
+    aes(x=factor(1:3), y=value),
+    stat = "identity",
+    fill = "#f4a34b") +
+  scale_x_discrete(labels = f$label, breaks = 1:3) +
+  scale_y_continuous(limits = c(0, max(f$value))) + 
+  xlab("") +
+  ylab("")+
+  theme_minimal() 
+
+```
+
+### Runs
+
+```{r}
+d <- data.frame(
+  cur = as.numeric(c(area$openDownHillTrails, area$openDownHillLifts)),
+  max = as.numeric(c(area$maxOpenDownHillTrails, area$maxOpenDownHillLifts)),
+  labels = c("Trails", "Lifts"),
+  stringsAsFactors = FALSE
+)
+d$percent <- round((d$cur / d$max)*100, digits=0)
+
+
+# Trails
+createPercentGauge(d$percent[1],"Trails Open")
+
+# Lifts 
+createPercentGauge(d$percent[2],"Lifts Open")
+```
+
+
+Acknowledgement {data-height=2}
+------------
+![](sclogo.png) ![](wulogo.jpg) ![](rslogo.png) <br>
+Data Courtesy of Snocountry and Weather Underground. Report by RStudio. <br>
+Not to be used for commercial purposes.
+
+
+
