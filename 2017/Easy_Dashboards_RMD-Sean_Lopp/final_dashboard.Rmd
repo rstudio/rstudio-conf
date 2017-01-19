@@ -1,0 +1,414 @@
+---
+title: Current Conditions
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    theme: journal
+    css: styles_dashboard.css
+runtime: shiny
+---
+
+```{r global}
+library(ggplot2)
+source("utils.R")
+library(jsonlite)
+library(tidyr)
+library(flexdashboard)
+library(shiny)
+library(ggrepel)
+library(leaflet)
+library(dplyr)
+library(dygraphs)
+library(lubridate)
+library(xts)
+
+opts <- getKnownAreas()
+resorts <- opts$resorts
+
+# area.rds is updated daily based on a schedule run of the 
+# get_area_data.Rmd file
+# this could be put in the data chunk of shiny pre-rendered
+areas <- reactiveFileReader(5000,
+                            session = NULL,
+                            filePath = "/tmp_shared/area.rds",
+                            readFunc = readRDS)
+
+# check the weather for all resorts every minute
+weather <- reactive({
+  invalidateLater(60000, session = NULL)
+  w <- lapply(resorts, getCurrentWeather)
+  Sys.sleep(0.1) #ensures API results are returned successfully
+  w
+})
+
+
+# Define some variables that hold information for all resorts
+temp <- reactive({
+  as.numeric(sapply(weather(), function(.){.$feelslike_f}))
+})
+
+base <- reactive({
+  as.numeric(sapply(areas(), function(.){.$avgBaseDepthMax}))
+})
+
+fresh <- reactive({
+  f <- as.numeric(sapply(areas(), function(.){.$snowLast48Hours}))
+  f[is.na(f)] <- 0
+  f
+})
+
+runs <- reactive({
+  as.numeric(sapply(areas(), function(.){.$openDownHillTrails}))
+})
+
+forecast <- reactive({
+  f24 <- as.numeric(sapply(areas(), function(.){.$predictedSnowFall_24Hours}))
+  f48 <- as.numeric(sapply(areas(), function(.){.$predictedSnowFall_48Hours}))
+  f72 <- as.numeric(sapply(areas(), function(.){.$predictedSnowFall_72Hours}))
+
+  f <- data.frame(
+    H24 = f24,
+    H48 = f48,
+    H72 = f72,
+    resorts = resorts,
+    stringsAsFactors = FALSE
+  )
+  
+  ftidy <- gather(f, value = "forecast", key = "period", -resorts) 
+  fclean <- separate(ftidy, period, sep ="H", into = c("jnk", "hour")) %>% 
+    .[,-2]
+  fclean$hour <- as.numeric(fclean$hour)
+  fclean
+})
+
+
+```
+
+
+All Resorts
+===========================
+
+Sidebar {.sidebar}
+--------------
+```{r}
+p("Whats important to you?")
+
+
+# Helper function
+makeImportanceSlider <- function(id, label){
+  sliderInput(inputId = id,
+              label = label,
+              min = 0,
+              max = 1,
+              value = 0.5,
+              ticks = FALSE)
+}
+
+makeImportanceSlider("warmth", "Warmth")
+makeImportanceSlider("fresh", "New Snow")
+makeImportanceSlider("base", "Base Depth")
+makeImportanceSlider("totruns", "# of Runs")
+
+
+```
+
+Row
+--------------
+
+### Recommended Resort
+
+```{r}
+# rank the resort based on the user's input
+winner <- reactive({  
+  weights <- c(
+    input$warmth,
+    input$fresh,
+    input$base,
+    input$totruns
+  )
+  measures <- list(warmth = temp(),
+                   fresh = fresh(),
+                   base = base(),
+                   totruns = runs())
+  ranks <- sapply(measures, rank) 
+  weighted_ranks <- ranks%*%weights
+  winner <- resorts[which(max(weighted_ranks)==weighted_ranks)[1]]
+  winner
+})
+
+renderLeaflet({
+  data <- getKnownAreas() %>%
+    separate(weather_underground, 
+                         into = c("lat","lon"),
+                         sep=",")
+  
+  pick <- data[which(resorts==winner()),]
+  
+  leaflet(data) %>% 
+    addCircleMarkers(~lon, ~lat, popup=~resorts) %>% 
+    #highlight the winner 
+    addPopups(lng = pick$lon, lat = pick$lat, popup=pick$resorts) %>% 
+    addProviderTiles("CartoDB.Positron") %>% 
+    setView(lng = pick$lon, lat = pick$lat, zoom=6)
+    
+})
+```
+
+### Snow Forecast
+```{r}
+renderDygraph({
+  # cummulative sum of forecast
+  f <- forecast() %>% 
+    group_by(resorts) %>% 
+    mutate(forecast = cumsum(forecast))
+  
+  
+  # identify resort with highest
+  id <- which(f$forecast == max(f$forecast))[1]
+  max_resort <- f$resorts[id]
+
+  #dygraphs expects non-tidy, xts data :/
+  f <- spread(f, key = resorts, value = forecast)
+  f$hour <- today() + hours(f$hour)
+  f <- xts(f, order.by = f$hour)
+  f$hour <- NULL
+  
+  # color the top forecast blue, all others grey
+  col <- data.frame(names = colnames(f),
+                    colors = rep("grey", length(resorts)),
+                    stringsAsFactors = FALSE)
+  
+  col[which(col$names == max_resort),2] <- "#2c62ba"
+
+  
+  #plot
+  dygraph(f) %>% 
+      dyOptions(colors = col$colors) %>% 
+      dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE)
+      
+  
+})
+```
+
+
+Row
+-----------
+
+### Weather
+```{r}
+renderPlot({
+  type <- sapply(weather(), function(.){.$weather})
+  
+  all_weather <- data.frame(resort=resorts,
+                            temp=temp(),
+                            type=type,
+                            stringsAsFactors = FALSE)
+  
+  ggplot(all_weather, 
+         aes(x = type,
+             y = temp,
+             label = resort,
+             color = temp))+
+    geom_label_repel() +
+    scale_color_continuous(guide = FALSE) +
+    xlab("") +
+    ylab("Temperature (F)") +
+    theme_minimal() 
+})  
+```
+
+### Base
+```{r}
+renderPlot({
+  d <- data.frame(resorts = resorts, base = base())
+  avg_base <- mean(d$base)
+  min_resort <- which(d$base == min(d$base))[1]
+  ggplot(d, aes(x = reorder(resorts,base), y = base)) +
+    geom_bar(fill = "#f4a34b", stat = "identity") +
+    xlab("") +
+    ylab("Base Depth (in)") +
+    theme_minimal() +
+    geom_hline(yintercept = avg_base, color = "#2c62ba") +
+    geom_label(label = "Average",
+               color = "#2c62ba",
+               aes(y = avg_base, x = resorts[min_resort])) +
+    coord_flip()
+})
+```
+
+### Runs
+```{r}
+renderPlot({
+  d <- data.frame(resorts = resorts, runs = runs())
+  ggplot(d, aes(x = reorder(resorts,runs) , y = runs)) +
+    geom_bar(stat = "identity", fill = "#2c62ba") +
+    xlab("") +
+    ylab("") +
+    theme_minimal() +
+    theme(
+      axis.text.x = element_text(angle=45)
+    )
+})
+```
+
+
+
+
+
+Acknowledgement {data-height=2}
+------------
+![](sclogo.png) ![](wulogo.jpg) ![](rslogo.png) <br>
+Data Courtesy of Snocountry and Weather Underground. Report by RStudio. <br>
+Not to be used for commercial purposes.
+
+###
+```{r}
+renderText({
+  curArea()
+  areaWeather()
+  paste0("Last Updated on: ",Sys.Date(), " at ", format(Sys.time(), '%r'))
+})
+```
+
+Specific Resort
+=======================
+
+Sidebar {.sidebar}
+--------------------
+```{r}
+selectInput("resort", "", choices = resorts, selected = "Abasin")
+
+# get weather for the selected resort
+curArea <- reactive({
+  ind <- which(resorts==input$resort)
+  areas()[[ind]]
+})
+
+# get weather for the selected report
+areaWeather <- reactive({
+  ind <- which(resorts==input$resort)
+  weather()[[ind]]
+})
+
+renderUI({tags$img(src=curArea()$logo)})
+```
+
+
+
+Summary {data-height=30}
+----------
+
+
+### Last 48 Hours {data-width=30}
+```{r}
+renderValueBox({
+valueBox(caption = curArea()$secondarySurfaceCondition,
+                 
+         value = paste0(curArea()$snowLast48Hours,'"'),
+         icon="ion-ios-snowy")
+})
+```
+
+### Base {data-width=30}
+
+```{r} 
+renderValueBox({
+  valueBox(value = paste0(curArea()$avgBaseDepthMax, '"'),
+           caption = "Base",
+           color="warning",
+           icon="fa-map-signs")
+})
+```
+
+### Weather {data-width=30}
+
+```{r} 
+renderValueBox({
+  weather_icon <- mapDescIcon(areaWeather()$weather)
+  valueBox(caption = areaWeather()$weather,
+           value =  areaWeather()$feelslike_string,
+           icon=weather_icon,
+           color="primary")
+})
+```
+
+
+Charts {data-height=70}
+------------
+
+### Snow Forecast
+```{r}
+
+renderPlot({
+  #get forecasted data
+  f <- data.frame(
+    label=c("24 Hours", "48 Hours","72 Hours"),
+    value = as.numeric(
+            c(curArea()$predictedSnowFall_24Hours,
+              curArea()$predictedSnowFall_48Hours,
+              curArea()$predictedSnowFall_72Hours)),
+    stringsAsFactors = FALSE
+  )
+  
+  #generate plot  
+  ggplot(f) + 
+    geom_bar(
+      aes(x = factor(1:3), y = value), 
+      stat="identity", 
+      fill = "#f4a34b") +
+    scale_x_discrete(labels = f$label, breaks = 1:3) +
+    scale_y_continuous(limits = c(0, max(f$value))) + 
+    xlab("") +
+    ylab("")+
+    theme_minimal() 
+})
+```
+
+### Runs
+
+```{r}
+d <- reactive({
+  tmp <- data.frame(
+    cur = as.numeric(c(curArea()$openDownHillTrails,
+                     curArea()$openDownHillLifts)),
+    max = as.numeric(c(curArea()$maxOpenDownHillTrails,
+                     curArea()$maxOpenDownHillLifts)),
+    labels = c("Trails", "Lifts"),
+    stringsAsFactors = FALSE
+  )
+  tmp$percent <- round((tmp$cur / tmp$max)*100, digits=0)
+  tmp
+})
+
+# Trails
+renderGauge({
+  p <- d()$percent[1]
+  createPercentGauge(p,"Trails Open")
+  })
+
+# Lifts 
+renderGauge({
+  p <- d()$percent[2]
+  createPercentGauge(p,"Lifts Open")
+  })
+
+```
+
+
+Acknowledgement {data-height=2}
+------------
+![](sclogo.png) ![](wulogo.jpg) ![](rslogo.png) <br>
+Data Courtesy of Snocountry and Weather Underground. Report by RStudio. <br>
+Not to be used for commercial purposes.
+
+### {.no-title}
+```{r}
+renderText({
+  curArea()
+  areaWeather()
+  paste0("Last Updated on: ",Sys.Date(), " at ", format(Sys.time(), '%r'))
+})
+```
+

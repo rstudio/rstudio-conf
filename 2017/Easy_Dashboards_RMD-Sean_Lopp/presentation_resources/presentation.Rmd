@@ -1,0 +1,401 @@
+---
+title: "Easier Dashboards"
+output:
+  xaringan::moon_reader:
+    nature:
+      highlightStyle: solarized-dark
+      highlightLines: true
+      highlightLanguage: r
+    css: presentation.css 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+options(htmltools.dir.version = FALSE)
+
+```
+
+## Plan
+
+![](ski_ratings.jpg)
+- What's our goal?
+
+- Beginner: Parameterized Report
+
+- Intermediate: Parameterized Dashboard
+
+- Advanced: Parameterized Dashboard + Shiny
+
+### All materials on Github
+
+---
+class: inverse, center, middle
+
+# End Result
+
+???
+
+Walk through the final result
+Discuss background on ski metrics:
+  base
+  temp
+  width
+
+
+---
+name: param_template
+count: false
+
+
+## Parameterized Report
+
+---
+template: param_template
+
+YAML Header:
+
+```yaml
+output: html_document
+params:
+  resort: Abasin
+```
+
+Now we can use `params$resort`:
+
+```{r}
+getAreaData(params$resort)
+```
+
+We can pass parameters:
+
+```{r}
+rmarkdown::render(params = list(resort = "Abasin"))
+
+# Or even something cool like ...
+lapply(resorts, function(r){rmarkdown::render(params = list(resort = r))})
+```
+
+
+### Add parameters, access with params$
+
+
+---
+template: param_template
+Actual YAML Header:
+
+```yaml
+params:
+  resort:
+    label: "Select Resort:"
+    input: select
+    value: Abasin
+    choices: !r source("utils.R"); . <- getKnownAreas(); .$resorts
+```
+
+In IDE:  
+
+![](knit_with_params.png)
+
+
+In Connect ... 
+
+
+---
+class: inverse, center, middle
+
+# Demo
+
+???
+
+show the results
+
+
+
+---
+name: flexdashboard
+count: false
+
+## Parameterized Dashboard
+
+---
+template: flexdashboard
+
+```
+output:
+  flexdashboard::flex_dashboard
+    orientation: rows
+
+Row
+-----
+
+### Chart A
+
+{Code Chunk}
+
+Row
+------
+
+### Chart B
+
+{Code Chunk}
+
+```
+
+### Use code chunks as building blocks.
+
+### Use markdown syntax to define layout.
+
+---
+template: flexdashboard
+class: inverse, middle, center
+
+# Demo
+
+???
+
+Should I show the demo in RSP or RSC or both?
+I think just RSC 
+
+---
+template: flexdashboard
+
+Bonus Content - Value Boxes
+
+```{r}
+valueBox(value, label, color, icon)
+```
+
+### All arguments can be dynamic
+
+```{r}
+mapDescIcon <- function(desc){
+  curIcon = "ion-android-sunny"
+  if (grepl(pattern = "*Snow*|*Ice*", x = desc))
+    curIcon = "ion-ios-snow"
+  if (grepl(pattern = "*Rain*|*Drizzle*|*Hail*", x = desc))
+    curIcon = "ion-ios-rainy-outline"
+  if (grepl(pattern = "*Cloud*|*Overcast*|*Fog*", x= desc))
+    curIcon = "ion-ios-cloud-outline"
+  curIcon
+}
+```
+
+---
+template: flexdashboard
+
+Bonus Content - Gauges 
+
+```{r}
+gauge(percent,
+        min = 0, 
+        max = 100,
+        symbol = "%", 
+        label = label,
+        gaugeSectors(success = c(80,100),
+                     warning = c(50, 80),
+                     danger = c(0,50), 
+                     colors = c("success","warning","danger")))
+```
+
+### Colors can depend on value
+
+
+---
+name: shiny
+count: false
+
+## Dashboard + Shiny
+
+---
+template: shiny
+
+Goals:
+
+- Let users select the resort in real time
+
+- Update weather in *near* real-time
+
+- Update conditions daily
+
+
+---
+name: shiny1
+template: shiny
+count: false
+
+- Let users select the resort in real time
+
+---
+template: shiny1
+
+```
+---
+... 
+runtime: shiny
+---
+
+Inputs {.sidebar}
+------------------
+
+{Code Chunk with Shiny Inputs}
+
+Row
+-------------------
+
+### Output
+
+{Code Chunk with Shiny Outputs}
+
+### Output
+
+{Code Chunk with Shiny Outputs}
+```
+
+### runtime shiny changes EVERYTHING
+
+---
+template: shiny1
+
+```{r}
+library(shiny)
+
+opts <- getKnownAreas()
+selectInput("area", "Select Resort", choices = opts, selected = "Abasin")
+
+conditions <- reactive({
+  getAreaData(input$resort)
+})
+```
+
+
+```{r}
+renderPlot({
+  ggplot(conditions(), ...)
+})
+```
+
+### No need to define ui or server
+### No need for xxxOutput - just stick in renderXXX
+
+---
+## What??
+### No need to define ui or server
+### No need for xxxOutput - just stick in renderXXX
+
+The trick looks like:
+
+```{r}
+ui <- uiOutput("contents")
+
+server <- ...{
+  output$contents <- renderUI({
+     rmarkdown::render("source.Rmd")
+  })
+}
+```
+
+For those of you who are curious, look at:
+
+```
+rmarkdown::run
+-- rmarkdown:::rmarkdown_shiny_ui
+-- rmarkdown:::rmarkdown_shiny_server
+```
+
+---
+## What?
+### No need to define ui or server
+### No need for xxxOutput - just stick in renderXXX
+
+This comes at a cost:
+- Deployed content doesn't scale the same way
+- Debugging is harder
+
+Many of these concerns are being fixed by `runtime:shiny_prerendered`
+
+???
+
+All the heavy lifting is done in the server function
+
+---
+template: shiny
+
+- Update weather in *near* real-time
+
+```{r}
+weather <- reactive({
+  getCurrentWeather(input$resort) 
+  invalidateLater(n)
+})
+```
+
+### Use invalidateLater
+### API is called every n seconds OR if the input changes
+### Look out for API abuse
+
+---
+template: shiny
+
+- Update conditions daily
+
+We had:
+
+```{r}
+conditions <- reactive({
+  getAreaData(input$resort)
+})
+```
+
+### Problem! 
+### Updqtes with change in input, not change in data
+
+---
+template: shiny
+
+- Update conditions daily
+
+### Solution:
+
+-  Call the API on a scheduled basis, save results to file:
+```{r}
+areas <- lapply(getAreaData, resorts)
+saveRDS(areas, "areas.Rdat")
+```
+
+-  In our dashboard: 
+```{r}
+areas <- reactiveFileReader(n, "areas.Rdat", readRDS)
+conditions <- reactive({
+  areas[[input$resort]]
+})
+```
+
+###reactiveFileReader
+
+---
+class: inverse, middle, center
+
+# Demo
+
+???
+First showcase what we've done so far
+
+Then return to our original goal, pointing out the differences
+
+---
+
+
+## Food for Thought
+`reactiveFileReader` seems like over kill. 
+
+I am querying a file for changes, *but I know when it will change!*
+
+### Answer: shiny_prerendered  + scheduled Rmd
+
+
+
+---
+class: inverse, middle, center
+
+# Questions?
+# Find Me After
