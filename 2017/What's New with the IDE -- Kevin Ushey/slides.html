@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What’s New with the IDE</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+  <meta name="date" content="2017-01-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: 'What’s New with the IDE',
+                        subtitle: 'Improving productivity – rstudio::conf 2017',
+                useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                      },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Kevin Ushey' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <link href="slides_files/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="slides_files/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="slides_files/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="slides_files/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="slides_files/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="slides_files/ioslides-13.5.1/js/prettify/lang-r.js"></script>
+  <script src="slides_files/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="slides_files/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="slides_files/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="slides_files/ioslides-13.5.1/js/slide-deck.js"></script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+  </style>
+
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body style="opacity: 0">
+
+<slides>
+
+  <slide class="title-slide segue nobackground">
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">2017-01-18</p>
+          </hgroup>
+  </slide>
+
+<slide class=''><hgroup><h2>Productivity in RStudio</h2></hgroup><article  id="productivity-in-rstudio">
+
+<p>I plan to discuss features that help you:</p>
+
+<ul>
+<li>Write code more quickly,</li>
+<li>Find things in files more quickly,</li>
+</ul>
+
+<p>My goal: whether you&#39;re a relatively new user of RStudio, or you&#39;ve been using RStudio for a couple years, you learn something new about what you can do in the IDE.</p>
+
+<p>The following slides use RStudio v1.0.136.</p>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Autocompletion</h2></hgroup><article  id="autocompletion">
+
+</article></slide><slide class=''><hgroup><h2>Autocompletion</h2></hgroup><article  id="autocompletion-1">
+
+<p>You might be familiar with RStudio&#39;s autocompletion (using e.g. <code>&lt;Tab&gt;</code>, or <code>&lt;Ctrl + Space&gt;</code>, to request completion results). However, RStudio&#39;s autocompletion system has a number of features you might not be aware of.</p>
+
+<p>RStudio&#39;s autocompletion tries to help you be as lazy as possible.</p>
+
+</article></slide><slide class=''><hgroup><h2>Multi-Line Autocompletion</h2></hgroup><article  id="multi-line-autocompletion">
+
+<p>RStudio can retrieve autocompletion results for argument names within a function call.</p>
+
+<p>You can use either <code>&lt;Tab&gt;</code> or <code>&lt;Ctrl + Space&gt;</code> to request completions; <code>&lt;Ctrl + Space&gt;</code> is preferred if the cursor is at the start of a line as the <code>&lt;Tab&gt;</code> key will default to insertion of literal tabs.</p>
+
+<img src='img/autocompletion/multiline-autocompletion.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Fuzzy Autocompletion</h2></hgroup><article  id="fuzzy-autocompletion">
+
+<p>Rather than use prefix matching, RStudio performs &#39;fuzzy matching&#39; when matching completion results to what you type.</p>
+
+<img src='img/autocompletion/fuzzy-autocompletion.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Fuzzy Autocompletion</h2></hgroup><article  id="fuzzy-autocompletion-1">
+
+<p>RStudio does substring-based matching on the text you type. The only requirement is that your input text occurs in the same order as in the item to be matched.</p>
+
+<pre class = 'prettyprint lang-r'>## Let&#39;s see how exactly &#39;scflead&#39; matches in
+## The previous example. It&#39;s included as a
+## completion candidate because it occurs
+## &#39;in the same order&#39; within the variable name.
+##
+##    supercalifragilisticexpialidocious
+##    s____c___f____l_____e___a__d______
+##
+##</pre>
+
+</article></slide><slide class=''><hgroup><h2>Fuzzy Autocompletion</h2></hgroup><article  id="fuzzy-autocompletion-2">
+
+<p>Naming conventions in R are often inconsistent &#8211; some functions use <code>.</code> to separate words in a variable name, while others use <code>_</code> or otherwise. RStudio&#39;s autocompletion tries to be permissive about the presence or absence of these symbols.</p>
+
+<pre class = 'prettyprint lang-r'>package.ver</pre>
+
+<img src='img/autocompletion/fuzzy-autocompletion-2.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Context-Specific Autocompletion</h2></hgroup><article  id="context-specific-autocompletion">
+
+<p>RStudio performs introspection on your document to identify completion items.</p>
+
+<img src='img/autocompletion/context-autocompletion.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Project-File Autocompletion</h2></hgroup><article  id="project-file-autocompletion">
+
+<p>RStudio indexes all files in your project, and uses this to power the completion of file names within R strings.</p>
+
+<p>For files within deeply nested directories, it will be sufficient to type only the first few letters of the file name; RStudio will fill in the other parts itself.</p>
+
+<img src='img/autocompletion/project-file-autocompletion.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Specialized Autocompletion</h2></hgroup><article  id="specialized-autocompletion">
+
+<p>RStudio provides specialized autocompletion results in some contexts. For example, within <code>Sys.getenv()</code> and <code>Sys.setenv()</code>, we provide completions for all environment variables currently defined.</p>
+
+<img src='img/autocompletion/environment-variable-completion.png' title='fig:'/>
+
+<p>Similar behavior exists in <code>options()</code> / <code>getOption()</code>, and <code>attr()</code>.</p>
+
+</article></slide><slide class=''><hgroup><h2>Markdown Path Completion</h2></hgroup><article  id="markdown-path-completion">
+
+<p>RStudio also provides autocompletion for paths used in Markdown-style links, for R Markdown documents. A similar discovery of paths within nested directories is performed here, as with completions for paths in strings.</p>
+
+<img src='img/autocompletion/markdown-path-completion.png' title='fig:'/>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Diagnostics</h2></hgroup><article  id="diagnostics">
+
+</article></slide><slide class=''><hgroup><h2>R Code Diagnostics</h2></hgroup><article  id="r-code-diagnostics">
+
+<p>You might&#39;ve noticed that RStudio now highlights syntax errors (if any) in your code:</p>
+
+<img src='img/diagnostics/syntax-error.png' title='fig:'/>
+
+<p>These particular diagnostics can be very helpful when building Shiny applications. However, RStudio comes with a set of richer diagnostics not enabled by default.</p>
+
+</article></slide><slide class=''><hgroup><h2>R Code Diagnostics &#8211; Enabling Extras</h2></hgroup><article  id="r-code-diagnostics----enabling-extras">
+
+<p>The following diagnostics can be enabled in the <code>Tools -&gt; Global Options... -&gt; Code</code> dialog.</p>
+
+<img src='img/diagnostics/diagnostics-menu.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Missing Arguments</h2></hgroup><article  id="missing-arguments">
+
+<p>RStudio will attempt to statically ascertain whether a function call might fail due to missing arguments. For example, in the following call to <code>rnorm()</code>, we have forgotten to pass the <code>n</code> argument.</p>
+
+<img src='img/diagnostics/missing-argument.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>No Definition in Scope</h2></hgroup><article  id="no-definition-in-scope">
+
+<p>RStudio will detect the usage of variables that aren&#39;t actually available, or defined, in the current scope. This can be helpful for catching typos.</p>
+
+<p>In the underlying code, we&#39;ve defined a variable called <code>hw</code> but accidentally attempted to use it as <code>HW</code>.</p>
+
+<img src='img/diagnostics/no-definition-in-scope.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Defined but not Used</h2></hgroup><article  id="defined-but-not-used">
+
+<p>In the following example, we attempt to compute <code>2 ^ n</code> by updating a value called <code>total</code> by multiplying it by 2 <code>n</code> times. However, we accidentally wrote <code>Total</code> within the body of the <code>for</code> loop. The diagnostics system detects this.</p>
+
+<p>Note that the following code would run without error; however, it would produce the wrong result!</p>
+
+<img src='img/diagnostics/defined-but-not-used.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Whitespace</h2></hgroup><article  id="whitespace">
+
+<p>RStudio will also provide so-called &#39;style&#39; diagnostics, to help encourage the use of whitespace to make R code more readable.</p>
+
+<img src='img/diagnostics/whitespace.png' title='fig:'/>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Finding Things</h2></hgroup><article  id="finding-things">
+
+</article></slide><slide class=''><hgroup><h2>Fuzzy File Finder</h2></hgroup><article  id="fuzzy-file-finder">
+
+<p>One of the most useful, yet often least known about, commands in the RStudio IDE is <code>Go to file/function</code>. More affectionately, we call it the fuzzy file finder. This can be used to quickly navigate to any file, or function (R or C++), in your project.</p>
+
+<p>The command can be invoked with <code>Ctrl + .</code>. Use it often!</p>
+
+<img src='img/finding-things/fuzzy-file-finder.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Fuzzy File Finder</h2></hgroup><article  id="fuzzy-file-finder-1">
+
+<p>In the following example, we use the fuzzy file finder to locate the term <code>create</code> within the <code>devtools</code> package sources.</p>
+
+<img src='img/finding-things/fuzzy-file-finder-2.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Fuzzy File Finder</h2></hgroup><article  id="fuzzy-file-finder-2">
+
+<p>As per its name, the fuzzy file finder also does &#39;fuzzy&#39; substring matching on the potential completion terms.</p>
+
+<img src='img/finding-things/fuzzy-file-finder-3.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Find in Files</h2></hgroup><article  id="find-in-files">
+
+<p>Use <code>Ctrl + Shift + F</code> to search for terms in all files within some scope. The command can also be accessed from <code>Edit -&gt; Find in Files...</code>.</p>
+
+<img src='img/finding-things/find-in-files.gif' title='fig:'/>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Code Tools</h2></hgroup><article  id="code-tools">
+
+</article></slide><slide class=''><hgroup><h2>Execute a Statement at a Time</h2></hgroup><article  id="execute-a-statement-at-a-time">
+
+<p>RStudio now executes a whole statement at a time with <code>Ctrl + Enter</code>, rather than a single line-wise execution.</p>
+
+<img src='img/codetools/execute-statement.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Rename in Scope</h2></hgroup><article  id="rename-in-scope">
+
+<p>Use <code>Ctrl + Alt + Shift + M</code> to rename the variable and all usages of that variable in the current scope.</p>
+
+<img src='img/codetools/rename-in-scope.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Reformat Code</h2></hgroup><article  id="reformat-code">
+
+<p>Use <code>Ctrl + Shift + A</code> to reformat the current selection. The code is reformatted and reindented to improve readability.</p>
+
+<img src='img/codetools/reformat-code.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Multiple Cursors</h2></hgroup><article  id="multiple-cursors">
+
+<p>RStudio has support for multiple cursors (as seen before, using <code>Rename in Scope</code>). In the following demo, multiple cursors are generated by holding the <code>Alt</code> key, and clicking and dragging with the mouse.</p>
+
+<img src='img/codetools/multiple-cursors.gif' title='fig:'/>
+
+<p>Multiple cursors can also be added using <code>Ctrl + Alt + Up/Down</code>; a new cursor is generated in the direction pressed.</p>
+
+</article></slide><slide class=''><hgroup><h2>Insert Commonly Used Code</h2></hgroup><article  id="insert-commonly-used-code">
+
+<ul>
+<li><p>Use <code>Alt + -</code> to insert the assignment operator. This will insert <code>&lt;-</code> in R code, and <code>=</code> in other contexts.</p></li>
+<li><p>Use <code>Ctrl + Shift + M</code> to insert the <a href='https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html' title=''>magrittr</a> pipe operator.</p></li>
+<li><p>Use <a href='https://rstudio.github.io/rstudio-extensions/rstudio_snippets.html' title=''>RStudio Snippets</a> to insert TextMate-like snippets of code. Use <code>&lt;Shift + Tab&gt;</code> to quickly insert a snippet. Use <code>&lt;Tab&gt;</code> to complete each section of the snippet.</p></li>
+<li><p>Use <a href='https://rstudio.github.io/rstudio-extensions/rstudio_addins.html' title=''>RStudio Addins</a> to bind the execution of user-defined R code to RStudio menu items, or custom-defined keyboard shortcuts. Use the <a href='https://rstudio.github.io/rstudio-extensions/rstudioapi.html' title=''><code>rstudioapi</code></a> package to write R code that interacts directly with the RStudio session.</p></li>
+</ul>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>R Markdown</h2></hgroup><article  id="r-markdown">
+
+</article></slide><slide class=''><hgroup><h2>Document Outline</h2></hgroup><article  id="document-outline">
+
+<p>Use <code>Ctrl + Shift + O</code> to toggle a document outline view in R Markdown (and other!) documents. This can be used to quickly navigate from section to section in source documents.</p>
+
+<img src='img/rmarkdown/document-outline.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>LaTeX Chunks</h2></hgroup><article  id="latex-chunks">
+
+<p>RStudio will render latex contained within <code>$...$</code> and <code>$$...$$</code> blocks inline, letting you double-check your latex before rendering your final document.</p>
+
+<img src='img/rmarkdown/mathjax.gif' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Non-R Engines</h2></hgroup><article  id="non-r-engines">
+
+<p>Alternate engines (e.g. <code>python</code>) can be used as well.</p>
+
+<pre class = 'prettyprint lang-python'>print [x ** 3 for x in range(1, 10)]</pre>
+
+<pre >## [1, 8, 27, 64, 125, 216, 343, 512, 729]</pre>
+
+<ul>
+<li>Use <code>engine.path</code> to point to a particular executable for your engine.</li>
+<li>Use <code>engine.opts</code> to control what arguments are passed to the engine executable.</li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Other Shortcuts to Know</h2></hgroup><article  id="other-shortcuts-to-know">
+
+<ul class = 'build'>
+<li><code>Ctrl + Alt + I</code> will insert an R chunk. (Never type <code>```</code> again!)</li>
+<li><code>Ctrl + Shift + Enter</code> will run a whole chunk at once.</li>
+<li><code>Ctrl + PageUp</code> and <code>Ctrl + PageDown</code> will navigate between chunks.</li>
+</ul>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Miscellaneous</h2></hgroup><article  id="miscellaneous">
+
+</article></slide><slide class=''><hgroup><h2>Editor Keybindings</h2></hgroup><article  id="editor-keybindings">
+
+<p>Customize the editor keybindings &#8211; both Vim and Emacs keybindings are available.</p>
+
+<img src='img/miscellaneous/editor-keybindings.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Focus</h2></hgroup><article  id="focus">
+
+<p>Use <code>Ctrl + 1</code> and <code>Ctrl + 2</code> to quickly transfer focus between the source editor and the console.</p>
+
+<p>Similarly, use <code>Ctrl + Shift + 1</code> to zoom the source pane, and <code>Ctrl + Shift + 2</code> to zoom the console.</p>
+
+<p>Try different numbers to focus other panes in the IDE.</p>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Closing Up</h2></hgroup><article  id="closing-up">
+
+</article></slide><slide class=''><hgroup><h2>Keyboard Shortcuts</h2></hgroup><article  id="keyboard-shortcuts">
+
+<p>You can access a keyboard shortcut cheatsheet directly from the IDE. Use <code>Alt + Shift + K</code>, or click <code>Help -&gt; Keyboard Shortcuts Help</code> from the main menu.</p>
+
+<img src='img/miscellaneous/keyboard-shortcuts.png' title='fig:'/>
+
+</article></slide><slide class=''><hgroup><h2>Thanks for Attending!</h2></hgroup><article  id="thanks-for-attending"></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>
