@@ -347,7 +347,7 @@ conditions <- reactive({
 ```
 
 ### Problem! 
-### Updqtes with change in input, not change in data
+### Updates with change in input, not change in data
 
 ---
 template: shiny
