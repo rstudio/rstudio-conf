@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modeling in the Tidyverse</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Max Kuhn (RStudio)" />
+    <link rel="stylesheet" href="mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Modeling in the Tidyverse
+### Max Kuhn (RStudio)
+
+---
+
+  
+
+
+
+# Goals of Tidy Modeling &lt;img src="images/yardstick.png" class="title-hex"&gt; &lt;img src="images/tidyposterior.png" class="title-hex"&gt; &lt;img src="images/rsample.png" class="title-hex"&gt; &lt;img src="images/recipes.png" class="title-hex"&gt; &lt;img src="images/broom.png" class="title-hex"&gt;
+
+The tidy modeling packages are a set of coordinated packages that: 
+
+* Promote tenets of the [tidyverse](http://www.tidyverse.org/) (manifesto [here](https://cran.r-project.org/web/packages/tidyverse/vignettes/manifesto.html)): 
+   1. Reuse existing data structures.
+   1. Compose simple functions with the pipe.
+   1. Embrace functional programming.
+   1. Design for humans.
+
+* Encourage empirical validation and good methodology
+
+* Smooth out diverse interfaces
+
+* Enable a wider variety of methodologies (esp. for feature engineering)
+
+---
+# Empirical Validation and Good Methodology &lt;img src="images/tidyposterior.png" class="title-hex"&gt;
+
+.pull-left[
+For example: 
+
+* Embrace resampling to protect against poor methodology (e.g. classical stepwise, enhanced interrogation of data)
+
+* Use loss functions that are relevant (e.g. expected return on investment vs accuracy)
+
+* Don't solely rely on p-values to compare and characterize models
+
+* Utilize [Bayesian ROPE estimates](http://doingbayesiandataanalysis.blogspot.com/2013/08/how-much-of-bayesian-posterior.html) to assess _practical differences_ (example on right is based on an updated version of `mtcars` modeled using ordinary `lm`)
+]
+.pull-right[
+
+&lt;img src="Modeling_in_the_Tidyverse_files/figure-html/diff-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Smooth Out Diverse Interfaces
+.pull-left[
+For example, to produce class probabilities: 
+
+.font90[
+|Function     |Package      |Code                                       |
+|:------------|:------------|:------------------------------------------|
+|`lda`        |`MASS`       |`predict(obj)`                             |
+|`glm`        |`stats`      |`predict(obj, type = "response")`          |
+|`gbm`        |`gbm`        |`predict(obj, type = "response", n.trees)` |
+|`mda`        |`mda`        |`predict(obj, type = "posterior")`         |
+|`rpart`      |`rpart`      |`predict(obj, type = "prob")`              |
+|`Weka`       |`RWeka`      |`predict(obj, type = "probability")`       |
+]
+]
+.pull-right[
+
+
+* `caret` does this for classification and regression
+
+* Extend this to nearly all type of models
+
+* Exploit delayed evaluation of expressions to produce a cleaner interface
+
+* View R as the _primary_ computational engine but offer other options
+
+For example: `rand_forest` as an interface to `randomForest`, `ranger`,  `sparklyr::ml_random_forest`, etc. 
+]
+
+
+---
+# Possible Syntax
+
+.pull-left[  
+  A _pipeline_ consists of a set of actions such as :
+  
+* generic model specification (`parsnip` package)
+* declaration of variables (formulas, `recipes`)
+
+Optionally, things like:
+  
+* pre-processing methods (`recipes`)
+* simple univariate filters (package TBA)
+* calibration/post-fit adjustments (package TBA)
+
+Aspects of these components _do not_ have to be immediately defined. For example:
+]
+.pull-right[  
+.font90[
+```r
+# Define the model matrix
+vars_and_preproc &lt;- recipe(response ~ ., data = dat) %&gt;%
+  step_knnimpute(all_predictors(), K = varying()) 
+
+# Choose a model such as random forest...
+model_spec &lt;- rand_forest(
+  trees = 1000,
+  min_n = varying(), 
+  mtry = varying()
+)
+
+# ... or another types of model
+model_spec &lt;- surv_reg(distribution = varying())
+
+# Optionally layer in some pre-model feature selection
+filter &lt;- feature_filter(all_predictors())
+
+# Combine them together
+model_spec &lt;- pipeline() %&gt;%
+  add(vars_and_preproc) %&gt;%
+  add(model_spec) %&gt;%
+  add(filter)
+  
+# `pipeline` detects what what arguments are varying (if any)
+```
+]
+]
+
+
+---
+# Possible Syntax
+
+At some point though, the pipeline needs to be finalize so that it can be estimated:
+  
+```r
+model_fit &lt;- fit(data = train_dat, model_spec, engine = "R") # or stan or spark etc. 
+```
+
+However, if there are still placeholders for parameters, there will be methods for tuning these values: 
+
+.pull-left[
+```r
+grid &lt;- random_grid(model_spec, size = 20, 
+                    data = train_dat)
+
+folds &lt;- rsample::vfold_cv(train_dat)
+
+grid_results &lt;- 
+  grid_search(
+    model_spec, 
+    values = grid,
+    sampling = folds
+  )
+```
+]
+.pull-right[ 
+````r
+final_param &lt;- grid_results %&gt;% pick_best()
+# or 
+final_param &lt;- genetic_opt(model_spec, iter = 20, 
+                           sampling = folds)
+
+fitted_model &lt;- model_spec %&gt;% 
+  update(final_param) %&gt;%
+  fit(data = train_dat)
+```
+]
+
+---
+# Future Plans
+
+Once the model interface is finalized, a set of packages will quickly follow. 
+
+Components will be released in packages that are relatively small in scope. 
+
+The plan is to offer both high- and low-level APIs for these tasks.
+
+ * `caret` is popular partly because it can make a lot of decisions for you. Obviously this is good and bad. 
+
+ * For example, it isn't too difficult to do simple grid search using [`rsample`](https://topepo.github.io/rsample/), [`recipes`](https://topepo.github.io/recipes/), and [`purrr`](http://purrr.tidyverse.org/) (see the workshop notes). 
+
+ 
+---
+# Thanks
+
+* Hadley and our tidyverse team for the support and help
+
+* David Robinson for `broom`
+
+* All the contributors to the current set of packages
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
