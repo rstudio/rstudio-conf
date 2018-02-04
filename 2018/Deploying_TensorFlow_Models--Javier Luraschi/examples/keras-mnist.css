@@ -1,0 +1,18 @@
+.digits {
+  width: 300px;
+  padding-top: 5px;
+}
+.digits div {
+  width: 20px;
+  height: 16px;
+  background: #8484cd;
+  margin: 2px;
+  color: #FFF;
+  text-align: right;
+  padding-right: 5px;
+  word-spacing: 10px;
+  font-family: sans-serif;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  font-size: 14px;
+}

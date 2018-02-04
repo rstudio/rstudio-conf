@@ -1,0 +1,114 @@
+---
+title: "Deploying TensorFlow Models"
+output: html_notebook
+---
+
+# Install Tensorflow and Keras
+
+```{r eval=FALSE}
+# Install the Tensorflow, Keras and required packages
+install.packages("tensorflow")
+install.packages("keras")
+install.packages("devtools")
+install.packages("rsconnect")
+
+# Install TensorFlow locally
+tensorflow::install_tensorflow(version = "1.4")
+```
+
+# Train MNIST Digit Recognizer
+
+```{r}
+library(keras)
+
+# load data
+c(c(x_train, y_train), c(x_test, y_test)) %<-% dataset_mnist()
+
+# reshape and rescale
+x_train <- array_reshape(x_train, dim = c(nrow(x_train), 784)) / 255
+x_test <- array_reshape(x_test, dim = c(nrow(x_test), 784)) / 255
+
+# one-hot encode response
+y_train <- to_categorical(y_train, 10)
+y_test <- to_categorical(y_test, 10)
+
+# define and compile model
+model <- keras_model_sequential()
+model %>%
+  layer_dense(units = 32, activation = 'relu', input_shape = c(784),
+              name = "image") %>%
+  layer_dense(units = 16, activation = 'relu') %>%
+  layer_dense(units = 10, activation = 'softmax',
+              name = "prediction") %>%
+  compile(
+    loss = 'categorical_crossentropy',
+    optimizer = optimizer_rmsprop(),
+    metrics = c('accuracy')
+  )
+
+# train model
+history <- model %>% fit(
+  x_train, y_train,
+  epochs = 30, batch_size = 128,
+  validation_split = 0.2
+)
+```
+
+# Export the Model
+
+Export as HDF5 a keras model:
+
+```{r}
+save_model_hdf5(model, "keras-mnist.hdf5")
+```
+
+and as a SavedModel which is common across TensorFlow, Keras and tfestimators:
+
+```{r}
+export_savedmodel(model, "keras-mnist")
+```
+
+# Test the Model
+
+First, install tfdeploy:
+
+```{r}
+devtools::install_github("rstudio/tfdeploy")
+```
+
+Then serve locally:
+
+```{r}
+library(tfdeploy)
+serve_savedmodel("keras-mnist")
+```
+
+# Deploy to RStudio Connect
+
+Deploy model to demo server http://conference.rstudioconnect.com/:
+
+```{r}
+library(rsconnect)
+deployTFModel("keras-mnist")
+```
+
+# Use Deployed model from Bash
+
+```{bash}
+curl -sd @examples/digit-zero.json http://conference.rstudioconnect.com/content/2/predict
+```
+
+# Use model from JavaScript
+
+First, install `kerasjs` from GitHub:
+
+```{r}
+devtools::install_github("rstudio/kerasjs")
+```
+
+Then, save, convert and preview to JavaScript:
+
+```{r}
+library(kerasjs)
+kerasjs_convert("keras-mnist.hdf5")
+```
