@@ -1,0 +1,83 @@
+<b>Note:</b> Due dates of exams and project will not move, however the timeline of topics and smaller assignments might be updated throughout the semester.
+
+<br><br>
+
+<table class="table" style="max-width:900px;margin-left:auto;margin-right:auto">
+  <tr>
+    <th style="width:15%;text-align:right">Date</th>
+    <th style="width:50%">Lesson</th>
+    <th style="width:5%;text-align:center">Slides</th>
+    <th style="width:5%;text-align:center">Reading</th>
+    <th style="width:5%;text-align:center">AE</th>
+    <th style="width:5%;text-align:center">HW</th>
+    <th style="width:5%;text-align:center">Lab</th>
+    <th style="width:5%;text-align:center">Exam</th>
+    <th style="width:5%;text-align:center">Project</th>
+  </tr>
+
+  {{ range $.Site.Data.lessons }}
+    {{range . }}
+    <tr>
+      <td align="right">{{ .date }}</td>
+      <td>{{ .title }}</td>
+
+      {{ if .slides }}
+      <td align="center"><a href="{{ .Site.baseurl }}/slides/{{ .slides  }}">
+          <i class="fa fa-laptop  fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-laptop  fa-lg"></i></font></td>
+      {{ end }}
+      
+      {{ if .reading }}
+      <td align="center"><a href="{{ .Site.baseurl }}/reading/{{ .reading  }}">
+          <i class="fa fa-book fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-book fa-lg"></i></font></td>
+      {{ end }}
+
+      {{ if .appex }}
+      <td align="center"><a href="{{ .Site.baseurl }}/appex/{{ .appex }}">
+          <i class="fa fa-users fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-users fa-lg"></i></font></td>
+      {{ end }}
+      
+      {{ if .hw }}
+      <td align="center"><a href="{{ .Site.baseurl }}/hw/{{ .hw }}">
+          <i class="fa fa-pencil-square-o fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-pencil-square-o fa-lg"></i></font></td>
+      {{ end }}
+      
+      {{ if .lab }}
+      <td align="center"><a href="{{ .Site.baseurl }}/labs/{{ .lab }}">
+          <i class="fa fa-code fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-code fa-lg"></i></font></td>
+      {{ end }}
+      
+      {{ if .exam }}
+      <td align="center"><a href="{{ .Site.baseurl }}/exam/{{ .exam }}">
+          <i class="fa fa-check-square fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-check-square fa-lg"></i></font></td>
+      {{ end }}
+      
+      {{ if .project }}
+      <td align="center"><a href="{{ .Site.baseurl }}/project/{{ .project }}">
+          <i class="fa fa-file-powerpoint fa-lg"></i></a></td>
+      {{ else }}
+        <td align="center"><font color="f1f1f1">
+          <i class="fa fa-file-powerpoint fa-lg"></i></font></td>
+      {{ end }}
+    </tr>
+    {{ end }}
+  {{ end }}
+
+</table>

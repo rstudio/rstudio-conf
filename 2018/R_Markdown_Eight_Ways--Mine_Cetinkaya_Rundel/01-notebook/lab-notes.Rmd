@@ -1,0 +1,227 @@
+---
+title: "Prep + brainstorming for Denny's / La Quinta lab"
+output: html_notebook
+---
+
+Load packages:
+
+```{r load-packages}
+library(tidyverse)
+library(rvest)
+```
+
+# Pre-lab
+
+Load data:
+
+```{r load-data}
+dn <- read_csv("data-raw/dennys-raw.csv")
+lq <- read_csv("data-raw/laquinta-raw.csv")
+```
+
+## Same-ify Denny's and La Quinta data
+
+### La Quinta data cleanup:
+
+- Fix Canada ~~zip~~ post codes:
+
+```{r fix-ca-zip}
+lq$Address[639] <- "63 King Street East,\nOshawa, ON L1H1B4"
+lq$Address[867] <- "8640 Alexandra Rd,\nRichmond, BC V6X1C4"
+```
+
+- Fix nonstandard patterns:
+
+```{r fix-pattern}
+lq$Address[188] <- "3201 Macon Rd Suite A,\nColumbus, GA 31906-1717"
+lq$Address[522] <- "Carrera 38 # 26-13 Avenida las Palmas con Loma de San Julian El Poblado,\nMedellin Colombia, ANT 050016"
+lq$Address[656] <- "101 South Frontage Road I-20 West,\nPecos, TX 79772"
+lq$Address[762] <- "Av. Benito Juarez 1230 B (Carretera 57) Col. Valle Dorado Zona Hotelera,\nSan Luis Potosi, SL 78399"
+lq$Address[705] <- "2180 Hilltop Dr,\nRedding, CA 96002-0512"
+```
+
+- Fix variable names and order and split addresses into columns:
+
+```{r fix-vars-split-address}
+lq <- lq %>%
+  select(-c(Name, Phone, Fax)) %>%
+  rename(
+    address = Address,
+    longitude = Longitude,
+    latitude = Latitude
+  ) %>%
+  separate(address, c("address", "city", "state_zip"), sep = ",") %>%
+  mutate(state_zip = str_trim(state_zip)) %>%
+  separate(state_zip, c("state", "zip"), sep = " ") %>%
+  mutate(zip = str_replace(zip, "-(.*)", ""))
+```
+
+### Denny's data cleanup 
+
+Variable names and order:
+
+```{r fix-vars-order}
+dn <- dn %>%
+  rename(
+    address = Address,
+    city = City,
+    state = State,
+    zip = Zip,
+    longitude = Longitude,
+    latitude = Latitude
+  ) %>%
+  select(address, city, state, zip, longitude, latitude)
+```
+
+## Prep states data
+
+Get state abbreviations from R:
+
+```{r state-abb}
+state_abb <- tibble(
+  name = state.name, 
+  abbreviation = state.abb
+) %>%
+  add_row(name = "District of Columbia", abbreviation = "DC")
+```
+
+Get state areas from Wikipedia:
+
+```{r state-wiki-scrape}
+wiki_page <- read_html("https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_area")
+```
+
+```{r collect-states-info}
+state_names <- wiki_page %>%
+  html_nodes("td:nth-child(1) , .headerSort:nth-child(1)") %>%
+  html_text() %>%
+  tibble(name = .) %>%
+  mutate(name = str_trim(name)) %>%
+  slice(1:51)
+                                                                                       state_areas <- wiki_page %>%
+  html_nodes("h2+ .jquery-tablesorter .headerSort:nth-child(3) , td~ td+ td:nth-child(3)") %>%
+  html_text() %>%
+  tibble(area = .) %>%
+  slice(1:51) %>%
+  mutate(area = as.numeric(str_replace(area, ",", "")))
+```
+
+Create states data:
+
+```{r create-states}
+states_no_abb <- bind_cols(state_names, state_areas)
+states <- full_join(state_abb, states_no_abb)
+```
+
+## Write data out
+
+```{r write-data}
+write_csv(dn, path = "data-for-lab/dennys.csv")
+write_csv(lq, path = "data-for-lab/laquinta.csv")
+write_csv(states, path = "data-for-lab/states.csv")
+```
+
+# In lab
+
+## Data wrangling
+
+### In / out US
+
+Are there any Denny's locations outside the US? Nope!
+
+```{r dn-non-us}
+dn %>%
+  filter(!(state %in% states$abbreviation))
+```
+
+Are there any LA Quinta locations outside the US? YUP! -> *Ask students to figure out where they are.*
+
+```{r lq-non-us}
+lq %>%
+  filter(!(state %in% states$abbreviation))
+```
+
+Mark country for La Quinta -> *Give some as started, rest they should have to figure out*
+
+```{r lq-add-country}
+lq <- lq %>%
+  mutate(country = case_when(
+    state %in% state.abb     ~ "United States",
+    state %in% c("ON", "BC") ~ "Canada",
+    state == "ANT"           ~ "Columbia",
+    state == "FM"            ~ "Honduras",
+    TRUE                     ~ "Mexico"
+  ))
+```
+
+Mark country for Denny's
+
+```{r dn-add-country}
+dn <- dn %>%
+  mutate(country = "United States")
+```
+
+### Add establishment variable
+
+Do this before `bind_rows` to put everything together
+
+```{r add-establishment}
+dn <- dn %>% mutate(establishment = "Denny's") 
+lq <- lq %>% mutate(establishment = "La Quinta") 
+```
+
+## Counting
+
+How many Denny's per state or per square mile or thousand square miles? *LATTER LOOKS BETTER, ALSO MORE MEANINGFUL*   
+
+```{r count-per-state}
+dn %>%
+  count(state) %>%
+  inner_join(states, by = c("state" = "abbreviation")) %>%
+  mutate(
+    per_sq_mi = n / area,
+    per_sq_mi_th = n / (area / 1000)
+    )
+```
+
+Can do the same for La Quinta as well...
+
+## Visualizing
+
+First need to combine the data:
+
+```{r bind-dn-lq}
+dn_lq <- bind_rows(dn, lq)
+```
+
+Let's do only US for this:
+
+```{r us-only}
+dn_lq_us <- dn_lq %>%
+  filter(country == "United States")
+```
+
+
+Write out data at this stage for the shiny app:
+
+```{r}
+write_csv(dn_lq_us, path = "data-shiny/dn_lq_us.csv")
+```
+
+Then we plot:
+
+```{r viz-standard-col}
+ggplot(dn_lq_us, mapping = aes(x = longitude, y = latitude, color = establishment)) +
+  geom_point(alpha = 0.8)
+```
+
+Should we use La Quinta and Denny's colors? BUT THEY UGLY!!!
+
+```{r viz-custom-col}
+lq_col <- "#004827"
+dn_col <- "#FFDE23"
+
+ggplot(dn_lq_us, mapping = aes(x = longitude, y = latitude, color = establishment)) +
+  geom_point(alpha = 0.5) +
+  scale_color_manual(values = c(dn_col, lq_col))
+```

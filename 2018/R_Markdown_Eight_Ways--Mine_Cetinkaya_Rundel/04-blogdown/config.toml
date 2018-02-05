@@ -1,0 +1,94 @@
+baseurl = "/"
+languageCode = "en-us"
+defaultContentLanguage = "en-us"
+title = "STA 199"
+theme = "material"
+#disqusShortname = ""
+# googleAnalytics = ""
+paginate = 7
+relativeurls = true
+publishDir = "docs"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
+[author]
+  name = "Mine Cetinkaya-Rundel"
+  bio = ""
+  job = "Associate Professor of the Practice"
+  location = "Duke University"
+  gravatarEmail = "mine@stat.duke.edu"
+  # Your profile picture
+#  picture = ""
+  twitter = "minebocek"
+ 
+# Menu Configuration
+[[menu.main]]
+  weight = 1
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+  url = "/"
+[[menu.main]]
+  weight = 2
+  identifier = "syllabus"
+  name = "Syllabus"
+  pre = "<i class=\"material-icons\">date_range</i>"
+  url = "/syllabus"
+[[menu.main]]
+  weight = 3
+  identifier = "policies"
+  name = "Policies"
+  pre = "<i class=\"material-icons\">gavel</i>"
+  url = "/policies"
+[[menu.main]]
+  weight = 4
+  identifier = "rstudio"
+  name = "RStudio"
+  pre = "<i class=\"material-icons\">cloud_queue</i>"
+  url = "https://rstudio.cloud"
+[[menu.main]]
+  weight = 5
+  identifier = "github"
+  name = "GitHub"
+  pre = "<i class='fab fa-github fa-lg'></i>"
+  url = "https://github.com/Sta199-S18"
+[[menu.main]]
+  weight = 6
+  identifier = "help"
+  name = "Help"
+  pre = "<i class=\"material-icons\">help</i>"
+  url = "https://github.com/Sta199-S18/community/issues"
+
+
+[[menu.footer]]
+  weight = 1
+  identifier = "Duke"
+  name = "Duke StatSci"
+  pre = "<i class=\"button-icon fa fa-2x fa-map-marker\"></i>"
+  url = "http://stat.duke.edu/"
+[[menu.footer]]
+  weight = 2
+  name = "RStudio"
+  pre = "<i class=\"icon-rlogo\" style=\"font-size:150%\"></i>"
+  url = "https://rstudio.cloud/"
+[[menu.footer]]
+  weight = 3
+  identifier = "GitHub"
+  name = "GitHub"
+  pre = "<i class=\"button-icon fa fa-2x fa-github\"></i>"
+  url = "https://github.com/Sta199-S18/"
+[[menu.footer]]
+
+
+[params]
+  dateFormat = "January 2, 2006"
+  background = "http://www2.stat.duke.edu/courses/Spring18/Sta199/img/mugesketch.png"
+  favicon = "img/favicon.ico"

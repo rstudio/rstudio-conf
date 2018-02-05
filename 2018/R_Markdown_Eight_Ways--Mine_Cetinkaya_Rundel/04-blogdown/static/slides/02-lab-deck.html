@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 02: Data wrangling and visualization</title>
+    <meta charset="utf-8">
+    <meta name="date" content="2018-01-25" />
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lab-slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lab 02: Data wrangling and visualization
+### 2018-01-25
+
+---
+
+
+
+
+
+
+class: center, middle
+
+# Welcome to lab
+
+---
+
+## Agenda
+
+1. **Teams:** Find teammates.
+2. **Lab introduction:** Review FiveThirtyEight article on college majors.
+3. **Starting a new project:** Clone the repo into a new RStudio Cloud project.
+4. **Housekeeping &amp; Warm-up:** Make sure your git config and packages are set up and you know how to push and pull.
+5. **Tips:** Review a few common RMarkdown mistakes.
+
+---
+
+class: center, middle
+
+# Teams
+
+---
+
+- Find your teammates: [google sheet](https://docs.google.com/spreadsheets/d/1Cjh9bifCwxn32l2lrp5vQH1adOGtmb7XOrJru810Rxo/edit?usp=sharing)
+
+- Note the lead for today's lab -- this person is **NOT** solely responsible of doing the lab, but they are responsible for organizing the team effort, making sure all parts are in there, organizing team meetings to work on the assignment, etc.
+
+- Come up with a team name
+
+- Let me know your team name by the end of class
+
+---
+
+class: center, middle
+
+# Lab introduction
+
+---
+
+## Lab introduction
+
+- Lab instructions posted on the course website under `&lt;/&gt;`
+    + Let's go find today's lab!
+    
+- [The Economic Guide To Picking A College Major](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/) by Ben Casselman
+    
+---
+
+class: center, middle
+
+# Starting a new project
+
+---
+
+## Starting a new project
+
+- Go to the course GitHub organization and find the lab-02 repo that has your team name on it.
+
+- On GitHub, click on the green Clone or download button, select Use HTTPS (this might already be selected by default, and if it is, you’ll see the text Clone with HTTPS). Click on the clipboard icon to copy the repo URL.
+
+- Go to RStudio Cloud and into the course workspace. Create a New Project from Git Repo. You will need to click on the down arrow next to the New Project button to see this option.
+
+- Copy and paste the URL of your assignment repo into the dialog box and hit OK.
+
+---
+
+class: center, middle
+
+# Housekeeping &amp; Warm-up
+
+---
+
+## Housekeeping &amp; Warm-up
+
+- Follow the instructions to configure your git credentials. To double check, run the following 
+commands and make sure your info is correct:
+
+```
+git config --global user.email
+git config --global user.name
+```
+
+- Install the `tidyverse` package and make sure it's being loaded in your Lab .Rmd.
+
+- Update the name of your project to "Lab 02 - Data wrangling and visualization"
+
+- Pick **ONE** team member to walk through the warm-up commit and push. Then, others pull.
+
+---
+
+class: center, middle
+
+# Tips
+
+---
+
+## Tips
+
+- Be ready to troubleshoot your document, since it will likely fail to knit on multiple occasions throughout the process. Read the error message carefully and take note of which line is preventing a successful knit.
+
+- Make sure to keep track of your various chunks and to keep text and code in the right place.
+
+- Remember that your R Markdown file is not aware of your project's global environment and can only make use of variables, functions, etc. that you have loaded or defined in the document.
+
+- Remind yourself how the pipe operator (`%&gt;%`) works.
+
+- If you're unsure how a function works or what its arguments are, simply type `?` in front of it and hit enter (`?read_csv` for instance). The "Help" tab will open and provide a summary of the function as well as some examples.
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

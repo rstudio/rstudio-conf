@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" sizes="76x76" href="{{ "img/favicon.png" | relURL }}">
+	<link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>{{ .Site.Title }}</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js"></script>
+
+	<!-- CSS Files -->
+    <link href="{{ "css/bootstrap.min.css" | relURL }}" rel="stylesheet" />
+    <link href="{{"css/material-kit.css" | relURL }}" rel="stylesheet"/>
+</head>
+
+  {{ block "body" . }}
+	<!-- here you can add your content -->
+	{{ end }}
+			
+
+	<!--   Core JS Files   -->
+	<script src="{{"js/jquery.min.js" | relURL }}" type="text/javascript"></script>
+	<script src="{{"js/bootstrap.min.js" | relURL }}" type="text/javascript"></script>
+	<script src="{{"js/material.min.js" | relURL }}"></script>
+
+	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+	<script src="{{"js/nouislider.min.js" | relURL }}" type="text/javascript"></script>
+
+	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+	<script src="{{"js/bootstrap-datepicker.js" | relURL }}" type="text/javascript"></script>
+
+	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+	<script src="{{"js/material-kit.js" | relURL }}" type="text/javascript"></script>
+
+</html>

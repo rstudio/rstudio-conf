@@ -1,0 +1,157 @@
+---
+title: "Lab 00: Logistics"
+author: ""
+date: "2018-01-11"
+output:
+  xaringan::moon_reader:
+    css: "lab-slides.css"
+    logo: img/sta199-hex.png
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+# R options
+options(
+  htmltools.dir.version = FALSE, # for blogdown
+  show.signif.stars = FALSE,     # for regression output
+  warm = 1
+  )
+# Set dpi and height for images
+library(knitr)
+opts_chunk$set(fig.height = 2.65, dpi = 300) 
+# ggplot2 color palette with gray
+color_palette <- list(gray = "#999999", 
+                      salmon = "#E69F00", 
+                      lightblue = "#56B4E9", 
+                      green = "#009E73", 
+                      yellow = "#F0E442", 
+                      darkblue = "#0072B2", 
+                      red = "#D55E00", 
+                      purple = "#CC79A7")
+# For nonsese...
+library(emo)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rvest)
+```
+
+class: center, middle
+
+# Welcome to lab
+
+---
+
+## Who am I?
+
+---
+
+## Who are you?
+
+Your name, year, major / intended major, something else you'd like to share?
+
+---
+
+## R is cool!
+
+![growth of R](lab-img/00/Rgrowth.png)
+
+---
+
+## Outline
+
+1. Research study survey
+2. Questions on course policies
+3. GitHub accounts
+4. Asking for help
+5. Getting to know you survey
+6. Pretest
+7. RStudio Cloud accounts
+
+---
+
+## 1. Research study survey
+
+Jason Dowd - jason.dowd@duke.edu
+
+Survey at https://goo.gl/Gs6shQ.
+
+An email with information on the study will be sent out later today for your records.
+
+---
+
+## 2. Any questions on course policies?
+
+Make sure to review the syllabus and policies at [bit.ly/sta199-s18](http://bit.ly/sta199-s18).
+
+---
+
+## 3. GitHub accounts
+
+- If you have a GitHub account, note your username (you'll need it for the survey), and sit back and relax for a minute.
+
+- If you do not yet have a GitHub account, create one at https://github.com/. Tips for selecting a username:<sup>1</sup>
+    - Incorporate your actual name! People like to know who they’re dealing with. Also makes your username easier for people to guess or remember.
+    - Reuse your username from other contexts if you can, e.g., Twitter or Slack.
+    - Pick a username you will be comfortable revealing to your future boss.
+    - Shorter is better than longer.
+    - Be as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.
+    - Make it timeless. Don’t highlight your current university, employer, or place of residence.
+    - Avoid words laden with special meaning in programming, like `NA`.
+
+.footnote[ [1] Source: [Happy git with R](http://happygitwithr.com/github-acct.html#username-advice) by Jenny Bryan.]
+
+---
+
+## 4. Posting on the discussion forum
+
+- Go to https://github.com/Sta199-S18/community and bookmark this page.
+
+- In the issues tab find the issue created by Dr. Cetinkaya-Rundel (@mine-cetinkaya-rundel) and click on it to view it.
+
+- Respond to it with a hello, or something else. Feel free to add some code formatted text, inline surrounded by a single backtick or on a new line surrounded by three backtics, or a hyperlink. Or try bolding or italicizing. You could also tag someone if you know their GitHub username. Your post doesn't have to be meaningful.
+
+- Hit Comment when you're done.
+
+- Read the "How to get help" section on the course policies page.
+
+---
+
+## 5. Getting to know you survey
+
+- Go to sakai.duke.edu and locate this course's page.
+
+- Tests & Quizzes -> Getting to know you survey
+
+- Complete the survey fully. Brief answers are ok.
+
+---
+
+## 6. Pretest
+
+Do your best but don't worry if you don't know the answers to the questions or if you aren't sure. We will only use this information for determining the statistical background of students and for team formation, along with other pieces of information we collected from you in the "Getting to know you" survey.
+
+- Go to http://bit.ly/sta199_s18_pretest.
+
+- ACCESS CODE: CZZ9179BJW
+
+- COURSE: 199  SECTION: 1
+
+---
+
+## 7. RStudio Cloud accounts
+
+- If you had issues creating your RStudio Cloud account, forking the project, or opening the project and running the analysis, stick around to try it again.
+
+    - Go to [bit.ly/sta199-f18-rstudio-join](http://bit.ly/sta199-f18-rstudio-join) and sign in with your GitHub credentials.
+
+- If RStudio Cloud worked for you yesterday and you were able to run the analysis, you're free to leave.
+
+- Make sure to update your profile.
+

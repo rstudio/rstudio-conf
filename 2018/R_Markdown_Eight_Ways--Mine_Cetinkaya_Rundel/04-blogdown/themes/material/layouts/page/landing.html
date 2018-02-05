@@ -1,0 +1,31 @@
+
+{{ define "body" }}
+<body class="landing-page">
+  {{ partial "nav-absolute.html" . }}
+  <div class="wrapper">
+    <div class="header header-filter" style="background-image: url('{{ .Params.background | relURL }}');">
+      <div class="container">
+        <div class="row">
+					<div class="col-md-6">
+              <h1 class="title">{{ .Title }}</h1>
+              <h4>{{ .Params.description }}</h4>
+              <br />
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger btn-raised btn-lg">
+							<i class="fa fa-play"></i> Watch video</a>
+					</div>
+        </div>
+      </div>
+    </div>
+		<div class="main main-raised">
+			<div class="container">
+		  	<div class="section text-left section-landing">
+		  	  
+	            {{ .Content }}
+	            
+	      </div>
+      </div>
+		</div>
+    {{ partial "footer" . }}
+	</div>
+</body>
+{{ end }}

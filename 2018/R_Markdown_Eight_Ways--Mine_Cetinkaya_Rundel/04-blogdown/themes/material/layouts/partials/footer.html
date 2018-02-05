@@ -1,0 +1,37 @@
+<footer class="footer">
+  <div class="container">
+	  <nav class="pull-left">
+	    <ul>
+	    {{ range .Site.Menus.footer }}
+        {{ if .HasChildren }}
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            {{ .Name }}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            {{ range .Children }}
+            <li class="nav-item">
+              <a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+            </li>
+            {{end}}
+          </ul>
+        </li>
+
+        {{ else }}
+
+        <li>
+          <a href="{{ .URL | relURL }}">{{ .Pre }} {{ .Name }}</a>
+        </li>
+        {{ end }}
+      {{ end }}
+      </ul>
+    </nav>
+	  <div class="copyright pull-right">
+	    <img src="{{"img/cc-by.svg" | relURL }}"/>
+	  </div>
+  </div>
+</footer>

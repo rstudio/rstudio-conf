@@ -1,0 +1,94 @@
+---
+title: "UN Votes"
+author: "Mine Cetinkaya-Rundel"
+date: "2018-01-10"
+output: html_document
+---
+
+Let's take a look at the voting history of countries in the United Nations General Assembly. We will be using data from the unvotes package. Additionally, we will make use of the tidyverse and lubridate packages.
+
+```{r load-packages, warning=FALSE, message=FALSE}
+library(unvotes)
+library(tidyverse)
+library(lubridate)
+library(DT)
+```
+
+## Data
+
+We have three datasets we can work with: `un_roll_calls`, `un_roll_call_issues`, and `un_votes`. Each of these datasets contains a variable called `rcid`, the roll call id, which can be used to join them with each other.
+
+- The `un_votes` dataset provides information on the voting history of the United Nations General Assembly. It contains one row for each country-vote pair.
+
+```{r view-un_votes}
+un_votes
+```
+
+- The `un_roll_calls` dataset contains information on each roll call vote of the United Nations General Assembly.
+
+```{r view-un_roll_calls}
+un_roll_calls
+```
+
+- The `un_roll_call_issues` dataset contains (topic) classifications of roll call votes of the United Nations General Assembly. Many votes had no topic, and some have more than one.
+
+```{r view-un_roll_call_issues}
+un_roll_call_issues
+```
+
+## Analysis
+
+First, let's take a look at how often each country voted "yes" on a resolution in each year. We'll visualize the results, so let's pick a few countries of interest first,
+
+```{r country-list}
+country_list <- c("United States of America", "Russian Federation", "Mexico", "Turkey")
+```
+
+and focus our analysis on them.
+
+```{r plot-yearly-yes, fig.width=10, warning=FALSE}
+un_votes %>%
+  filter(country %in% country_list) %>%
+  inner_join(un_roll_calls, by = "rcid") %>%
+  group_by(year = year(date), country) %>%
+  summarize(votes = n(),
+            percent_yes = mean(vote == "yes")) %>%
+  ggplot(mapping = aes(x = year, y = percent_yes, color = country)) +
+    geom_line() +
+    ylab("% of votes that are 'Yes'")
+```
+
+Next, let's see how US and Turkey's voting record changed over the years on each of the issues.
+
+```{r plot-yearly-yes-issue, fig.width=10, warning=FALSE}
+un_votes %>%
+  filter(country %in% c("United States of America", "Turkey")) %>%
+  inner_join(un_roll_calls, by = "rcid") %>%
+  inner_join(un_roll_call_issues, by = "rcid") %>%
+  group_by(country, year = year(date), issue) %>%
+  summarize(votes = n(),
+            percent_yes = mean(vote == "yes")) %>%
+  filter(votes > 5) %>%  # Only use records where there are more than 5 votes
+  ggplot(mapping = aes(x = year, y = percent_yes, color = country)) +
+    geom_point() +
+    geom_smooth(method = "loess", se = FALSE) +
+    facet_wrap(~ issue)
+```
+
+## References
+
+1. David Robinson (2017). unvotes: United Nations General Assembly Voting Data. R package version 0.2.0. https://CRAN.R-project.org/package=unvotes.
+2. Erik Voeten "Data and Analyses of Voting in the UN General Assembly" Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013).
+3. Much of the analysis has been modeled on the examples presented in the [unvotes package vignette](https://cran.r-project.org/web/packages/unvotes/vignettes/unvotes.html).
+
+## Appendix
+
+Below is a list of countries in the dataset:
+
+```{r}
+un_votes %>% 
+  arrange(country) %>% 
+  select(country) %>%
+  distinct() %>%
+  datatable()
+```
