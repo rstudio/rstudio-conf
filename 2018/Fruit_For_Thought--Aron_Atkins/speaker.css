@@ -1,0 +1,7 @@
+body {
+    font-size: x-large;
+}
+
+.slide {
+    page-break-inside: avoid
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="speaker.css" type="text/css" />
+</head>
+<body>
+<h1 id="fruit-for-thought">Fruit for Thought</h1>
+<div class="slide">
+<h2 id="title-slide">Title Slide</h2>
+<p>Hello. Thanks for coming. My name is Aron Atkins and I am part of the team building RStudio Connect.</p>
+</div>
+<div class="slide">
+<h2 id="rstudio-connect-logo">RStudio Connect Logo</h2>
+<p>I grew up as part of a farming family with apples always nearby.</p>
+</div>
+<div class="slide">
+<h2 id="howard-atkins">Howard Atkins</h2>
+<p>This is my grandfather in one of our orchards.</p>
+<p>When I was young, I traveled with my father throughout New York and New England to visit other apple farms. We saw acres and acres of trees.</p>
+<p>Some of the names you know: McIntosh. Delicious. Empire. Some you may not: Gravenstein; Winesap; and an apple named for its size: the massive Twenty Ounce.</p>
+</div>
+<div class="slide">
+<h2 id="macoun">Macoun</h2>
+<p>My favorite has always been the Macoun. A slight purplish hue with the right amount of tart. You find Macouns only at the close of fall; my favorite time of the year in New England.</p>
+</div>
+<div class="slide">
+<h2 id="tiled-watercolors">Tiled Watercolors</h2>
+<p>I searched for a way to combine farming, apples and <code>rmarkdown</code>. Obviously.</p>
+<p>I found the U.S. Department of Agriculture Pomological Watercolor Collection and fell in love. There are over seven thousand paintings, lithographs, and line drawings with almost four thousand images of apples.</p>
+</div>
+<div class="slide">
+<h2 id="building-the-report">Building the report</h2>
+<p>I was able to find a dataset someone built by screen-scraping the USDA site.</p>
+<p>I started building an R Markdown report to extract images of Macouns from the watercolor collection.</p>
+<p>Here is my first attempt using that dataset to build a report.</p>
+</div>
+<div class="slide">
+<h3 id="image.rmd"><code>image.Rmd</code></h3>
+<p>It's pretty bare. Just an image and the name of the fruit.</p>
+<p>The code slurps in the JSON dataset, filters for entries that are Macoun apples, chooses one, and emits its image.</p>
+</div>
+<div class="slide">
+<h3 id="macoun.rmd"><code>macoun.Rmd</code></h3>
+<p>That's a nice start, but let's try to compare the details of the selected art against the entire collection.</p>
+<p>Here's an improved version of the report that compares the type of fruit and its variety to the other works. The metadata for the chosen image and how it compares to the collection is being used to generate the report text.</p>
+<p>The first graph plots the contributions over time by this artist. The second graph shows when artwork with the same type of fruit and variety were created.</p>
+<p>This is probably similar to reports that you are already writing - mixing computation, text, and visualizations.</p>
+</div>
+<div class="slide">
+<h3 id="introducing-parameters">Introducing Parameters</h3>
+<p>When I was working on this report, I realized early on that there are only two paintings of Macouns in the watercolor collection.</p>
+<p>If I want to try reporting on other fruits and varieties, I could edit this R Markdown file in-place (edit the report to look for bartlett pears). I could also edit a copy of the source file.</p>
+<p>I don't love these answers. It's really easy to accidentally end up with subtly different behavior in each of the source files or forget the different experiments that were tried.</p>
+<p>Parameterized reports let you vary your inputs without changing your source.</p>
+</div>
+<div class="slide">
+<h3 id="simple.rmd"><code>simple.Rmd</code></h3>
+<p>Let's take this report and allow the customization of three variables: the type of fruit, the variety, and the date range.</p>
+<p>In this version, we have added a &quot;params&quot; block to the YAML report configuration. The report variables have just been hoisted up as parameters.</p>
+<p>Here is where we are using the parameters in our report. I am using simple variable assignment so all three parameters are used together, but these parameter references could appear anywhere in the report.</p>
+<p>We can still &quot;knit&quot; this report as before. The rendering uses the values in our parameter section.</p>
+</div>
+<div class="slide">
+<h3 id="knitting">Knitting</h3>
+<p>The IDE &quot;Knit&quot; menu has a &quot;Knit with Parameters&quot; option, and that's where we can start to see the power of parameterized reports.</p>
+<p>This dialog is generated based on the configurable parameters. We'll worry about year later, but let's change these values. Our &quot;apples&quot; report just let us analyze the &quot;grapes&quot; in the collection!</p>
+</div>
+<div class="slide">
+<h3 id="parameterized.rmd"><code>parameterized.Rmd</code></h3>
+<p>Let's improve parameter customization a bit.</p>
+<p>First, let's change the &quot;fruit&quot; parameter to use a selector. I've extracted the ten most common types of fruit and have them listed as options. The &quot;any&quot; choice is being used as a wild card.</p>
+<p>&quot;Variety&quot; still allows string input. Its default is the empty string, indicating no filtering by variety. The title change helps us remember that blank input is OK.</p>
+<p>Year is customized as a two-value slider.</p>
+</div>
+<div class="slide">
+<h3 id="improved-knitting">Improved knitting</h3>
+<p>Let's see how these improvements change the customization panel.</p>
+<p>(try fruit: grapes, variety: black, year: include 1917)</p>
+<p>This parameterized report now acts as a template that can generate a whole class of documents.</p>
+</div>
+<div class="slide">
+<h3 id="deploying">Deploying</h3>
+<p>We can deploy this code to RStudio Connect. As you can see, the content is the same as I was able to produce within the RStudio IDE, but this one was rendered on the server.</p>
+<p>We can create a new variation of this report with different parameter values. These are the same controls that we saw in the IDE. Let's create a variant for &quot;grapes&quot;.</p>
+<p>This output lives alongside the default document output. They each have their own name. You can see that I have already created a number of variants: one for Macouns (of course), one for strawberries, and one with a narrowed date range to try and see if works created during the Great Depression are somehow different.</p>
+</div>
+<div class="slide">
+<h3 id="configuring-in-rsc">Configuring in RSC</h3>
+<p>Each variation of a report can be regenerated on a schedule and optionally sent via email. The &quot;strawberries&quot; version of the report is being regenerated and emailed once a day.</p>
+<p>Each report also retains the history of its previous renderings. I can look at the strawberry report from yesterday and see what is different from today's result. Each output of the source report tracks its own history.</p>
+</div>
+<div class="slide">
+<h2 id="any-report-can-become-parameterized">Any report can become parameterized</h2>
+<p>It is usually easy to add parameters to an existing R Markdown report. Just hoist any constant from your code to the &quot;params&quot; YAML, and iterate from there.</p>
+</div>
+<div class="slide">
+<h2 id="rendering-from-code">Rendering from code</h2>
+<p>If you render from other R code, you can customize parameters there, as well.</p>
+</div>
+<div class="slide">
+<h2 id="resources">Resources</h2>
+<p>Here are some of the resources I have mentioned.</p>
+<p>The R Markdown site contains documentation about parameterized reports and lots of other examples.</p>
+<p>The &quot;Old Fruit Pictures&quot; Twitter account posts a watercolor from the collection every few hours.</p>
+<p>Thank you for your time.</p>
+</div>
+</body>
+</html>

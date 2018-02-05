@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+    <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Fruit for Thought</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/night.css">
+        <link rel="stylesheet" href="talk.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	 var link = document.createElement( 'link' );
+	 link.rel = 'stylesheet';
+	 link.type = 'text/css';
+	 link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/pdf.css' : 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/print/paper.css';
+	 document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+    </head>
+    <body>
+	<div class="reveal">
+	    <div class="slides">
+		<section>
+                    <h2>Fruit for Thought</h2>
+                    <blockquote>
+                        Using Parameterized R Markdown reports to explore the
+                        Pomological Watercolor Collection.
+                    </blockquote>
+                    <h3>Aron Atkins @ RStudio</h3>
+                    <h4>@aronatkins</h4>
+                </section>
+
+                <section>
+                    <img src="images/logoRStudioConnect.svg"/>
+                </section>
+
+                <section data-background-image="images/HowardAtkins.jpg"
+                    data-background-size="contain">
+                    <!-- image of HWA from: -->
+                    <!-- http://usbusinessexecutive.com/food-drink/case-studies/atkins-farms-country-market-celebrating-53-years-a-new-storefront-north -->
+                </section>
+
+                <section data-background-image="images/Pomological_Watercolor_POM00003187-crop.jpg"
+                    data-background-size="contain">
+                    <!-- https://commons.wikimedia.org/wiki/File:Pomological_Watercolor_POM00003187.jpg -->
+                </section>
+
+                <section data-background-image="images/fruit_watercolors.png"
+                         data-background-size="440px"
+                         data-background-repeat="repeat">
+                    <!-- https://usdawatercolors.nal.usda.gov/pom/home.xhtml -->
+                    <div class="blackbox">
+                        <h3>USDA</h3><h3>Pomological Watercolors</h3>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Building the report</h3>
+                </section>
+
+                <section>
+                    Any report can become parameterized.
+                    <pre><code class="rmarkdown" data-trim data-noescape>
+---
+params:
+  fruit: "apples"
+---
+
+The fruit is `r params$fruit`.
+
+                    </code></pre>
+                </section>
+                <section>
+                    Rendering from code:
+                    <pre><code class="r" data-trim data-noescape>
+rmarkdown::render("parameterized.Rmd",
+                  params = list(
+                      fruit = "pears"))
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Resources:</h3>
+
+                    <dl>
+                        <dt>RMarkdown</dt>
+                        <dd><a href="http://rmarkdown.rstudio.com" target="_blank">http://rmarkdown.rstudio.com</a></dd>
+
+                        <dt>USDA Pomological Watercolor Collection</dt>
+                        <dd><a href="https://usdawatercolors.nal.usda.gov/" target="_blank">https://usdawatercolors.nal.usda.gov/</a></dd>
+
+                        <dt>Old Fruit Pictures</dt>
+                        <dd><a href="https://twitter.com/pomological" target="_blank">https://twitter.com/pomological</a></dd>
+                    </dl>
+                </section>
+                
+	    </div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"></script>
+
+	<script>
+	 // More info about config & dependencies:
+	 // - https://github.com/hakimel/reveal.js#configuration
+	 // - https://github.com/hakimel/reveal.js#dependencies
+	 Reveal.initialize({
+	     dependencies: [
+		 { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	     ]
+	 });
+	</script>
+
+        <style type="text/css">
+         /* https://stackoverflow.com/questions/34706859/set-header-and-footer-reveal-js-presentation#37518822 */
+         /* 1. Style header/footer <div> so they are positioned as desired. */
+         /* nits: 1. footer uses jquery. 2. footer does not resize with slides. */
+         #footer-left {
+             background: white;
+             color: #4c83b6;
+             width: 100%;
+             padding: .2em;
+             position: absolute;
+             bottom: 0%;
+             left: 0%;
+             font-weight: 200;
+             font-size: smaller;
+             z-index: 1;
+         }
+         #footer-left .logo {
+             height: 1em;
+         }
+        </style>
+
+        <!-- 2. Create hidden header/footer <div> -->
+        <div id="hidden" style="display:none;">
+            <div id="footer">
+                <div id="footer-left">
+                    <img class="logo" src="images/logoRStudio.svg" alt="RStudio" />
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript">
+         // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+         var footer = $('#footer').html();
+         if ( window.location.search.match( /print-pdf/gi ) ) {
+             Reveal.addEventListener( 'ready', function( event ) {
+                 $('.slide-background').append(footer);
+             });
+         }
+         else {
+             $('div.reveal').append(footer);
+         }
+        </script>
+    </body>
+</html>

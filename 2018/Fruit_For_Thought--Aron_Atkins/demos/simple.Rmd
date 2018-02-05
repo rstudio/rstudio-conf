@@ -1,0 +1,197 @@
+---
+output: 
+  html_document:
+    css: pomological.css
+params:
+  fruit: apples
+  variety: macoun
+  year: [1886, 1942]
+---
+
+```{r setup,echo=FALSE}
+library(magrittr)
+
+fruitName <- params$fruit
+varietyName <- params$variety
+startYear <- params$year[1]
+endYear <- params$year[2]
+if (fruitName == "any") { fruitName <- "" }
+
+json <- jsonlite::fromJSON("watercolors.json")
+watercolors <- as.data.frame(json)
+# janitorial services
+watercolors$year <- as.integer(watercolors$year)
+watercolors <- watercolors[!is.na(watercolors$year),]
+
+nameFilter <- grep(fruitName, watercolors$common_name, ignore.case = TRUE)
+fruit <- watercolors[nameFilter,]
+
+varietyFilter <- grep(varietyName, fruit$variety, ignore.case = TRUE)
+variety <- fruit[varietyFilter,]
+
+inDateRange <- variety[variety$year >= startYear & variety$year <= endYear,]
+if (nrow(inDateRange) == 0) {
+  stop("No fruit matched input parameters.")
+}
+chosen <- inDateRange[sample(nrow(inDateRange),1),]
+
+# extract counts of the number of measurements in the group that have the
+# same property as the chosen
+makeCounts <- function(group, chosen) {
+  list(
+    common_name = sum(group$common_name == chosen$common_name),
+    variety = sum(group$variety == chosen$variety),
+    geographic_origin = sum(group$geographic_origin == chosen$geographic_origin),
+    artist = sum(group$artist == chosen$artist)
+  )
+}
+
+# fruitNarrowed and varietyNarrowed are true if the user filters
+# narrowed the set of watercolors before we made our selection.
+fruitNarrowed <- !identical(watercolors, fruit)
+varietyNarrowed <- !identical(fruit, variety)
+
+# sameFruit and sameVariety are the watercolors matching our chosen item.
+sameFruit <- watercolors[watercolors$common_name == chosen$common_name,]
+sameVariety <- sameFruit[sameFruit$variety == chosen$variety,]
+
+# Count records that match our chosen item
+watercolorCounts <- makeCounts(watercolors, chosen)
+fruitCounts <- makeCounts(sameFruit, chosen)
+varietyCounts <- makeCounts(sameVariety, chosen)
+
+allFreq <- plyr::count(na.omit(as.integer(watercolors$year)))
+names(allFreq) <- c("year", "collection")
+
+hasNotes <- chosen$notes_on_original != ""
+
+googleSearch <- sprintf("https://www.google.com/search?q=%s",
+                        URLencode(paste0(chosen$common_name, " ",
+                                         chosen$variety)))
+```
+
+## `r chosen$title`
+
+<div style="float:right; margin-left: 40px;">
+
+```{r out.width="400px", echo=FALSE}
+source("pomological.R")
+thumbnail_url <- find_pomological_thumbnail_url(chosen$id)
+knitr::include_graphics(thumbnail_url)
+```
+</div>
+
+(<a href="`r chosen$wikimedia_url`" target="_blank">Wikimedia</a> | 
+<a href="`r chosen$url`" target="_blank">USDA</a> | 
+<a href="`r googleSearch`" target="_blank">Google</a>)
+
+**Scientific name:** `r chosen$scientific_name`  
+**Common name:** `r chosen$common_name`  
+**Variety:** `r chosen$variety`  
+
+The U.S. Department of Agriculture (USDA) Pomological Watercolor Collection 
+contains `r nrow(watercolors)` watercolors, lithographs, and line drawings.
+
+There are `r watercolorCounts$common_name` works of `r chosen$common_name` and 
+`r watercolorCounts$variety` `r chosen$variety` `r chosen$common_name`.
+
+**Artist:** `r chosen$artist`  
+
+```{r echo=FALSE}
+# same artist lets us summarize information about the artist.
+sameArtist <- watercolors[watercolors$artist == chosen$artist,]
+artist.location <- unique(sameArtist$geographic_origin)
+artist.fruit <- unique(sameArtist$common_name)
+artist.variety <- unique(sameArtist$variety)
+```
+
+This artist was responsible for `r watercolorCounts$artist` entries in the
+collection; `r fruitCounts$artist` of those were `r chosen$common_name` and
+`r varietyCounts$artist` were `r chosen$variety` `r chosen$common_name`.
+
+Works by the artist were from `r length(artist.location)` different locations,
+covering `r length(artist.variety)` different varieties of
+`r length(artist.fruit)` fruits.
+
+```{r echo = FALSE, results = 'asis', eval = FALSE}
+# Woah. Some artists roam quite a lot. 
+cat("Locations by this artist.\n")
+cat(paste("*", artist.location), sep = "\n")
+```
+
+```{r echo = FALSE, fig.width=4, fig.height=2}
+artistFreq <- plyr::count(na.omit(as.integer(sameArtist$year)))
+names(artistFreq) <- c("year", "artist")
+mfreq <- merge(allFreq, artistFreq, all = TRUE)
+mfreq[is.na(mfreq)] <- 0
+# make sure we show at least a 10y span
+window <- c(max(min(artistFreq$year) - 5, min(mfreq$year)),
+            min(max(artistFreq$year) + 5, max(mfreq$year)))
+dygraphs::dygraph(mfreq, main = "works by this artist") %>% 
+  dygraphs::dyAxis("y", axisLabelWidth = 30) %>%
+  #dygraphs::dySeries("artist", label = chosen$artist) %>%
+  dygraphs::dyOptions(drawPoints = TRUE, pointSize = 2) %>%
+  # dygraphs::dyHighlight(highlightCircleSize = 5, 
+  #                       highlightSeriesBackgroundAlpha = 0.2,
+  #                       hideOnMouseOut = FALSE, 
+  #                       highlightSeriesOpts = list(strokeWidth = 3)) %>%
+  dygraphs::dyLegend(width = 300) %>%
+  dygraphs::dyRangeSelector(dateWindow = window)
+
+```
+
+**Date created:** `r chosen$date_created`  
+
+```{r echo=FALSE}
+sameYear <- watercolors[watercolors$year == chosen$year,]
+year.artist <- unique(sameYear$artist)
+year.location <- unique(sameYear$geographic_origin)
+year.fruit <- unique(sameYear$common_name)
+year.variety <- unique(sameYear$variety)
+```
+
+The Pomological Watercolor Collection contains `r nrow(sameYear)` works from 
+the year `r chosen$year`. These entries covered 
+`r length(year.variety)` varieties of `r length(year.fruit)` fruits
+produced by `r length(year.artist)` artists in `r length(year.location)`
+different locations.
+
+```{r echo = FALSE, fig.width=4, fig.height=2}
+fruitFreq <- plyr::count(na.omit(as.integer(sameFruit$year)))
+varietyFreq <- plyr::count(na.omit(as.integer(sameVariety$year)))
+names(fruitFreq) <- c("year", "fruit")
+names(varietyFreq) <- c("year", "variety")
+mfreq <- merge(merge(allFreq, fruitFreq, all = TRUE), varietyFreq, all = TRUE)
+mfreq[is.na(mfreq)] <- 0
+# make sure we show at least a 10y span
+window <- c(max(min(varietyFreq$year) - 5, min(mfreq$year)),
+            min(max(varietyFreq$year) + 5, max(mfreq$year)))
+dygraphs::dygraph(mfreq, main = "works with matching fruit/variety") %>% 
+  dygraphs::dyAxis("y", axisLabelWidth = 30) %>%
+  #dygraphs::dySeries("fruit", label = chosen$common_name) %>%
+  #dygraphs::dySeries("variety", label = chosen$variety) %>%
+  dygraphs::dyOptions(drawPoints = TRUE, pointSize = 2) %>%
+  dygraphs::dyLegend(width = 300) %>%
+  dygraphs::dyRangeSelector(dateWindow = window)
+```
+
+**Geographic origin:** `r chosen$geographic_origin`  
+
+```{r echo=FALSE}
+sameLocation <- watercolors[watercolors$geographic_origin == chosen$geographic_origin,]
+location.artist <- unique(sameLocation$artist)
+location.fruit <- unique(sameLocation$common_name)
+location.variety <- unique(sameLocation$variety)
+```
+
+This location includes works from `r length(location.artist)` artists,
+covering `r length(location.variety)` different varieties of
+`r length(location.fruit)` fruits.
+
+```{r echo = FALSE, results = 'asis', eval = hasNotes}
+cat("**Notes on original:**", chosen$notes_on_original, "\n")
+```
+
+<div style="clear:both;"></div>
+
+> <small>`r chosen$rights`</small>
