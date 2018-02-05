@@ -1,0 +1,30 @@
+---
+title: "Reading 01"
+output: 
+  html_document: 
+    theme: yeti
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Due
+
+Monday, Jan 22
+
+## Required:
+
+- [OpenIntro Statistics](https://drive.google.com/file/d/0B-DHaDEbiOGkc1RycUtIcUtIelE/view):
+    + Section 1.6: Examining numerical data
+    + Section 1.7: Considering categorical data
+
+- [What's so hard about histograms?](http://tinlizzie.org/histograms/)
+
+## Optional:
+
+- Reproducibility case studies:
+    - [Science retracts gay marriage paper without agreement of lead author LaCour](http://news.sciencemag.org/policy/2015/05/science-retracts-gay-marriage-paper-without-lead-author-s-consent)
+    - [Tracking retractions as a window into the scientific process Seizure study retracted after authors realize data got “terribly mixed”](http://retractionwatch.com/2013/02/01/seizure-study-retracted-after-authors-realize-data-got-terribly-mixed/)
+    - [Tracking retractions as a window into the scientific process
+Bad spreadsheet merge kills depression paper, quick fix resurrects it](http://retractionwatch.com/2014/07/01/bad-spreadsheet-merge-kills-depression-paper-quick-fix-resurrects-it/)

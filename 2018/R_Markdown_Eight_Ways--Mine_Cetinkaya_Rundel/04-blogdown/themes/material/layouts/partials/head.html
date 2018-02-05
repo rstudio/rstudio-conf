@@ -1,0 +1,33 @@
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head -->
+    {{ .Hugo.Generator }}                                                                   
+    {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}             
+    {{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}        
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <!-- Bootstrap core, FontAwesome, Academicons CSS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.0/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/gaborcsardi/r-font/master/rlogo.css">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="/css/cover.css">
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ "/css/" | relURL }}{{ . }}">       
+    {{ end }}
+    <link rel="alternate" href="{{ .RSSLink | default .Site.RSSLink  }}" type="application/rss+xml" title="{{ .Site.Title }}">
+    <link rel="feed" href="{{ .RSSLink | default .Site.RSSLink }}" type="application/rss+xml" title="{{ .Site.Title }}">
+    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | relURL }}">
+    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | relURL }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+  </head>

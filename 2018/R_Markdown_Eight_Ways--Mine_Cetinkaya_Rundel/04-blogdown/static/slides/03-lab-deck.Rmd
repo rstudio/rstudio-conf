@@ -1,0 +1,117 @@
+---
+title: "Lab 03: Visualizing spatial data"
+author: ""
+date: "2018-02-01"
+output:
+  xaringan::moon_reader:
+    css: "lab-slides.css"
+    logo: img/sta199-hex.png
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+# R options
+options(
+  htmltools.dir.version = FALSE, # for blogdown
+  show.signif.stars = FALSE,     # for regression output
+  warm = 1
+  )
+# Set dpi and height for images
+library(knitr)
+opts_chunk$set(fig.height = 2.65, dpi = 300) 
+# ggplot2 color palette with gray
+color_palette <- list(gray = "#999999", 
+                      salmon = "#E69F00", 
+                      lightblue = "#56B4E9", 
+                      green = "#009E73", 
+                      yellow = "#F0E442", 
+                      darkblue = "#0072B2", 
+                      red = "#D55E00", 
+                      purple = "#CC79A7")
+# For nonsese...
+library(emo)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rvest)
+```
+
+## Agenda
+
+1. **An example of the power of visualization:** 
+2. **Git wisdom**
+3. **Lab introduction**
+4. **Starting a new project:** Clone the repo into a new RStudio Cloud project.
+
+---
+
+## The importance of visualization
+
+- What do these guys have in common?
+
+```{r echo=FALSE, out.width="300px"}
+knitr::include_graphics("lab-img/03/John_Snow.jpg"); knitr::include_graphics("lab-img/03/John_Snow-got.jpg")
+```
+
+---
+
+- They're both named John Snow, but only one of them was involved with the 1854 Broad Street London cholera outbreak
+
+```{r echo=FALSE, out.width="600px"}
+knitr::include_graphics("lab-img/03/Snow-cholera-map.jpg")
+```
+---
+
+## Git
+
+- Git commands should be used with intent
+
+- During lab, try to avoid this: "I'm confused; let's see if clicking this fixes anything" (ask me, or talk with teammates)
+
+- When not in lab, (careful) experimentation is totally encouraged!
+
+- Bottom line: understand *why* a command does what it does.
+
+---
+
+## Lab introduction
+The next two labs are motivated by:
+
+```{r echo=FALSE, out.width="220px"}
+knitr::include_graphics("lab-img/03/Dennys.png")
+knitr::include_graphics("lab-img/03/LaQuinta.jpg")
+```
+
+```{r echo=FALSE, out.width="220px"}
+knitr::include_graphics("lab-img/03/texas-flag.png")
+knitr::include_graphics("lab-img/03/mitch-hedberg.jpg")
+```    
+
+---
+
+## Starting a new project
+
+- Go to the course GitHub organization and find the lab-03 repo that has your team name on it.
+
+- On GitHub, click on the green Clone or download button, select Use HTTPS (this might already be selected by default, and if it is, you’ll see the text Clone with HTTPS). Click on the clipboard icon to copy the repo URL.
+
+- Go to RStudio Cloud and into the course workspace. Create a New Project from Git Repo. You will need to click on the down arrow next to the New Project button to see this option.
+
+- Copy and paste the URL of your assignment repo into the dialog box and hit OK.
+
+- Follow the instructions to configure your git credentials. To double check, run the following 
+commands and make sure your info is correct:
+
+```
+git config --global user.email
+git config --global user.name
+```
+- Install the `tidyverse` package and make sure it's being loaded in your Lab .Rmd.
+
+

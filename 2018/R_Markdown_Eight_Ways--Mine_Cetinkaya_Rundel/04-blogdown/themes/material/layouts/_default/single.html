@@ -1,0 +1,19 @@
+
+{{ define "body" }}
+<body class="profile-page">
+  {{ partial "nav-fixed-top.html" . }}
+  <div class="wrapper">
+    <div class="header header-filter" style="background-image: url('{{ .Site.Params.background | relURL }}');">
+    </div>
+		<div class="main main-raised">
+			<div class="container">
+		  	<div class="section text-left">
+		  	  <h2 class="title">{{ .Title }}</h2>
+	            {{ .Content }}
+	      </div>
+      </div>
+		</div>
+    {{ partial "footer" . }}
+	</div>
+</body>
+{{ end }}

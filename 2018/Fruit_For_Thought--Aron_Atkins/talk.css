@@ -1,0 +1,25 @@
+.reveal section code {
+    font-size: 1.5em;
+}
+
+.reveal section img {
+    background: white;
+    box-shadow: none;
+    border: none;
+    padding: 20px;
+}
+
+.reveal dt {
+    margin-top: 1em;
+}
+
+.reveal pre code {
+    padding: 25px;
+    line-height: 1.2em;
+}
+
+.blackbox {
+    background-color: rgba(1, 1, 1, 0.7);
+    margin: 20px auto;
+    padding: 5px;
+}

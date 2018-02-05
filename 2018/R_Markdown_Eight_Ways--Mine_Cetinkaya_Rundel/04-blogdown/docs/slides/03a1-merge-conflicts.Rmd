@@ -1,0 +1,103 @@
+---
+title: "Resolving merge conflicts"
+author: "Dr. Çetinkaya-Rundel"
+date: "2018-01-29"
+output:
+  xaringan::moon_reader:
+    css: "slides.css"
+    logo: img/sta199-logo-hex.png
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(magick)
+library(knitr)
+library(emo)
+library(mosaicData)
+library(openintro)
+library(DT)
+```
+
+```{r setup, include=FALSE}
+# R options
+options(
+  htmltools.dir.version = FALSE, # for blogdown
+  show.signif.stars = FALSE,     # for regression output
+  warm = 1
+  )
+# Set dpi and height for images
+opts_chunk$set(fig.height = 2.65, dpi = 300) 
+# ggplot2 color palette with gray
+color_palette <- list(gray = "#999999", 
+                      salmon = "#E69F00", 
+                      lightblue = "#56B4E9", 
+                      green = "#009E73", 
+                      yellow = "#F0E442", 
+                      darkblue = "#0072B2", 
+                      red = "#D55E00", 
+                      purple = "#CC79A7")
+# For nonsese...
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+# For magick
+dev.off <- function(){
+  invisible(grDevices::dev.off())
+}
+```
+
+
+## Announcements
+
+Please sit with your teams in class and lab
+
+---
+
+class: center, middle
+
+# Merge conflicts
+
+---
+
+## Merge conflicts
+
+- When two collaborators make changes to a file and push the file to their repo, git merges these two files.
+
+- If these two files have conflicting content on the same line, git will produce a **merge conflict**.
+
+---
+
+## Getting started
+
+- Clone your assignment repo in RStudio Cloud (`hw-01-dataviz-teamname`), and open the .Rmd file.
+
+- Assign the numbers 1, 2, 3 (and 4, if you have 4 members) to each of the team members.
+
+---
+
+## Let's cause a merge conflict
+
+Take turns in completing the exercise, only one member at a time. For now, only commit and push the Rmd file:
+
+- Member 1 - Change the team name to your actual team name, knit, commit, push.
+
+- Member 2 - Change the team name to some other word, knit, commit, push. You should get an error. Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Commit, and push.
+
+- Member 3 - Add a name to the first code chunk, knit, commit, push. You should get an error. Pull. No merge conflicts should occur. Now push.
+
+- Member 4 - Add a different name to the first code chunk, knit, commit, push. You should get an error. Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. Commit, and push.
+
+- All members - Pull, and observe the changes in your document.
+
+---
+
+## Tips for collaborating via git/GitHub
+
+- Always pull first before you start working.
+
+- Commit, and push, often to minimize merge conflicts and/or to make merge conflicts easier to resolve.
+
+- If you find yourself in a situation that is difficult to resolve, ask questions asap, don't let it linger and get bigger.

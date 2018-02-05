@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deploying TensorFlow Models</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Javier Luraschi" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/styles/rstudio.css" type="text/css" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/styles/tfdeploy.css" type="text/css" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/examples/keras-mnist.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Deploying TensorFlow Models
+## with tfdeploy
+### <a href="https://github.com/javierluraschi">Javier Luraschi</a>
+### February 2018
+
+---
+
+class: rstudio-slide, left, rstudio-overview
+
+
+
+# Overview
+
+- **Train** and **Export** models with [tensorflow.rstudio.com](https://tensorflow.rstudio.com)
+- **Test** deployments with [tfdeploy](https://github.com/rstudio/tfdeploy).
+- **Deploy** with [cloudml](https://github.com/rstudio/cloudml) and [rsconnect](https://github.com/rstudio/rsconnect).
+- **Predict** models from any platform!
+
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-goal.png)
+
+---
+class: rstudio-slide, left
+
+# Train
+
+**Train** models with [tensorflow.rstudio.com](https://tensorflow.rstudio.com)
+
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-training.png)
+
+---
+class: rstudio-slide, left, tfdeploy-code-image
+
+# Export
+
+Use `export_savedmodel()` across Keras, Estimators and the Core API.
+
+.pull-left[
+
+```r
+# Keras API
+export_savedmodel(model, "mnist")
+
+# Estimator API
+export_savedmodel(model, "mtcars")
+
+# Core API
+input  &lt;- list(images = x),
+output &lt;- list(scores = y)
+export_savedmodel(sess, "mnist", input, output)
+```
+]
+.pull-right[
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-export.png)
+]
+
+---
+class: rstudio-slide, left, tfdeploy-code-image
+
+# Test
+
+- Install `tfdeploy` from [github.com/rstudio/tfdeploy](https://github.com/rstudio/tfdeploy)
+- Run `serve_savedmodel()` to serve and test your model:
+
+.pull-left[
+
+```r
+# Install tfdeploy from GitHub
+devtools::install_github("rstudio/tfdeploy")
+
+# Run local server with model
+serve_savedmodel("&lt;model-name&gt;")
+```
+]
+
+.pull-right[
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-test.png)
+]
+
+---
+class: rstudio-slide, left, tfdeploy-code-image
+
+# Deploy
+
+Deploy models to [TensorFlow Serving](https://github.com/tensorflow/serving), [CloudML](https://tensorflow.rstudio.com/tools/cloudml/articles/getting_started.html) or [RStudio Connect](https://www.rstudio.com/products/connect/).
+
+.pull-left[
+
+```r
+# Deploy to CloudML
+library(cloudml)
+cloudml_deploy("keras-mnist", "rstudio-conf")
+```
+
+
+```r
+# Deploy to RStudio Connect
+library(rsconnect)
+deployTFModel("keras-mnist")
+```
+]
+
+.pull-right[
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-connect.png)
+]
+
+---
+class: rstudio-slide, left
+
+# Predict
+
+Predict using **any programming language**.
+
+
+```bash
+curl -d @examples/digit-zero.json http://localhost:3939/content/2/predict
+```
+
+.thin-block[
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-curl.png)
+
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-targets.png)
+
+]
+
+---
+class: rstudio-slide, left
+
+# Thanks!
+
+- Slides: [rpubs.com/jluraschi/](https://rpubs.com/jluraschi/)
+- R Notebook: [Slides](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/deploy-tensorflow-models-with-tfdeploy.Rmd) - [Demo](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/deploy-tensorflow-models-walkthrough.Rmd)
+
+---
+class: rstudio-slide, left, tfdeploy-code-image
+
+# Predicting from JavaScript?
+
+TensorFlow predictions in JavaScript with [kerasjs](https://gist.github.com/rstudio/kerasjs):
+
+.pull-left[
+
+```r
+# Install kerasjs from GitHub
+devtools::install_github("rstudio/kerasjs")
+
+# Train and Export model from Keras as HDF5
+# or use an existing model
+model_path &lt;- system.file(
+  "models/keras-mnist.hdf5",
+  package = "kerasjs"
+)
+
+# Convert model to JavaScript and Preview
+kerasjs_convert(model_path)
+```
+]
+.pull-right[
+.mnist-digits[
+
+]
+]
+
+---
+class: rstudio-slide, left, tfdeploy-code-image
+
+# Predicting from Shiny?
+
+Using `shiny` to perform a prediction over a load or deployed TensorFlow model:
+
+.pull-left[
+
+```r
+data &lt;- list(instances = list(
+    list(pixels::get_pixels())
+))
+
+# Request prediction from deployed model
+httr::POST(url, body = toJSON(data))
+
+# Or directly from TensorFlow
+tfdeploy::predict_savedmodel(data)
+
+# Then assign to reactive, etc.
+```
+]
+
+.pull-right[
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-shiny.png)
+]
+
+---
+class: rstudio-slide, left, tfdeploy-code-image
+
+# Predicting from Spark?
+
+[TensorFlow predictions in Spark with sparklyr](https://gist.github.com/javierluraschi/aaf0ef91fcd9e368478bae7e4c883e85):
+
+.pull-left[
+
+```r
+mtcars_tbl %&gt;% spark_apply(function(df) {
+  instances &lt;- unname(apply(df, 1, function(e) 
+    list(cyl = e[2], disp = e[3])
+  ))
+  
+  results &lt;- tfdeploy::predict_savedmodel(
+    instances,
+    "tfestimators-mtcars.tar",
+    signature_name = "predict"
+  )
+
+  unname(unlist(results))
+})
+```
+]
+
+.pull-right[
+![](https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/images/tensorflow-deployment-sparklyr.png)
+]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://unpkg.com/keras-js@1.0.2"></script>
+<script src="https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/examples/pixels.js"></script>
+<script src="https://s3.amazonaws.com/javierluraschi/tensorflow-deployment-rstudio-conf/examples/keras-mnist.js"></script>
+<script>var slideshow = remark.create({
+"countIncrementalSlides": true,
+"highlightLines": true,
+"highlightStyle": "github",
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

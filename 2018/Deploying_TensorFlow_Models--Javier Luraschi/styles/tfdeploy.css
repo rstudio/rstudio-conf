@@ -1,0 +1,60 @@
+.rstudio-slide a {
+  font-size: 24px;
+  color: #4444FF;
+}
+
+.rstudio-overview img {
+  max-width: 60%;
+}
+
+.rstudio-overview > p {
+  text-align: center;
+}
+
+.rstudio-slide li,
+.rstudio-slide li a,
+.rstudio-slide p a {
+  font-size: 36px;
+}
+
+.tfdeploy-code-image {
+  margin-top: -10px;
+}
+
+.rstudio-slide .remark-inline-code {
+  background-color: #cbf8d7;
+}
+
+.tfdeploy-code-image img {
+  -margin-top: -16px;
+  border: solid 1px #EEE;
+  box-shadow: 0 15px 30px -1px rgba(0,0,0,.08), 0 4px 5px 0 rgba(0,0,0,.02), 0 1px 10px 0 rgba(0,0,0,.02);
+}
+
+.tfdeploy-code-image .pull-left {
+  width: 65%;
+}
+
+.tfdeploy-code-image .pull-right {
+  width: 33%;
+}
+
+.tfdeploy-code-image .pull-right p {
+  display:table-cell;
+}
+
+.remark-code {
+  font-size: 22px;
+}
+
+.rstudio-slide pre {
+  margin: 0;
+}
+
+.rstudio-slide .thin-block p {
+  margin: 15px 0 0 0;
+}
+
+.remark-code {
+  box-shadow: 0 15px 30px -1px rgba(0,0,0,.08), 0 4px 5px 0 rgba(0,0,0,.02), 0 1px 10px 0 rgba(0,0,0,.02);
+}

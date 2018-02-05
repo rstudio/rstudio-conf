@@ -1,0 +1,12 @@
+name: lab-03-viz-sp-data-shiny
+title: lab-03-viz-sp-data-shiny
+username:
+account: mine
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 270520
+bundleId: 1205126
+url: https://mine.shinyapps.io/lab-03-viz-sp-data-shiny/
+when: 1517600360.21642
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,156 @@
+---
+title: "Lab 01: Hello R!"
+author: ""
+date: "2018-01-18"
+output:
+  xaringan::moon_reader:
+    css: "lab-slides.css"
+    logo: img/sta199-hex.png
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+# R options
+options(
+  htmltools.dir.version = FALSE, # for blogdown
+  show.signif.stars = FALSE,     # for regression output
+  warm = 1
+  )
+# Set dpi and height for images
+library(knitr)
+opts_chunk$set(fig.height = 2.65, dpi = 300) 
+# ggplot2 color palette with gray
+color_palette <- list(gray = "#999999", 
+                      salmon = "#E69F00", 
+                      lightblue = "#56B4E9", 
+                      green = "#009E73", 
+                      yellow = "#F0E442", 
+                      darkblue = "#0072B2", 
+                      red = "#D55E00", 
+                      purple = "#CC79A7")
+# For nonsese...
+library(emo)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rvest)
+```
+
+class: center, middle
+
+# Welcome to lab
+
+---
+
+## Agenda
+
+1. **Lab strucuture:** Lab structure overview.
+2. **Lab 01 intro and demos:** Introduce the lab, and work through the first section as a class.
+3. **On your own:** Work on the rest of the lab "on your own", but feel free to check in with teammates as much as you like.
+
+---
+
+class: center, middle
+
+# Lab strucuture
+
+---
+
+## Lab strucuture
+
+- 5-10 minute introduction (a bit longer today)
+
+- Use the remaining time to work through the lab exercises and fill out your lab report
+    + Today: on your own
+    + Remainder of the semester: in teams
+
+- Lab instructions posted on the course website under `</>`
+    + Let's go find today's lab!
+    
+---
+
+## Tips
+
+- You do not have to finish the lab in class, they're due next week in lab. But you might choose to get through portions that you think will be challenging (which initially might be the coding component) in class when I can help you on the spot, and leave the narrative writing till later.
+
+- Do not pressure each other to finish early, use the time wisely to really learn the material and produce a quality report.
+
+- When working in teams, DO not split up lab amongst the team members, work on it together in its entirety.
+
+---
+
+class: center, middle
+
+# Lab 01 intro and demos
+
+---
+
+## Goals
+
+- Introduce you to R and RStudio:
+    + R is the name of the programming language itself 
+    + RStudio is a convenient interface
+
+- Introduce you to Git and GitHub: collaboration and version control system that we will be using throughout the course
+    + Git is a version control system -- like "Track Changes" features from Microsoft Word on steroids
+    + GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
+
+- Take baby steps:
+    + This a solo lab to make versioning (working with Git) simpler
+    + Next week you’ll learn about collaborating on GitHub and produce a single lab report for the team
+
+---
+
+## Getting started
+
+First, put away computers, and watch me do it:
+
+- Click on the assignment link that you should have received in your email to create your GitHub repository (which we’ll refer to as "repo" going forward) for the assignment. This repo contains a template you can build on to complete your assignment.
+
+- On GitHub, click on the green **Clone or download button**, select **Use HTTPS** (this might already be selected by default, and if it is, you’ll see the text **Clone with HTTPS** as in the image below). Click on the clipboard icon to copy the repo URL.
+
+- Go to RStudio Cloud and into the course workspace. Create a **New Project from Git Repo**. You will need to click on the down arrow next to the **New Project** button to see this option.
+
+- Copy and paste the URL of your assignment repo into the pop up dialog box.
+
+- Hit OK.
+
+Now it's your turn! Place a green sticky on your laptop when you're done with this part (you can continue if you like). Place a red sticky if you have questions.
+
+---
+
+## Housekeeping
+
+First, put away computers, and watch me do it:
+
+- Go to the Terminal pane
+
+- Type the following two lines of code, replacing the information in the quotation marks with your info:
+
+```
+git config --global user.email "your email"
+git config --global user.name "your name"
+```
+
+- To confirm that the changes have been implemented, run the following
+
+```
+git config --global user.email
+git config --global user.name
+```
+
+Now it's your turn! Place a green sticky on your laptop when you're done with this part (you can continue if you like). Place a red sticky if you have questions.
+
+---
+
+class: center, middle
+
+# On your own!
+
+<iframe src="https://giphy.com/embed/13awhIC2CcDaHC" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/fall-kid-childhood-13awhIC2CcDaHC">via GIPHY</a></p>

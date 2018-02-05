@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Keeping track of notes, with the eventual hope of a book…</title>
+  <meta name="description" content="Keeping track of notes, with the eventual hope of a book for an introductory data science course.">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Keeping track of notes, with the eventual hope of a book…" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Keeping track of notes, with the eventual hope of a book for an introductory data science course." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Keeping track of notes, with the eventual hope of a book…" />
+  
+  <meta name="twitter:description" content="Keeping track of notes, with the eventual hope of a book for an introductory data science course." />
+  
+
+<meta name="author" content="Mine Cetinkaya-Rundel">
+
+
+<meta name="date" content="2018-02-02">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="lab-3-visualizing-spatial-data.html">
+<link rel="next" href="packages.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Intro to Data Science and Statistical Thinking</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="lab-3-visualizing-spatial-data.html"><a href="lab-3-visualizing-spatial-data.html"><i class="fa fa-check"></i><b>1</b> Lab 3 - Visualizing spatial data</a><ul>
+<li class="chapter" data-level="1.1" data-path="lab-3-visualizing-spatial-data.html"><a href="lab-3-visualizing-spatial-data.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a></li>
+<li class="chapter" data-level="3" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>3</b> Packages</a></li>
+<li class="chapter" data-level="4" data-path="housekeeping.html"><a href="housekeeping.html"><i class="fa fa-check"></i><b>4</b> Housekeeping</a><ul>
+<li class="chapter" data-level="4.1" data-path="housekeeping.html"><a href="housekeeping.html#git-configuration"><i class="fa fa-check"></i><b>4.1</b> Git configuration</a></li>
+<li class="chapter" data-level="4.2" data-path="housekeeping.html"><a href="housekeeping.html#project-name"><i class="fa fa-check"></i><b>4.2</b> Project name:</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="warm-up.html"><a href="warm-up.html"><i class="fa fa-check"></i><b>5</b> Warm up</a><ul>
+<li class="chapter" data-level="5.1" data-path="warm-up.html"><a href="warm-up.html#yaml"><i class="fa fa-check"></i><b>5.1</b> YAML:</a></li>
+<li class="chapter" data-level="5.2" data-path="warm-up.html"><a href="warm-up.html#commiting-and-pushing-changes"><i class="fa fa-check"></i><b>5.2</b> Commiting and pushing changes:</a></li>
+<li class="chapter" data-level="5.3" data-path="warm-up.html"><a href="warm-up.html#pulling-changes"><i class="fa fa-check"></i><b>5.3</b> Pulling changes:</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="the-data.html"><a href="the-data.html"><i class="fa fa-check"></i><b>6</b> The data</a></li>
+<li class="chapter" data-level="7" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>7</b> Exercises</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Keeping track of notes, with the eventual hope of a book…</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="getting-started" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Getting started</h1>
+<ul>
+<li><p>Go to the course organization on GitHub: <a href="https://github.com/Sta199-S18" class="uri">https://github.com/Sta199-S18</a>.</p></li>
+<li><p>Find the repo starting with <code>lab-03</code> and that has your team name at the end (this should be the only <code>lab-03</code> repo available to you).</p></li>
+<li><p>In the repo, click on the green <strong>Clone or download</strong> button, select <strong>Use HTTPS</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with HTTPS</strong> as in the image below). Click on the clipboard icon to copy the repo URL.</p></li>
+<li><p>Go to RStudio Cloud and into the course workspace. Create a <strong>New Project from Git Repo</strong>. You will need to click on the down arrow next to the <strong>New Project</strong> button to see this option.</p></li>
+<li><p>Copy and paste the URL of your assignment repo into the dialog box:</p></li>
+<li><p>Hit OK, and you’re good to go!</p></li>
+</ul>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-3-visualizing-spatial-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="packages.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/lab-03-viz-sp-data.Rmd",
+"text": "Edit"
+},
+"download": ["intro-ds.pdf", "intro-ds.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
