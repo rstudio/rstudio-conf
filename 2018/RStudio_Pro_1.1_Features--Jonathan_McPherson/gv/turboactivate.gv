@@ -1,0 +1,37 @@
+digraph ta {
+  graph [bgcolor="black", color="white", fontcolor="white"]
+  node [shape=box, fontname=Helvetica, fillcolor="darkgray", style=filled, fontcolor="white", color="white"]
+  edge [fontname=Helvetica, fontsize=10, color="white"]
+  rankdir = "LR";
+  
+  subgraph cluster_rsp {
+      subgraph cluster_0 {
+          rankdir = "BT";
+          a1 [label = "Activate"];
+          r1 [label = "Run"];
+          d1 [label = "Deactivate"];
+          label = "Server 1";
+          a1 -> r1 -> d1;
+      }
+      subgraph cluster_1 {
+          rankdir = "BT";
+          a2 [label = "Activate"];
+          r2 [label = "Run"];
+          d2 [label = "Deactivate"];
+          label = "Server 2";
+          a2 -> r2 -> d2;
+      }
+  }
+  
+  i [label = "Internet"];
+  a1 -> i;
+  d1 -> i;
+  a2 -> i;
+  d2 -> i;
+  i -> a1;
+  i -> a2;
+  i -> d1;
+  i -> d2;
+
+  d1 -> a2 [lhead=cluster_0,ltail=cluster_1];
+}
