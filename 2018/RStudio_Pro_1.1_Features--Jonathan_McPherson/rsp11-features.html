@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Jonathan McPherson" />
+  <title>RStudio Server Pro 1.1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="rsp11-features_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="rsp11-features_files/reveal.js-3.3.0.1/css/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    <script src="rsp11-features_files/htmlwidgets-0.9/htmlwidgets.js"></script>
+    <script src="rsp11-features_files/viz-0.3/viz.js"></script>
+    <link href="rsp11-features_files/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="rsp11-features_files/grViz-binding-0.9.2/grViz.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">RStudio Server Pro 1.1</h1>
+  <h1 class="subtitle">New Features</h1>
+    <h2 class="author">Jonathan McPherson</h2>
+    <h3 class="date">2018.02.02</h3>
+</section>
+
+<section><section id="agenda" class="title-slide slide level1"><h1>Agenda</h1></section><section id="for-users" class="slide level2">
+<h2>For Users</h2>
+<ul>
+<li>Session Management</li>
+<li>Session Cleanup</li>
+</ul>
+</section><section id="for-admins" class="slide level2">
+<h2>For Admins</h2>
+<ul>
+<li>Notifications</li>
+<li>Session Cleanup</li>
+<li>Licensing in Docker/VMs</li>
+<li>First Project Template</li>
+</ul>
+</section></section>
+<section><section id="users" class="title-slide slide level1"><h1>Users</h1></section><section id="label-sessions" class="slide level2">
+<h2>Label Sessions</h2>
+<p><img data-src="img/label-session.png" alt="session label" /></p>
+</section><section id="label-sessions-1" class="slide level2">
+<h2>Label Sessions</h2>
+<p><img data-src="img/labelled-sessions.png" alt="session labels" /></p>
+</section><section id="cleanup-sessions" class="slide level2">
+<h2>Cleanup Sessions</h2>
+<p><img data-src="img/select-sessions.png" alt="session cleanup" /></p>
+</section><section id="session-info" class="slide level2">
+<h2>Session Info</h2>
+<p><img data-src="img/session-sizes.png" alt="info" /></p>
+</section><section id="session-child-management" class="slide level2">
+<h2>Session child management</h2>
+<p><img data-src="img/quit-child-processes.png" alt="kill em all" /></p>
+</section><section id="summary" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li>Label sessions for easy access</li>
+<li>Select multiple sessions for cleanup</li>
+<li>Force-quit sessions when necessary</li>
+<li>Session size info for estimating resume time</li>
+</ul>
+</section></section>
+<section><section id="admins" class="title-slide slide level1"><h1>Admins</h1></section><section id="session-multiplication" class="slide level2">
+<h2>Session Multiplication</h2>
+<ul>
+<li>Home directory space is often constrained</li>
+<li>Users don’t take time to clean up sessions</li>
+<li>Sessions can be very large</li>
+</ul>
+</section><section id="session-cleanup" class="slide level2">
+<h2>Session Cleanup</h2>
+<ul>
+<li>Fully clean up unused sessions</li>
+<li>Recover disk space</li>
+</ul>
+</section><section id="session-cleanup-1" class="slide level2">
+<h2>Session Cleanup</h2>
+<pre><code>session-timeout-kill-hours=168</code></pre>
+</section><section id="session-cleanup-caveats" class="slide level2">
+<h2>Session Cleanup Caveats</h2>
+<ul>
+<li>Unused sessions means “user interaction”</li>
+<li>Force-kill is used; set timeout accordingly</li>
+<li>Users can lose unsaved data</li>
+</ul>
+</section><section id="notifications" class="slide level2">
+<h2>Notifications</h2>
+<p><em>How do you communicate impending maintenance or other downtime?</em></p>
+</section><section id="notifications-1" class="slide level2">
+<h2>Notifications</h2>
+<p><img data-src="img/admin-notifications.png" alt="notifications" /></p>
+</section><section id="notifications-2" class="slide level2">
+<h2>Notifications</h2>
+<ul>
+<li>Set message start time/end time</li>
+<li>Notification will be delivered to each user session</li>
+<li>Scriptable</li>
+</ul>
+</section><section id="notifications-3" class="slide level2">
+<h2>Notifications</h2>
+<pre><code>/etc/rstudio/notifications.conf
+
+StartTime: 2018-06-01 10:33:00 -05:00
+EndTime: 2018-06-05
+Message: The server will go down tonight from 10pm to 12am
+    for maintenance.</code></pre>
+</section><section id="licensing-in-containersvms" class="slide level2">
+<h2>Licensing in Containers/VMs</h2>
+<ul>
+<li>RSP License bound to physical hardware</li>
+<li>Must deactivate and re-activate when moving hardware</li>
+</ul>
+</section><section id="activating-in-containers" class="slide level2">
+<h2>Activating in Containers</h2>
+<div id="htmlwidget-e66ced62b25ad7a54c50" style="width:960px;height:576px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e66ced62b25ad7a54c50">{"x":{"diagram":"digraph ta {\n  graph [bgcolor=\"black\", color=\"white\", fontcolor=\"white\"]\n  node [shape=box, fontname=Helvetica, fillcolor=\"darkgray\", style=filled, fontcolor=\"white\", color=\"white\"]\n  edge [fontname=Helvetica, fontsize=10, color=\"white\"]\n  rankdir = \"LR\";\n  \n  subgraph cluster_rsp {\n      subgraph cluster_0 {\n          rankdir = \"BT\";\n          a1 [label = \"Activate\"];\n          r1 [label = \"Run\"];\n          d1 [label = \"Deactivate\"];\n          label = \"Server 1\";\n          a1 -> r1 -> d1;\n      }\n      subgraph cluster_1 {\n          rankdir = \"BT\";\n          a2 [label = \"Activate\"];\n          r2 [label = \"Run\"];\n          d2 [label = \"Deactivate\"];\n          label = \"Server 2\";\n          a2 -> r2 -> d2;\n      }\n  }\n  \n  i [label = \"Internet\"];\n  a1 -> i;\n  d1 -> i;\n  a2 -> i;\n  d2 -> i;\n  i -> a1;\n  i -> a2;\n  i -> d1;\n  i -> d2;\n\n  d1 -> a2 [lhead=cluster_0,ltail=cluster_1];\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</section><section id="containervm-activation-challenges" class="slide level2">
+<h2>Container/VM Activation Challenges</h2>
+<ul>
+<li>License tied to hardware</li>
+<li>Internet access required inside containers</li>
+<li>Keys required inside containers</li>
+<li>License lost if container deleted w/o deactivate</li>
+</ul>
+</section><section id="floating-licensing" class="slide level2 center">
+<h2>Floating Licensing</h2>
+<div id="htmlwidget-757621eb152b2e5a7c98" style="width:960px;height:576px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-757621eb152b2e5a7c98">{"x":{"diagram":"digraph tf {\n  graph [bgcolor=\"black\", color=\"white\", fontcolor=\"white\"]\n  node [shape=box, fontname=Helvetica, fillcolor=\"darkgray\", style=filled, fontcolor=\"white\", color=\"white\"]\n  edge [fontname=Helvetica, fontsize=10, color=\"white\", fontcolor=\"white\"]\n  rankdir=\"LR\";\n  \n  subgraph cluster_rsp {\n      subgraph cluster_0 {\n          r1 [label = \"Run\"];\n          label = \"Server 1\";\n      }\n      subgraph cluster_1 {\n          r2 [label = \"Run\"];\n          label = \"Server 2\";\n      }\n  }\n  \n  s [label = \"License Server\"];\n  r1 -> s [label = \"Release\"];\n  r2 -> s [label = \"Release\"];\n  s -> r2 [label = \"Acquire\"];\n  s -> r1 [label = \"Acquire\"]\n\n  r1 -> r2 [lhead=cluster_0,ltail=cluster_1];\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</section><section id="floating-licensing-1" class="slide level2">
+<h2>Floating Licensing</h2>
+<ul>
+<li>License concurrent instances, not hardware</li>
+<li>No license needed in containers (just address of server)</li>
+<li>No internet access needed in containers</li>
+<li>OK if container destroyed/deleted unexpectantly</li>
+<li>Available in other RStudio products, too</li>
+</ul>
+</section><section id="first-project-template" class="slide level2">
+<h2>First Project Template</h2>
+<ul>
+<li>Help new users</li>
+<li>Provide a template for common tasks</li>
+<li>Supply examples of correct code and style</li>
+</ul>
+</section><section id="first-project-template-1" class="slide level2">
+<h2>First Project Template</h2>
+<pre><code>session-first-project-template-path=/etc/rstudio/welcome-project</code></pre>
+</section><section id="first-project-template-2" class="slide level2">
+<h2>First Project Template</h2>
+<p><img data-src="img/new-project.png" alt="first" /></p>
+</section><section id="first-project-template-3" class="slide level2">
+<h2>First Project Template</h2>
+<ul>
+<li>Copied to home directory on first login</li>
+<li>Opened in first user session</li>
+<li>Can control which files are opened in tabs</li>
+</ul>
+</section><section id="professional-drivers" class="slide level2">
+<h2>Professional drivers</h2>
+<ul>
+<li>High-performance ODBC drivers</li>
+<li>Many enterprise and cloud data sources available</li>
+<li>Connect with RSP and other RStudio products</li>
+</ul>
+</section><section id="summary-1" class="slide level2">
+<h2>Summary</h2>
+<ul>
+<li>Clean up resources from old sessions</li>
+<li>Give users timly notifications</li>
+<li>License with confidence in containers and VMs</li>
+<li>Get new users started on the right foot</li>
+<li>Use professional data drivers</li>
+</ul>
+</section><section id="further-reading" class="slide level2">
+<h2>Further Reading</h2>
+<p>docs.rstudio.com/ide/server-pro</p>
+</section></section>
+<section><section id="q-a" class="title-slide slide level1"><h1>Q &amp; A</h1></section></section>
+    </div>
+  </div>
+
+  <script src="rsp11-features_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="rsp11-features_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

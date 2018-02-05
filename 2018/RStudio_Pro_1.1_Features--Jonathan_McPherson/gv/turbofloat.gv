@@ -1,0 +1,25 @@
+digraph tf {
+  graph [bgcolor="black", color="white", fontcolor="white"]
+  node [shape=box, fontname=Helvetica, fillcolor="darkgray", style=filled, fontcolor="white", color="white"]
+  edge [fontname=Helvetica, fontsize=10, color="white", fontcolor="white"]
+  rankdir="LR";
+  
+  subgraph cluster_rsp {
+      subgraph cluster_0 {
+          r1 [label = "Run"];
+          label = "Server 1";
+      }
+      subgraph cluster_1 {
+          r2 [label = "Run"];
+          label = "Server 2";
+      }
+  }
+  
+  s [label = "License Server"];
+  r1 -> s [label = "Release"];
+  r2 -> s [label = "Release"];
+  s -> r2 [label = "Acquire"];
+  s -> r1 [label = "Acquire"]
+
+  r1 -> r2 [lhead=cluster_0,ltail=cluster_1];
+}
