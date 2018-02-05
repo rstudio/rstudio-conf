@@ -1,0 +1,437 @@
+/* * mixing tufte and envisioned-css * */
+
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700';
+@import 'https://fonts.googleapis.com/css?family=Source+Code+Pro';
+@charset "UTF-8";
+
+/* Tufte CSS styles */
+
+html {
+	font-size: 12px;
+}
+
+body {
+	width: 87.5%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 12.5%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+	background-color: #fefefe;
+	color: #222;
+	max-width: 1400px;
+	counter-reset: li;
+}
+
+h1.title {
+	font-weight: 700;
+	font-style: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-top: 4rem;
+	margin-bottom: 1.5rem;
+	font-size: 3.2rem;
+	line-height: 1;
+	color: #6CA0DC;
+}
+
+h1 {
+	font-style: normal;
+	font-weight: 400;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-top: 2.1rem;
+	margin-bottom: 0;
+	font-size: 2.2rem;
+	line-height: 1;
+	color: #6CA0DC;
+}
+
+h2 {
+	font-style: normal;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 1.7rem;
+	margin-top: 2rem;
+	margin-bottom: 0;
+	line-height: 1;
+	color: #6CA0DC;
+}
+
+h3.subtitle {
+	font-style: normal;
+	font-weight: 400;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1.8rem;
+	display: block;
+	line-height: 1;
+	color: #6CA0DC;
+}
+
+h4 {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.4rem;
+	font-family: 'Source Sans Pro', sans-serif;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	line-height: 1;
+}
+
+h4.author,
+h4.date {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 300;
+	margin: 1rem auto;
+	line-height: 1;
+}
+
+.numeral {
+	font-family: "Source Sans Pro";
+	font-weight: 300;
+}
+
+.danger {
+	color: red;
+}
+
+article {
+	position: relative;
+	padding: 5rem 0rem;
+}
+
+section {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+p,
+ol,
+ul {
+	font-size: 1.4rem;
+}
+
+p {
+	line-height: 2rem;
+	margin-top: 1.4rem;
+	margin-bottom: 1.4rem;
+	padding-right: 0;
+	vertical-align: baseline;
+}
+
+em {
+	font-style: italic;
+	font-weight: 300;
+	font-family: "Source Sans Pro";
+}
+
+strong {
+	font-style: bold;
+	font-weight: 600;
+	font-family: "Source Sans Pro";
+}
+
+blockquote {
+	font-size: 1.4rem;
+}
+
+blockquote p {
+	width: 50%;
+}
+
+blockquote footer {
+	width: 50%;
+	font-size: 1.1rem;
+	text-align: right;
+}
+
+ol,
+ul {
+	width: 45%;
+	-webkit-padding-start: 5%;
+	-webkit-padding-end: 5%;
+}
+
+li {
+	padding: 0.5rem 0;
+}
+
+table {
+	border-top: 2px solid #111;
+	border-bottom: 2px solid #111;
+	font-size: 1.1rem;
+}
+
+th {
+	border-bottom: 1px solid #111;
+}
+
+div.figure {
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	max-width: 55%;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	margin: 0 0 3em 0;
+}
+
+
+/* Links: replicate underline that clears descenders */
+
+a:link,
+a:visited {
+	color: inherit;
+}
+
+a:link {
+	text-decoration: none;
+	background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#333, #333);
+	background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+	-webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+	-moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+	background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8, -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8, -0.15em 0 #fffff8;
+	background-position: 0% 93%, 100% 93%, 0% 93%;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	a:link {
+		background-position-y: 87%, 87%, 87%;
+	}
+}
+
+a:link::selection {
+	text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+	background: #b4d5fe;
+}
+
+a:link::-moz-selection {
+	text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+	background: #b4d5fe;
+}
+
+
+/* Sidenotes, margin notes, figures, captions */
+
+img {
+	max-width: 100%;
+}
+
+.marginnote img {
+	display: block;
+}
+
+.sidenote,
+.marginnote {
+	float: right;
+	clear: right;
+	margin-right: -60%;
+	width: 50%;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	font-size: 1.1rem;
+	line-height: 1.3;
+	vertical-align: baseline;
+	position: relative;
+}
+
+.sidenote-number {
+	font-family: "Source Sans Pro Bold";
+	position: relative;
+	vertical-align: baseline;
+}
+
+.sidenote-number {
+	font-size: 1rem;
+	top: -0.5rem;
+	left: 0.1rem;
+}
+
+p,
+footer,
+table {
+	width: 55%;
+}
+
+table table,
+li p,
+li pre {
+	width: auto;
+}
+
+li p,
+li pre {
+	margin-top: auto;
+}
+
+div.fullwidth,
+table.fullwidth {
+	max-width: 90%;
+}
+
+#TOC,
+h1.title {
+	max-width: 90%;
+}
+
+#TOC ol,
+#TOC ul {
+	width: auto;
+}
+
+div.fullwidth p.caption {
+	margin-right: 0;
+	max-width: 33%;
+}
+
+p.caption {
+	text-align: left;
+}
+
+@media screen and (max-width: 760px) {
+	p,
+	footer,
+	ol,
+	ul,
+	table {
+		width: 90%;
+	}
+	pre {
+		width: 100%;
+		font-size: 16px;
+	}
+	ul {
+		width: 85%;
+	}
+	figure {
+		max-width: 90%;
+	}
+	div.fullwidth p.caption {
+		max-width: none;
+	}
+	blockquote p,
+	blockquote footer {
+		width: 90%;
+	}
+}
+
+code {
+	font-family: 'Source Code Pro', Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+pre code {
+	font-size: 15px;
+}
+
+p code {
+	white-space: inherit;
+}
+
+h1 code,
+h2 code,
+h3 code {
+	font-size: 0.80em;
+}
+
+.marginnote code,
+.sidenote code {
+	font-size: 1rem;
+}
+
+pre {
+		width: 100%;
+		font-size: 16px;
+		overflow-x: auto;
+}
+
+.fullwidth {
+	max-width: 90%;
+	clear: both;
+}
+
+span.newthought {
+	font-variant: small-caps;
+	font-size: 1.2em;
+}
+
+input.margin-toggle {
+	display: none;
+}
+
+label.sidenote-number {
+	display: inline;
+}
+
+label.margin-toggle:not(.sidenote-number) {
+	display: none;
+}
+
+@media (max-width: 760px) {
+	label.margin-toggle:not(.sidenote-number) {
+		display: inline;
+	}
+	.sidenote,
+	.marginnote {
+		display: none;
+	}
+	.shownote,
+	.margin-toggle:checked+.sidenote,
+	.margin-toggle:checked+.marginnote {
+		display: block;
+		float: left;
+		left: 1rem;
+		clear: both;
+		width: 95%;
+		margin: 1rem 2.5%;
+		vertical-align: baseline;
+		position: relative;
+	}
+	label {
+		cursor: pointer;
+	}
+	div.figure {
+		max-width: 90%;
+	}
+	pre {
+		width: 90%;
+		padding: 0;
+	}
+}
+
+ol {
+	/* Remove the default left padding */
+	padding-left: 0;
+}
+
+ol>li {
+	/* Create a positioning context */
+	position: relative;
+	/* Disable the normal item numbering */
+	list-style: none;
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 0;
+	padding-left: 90px;
+}
+
+ol>li:before {
+	/* Use the counter as content */
+	content: "Exercise " counter(li)".";
+	/* Increment the counter by 1 */
+	counter-increment: li;
+	position: absolute;
+	color: #6CA0DC;
+	left: -0.5px;
+	font-weight: bold;
+}
+
+ol ol {
+	counter-reset: subitem;
+}

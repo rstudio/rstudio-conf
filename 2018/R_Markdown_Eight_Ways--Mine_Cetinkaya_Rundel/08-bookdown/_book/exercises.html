@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Keeping track of notes, with the eventual hope of a book…</title>
+  <meta name="description" content="Keeping track of notes, with the eventual hope of a book for an introductory data science course.">
+  <meta name="generator" content="bookdown 0.6 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Keeping track of notes, with the eventual hope of a book…" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Keeping track of notes, with the eventual hope of a book for an introductory data science course." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Keeping track of notes, with the eventual hope of a book…" />
+  
+  <meta name="twitter:description" content="Keeping track of notes, with the eventual hope of a book for an introductory data science course." />
+  
+
+<meta name="author" content="Mine Cetinkaya-Rundel">
+
+
+<meta name="date" content="2018-02-02">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="the-data.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Intro to Data Science and Statistical Thinking</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="lab-3-visualizing-spatial-data.html"><a href="lab-3-visualizing-spatial-data.html"><i class="fa fa-check"></i><b>1</b> Lab 3 - Visualizing spatial data</a><ul>
+<li class="chapter" data-level="1.1" data-path="lab-3-visualizing-spatial-data.html"><a href="lab-3-visualizing-spatial-data.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a></li>
+<li class="chapter" data-level="3" data-path="packages.html"><a href="packages.html"><i class="fa fa-check"></i><b>3</b> Packages</a></li>
+<li class="chapter" data-level="4" data-path="housekeeping.html"><a href="housekeeping.html"><i class="fa fa-check"></i><b>4</b> Housekeeping</a><ul>
+<li class="chapter" data-level="4.1" data-path="housekeeping.html"><a href="housekeeping.html#git-configuration"><i class="fa fa-check"></i><b>4.1</b> Git configuration</a></li>
+<li class="chapter" data-level="4.2" data-path="housekeeping.html"><a href="housekeeping.html#project-name"><i class="fa fa-check"></i><b>4.2</b> Project name:</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="warm-up.html"><a href="warm-up.html"><i class="fa fa-check"></i><b>5</b> Warm up</a><ul>
+<li class="chapter" data-level="5.1" data-path="warm-up.html"><a href="warm-up.html#yaml"><i class="fa fa-check"></i><b>5.1</b> YAML:</a></li>
+<li class="chapter" data-level="5.2" data-path="warm-up.html"><a href="warm-up.html#commiting-and-pushing-changes"><i class="fa fa-check"></i><b>5.2</b> Commiting and pushing changes:</a></li>
+<li class="chapter" data-level="5.3" data-path="warm-up.html"><a href="warm-up.html#pulling-changes"><i class="fa fa-check"></i><b>5.3</b> Pulling changes:</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="the-data.html"><a href="the-data.html"><i class="fa fa-check"></i><b>6</b> The data</a></li>
+<li class="chapter" data-level="7" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>7</b> Exercises</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Keeping track of notes, with the eventual hope of a book…</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exercises" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Exercises</h1>
+<p><strong>Exercise 1:</strong> What are the dimensions of the Denny’s dataset? (Hint: Use inline R code and functions like <code>nrow</code> and <code>ncol</code> to compose your answer.) What does each row in the dataset represent? What are the variables?</p>
+<p><strong>Exercise 2:</strong> What are the dimensions of the La Quinta’s dataset? What does each row in the dataset represent? What are the variables?</p>
+<p>We would like to limit our analysis to Denny’s and La Quinta locations in the United States.</p>
+<p><strong>Exercise 3:</strong> Take a look at the websites that the data come from (linked above). Are there any La Quinta’s locations outside of the US? If so, which countries? What about Denny’s?</p>
+<p><strong>Exercise 4:</strong> Now take a look at the data. What would be some ways of determining whether or not either establishment has any locations outside the US using just the data (and not the websites). Don’t worry about whether you know how to implement this, just brainstorm some ideas. Write down at least one as your answer, but you’re welcomed to write down a few options too.</p>
+<p>We will determine whether or not the establishment has a location outside the US using the <code>state</code> variable in the <code>dn</code> and <code>lq</code> datasets. We know exactly which states are in the US, and we have this information in the <code>states</code> dataframe we loaded.</p>
+<p><strong>Exercise 5:</strong> Find the Denny’s locations that are outside the US, if any. To do so, filter the Denny’s locations for observations where <code>state</code> is not in <code>states$abbreviation</code>. The code for this is given below. Note that the <code>%in%</code> operator matches the states listed in the <code>state</code> variable to those listed in <code>states$abbreviation</code>. The <code>!</code> operator means <strong>not</strong>. Are there any Denny’s locations outside the US?</p>
+<p>“Filter for <code>state</code>s that are not in <code>states$abbreviation</code>.”</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dn <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>(state <span class="op">%in%</span><span class="st"> </span>states<span class="op">$</span>abbreviation))</code></pre></div>
+<pre><code>## # A tibble: 0 x 6
+## # ... with 6 variables: address &lt;chr&gt;, city &lt;chr&gt;, state &lt;chr&gt;, zip &lt;chr&gt;,
+## #   longitude &lt;dbl&gt;, latitude &lt;dbl&gt;</code></pre>
+<p><strong>Exercise 6:</strong> Add a country variable to the Denny’s dataset and set all observations equal to <code>&quot;United States&quot;</code>. Remember, you can use the <code>mutate</code> function for adding a variable.</p>
+<p>We don’t need to tell R how many times to repeat the character string “United States” to fill in the data for all observations, R takes care of that automatically.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dn <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">country =</span> <span class="st">&quot;United States&quot;</span>)</code></pre></div>
+<pre><code>## # A tibble: 1,643 x 7
+##    address            city        state zip   longitude latitude country  
+##    &lt;chr&gt;              &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;    
+##  1 2900 Denali        Anchorage   AK    99503    -150       61.2 United S…
+##  2 3850 Debarr Road   Anchorage   AK    99508    -150       61.2 United S…
+##  3 1929 Airport Way   Fairbanks   AK    99701    -148       64.8 United S…
+##  4 230 Connector Dr   Auburn      AL    36849    - 85.5     32.6 United S…
+##  5 224 Daniel Payne … Birmingham  AL    35207    - 86.8     33.6 United S…
+##  6 900 16th St S, Co… Birmingham  AL    35294    - 86.8     33.5 United S…
+##  7 5931 Alabama High… Cullman     AL    35056    - 86.9     34.2 United S…
+##  8 2190 Ross Clark C… Dothan      AL    36301    - 85.4     31.2 United S…
+##  9 900 Tyson Rd       Hope Hull … AL    36043    - 86.4     32.2 United S…
+## 10 4874 University D… Huntsville  AL    35816    - 86.7     34.7 United S…
+## # ... with 1,633 more rows</code></pre>
+<p>Make sure to save the result of this as <code>dn</code> again so that the stored data frame contains the new variable going forward.</p>
+<p><strong>Exercise 7:</strong> Find the La Quinta locations that are outside the US, and figure out which country they are in. This might require some googling. Take notes, you will need to use this information in the next exercise.</p>
+<p><strong>Exercise 8:</strong> Add a country variable to the La Quinta dataset. Use the <code>case_when</code> function to populate this variable. You’ll need to refer to your notes from Exercise 7 about which country the non-US locations are in. Here is some starter code to get you going:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lq <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">country =</span> <span class="kw">case_when</span>(
+    state <span class="op">%in%</span><span class="st"> </span>state.abb     <span class="op">~</span><span class="st"> &quot;United States&quot;</span>,
+    state <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;ON&quot;</span>, <span class="st">&quot;BC&quot;</span>) <span class="op">~</span><span class="st"> &quot;Canada&quot;</span>,
+    state <span class="op">==</span><span class="st"> &quot;ANT&quot;</span>           <span class="op">~</span><span class="st"> &quot;Colombia&quot;</span>,
+    ...                      <span class="co"># fill in the rest</span>
+  ))</code></pre></div>
+<p>Going forward we will work with the data from the United States only. All Denny’s locations are in the United States, so we don’t need to worry about them. However we do need to filter the La Quinta dataset for locations in United States.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lq &lt;-<span class="st"> </span>lq <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">filter</span>(country <span class="op">==</span><span class="st"> &quot;United States&quot;</span>)</code></pre></div>
+<p><strong>Exercise 9:</strong> Which states have the most and fewest Denny’s locations? What about La Quinta? Is this surprising? Why or why not?</p>
+<p>Next, let’s calculate which states have the most Denny’s locations <em>per thousand square miles</em>. This requires joinining information from the frequency tables you created in Exercise 8 with information from the <code>states</code> data frame.</p>
+<p>First, we count how many observations are in each state, which will give us a data frame with two variables: <code>state</code> and <code>n</code>. Then, we join this data frame with the <code>states</code> data frame. However note that the variables in the <code>states</code> data frame that has the two-letter abbreviations is called <code>abbreviation</code>. So when we’re joining the two data frames we specify that the <code>state</code> variable from the Denny’s data should be matched <code>by</code> the <code>abbreviation</code> variable from the <code>states</code> data:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dn <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">count</span>(state) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">inner_join</span>(states, <span class="dt">by =</span> <span class="kw">c</span>(<span class="st">&quot;state&quot;</span> =<span class="st"> &quot;abbreviation&quot;</span>))</code></pre></div>
+<p>Before you move on the the next question, run the code above and take a look at the output. In the next exercise you will need to build on this pipe.</p>
+<p><strong>Exercise 10:</strong> Which states have the most Denny’s locations per thousand square miles? What about La Quinta?</p>
+<p>Next, we put the two datasets together into a single data frame. However before we do so, we need to add an identifier variable. We’ll call this <code>establishment</code> and set the value to <code>&quot;Denny's&quot;</code> and <code>&quot;La Quinta&quot;</code> for the <code>dn</code> and <code>lq</code> data frames, respectively.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dn &lt;-<span class="st"> </span>dn <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">establishment =</span> <span class="st">&quot;Denny&#39;s&quot;</span>)
+lq &lt;-<span class="st"> </span>lq <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">establishment =</span> <span class="st">&quot;La Quinta&quot;</span>)</code></pre></div>
+<p>Since the two data frames have the same columns, we can easily bind them with the <code>bind_rows</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dn_lq &lt;-<span class="st"> </span><span class="kw">bind_rows</span>(dn, lq)</code></pre></div>
+<p>We can plot the locations of the two establishments using a scatter plot, and color the points by the establishment type. Note that the latitude is plotted on the x-axis and the longitude on the y-axis.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(dn_lq, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> longitude, <span class="dt">y =</span> latitude, <span class="dt">color =</span> establishment)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="intro-ds_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>See <a href="http://ggplot2.tidyverse.org/reference/labs.html">here</a> for help with the syntax for customizing your plots. You can also choose different themes to change the overall look of your plots, see <a href="http://ggplot2.tidyverse.org/reference/ggtheme.html">here</a> for help with these.</p>
+<p>The following two questions ask you to create visualizations. These should follow best practices you learned in class, such as informative titles, axis labels, etc.</p>
+<p><strong>Exercise 11:</strong> Filter the data for observations in North Carolina only, and recreate the plot. You should also adjust the transparency of the points, by setting the <code>alpha</code> level, so that it’s easier to see the overplotted ones. Visually, does Mitch Hedberg’s joke appear to hold here?</p>
+<p><strong>Exercise 12:</strong> Now filter the data for observations in Texas only, and recreate the plot, with an appropriate <code>alpha</code> level. Visually, does Mitch Hedberg’s joke appear to hold here?</p>
+<p>That’s it for now! In the next lab we will take a more quantitative approach to answering these questions.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-data.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/lab-03-viz-sp-data.Rmd",
+"text": "Edit"
+},
+"download": ["intro-ds.pdf", "intro-ds.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

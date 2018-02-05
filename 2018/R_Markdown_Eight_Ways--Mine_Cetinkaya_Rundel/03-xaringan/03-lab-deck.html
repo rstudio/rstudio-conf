@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 03: Visualizing spatial data</title>
+    <meta charset="utf-8">
+    <meta name="date" content="2018-02-01" />
+    <link href="libs/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lab-slides.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Lab 03: Visualizing spatial data
+### 2018-02-01
+
+---
+
+
+
+
+
+
+&lt;!-- Add agenda, some words about visualization, and some for git --&gt;
+
+## Agenda
+
+1. **An example of the power of visualization:** 
+2. **Git wisdom**
+3. **Lab intro**
+4. **Starting a new project** and next steps
+
+---
+
+## What do these guys have in common?
+
+&lt;img src="img/03-viz-sp-data/John_Snow.jpg" width="300px" height="250px" /&gt;&lt;img src="img/03-viz-sp-data/John_Snow-got.jpg" width="300px" height="250px" /&gt;
+
+---
+
+## The power of visualization
+
+They're both named John Snow, but only one of them was involved with the 1854 Broad Street London cholera outbreak.
+
+&lt;img src="img/03-viz-sp-data/Snow-cholera-map.jpg" width="500px" /&gt;
+
+---
+
+## Git wisdom
+
+- Git commands should be used with intent
+
+- During lab, try to avoid this: "I'm confused; let's see if clicking this fixes anything" (ask me, or talk with teammates)
+
+- When not in lab, (careful) experimentation is totally encouraged!
+
+- Bottom line: understand *why* a command does what it does.
+
+---
+
+&lt;!-- INFO FROM LAB --&gt;
+
+## Lab intro
+
+Have you ever taken a road trip in the US and thought to yourself "I wonder what La Quinta means". Well, the late comedian [Mitch Hedberg](https://en.wikipedia.org/wiki/Mitch_Hedberg) thinks it's Spanish for *next to Denny's*.
+
+![LA Quinta is Spanish for next to Denny's](img/03-viz-sp-data/mitch-hedgeberg-lqd.jpg)
+
+---
+
+## Starting a new project
+
+- Go to the course organization on GitHub: https://github.com/Sta199-S18.
+
+- Find the repo starting with `lab-03` and that has your team name at the end (this should be the only `lab-03` repo available to you).
+
+- In the repo, click on the green **Clone or download** button, select **Use HTTPS** (this might already be selected by default, and if it is, you'll see the text **Clone with HTTPS** as in the image below). Click on the clipboard icon to copy the repo URL.
+
+- Go to RStudio Cloud and into the course workspace. Create a **New Project from Git Repo**. You will need to click on the down arrow next to the **New Project** button to see this option.
+
+- Copy and paste the URL of your assignment repo into the dialog box:
+
+- Hit OK, and you're good to go!
+
+---
+
+## Packages
+
+In this lab we will work with the `tidyverse` package. So we need to 
+install and load it:
+
+
+```r
+install.packages("tidyverse")
+library(tidyverse) 
+```
+
+Note that this package is also loaded in your R Markdown document.
+
+---
+
+## Git configuration
+
+- Go to the *Terminal* pane
+- Type the following two lines of code, replacing the information in the quotation marks with your info.
+
+
+```bash
+git config --global user.email "your email"
+git config --global user.name "your name"
+```
+
+To confirm that the changes have been implemented, run the following:
+
+
+```bash
+git config --global user.email
+git config --global user.name
+```
+
+&lt;!-- --&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

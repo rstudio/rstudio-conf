@@ -1,0 +1,17 @@
+--- 
+title: "Keeping track of notes, with the eventual hope of a book..."
+author: "Mine Cetinkaya-Rundel"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+#github-repo: rstudio/bookdown-demo
+description: "Keeping track of notes, with the eventual hope of a book for an introductory data science course."
+---
+
+```{r}
+library(tidyverse)
+```

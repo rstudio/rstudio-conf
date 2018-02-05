@@ -1,0 +1,150 @@
+---
+title: "Lab 02: Data wrangling and visualization"
+author: ""
+date: "2018-01-25"
+output:
+  xaringan::moon_reader:
+    css: "lab-slides.css"
+    logo: img/sta199-hex.png
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+# R options
+options(
+  htmltools.dir.version = FALSE, # for blogdown
+  show.signif.stars = FALSE,     # for regression output
+  warm = 1
+  )
+# Set dpi and height for images
+library(knitr)
+opts_chunk$set(fig.height = 2.65, dpi = 300) 
+# ggplot2 color palette with gray
+color_palette <- list(gray = "#999999", 
+                      salmon = "#E69F00", 
+                      lightblue = "#56B4E9", 
+                      green = "#009E73", 
+                      yellow = "#F0E442", 
+                      darkblue = "#0072B2", 
+                      red = "#D55E00", 
+                      purple = "#CC79A7")
+# For nonsese...
+library(emo)
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(rvest)
+```
+
+class: center, middle
+
+# Welcome to lab
+
+---
+
+## Agenda
+
+1. **Teams:** Find teammates.
+2. **Lab introduction:** Review FiveThirtyEight article on college majors.
+3. **Starting a new project:** Clone the repo into a new RStudio Cloud project.
+4. **Housekeeping & Warm-up:** Make sure your git config and packages are set up and you know how to push and pull.
+5. **Tips:** Review a few common RMarkdown mistakes.
+
+---
+
+class: center, middle
+
+# Teams
+
+---
+
+- Find your teammates: [google sheet](https://docs.google.com/spreadsheets/d/1Cjh9bifCwxn32l2lrp5vQH1adOGtmb7XOrJru810Rxo/edit?usp=sharing)
+
+- Note the lead for today's lab -- this person is **NOT** solely responsible of doing the lab, but they are responsible for organizing the team effort, making sure all parts are in there, organizing team meetings to work on the assignment, etc.
+
+- Come up with a team name
+
+- Let me know your team name by the end of class
+
+---
+
+class: center, middle
+
+# Lab introduction
+
+---
+
+## Lab introduction
+
+- Lab instructions posted on the course website under `</>`
+    + Let's go find today's lab!
+    
+- [The Economic Guide To Picking A College Major](https://fivethirtyeight.com/features/the-economic-guide-to-picking-a-college-major/) by Ben Casselman
+    
+---
+
+class: center, middle
+
+# Starting a new project
+
+---
+
+## Starting a new project
+
+- Go to the course GitHub organization and find the lab-02 repo that has your team name on it.
+
+- On GitHub, click on the green Clone or download button, select Use HTTPS (this might already be selected by default, and if it is, you’ll see the text Clone with HTTPS). Click on the clipboard icon to copy the repo URL.
+
+- Go to RStudio Cloud and into the course workspace. Create a New Project from Git Repo. You will need to click on the down arrow next to the New Project button to see this option.
+
+- Copy and paste the URL of your assignment repo into the dialog box and hit OK.
+
+---
+
+class: center, middle
+
+# Housekeeping & Warm-up
+
+---
+
+## Housekeeping & Warm-up
+
+- Follow the instructions to configure your git credentials. To double check, run the following 
+commands and make sure your info is correct:
+
+```
+git config --global user.email
+git config --global user.name
+```
+
+- Install the `tidyverse` package and make sure it's being loaded in your Lab .Rmd.
+
+- Update the name of your project to "Lab 02 - Data wrangling and visualization"
+
+- Pick **ONE** team member to walk through the warm-up commit and push. Then, others pull.
+
+---
+
+class: center, middle
+
+# Tips
+
+---
+
+## Tips
+
+- Be ready to troubleshoot your document, since it will likely fail to knit on multiple occasions throughout the process. Read the error message carefully and take note of which line is preventing a successful knit.
+
+- Make sure to keep track of your various chunks and to keep text and code in the right place.
+
+- Remember that your R Markdown file is not aware of your project's global environment and can only make use of variables, functions, etc. that you have loaded or defined in the document.
+
+- Remind yourself how the pipe operator (`%>%`) works.
+
+- If you're unsure how a function works or what its arguments are, simply type `?` in front of it and hit enter (`?read_csv` for instance). The "Help" tab will open and provide a summary of the function as well as some examples.
