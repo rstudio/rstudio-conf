@@ -1,0 +1,55 @@
+---
+output: 
+  html_document:
+    css: pomological.css
+---
+
+```{r setup,echo=FALSE}
+library(magrittr)
+
+fruitName <- "apples"
+varietyName <- "macoun"
+startYear <- 1886
+endYear <- 1942
+
+json <- jsonlite::fromJSON("watercolors.json")
+watercolors <- as.data.frame(json)
+# janitorial services
+watercolors$year <- as.integer(watercolors$year)
+watercolors <- watercolors[!is.na(watercolors$year),]
+
+if (fruitName == "any") { fruitName <- "" }
+nameFilter <- grep(fruitName, watercolors$common_name, ignore.case = TRUE)
+fruit <- watercolors[nameFilter,]
+
+varietyFilter <- grep(varietyName, fruit$variety, ignore.case = TRUE)
+variety <- fruit[varietyFilter,]
+
+inDateRange <- variety[variety$year >= startYear & variety$year <= endYear,]
+if (nrow(inDateRange) == 0) {
+  stop("No fruit matched input parameters.")
+}
+chosen <- inDateRange[sample(nrow(inDateRange),1),]
+```
+
+<div style="float:right; margin-left: 40px;">
+
+<a href="`r chosen$url`" target="_blank">
+```{r out.width="600px", echo=FALSE}
+source("pomological.R")
+thumbnail_url <- find_pomological_thumbnail_url(chosen$id)
+knitr::include_graphics(thumbnail_url)
+```
+</a>
+</div>
+
+**Scientific name:** `r chosen$scientific_name`  
+**Common name:** `r chosen$common_name`  
+**Variety:** `r chosen$variety`  
+
+(<a href="`r chosen$wikimedia_url`" target="_blank">Wikimedia</a> | 
+<a href="`r chosen$url`" target="_blank">USDA</a>)
+
+<div style="clear:both;"></div>
+
+> <small>`r chosen$rights`</small>

@@ -1,0 +1,8 @@
+body {
+  font-size: 1.5em;
+}
+.dygraphs {
+  overflow: auto; /* stops overflowing our floating image */
+  margin-left: 0;
+  margin-bottom: 2em;
+}
