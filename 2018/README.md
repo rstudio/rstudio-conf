@@ -1,6 +1,6 @@
 # Shiny Load Test Results
 
-This repository supports a talk given at the 2018 rstudio::conf. The best place to start is the [video of the talk](https://rstudio.com/resources/webinars) as well as the pdf slides.
+The full contents are available at https://github.com/slopp/shinyloadtest-results. The best place to start is the [video of the talk](https://rstudio.com/resources/webinars) as well as the pdf slides.
 
 The contents of the repo are as follows:
 
