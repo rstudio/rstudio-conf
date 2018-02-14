@@ -1,6 +1,6 @@
 # Shiny Load Test Results
 
-The full materials and data for the talk are available at https://github.com/slopp/shinyloadtest-result. The best place to start is the [video of the talk](https://rstudio.com/resources/webinars) as well as the pdf slides.
+The full materials and data for the talk are available at https://github.com/slopp/shinyloadtest-results. The best place to start is the [video of the talk](https://rstudio.com/resources/webinars) as well as the pdf slides.
 
 The contents of the repo are as follows:
 
