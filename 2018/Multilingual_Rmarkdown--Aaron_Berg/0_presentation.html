@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multilingual RMarkdown</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Aaron Berg" />
+    <link href="resources/libs/remark-css/default.css" rel="stylesheet" />
+    <link href="resources/libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Multilingual RMarkdown
+### Aaron Berg
+### February 2, 2018
+
+---
+
+
+
+class: middle, inverse
+
+# Multilingual RMarkdown
+
+![](resources/multilingual_code_chunk.jpg)
+
+---
+# Lots of Choices
+
+
+```r
+# set engines for interpreted languages
+local({
+    for (i in c("awk", "bash", "coffee", "gawk", "groovy", 
+        "haskell", "lein", "mysql", "node", "octave", 
+        "perl", "psql", "Rscript", "ruby", "sas", "scala", 
+        "sed", "sh", "stata", "zsh")) knit_engines$set(
+          setNames(list(eng_interpreted), 
+        i))
+})
+
+# additional engines
+knit_engines$set(highlight = eng_highlight, Rcpp = eng_Rcpp, 
+    tikz = eng_tikz, dot = eng_dot, c = eng_shlib, 
+    fortran = eng_shlib, fortran95 = eng_shlib, asy = eng_dot, 
+    cat = eng_cat, asis = eng_asis, stan = eng_stan, 
+    block = eng_block, block2 = eng_block2, js = eng_js, 
+    css = eng_css, sql = eng_sql, go = eng_go, python = eng_python, 
+    julia = eng_julia)
+```
+
+.footnote[from Knitr's [code base](https://github.com/yihui/knitr/blob/1bdaf3965a516d5d3e1cd39440a1991492b17d84/R/engine.R#L620-L636)]
+
+---
+# Basic Language Engines
+
+
+```r
+# set engines for interpreted languages
+local({
+    for (i in c("awk", "bash", "coffee", "gawk", "groovy", 
+        "haskell", "lein", "mysql", "node", "octave", 
+        "perl", "psql", "Rscript", "ruby", "sas", "scala", 
+        "sed", "sh", "stata", "zsh")) knit_engines$set(
+          setNames(list(eng_interpreted), 
+        i))
+})
+```
+
+.footnote[from Knitr's [code base](https://github.com/yihui/knitr/blob/1bdaf3965a516d5d3e1cd39440a1991492b17d84/R/engine.R#L620-L636)]
+
+
+- Chunks execute independently
+
+- Code, terminal output, and side effects affect output
+
+- Chunk options similar to R chunks
+---
+
+# Special Language Engines
+
+
+```r
+# additional engines
+knit_engines$set(highlight = eng_highlight, Rcpp = eng_Rcpp, 
+    tikz = eng_tikz, dot = eng_dot, c = eng_shlib, 
+    fortran = eng_shlib, fortran95 = eng_shlib, asy = eng_dot, 
+    cat = eng_cat, asis = eng_asis, stan = eng_stan, 
+    block = eng_block, block2 = eng_block2, js = eng_js, 
+    css = eng_css, sql = eng_sql, go = eng_go, python = eng_python, 
+    julia = eng_julia)
+```
+
+.footnote[from Knitr's [code base](https://github.com/yihui/knitr/blob/1bdaf3965a516d5d3e1cd39440a1991492b17d84/R/engine.R#L620-L636)]
+
+
+- code may be available throughout the document
+
+- objects may be available to R
+
+- special visualizations
+
+---
+class: middle, center, inverse
+
+# flexible; central; collaborative
+    </textarea>
+<script src="resources/libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
