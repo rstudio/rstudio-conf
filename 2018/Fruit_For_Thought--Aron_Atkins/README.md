@@ -6,9 +6,11 @@ Atkins](https://github.com/aronatkins).
 
 ## Slides
 
-The slides for the talk are in [`index.html`](index.html) with accompanying
-speaker script in [`speaker.md`](speaker.md) (compiled to
-[`speaker.html`](speaker.html) using custom CSS with `pandoc`).
+The slides for this talk are available [as a PDF](Fruit_For_Thought--Aron_Atkins.pdf).
+The HTML source for the slides is in [`index.html`](index.html).
+
+The source for the speaker script is in [`speaker.md`](speaker.md) (compiled
+to [`speaker.html`](speaker.html) using custom CSS with `pandoc`).
 
 ```
 pandoc -s -c speaker.css -o speaker.html speaker.md
