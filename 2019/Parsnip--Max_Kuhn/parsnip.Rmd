@@ -1,0 +1,288 @@
+---
+output:
+  xaringan::moon_reader:
+    css: ["mtheme_max.css", "fonts_mtheme_max.css"]  
+    self_contained: false
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightLanguage: R
+      countIncrementalSlides: false   
+---
+layout: false
+class: inverse, center
+
+<img src="parsnip.svg" width = "50%">
+
+
+```{r startup, include = FALSE, message = FALSE, warning = FALSE}
+library(tidymodels)
+options(digits = 3)
+```
+
+---
+
+# Modeling in R - User-facing Problems
+
+
+
+.pull-left[
+
+* must be a matrix with factors converted to zero-based integers
+  
+* only has the formula or x/y interface
+  
+* the prediction object is a specialized class (`ranger`) or inconsistent (`glmnet`)
+  
+* `na.omit` silently returns less rows that the input
+  
+* Sparse matrices can be used (unless the can't)
+  
+* No OOP (classes, methods)
+  
+]
+.pull-right[  
+Syntax for computing predicted class probabilities:
+
+.font80[
+
+|Function      |Package      |Code                                       |
+|:-------------|:------------|:------------------------------------------|
+|`lda`         |`MASS`       |`predict(obj)`                             |
+|`glm`         |`stats`      |`predict(obj, type = "response")`          |
+|`gbm`         |`gbm`        |`predict(obj, type = "response", n.trees)` |
+|`mda`         |`mda`        |`predict(obj, type = "posterior")`         |
+|`rpart`       |`rpart`      |`predict(obj, type = "prob")`              |
+|`Weka`        |`RWeka`      |`predict(obj, type = "probability")`       |
+|`logitboost`  |`LogitBoost` |`predict(obj, type = "raw", nIter)`        |
+|`pamr.train`  |`pamr`       |`pamr.predict(obj, type = "posterior")`    |
+
+]
+
+]
+
+---
+
+# `parsnip` 
+
+The package 
+
+ * creates a unified interface to models
+ 
+ * organizes them by model type (e.g. logistic regression, MARS, etc)
+ 
+ * generalizes _how_ to fit them (aka their _computational engine_)
+ 
+ * has a tidy interface
+ 
+ * returns predictable objects
+  
+ The last point follows the [modeling package guidelines](https://tidymodels.github.io/model-implementation-principles/) that we created and posted last year. 
+ 
+It is similar in theory to `caret` but the implementation is much better. 
+ 
+First of two blog posts can be found on the [tidyverse blog](https://www.tidyverse.org/articles/2018/11/parsnip-0-0-1/).
+
+---
+
+# Example: Linear Regression
+
+Like `ggplot2` and `recipes`, `parsnip` defers the computations until specific point. 
+
+.pull-left[
+Let's create a model with a ridge penalty (i.e. weight decay). A model specification is created:
+
+```{r spec}
+library(tidymodels)
+
+reg_model <- linear_reg(penalty = 0.01)
+reg_model
+```
+We can then set the computational engine. For this model, it includes `"lm"`, `"glmnet`", `"stan"`, `"spark"`, and `"keras"`. 
+
+If we want to fit the model via `glmnet`, the engine is declared:
+
+```{r glmnet}
+reg_model %>% 
+  set_engine("glmnet")
+```
+]
+.pull-right[  
+`parsnip` knows how to translate the general syntax to the model's arguments :
+
+```{r glmnet-trans}
+reg_model %>% 
+  set_engine("glmnet") %>% 
+  translate()
+```
+]
+
+
+---
+
+# Example: Linear Regression
+
+We don't _usually_ need the data for the specification. 
+
+`glmnet` only has an `x/y` interface but parsnip let's you fit it using a formula or with data objects.
+
+.pull-left[
+
+```{r glmnet-fit-form}
+reg_model %>% 
+  set_engine("glmnet") %>% 
+  fit(mpg ~ ., data = mtcars)
+```
+
+]
+.pull-right[
+```{r glmnet-fit-xy}
+reg_model %>% 
+  set_engine("glmnet") %>% 
+  fit_xy(x = mtcars %>% select(-mpg), 
+         y = mtcars$mpg)
+```
+
+]
+
+
+---
+
+# Prediction
+
+This particular model is pretty bad about how it returns results. 
+
+`parsnip` _always returns the same number of rows as you give it_. 
+
+The column names are well defined and stable:
+
+```{r glmnet-pred}
+linear_reg(penalty = 0.01) %>% 
+  set_engine("glmnet") %>% 
+  fit(mpg ~ ., data = mtcars %>% slice(1:29)) %>% 
+  predict(new_data = mtcars %>% slice(30:32))
+```
+
+---
+
+# Prediction
+
+...even when a prediction cant be made...
+
+
+```{r glmnet-miss}
+
+holdout <- mtcars %>% slice(30:32)
+holdout[1, "disp"] <- NA
+
+linear_reg(penalty = 0.01) %>% 
+  set_engine("glmnet") %>% 
+  fit(mpg ~ ., data = mtcars %>% slice(1:29)) %>% 
+  predict(new_data = holdout)
+```
+
+
+---
+
+# Prediction
+
+...even when the prediction produces 2+ values per sample
+
+.pull-left[
+
+```{r glmnet-multi-pred}
+preds <- 
+  linear_reg() %>%    # <- fit all penalty values
+  set_engine("glmnet") %>% 
+  fit(mpg ~ ., data = mtcars %>% slice(1:29)) %>% 
+  multi_predict(new_data = holdout)
+preds
+```
+
+]
+.pull-right[
+
+```{r glmnet-multi-pred-details}
+preds %>% pull(.pred) %>% pluck(1) %>% slice(1:2)
+preds %>% pull(.pred) %>% pluck(2) %>% slice(1:5)
+```
+
+]
+
+
+---
+
+# Data Descriptors
+
+
+.pull-left[
+
+There are times when the specification of the abstract model that is dependent on the data in some way. 
+
+For example, the main argument to random forest is $m_{try}$, which is the number of predictors that are sampled at each point when a split is created. 
+
+For most functions, this argument is called `mtry` and it depends on the number of _predictors_ in the data. 
+]
+.pull-right[
+How do we do that with `parsnip` since the data are not an input to the specification? 
+
+The package has _data descriptors_ that are abstract placeholders for characteristics of the data: 
+
+* `.obs()`: The current number of rows
+* `.preds()`: The number of columns (before indicators)
+* `.cols()`: The number of columns (after indicators)
+* `.facts()`: The number of factor predictors
+* `.lvls()`: A table  with the counts for each level
+* `.x()`: The predictor (data frame or matrix).
+* `.y()`: Outcome(s) (vector, matrix, or data frame)
+* `.dat()`: Training set
+]
+
+---
+
+# Specifying `mtry`
+
+```{r dd}
+mod <- rand_forest(trees = 1000, mtry = floor(.preds() * .75)) %>% 
+  set_engine("randomForest")
+
+mod %>% translate()
+```
+
+
+---
+
+# Specifying `mtry`
+
+
+```{r dd-fit}
+mod %>%  fit(mpg ~ ., data = mtcars)
+
+n_pred <- ncol(mtcars) - 1
+
+floor(n_pred * .75)
+```
+
+
+---
+
+# Next Steps
+
+* Add more models and _classes_ of models. For example:
+  * `repeat_meas` might wrap `lme4::lmer`, `gee:gee`, `rstanarm::stan_glm`, and others for simple mixed models with a single random effect or cluster variable for numeric outcomes.
+  
+* Formalize the API and tools for others to add `parsnip` models to their packages
+
+* Case weights
+
+* Integrate with a new pipeline-ish pacakge and model tuning. 
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Thanks - slides will be at `https://github.com/rstudio/rstudio-conf`
+
+<img src="goodbye.jpg" width = "30%">
+

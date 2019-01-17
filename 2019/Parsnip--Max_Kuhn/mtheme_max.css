@@ -1,0 +1,184 @@
+a, a > code {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+.footnote {
+  position: absolute;
+  bottom: 3em;
+  padding-right: 4em;
+  font-size: 90%;
+}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 80px solid #23373B;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+
+.title-slide .inverse .remark-slide-content {
+  background-color: #FAFAFA;
+}
+
+.inverse {
+  background-color: #23373B;
+  text-shadow: none;
+}
+.inverse h1, .inverse h2, .inverse h3 {
+  color: #f3f3f3;
+}
+/* Two-column layout */
+.left-column {
+  color: #777;
+  width: 20%;
+  height: 92%;
+  float: left;
+}
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: #000;
+}
+.right-column {
+  width: 75%;
+  float: right;
+  padding-top: 1em;
+}
+.pull-left {
+  float: left;
+  width: 47%;
+}
+.pull-right {
+  float: right;
+  width: 47%;
+}
+.pull-right ~ * {
+  clear: both;
+}
+img, video, iframe {
+  max-width: 100%;
+}
+blockquote {
+  border-left: solid 5px lightgray;
+  padding-left: 1em;
+}
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+table thead th { border-bottom: 1px solid #ddd; }
+th, td { padding: 5px; }
+thead, tfoot, tr:nth-child(even) { background: #eee }
+
+@page { margin: 0; }
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+.remark-slide-content > h1 {
+  font-family: 'Fira Sans';
+  font-weight: normal;
+  font-size: 45px;
+  margin-top: -95px;
+  margin-left: -00px;
+  color: #FAFAFA;
+}
+
+.remark-slide-content > inverse {
+width: 112px;
+height: 47px;
+border-bottom: 1px solid black;
+position: absolute;
+}
+
+.remark-slide-content > h2 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 00px;
+}
+
+.remark-slide-content > h3 {
+  padding-top: -15px;
+  padding-bottom: 10px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 00px;
+}
+
+.title-slide {
+  background-color: #FAFAFA;
+  border-top: 80px solid #FAFAFA;
+}
+
+.title-slide > h1  {
+  color: #1A292C;
+  font-size: 40px;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 80px;
+}
+.title-slide > h2  {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 15px;
+}
+.title-slide > h3  {
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+.remark-slide-number {
+  font-size: 13pt;
+  font-family: 'Fira Sans';
+  color: #272822;
+  opacity: 1;
+}
+.inverse .remark-slide-number {
+  font-size: 13pt;
+  font-family: 'Fira Sans';
+  color: #FAFAFA;
+  opacity: 1;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+
+
+.title-hex{
+  height: 60px;
+  align: middle;
+  float: right;
+}
+

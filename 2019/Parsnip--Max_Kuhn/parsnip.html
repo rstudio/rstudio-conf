@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+layout: false
+class: inverse, center
+
+&lt;img src="parsnip.svg" width = "50%"&gt;
+
+
+
+
+---
+
+# Modeling in R - User-facing Problems
+
+
+
+.pull-left[
+
+* must be a matrix with factors converted to zero-based integers
+  
+* only has the formula or x/y interface
+  
+* the prediction object is a specialized class (`ranger`) or inconsistent (`glmnet`)
+  
+* `na.omit` silently returns less rows that the input
+  
+* Sparse matrices can be used (unless the can't)
+  
+* No OOP (classes, methods)
+  
+]
+.pull-right[  
+Syntax for computing predicted class probabilities:
+
+.font80[
+
+|Function      |Package      |Code                                       |
+|:-------------|:------------|:------------------------------------------|
+|`lda`         |`MASS`       |`predict(obj)`                             |
+|`glm`         |`stats`      |`predict(obj, type = "response")`          |
+|`gbm`         |`gbm`        |`predict(obj, type = "response", n.trees)` |
+|`mda`         |`mda`        |`predict(obj, type = "posterior")`         |
+|`rpart`       |`rpart`      |`predict(obj, type = "prob")`              |
+|`Weka`        |`RWeka`      |`predict(obj, type = "probability")`       |
+|`logitboost`  |`LogitBoost` |`predict(obj, type = "raw", nIter)`        |
+|`pamr.train`  |`pamr`       |`pamr.predict(obj, type = "posterior")`    |
+
+]
+
+]
+
+---
+
+# `parsnip` 
+
+The package 
+
+ * creates a unified interface to models
+ 
+ * organizes them by model type (e.g. logistic regression, MARS, etc)
+ 
+ * generalizes _how_ to fit them (aka their _computational engine_)
+ 
+ * has a tidy interface
+ 
+ * returns predictable objects
+  
+ The last point follows the [modeling package guidelines](https://tidymodels.github.io/model-implementation-principles/) that we created and posted last year. 
+ 
+It is similar in theory to `caret` but the implementation is much better. 
+ 
+First of two blog posts can be found on the [tidyverse blog](https://www.tidyverse.org/articles/2018/11/parsnip-0-0-1/).
+
+---
+
+# Example: Linear Regression
+
+Like `ggplot2` and `recipes`, `parsnip` defers the computations until specific point. 
+
+.pull-left[
+Let's create a model with a ridge penalty (i.e. weight decay). A model specification is created:
+
+
+```r
+library(tidymodels)
+
+reg_model &lt;- linear_reg(penalty = 0.01)
+reg_model
+```
+
+```
+## Linear Regression Model Specification (regression)
+## 
+## Main Arguments:
+##   penalty = 0.01
+```
+We can then set the computational engine. For this model, it includes `"lm"`, `"glmnet`", `"stan"`, `"spark"`, and `"keras"`. 
+
+If we want to fit the model via `glmnet`, the engine is declared:
+
+
+```r
+reg_model %&gt;% 
+  set_engine("glmnet")
+```
+
+```
+## Linear Regression Model Specification (regression)
+## 
+## Main Arguments:
+##   penalty = 0.01
+## 
+## Computational engine: glmnet
+```
+]
+.pull-right[  
+`parsnip` knows how to translate the general syntax to the model's arguments :
+
+
+```r
+reg_model %&gt;% 
+  set_engine("glmnet") %&gt;% 
+  translate()
+```
+
+```
+## Linear Regression Model Specification (regression)
+## 
+## Main Arguments:
+##   penalty = 0.01
+## 
+## Computational engine: glmnet 
+## 
+## Model fit template:
+## glmnet::glmnet(x = missing_arg(), y = missing_arg(), weights = missing_arg(), 
+##     lambda = 0.01, family = "gaussian")
+```
+]
+
+
+---
+
+# Example: Linear Regression
+
+We don't _usually_ need the data for the specification. 
+
+`glmnet` only has an `x/y` interface but parsnip let's you fit it using a formula or with data objects.
+
+.pull-left[
+
+
+```r
+reg_model %&gt;% 
+  set_engine("glmnet") %&gt;% 
+  fit(mpg ~ ., data = mtcars)
+```
+
+```
+## parsnip model object
+## 
+## 
+## Call:  glmnet::glmnet(x = as.matrix(x), y = y, family = "gaussian",      lambda = ~0.01) 
+## 
+##      Df  %Dev Lambda
+## [1,] 10 0.869   0.01
+```
+
+]
+.pull-right[
+
+```r
+reg_model %&gt;% 
+  set_engine("glmnet") %&gt;% 
+  fit_xy(x = mtcars %&gt;% select(-mpg), 
+         y = mtcars$mpg)
+```
+
+```
+## parsnip model object
+## 
+## 
+## Call:  glmnet::glmnet(x = as.matrix(x), y = y, family = "gaussian",      lambda = ~0.01) 
+## 
+##      Df  %Dev Lambda
+## [1,] 10 0.869   0.01
+```
+
+]
+
+
+---
+
+# Prediction
+
+This particular model is pretty bad about how it returns results. 
+
+`parsnip` _always returns the same number of rows as you give it_. 
+
+The column names are well defined and stable:
+
+
+```r
+linear_reg(penalty = 0.01) %&gt;% 
+  set_engine("glmnet") %&gt;% 
+  fit(mpg ~ ., data = mtcars %&gt;% slice(1:29)) %&gt;% 
+  predict(new_data = mtcars %&gt;% slice(30:32))
+```
+
+```
+## # A tibble: 3 x 1
+##   .pred
+##   &lt;dbl&gt;
+## 1  17.9
+## 2  10.9
+## 3  25.6
+```
+
+---
+
+# Prediction
+
+...even when a prediction cant be made...
+
+
+
+```r
+holdout &lt;- mtcars %&gt;% slice(30:32)
+holdout[1, "disp"] &lt;- NA
+
+linear_reg(penalty = 0.01) %&gt;% 
+  set_engine("glmnet") %&gt;% 
+  fit(mpg ~ ., data = mtcars %&gt;% slice(1:29)) %&gt;% 
+  predict(new_data = holdout)
+```
+
+```
+## # A tibble: 3 x 1
+##   .pred
+##   &lt;dbl&gt;
+## 1  NA  
+## 2  10.9
+## 3  25.6
+```
+
+
+---
+
+# Prediction
+
+...even when the prediction produces 2+ values per sample
+
+.pull-left[
+
+
+```r
+preds &lt;- 
+  linear_reg() %&gt;%    # &lt;- fit all penalty values
+  set_engine("glmnet") %&gt;% 
+  fit(mpg ~ ., data = mtcars %&gt;% slice(1:29)) %&gt;% 
+  multi_predict(new_data = holdout)
+preds
+```
+
+```
+## # A tibble: 3 x 1
+##   .pred            
+##   &lt;list&gt;           
+## 1 &lt;tibble [80 × 2]&gt;
+## 2 &lt;tibble [80 × 2]&gt;
+## 3 &lt;tibble [80 × 2]&gt;
+```
+
+]
+.pull-right[
+
+
+```r
+preds %&gt;% pull(.pred) %&gt;% pluck(1) %&gt;% slice(1:2)
+```
+
+```
+## # A tibble: 2 x 2
+##   penalty .pred
+##     &lt;dbl&gt; &lt;dbl&gt;
+## 1 0.00346    NA
+## 2 0.00380    NA
+```
+
+```r
+preds %&gt;% pull(.pred) %&gt;% pluck(2) %&gt;% slice(1:5)
+```
+
+```
+## # A tibble: 5 x 2
+##   penalty .pred
+##     &lt;dbl&gt; &lt;dbl&gt;
+## 1 0.00346  10.9
+## 2 0.00380  10.9
+## 3 0.00417  10.9
+## 4 0.00457  10.9
+## 5 0.00502  10.9
+```
+
+]
+
+
+---
+
+# Data Descriptors
+
+
+.pull-left[
+
+There are times when the specification of the abstract model that is dependent on the data in some way. 
+
+For example, the main argument to random forest is `\(m_{try}\)`, which is the number of predictors that are sampled at each point when a split is created. 
+
+For most functions, this argument is called `mtry` and it depends on the number of _predictors_ in the data. 
+]
+.pull-right[
+How do we do that with `parsnip` since the data are not an input to the specification? 
+
+The package has _data descriptors_ that are abstract placeholders for characteristics of the data: 
+
+* `.obs()`: The current number of rows
+* `.preds()`: The number of columns (before indicators)
+* `.cols()`: The number of columns (after indicators)
+* `.facts()`: The number of factor predictors
+* `.lvls()`: A table  with the counts for each level
+* `.x()`: The predictor (data frame or matrix).
+* `.y()`: Outcome(s) (vector, matrix, or data frame)
+* `.dat()`: Training set
+]
+
+---
+
+# Specifying `mtry`
+
+
+```r
+mod &lt;- rand_forest(trees = 1000, mtry = floor(.preds() * .75)) %&gt;% 
+  set_engine("randomForest")
+
+mod %&gt;% translate()
+```
+
+```
+## Random Forest Model Specification (unknown)
+## 
+## Main Arguments:
+##   mtry = floor(.preds() * 0.75)
+##   trees = 1000
+## 
+## Computational engine: randomForest 
+## 
+## Model fit template:
+## randomForest::randomForest(x = missing_arg(), y = missing_arg(), 
+##     mtry = floor(.preds() * 0.75), ntree = 1000)
+```
+
+
+---
+
+# Specifying `mtry`
+
+
+
+```r
+mod %&gt;%  fit(mpg ~ ., data = mtcars)
+```
+
+```
+## parsnip model object
+## 
+## 
+## Call:
+##  randomForest(x = as.data.frame(x), y = y, ntree = ~1000, mtry = ~floor(.preds() *      0.75)) 
+##                Type of random forest: regression
+##                      Number of trees: 1000
+## No. of variables tried at each split: 7
+## 
+##           Mean of squared residuals: 5.5
+##                     % Var explained: 84.4
+```
+
+```r
+n_pred &lt;- ncol(mtcars) - 1
+
+floor(n_pred * .75)
+```
+
+```
+## [1] 7
+```
+
+
+---
+
+# Next Steps
+
+* Add more models and _classes_ of models. For example:
+  * `repeat_meas` might wrap `lme4::lmer`, `gee:gee`, `rstanarm::stan_glm`, and others for simple mixed models with a single random effect or cluster variable for numeric outcomes.
+  
+* Formalize the API and tools for others to add `parsnip` models to their packages
+
+* Case weights
+
+* Integrate with a new pipeline-ish pacakge and model tuning. 
+
+
+---
+layout: false
+class: inverse, middle, center
+
+# Thanks - slides will be at `https://github.com/rstudio/rstudio-conf`
+
+&lt;img src="goodbye.jpg" width = "30%"&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
