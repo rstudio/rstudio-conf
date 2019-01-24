@@ -2,6 +2,8 @@
 
 - Sean Lopp, RStudio, Connect 1.7.0 is a major release that also includes many other significant improvements [Connect 1.7.0 release](https://blog.rstudio.com/2019/01/17/announcing-rstudio-connect-1-7-0/)
 
+- Samantha C. Tyner, Iowa State University, Postdoctoral Research Associate [Lessons learned at rstudio::conf](https://sctyner.github.io/rstudio-conf.html)
+
 - Jacqueline Nolis, [@skyetetera](https://twitter.com/skyetetra), T-Mobile, [rstudio::conf 2019 takeaways: Serious Shiny, R in Production, and Data Science Skill Growth](https://medium.com/@skyetetra/rstudio-conf-2019-takeaways-9c60eda17084)
 
 - Athanasia Monika Mowinckel, [@DrMowinckels](https://twitter.com/DrMowinckels),
