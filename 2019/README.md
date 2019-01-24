@@ -8,7 +8,7 @@ rstudio::conf is all things R and RStudio! Over 1,800 advanced and new R users j
 #### [Workshops](https://github.com/rstudio/rstudio-conf/blob/master/2019/workshops.md)
 #### [Recent Blog Posts](https://github.com/rstudio/rstudio-conf/blob/master/2019/blogposts.md)
 #### [e-Posters](https://github.com/rstudio/rstudio-conf/blob/master/2019/eposters.md)
-#### [Printable Cheats Sheet Calendar](https://github.com/rstudio/rstudio-conf/blob/master/2019/Cheatsheets_2019.pdf)
+#### [Printable Cheat Sheet Calendar](https://github.com/rstudio/rstudio-conf/blob/master/2019/Cheatsheets_2019.pdf)
 
 
 ### rstudio::conf 2020
