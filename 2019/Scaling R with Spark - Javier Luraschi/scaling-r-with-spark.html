@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scaling R with Spark</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Javier Luraschi" />
+    <meta name="date" content="2019-01-17" />
+    <link rel="stylesheet" href="https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/include/rstudio.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Scaling R with Spark
+## using sparklyr
+### Javier Luraschi
+### 01/17/2019
+
+---
+
+
+
+
+class: panel-wide-slide, left
+
+# What to do when code is slow?
+
+
+```r
+mtcars %&gt;% lm(mpg ~ wt + cyl, .)
+```
+
+--
+
+
+```r
+# Sample
+mtcars %&gt;% dplyr::sample_n(10) %&gt;% lm(mpg ~ wt + cyl, .)
+```
+
+--
+
+
+```r
+# Profile
+profvis::profvis(mtcars %&gt;% lm(mpg ~ wt + cyl, .))
+```
+
+--
+
+
+```r
+# Scale Up
+cloudml::cloudml_train("train.R")
+```
+
+--
+
+
+```r
+# Scale Out
+mtcars_tbl %&gt;% sparklyr::ml_linear_regression(mpg ~ wt + cyl)
+```
+
+--
+.small-note[**Note:** There are many more ways to sample, scale-up and scale-out.]
+
+---
+
+class: panel-narrow-slide, left
+
+# Scaling Out with R and Spark
+
+![](https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/images/spark-scale-out-scale-up.png)
+
+
+```r
+# Scale Out
+mtcars_tbl %&gt;% sparklyr::ml_linear_regression(mpg ~ wt + cyl)
+```
+
+---
+
+class: panel-narrow-slide, left
+
+# How to use R with Spark?
+
+
+```r
+library(sparklyr)                                    # R Interface to Apache Spark
+spark_install()                                      # Install Apache Spark
+sc &lt;- spark_connect(master = "local")                # Connect to Spark cluster
+```
+
+--
+
+
+```r
+cars_tbl &lt;- spark_read_csv(sc, "cars", "mtcars/")    # Read data in Spark
+
+summarize(cars_tbl, n = n())                         # Count records with dplyr
+dbGetQuery(sc, "SELECT count(*) FROM cars")          # Count records with DBI
+```
+
+--
+
+
+```r
+ml_linear_regression(cars_tbl, mpg ~ wt + cyl)       # Perform linear regression
+```
+
+--
+
+
+```r
+pipeline &lt;- ml_pipeline(sc) %&gt;%                      # Define Spark pipeline
+  ft_r_formula(mpg ~ wt + cyl) %&gt;%                   # Add formula transformation
+  ml_linear_regression()                             # Add model to pipeline
+
+fitted &lt;- ml_fit(pipeline, cars_tbl)                 # Fit pipeline
+```
+
+--
+
+
+```r
+spark_context(sc) %&gt;% invoke("version")              # Extend sparklyr with Scala
+spark_apply(cars_tbl, nrow)                          # Extend sparklyr with R
+```
+
+---
+
+class: panel-narrow-slide, left
+
+# What about realtime data?
+
+![](https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/images/realtime-spark-r-twitter.png)
+
+---
+
+class: panel-narrow-slide, left
+
+# Spark Structured Streams
+
+
+```r
+cars_str &lt;- stream_read_csv(sc, "mtcars/", "cars")     # Read stream in Spark
+```
+
+--
+
+
+```r
+out_str &lt;- summarize(cars_str, n = n())                # Count records with dplyr
+out_str &lt;- dbGetQuery(sc, "SELECT count(*) FROM cars") # Count records with DBI
+```
+
+--
+
+
+```r
+out_str &lt;- ml_transform(fitted, cars_str)              # Apply pipeline to stream
+```
+
+--
+
+
+```r
+out_str &lt;- spark_apply(cars_str, nrow)                 # Extend streams with R
+```
+
+--
+
+
+```r
+stream_write_csv(out_str, "output/")                   # Write as a CSV stream
+reactiveSpark(out_str)                                 # Use as a Shiny reactive
+```
+
+---
+
+class: panel-narrow-slide, left
+
+# Streaming with Spark, Kafka and Shiny
+
+&gt; Apache Kafka is an open-source stream-processing software platform that provides a unified, high-throughput and low-latency for handling real-time data feeds.
+
+--
+
+![](https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/images/streaming-kafka-spark-shiny.png)
+
+---
+
+class: panel-narrow-slide, left
+
+# What's new in Spark and R?
+
+**Streams**, **MLeap**, **Kubernetes** and **RStudio 1.2** integration.
+
+--
+
+![](https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/images/sparklyr-rstudio-1.2-features.png)
+
+---
+
+class: panel-narrow-slide, left
+
+# What are we currently working on?
+
+### - Faster data transfer with Apache Arrow: [pull/1611](https://github.com/rstudio/sparklyr/pull/1611).
+
+--
+
+### - [XGBoost](https://github.com/rstudio/sparkxgb) on Spark: [rstudio/sparkxgb](https://github.com/rstudio/sparkxgb).
+
+---
+
+class: panel-narrow-slide, left
+
+# Arrow on Spark
+
+&gt; .small-quote[Arrow is a cross-language development platform for in-memory data.]
+
+--
+
+
+```r
+devtools::install_github("apache/arrow", subdir = "r", ref = "dc5df8f")
+devtools::install_github("rstudio/sparklyr")
+
+library(arrow)
+library(sparklyr)
+```
+
+--
+
+.pull-left[![](https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/images/sparklyr-arrow-collect.png)]
+.pull-right[![](https://s3.amazonaws.com/javierluraschi/scaling-r-with-spark-rstudio-conf/images/sparklyr-arrow-apply.png)]
+
+---
+
+class: panel-narrow-slide, left
+
+# XGBoost on Spark
+
+&gt; sparkxgb is a sparklyr extension that provides an interface to XGBoost on Spark.
+
+--
+
+
+```r
+devtools::install_github("rstudio/sparkxgb")
+library(sparkxgb)
+```
+
+--
+
+
+```r
+iris_tbl &lt;- sdf_copy_to(sc, iris)
+
+xgb_model &lt;- xgboost_classifier(
+  iris_tbl, 
+  Species ~ .,
+  objective = "multi:softprob",
+  num_class = 3,
+  num_round = 50, 
+  max_depth = 4
+)
+
+xgb_model %&gt;% ml_predict(iris_tbl) %&gt;% glimpse()
+```
+
+---
+
+class: panel-wide-slide, left
+
+# Thank you!
+
+### **Docs**: .resource-link[spark.rstudio.com]
+### **Blog**: blog.rstudio.com/tags/sparklyr
+### **R Help**: community.rstudio.com
+### **Spark Help**: stackoverflow.com/tags/sparklyr
+### **Issues**: github.com/rstudio/sparklyr/issues
+### **Chat**: gitter.im/rstudio.sparklyr
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"countIncrementalSlides": true,
+"highlightLines": true,
+"highlightStyle": "github",
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
