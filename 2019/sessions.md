@@ -338,7 +338,7 @@ Speaker:Jim Hester - 	[website](https://jimhester.com/),	[twitter](https://twitt
 
 Session 4 / publication / [pagedown: Creating beautiful PDFs with R Markdown and CSS](https://bit.ly/pagedown)
 ([pagedown github repo](https://github.com/rstudio/pagedown))<br>
-Speaker: Yihui Xie - [website](https://bookdown.org/yihui/blogdown/),	[twitter](https://twitter.com/xieyihui),	[github](https://github.com/yihui),	[linkedin](https://www.linkedin.com/in/yihuixie/)
+Speaker: Yihui Xie - [website](https://yihui.name),	[twitter](https://twitter.com/xieyihui),	[github](https://github.com/yihui),	[linkedin](https://www.linkedin.com/in/yihuixie/)
 <details><summary>Abstract</summary>
 <p>The traditional way to beautiful PDFs is often through LaTeX or Word, but have you ever thought of printing a web page to PDF? Web technologies (HTML/CSS/JavaScript) are becoming more and more amazing. It is entirely possible to create high-quality PDFs through Google Chrome or Chromium now. Web pages are usually single-page documents, but they can be paginated thanks to the JavaScript library Paged.js, so that you can have elements like headers, footers, and page margins for the printing purpose. In this talk, we introduce a new R package, pagedown (https://github.com/rstudio/pagedown), to create PDF documents based on R Markdown and Paged.js. Applications of pagedown includes, but not limited to, books, articles, posters, resumes, letters, and business cards. With the power of CSS and JavaScript, you can typeset your documents with amazing elegance (e.g., a single line of CSS, "tr:nth-child(even) { background: #eee; }", will give you a striped table, and "border-radius: 50%;" gives you a circular element) and power (e.g., HTML Widgets).
 </p>
