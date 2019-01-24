@@ -138,7 +138,7 @@ Speaker: Emily Robinson -	[website](https://robinsones.github.io/),	[twitter](ht
 </p>
 </details><br>
 
-Session 2 / distributed / [Scaling R with Spark](http://rpubs.com/jluraschi/scaling-r-with-spark-rstudio-conf)<br>
+Session 2 / distributed / [Scaling R with Spark](https://github.com/rstudio/rstudio-conf/tree/master/2019/Scaling%20R%20with%20Spark%20-%20Javier%20Luraschi)<br>
 Speaker: Javier Luraschi - [twitter](https://twitter.com/javierluraschi), [github](https://github.com/javierluraschi),	[linkedin](https://www.linkedin.com/in/javier-luraschi-45ba7224)
 <details><summary>Abstract</summary>
 <p>This talk introduces new features in sparklyr that enable real-time data processing, brand new modeling extensions and significant performance improvements. The sparklyr package provides an interface to Apache Spark to enable data analysis and modeling in large datsets through familiar packages like dplyr and broom.
@@ -239,7 +239,7 @@ Speaker: Hao Zhu	- [website](https://haozhu233.github.io/),	[twitter](https://tw
 </p>
 </details><br>
 
-Session 3 / modeling / parsnip - a tidy model interface<br>
+Session 3 / modeling / [parsnip - a tidy model interface](https://github.com/rstudio/rstudio-conf/tree/master/2019/Parsnip--Max_Kuhn)<br>
 Speaker: Max Kuhn -	[website](http://appliedpredictivemodeling.com/about/),	[twitter](https://twitter.com/topepos),	[github](https://github.com/topepo),	[linkedin](https://www.linkedin.com/in/max-kuhn-864a9110/)
 <details><summary>Abstract</summary>
 <p>parsnip is a new tidymodels package that generalizes model interfaces across packages. The idea is to have a single function interface for types of specific models (e.g. logistic regression) that lets the user choose the computational engine for training. For example, logistic regression could be fit with several R packages, Spark, Stan, and Tensorflow. parsnip also standardizes the return objects and sets up some new features for some upcoming packages.
@@ -274,7 +274,7 @@ Speaker: Thomas Lin Pedersen - [website](https://www.data-imaginist.com/),	[twit
 </p>
 </details><br>
 
-Session 3 / workflow / [Getting it right: Writing reliable and maintainable R code](https://github.com/ajmcoqui/testingRCode)<br>
+Session 3 / workflow / [Getting it right: Writing reliable and maintainable R code](https://github.com/rstudio/rstudio-conf/tree/master/2019/Testing_R_Code--Amanda_Gadrow)<br>
 Speakers: Amanda Gadrow
 <details><summary>Abstract</summary>
 <p>How can you tell that your scripts, applications, and package functions are working as expected? Are you sure that when you make changes in one part of the code, it won't break something in another part? Have you thought deeply about how the consumers of your code (including Future You) will use it, maintain it, fix it, and improve it? Code quality is essential not only for reliable results but also for your script's maintainability and your users' satisfaction. Quality can be measured in part with targeted testing, and fortunately, there are several effective and easy-to-use code testing tools available in R. This talk will discuss some of the most useful testing packages, covering both concepts and examples.
