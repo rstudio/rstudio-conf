@@ -1,0 +1,263 @@
+---
+title: "Scaling R with Spark"
+subtitle: "sparklyr walkthrough"
+author: "Javier Luraschi"
+---
+
+## Configuration
+
+### Linux
+
+```{bash}
+wget http://apache.claz.org/kafka/2.1.0/kafka_2.12-2.1.0.tgz
+tar -xzf kafka_2.12-2.1.0.tgz
+
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-server-start.sh config/server.properties
+
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tweets
+bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+sudo ln -s /usr/lib/gcc/x86_64-amazon-linux/6.4.1/libgomp.spec /usr/lib64/libgomp.spec
+sudo ln -s /usr/lib/gcc/x86_64-amazon-linux/6.4.1/libgomp.a /usr/lib64/libgomp.a
+sudo ln -s /usr/lib64/libgomp.so.1.0.0 /usr/lib64/libgomp.so
+
+R CMD javareconf -e 
+
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic tweets --from-beginning
+```
+
+**Note:** You can clean up a Kafka topic as follows,
+
+```{bash}
+bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic tweets
+bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tweets
+```
+
+### OS X
+
+```{bash}
+R CMD javareconf -e 
+sudo R CMD javareconf
+
+brew install kafka
+
+brew services start zookeeper
+brew services start kafka
+```
+
+```{bash}
+/usr/local/Cellar/kafka/2.1.0/bin/kafka-topics --list --zookeeper localhost:2181
+
+/usr/local/Cellar/kafka/2.1.0/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic tweets --from-beginning
+```
+
+**Note:** You can clean up a Kafka topic as follows,
+
+```{bash}
+/usr/local/Cellar/kafka/2.1.0/bin/kafka-topics --zookeeper localhost:2181 --delete --topic tweets
+/usr/local/Cellar/kafka/2.1.0/bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic tweets
+```
+
+### Configuring Kafka
+
+```{r}
+install.packages("rJava")
+install.packages("rkafka")
+
+producer <- rkafka::rkafka.createProducer("localhost:9092", "sync")
+rkafka::rkafka.send(producer, "tweets", "localhost", "hello")
+```
+
+### Configuring Twitter
+
+```{r}
+install.packages("rtweet")
+library(dplyr)
+
+# See http://dev.twitter.com
+rtweet::create_token("appname", "", "", "", "")
+
+produce_tweets <- function(search, producer, topic = "tweets", last = data.frame(), iters = 1) {
+    if (iters <= 0) return(last)
+    
+    last_id <- last[nrow(last),]$status_id
+    tweets <- rtweet::search_tweets(paste(search, "filter:twimg"), max_id = last_id)
+    
+    tweets <- tweets[!identical(tweets$status_id, last_id),]
+    
+    if (nrow(tweets) > 0) {
+        tweets_subset <- dplyr::select(
+            tweets,
+            created_at, screen_name, text, is_retweet, favorite_count, retweet_count, media_url, location
+        )
+        
+        for (idx in 1:nrow(tweets_subset)) {
+            capture.output(rkafka::rkafka.send(producer, topic, "localhost", jsonlite::toJSON(tweets_subset[idx,])))
+            Sys.sleep(1)
+        }
+    }
+    
+    produce_tweets(search, producer, topic, tweets, iters - 1)
+}
+
+tweets <- produce_tweets("#rstats", producer, "tweets")
+```
+
+### Configuring Google Cloud
+
+```{r}
+install.packages("googleAuthR")
+devtools::install_github("javierluraschi/RoogleVision")
+```
+
+## Connecting to Spark
+
+```{r}
+library(shiny)
+library(sparklyr)
+library(dplyr)
+
+config <- spark_config()
+config$sparklyr.shell.packages <- "org.apache.spark:spark-sql-kafka-0-10_2.11:2.3.2"
+config$sparklyr.shell.files <- "cloudml.json"
+
+sc <- spark_connect(master = "local", config = config)
+```
+
+## Reading from Kafka
+
+```{r}
+read_options <- list(kafka.bootstrap.servers = "localhost:9092", subscribe = "tweets")
+
+stream <- stream_read_kafka(sc, options = read_options) %>%
+    stream_write_memory("stream")
+```
+
+## Using streams with dplyr and Spark
+
+```{r}
+tbl(sc, "stream") %>%
+  summarize(n = n())
+```
+
+```{r}
+tbl(sc, "stream") %>%
+  transmute(value = as.character(value))
+```
+
+```{r}
+tbl(sc, "stream") %>%
+  transmute(value = as.character(value)) %>%
+  transmute(text = get_json_object(value, '$[0].text'))
+```
+
+## Using streams with modeling
+
+```{r}
+tbl(sc, "stream") %>%
+  transmute(value = as.character(value)) %>%
+  transmute(text = get_json_object(value, '$[0].text')) %>%
+  filter(nchar(text) > 4) %>%
+  ft_tokenizer(input_col = "text", output_col = "words") %>%
+  transmute(word = explode(words)) %>%
+  filter(nchar(word) > 4) %>%
+  group_by(word) %>%
+  summarize(total = n()) %>%
+  arrange(desc(total))
+```
+
+## Using streams with R code to label an image using Google Cloud
+
+```{r}
+tbl(sc, "stream") %>%
+  transmute(value = as.character(value)) %>%
+  transmute(screen_name = get_json_object(value, '$[0].media_url[0]')) %>% filter(nchar(screen_name) > 4)
+```
+
+```{r}
+googleAuthR::gar_auth_service(scope = "https://www.googleapis.com/auth/cloud-platform", json_file="cloudml.json")
+
+image_response <- RoogleVision::getGoogleVisionResponse("http://pbs.twimg.com/media/DwzcM88XgAINkg-.jpg")
+image_response
+```
+
+```{r}
+knitr::include_graphics("http://pbs.twimg.com/media/DwzcM88XgAINkg-.jpg")
+```
+
+```{r}
+tbl(sc, "stream") %>% 
+  transmute(value = as.character(value)) %>%
+  transmute(media = get_json_object(value, '$[0].media_url[0]')) %>% filter(nchar(media) > 5) %>%
+  sdf_repartition(partitions = 10) %>%
+  spark_apply(function(df) {
+      googleAuthR::gar_auth_service(
+        scope = "https://www.googleapis.com/auth/cloud-platform", json_file="cloudml.json")
+      RoogleVision::getGoogleVisionResponse(df$media, download = FALSE)
+  }, columns = lapply(image_response, class)) %>%
+  group_by(description) %>%
+  summarize(total = n()) %>%
+  arrange(desc(total))
+```
+
+## Using streams with Shiny
+
+```{r}
+shiny::runApp("realtime", display.mode = "showcase")
+```
+
+## Configuring Arrow and XGBoost
+
+```{r}
+# Note, installing apache/arrow requires installing arrow first.
+devtools::install_github("apache/arrow", subdir = "r", ref = "dc5df8f")
+devtools::install_github("rstudio/sparklyr")
+```
+
+```{r}
+library(sparkxgb)
+library(sparklyr)
+sc <- spark_connect(master = "local")
+```
+
+## Using Arrow with Spark
+
+```{r}
+system.time(sdf_len(sc, 10^4) %>% spark_apply(nrow) %>% sdf_collect())
+```
+
+```{r}
+library(arrow)
+system.time(sdf_len(sc, 10^6) %>% spark_apply(nrow) %>% sdf_collect())
+```
+
+## Using XGBoost with Spark
+
+```{r}
+iris_tbl <- sdf_copy_to(sc, iris)
+
+xgb_model <- xgboost_classifier(
+  iris_tbl, 
+  Species ~ .,
+  objective = "multi:softprob",
+  num_class = 3,
+  num_round = 50, 
+  max_depth = 4
+)
+
+xgb_model %>% ml_predict(iris_tbl) %>% dplyr::glimpse()
+```
+
+## Cleanup
+
+```{r}
+spark_disconnect_all()
+```
+
+### OS X
+
+```{bash}
+brew services stop kafka
+brew services stop zookeeper
+```
