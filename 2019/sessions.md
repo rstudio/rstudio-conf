@@ -46,7 +46,7 @@ Speaker: Karthik	Ram	[website](http://karthik.io/), [twitter](https://twitter.co
 </details><br>
 
 
-Session 1 / interop / [New Language Features in RStudio 1.2](https://github.com/jmcphers/rstudio-1.2-features)<br>
+Session 1 / interop / [New Language Features in RStudio 1.2](https://github.com/rstudio/rstudio-conf/tree/master/2019/RStudio_1.2_Language_Features--Jonathan_McPherson)<br>
 Speaker: Jonathan McPherson -	[twitter](https://twitter.com/jmcphers), [github](https://github.com/jmcphers), [linkedin](https://www.linkedin.com/in/jonathanmcpherson/)
 <details><summary>Abstract</summary>
 <p>RStudio 1.2 dramatically improves support for many languages frequently used alongside R in data science projects, including SQL, D3, Stan, and Python. In this talk, you'll learn how to use RStudio 1.2's new language features to work more efficiently and fluidly in multi-lingual projects.
