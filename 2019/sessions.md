@@ -6,7 +6,7 @@ ___
 
 ## Day 1
 
-Welcome + RStudio Vision<br>
+[Welcome + RStudio Vision](https://github.com/rstudio/rstudio-conf/tree/master/2019/RStudio_Welcome_Vision-Tareef_Kawaf)<br>
 Speaker: Tareef Kawaf - [twitter](https://twitter.com/tareefk), [linkedin](https://www.linkedin.com/in/tareefk/)
 <details><summary>Abstract</summary>
 <p>
