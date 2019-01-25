@@ -1,0 +1,57 @@
+---
+title: "Top Spender Analysis"
+output: html_notebook
+---
+
+```{r setup}
+library(reticulate)
+library(r2d3)
+use_python("/usr/local/bin/python", required = TRUE)
+
+library(odbc)
+con <- dbConnect(odbc::odbc(), 
+                 .connection_string = "Driver={SQLite Driver};Database=data/chinook.db", 
+                 timeout = 10)
+
+```
+
+```{sql connection=con}
+SELECT customers.CustomerId, customers.LastName, invoices.Total
+FROM customers, invoices
+WHERE invoices.CustomerId = customers.CustomerId
+```
+
+```{python}
+import pandas as pd
+
+# Group by customer ID
+grouped = r.spending.groupby(["CustomerId", "LastName"])
+spenders = grouped.sum().reset_index()
+
+# Create a list of the top spenders
+top_spenders = grouped.sum().sort_values("Total", ascending = False).head(5)
+top_spenders.reset_index(inplace = True)
+print top_spenders
+```
+
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+plt.clf()
+
+customers = list(top_spenders['LastName'])
+y_pos = np.arange(len(customers))
+plt.bar(y_pos, top_spenders['Total'])
+plt.xticks(y_pos, customers)
+plt.title("Top 5 Spending Customers")
+plt.show()
+```
+
+
+```{r}
+sorted <- py$spenders[order(py$spenders$Total),]
+bubbles <- data.frame(id = sorted$LastName, value = seq_len(nrow(sorted)))
+r2d3(data = bubbles, script = "bubbles.js", d3_version = 4)
+```
+
