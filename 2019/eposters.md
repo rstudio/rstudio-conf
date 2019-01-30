@@ -4,7 +4,7 @@
 |:----|:-----------|
 |Hannah Fresques|Investigative ReporteRs|
 |Liz Romero|Building a highly flexible enterprise-wide reporting system using R Shiny|
-|Ben Stenhaug|Developing evidence-based ways of teaching R|
+|Ben Stenhaug|(https://github.com/stenhaug/shared/blob/master/Evidence%20based%20data%20science%20education.pdf)[Developing evidence-based ways of teaching R]|
 |Gabriela de Queiroz|A tour inside the R-Ladies organization|
 |Earo Wang|Tidyverts: Tidy your time series analysis with tsibble and fable|
 |Hiroaki Yutani - @yutannihilat_en (https://twitter.com/yutannihilat_en)|[gghighlight: Highlight ggplot2 with Predicates](https://github.com/yutannihilation/rstudioconf2019)|
