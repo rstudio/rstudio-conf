@@ -166,7 +166,7 @@ This workshop is co-taught by Rick Scavetta author of Deep Learning with R in Mo
 More info and materials can be found [here](https://github.com/rstudio/conf_tensorflow_training_day2).
 
 
-## Deep Learning: Beyong the Basics
+## Deep Learning: Beyond the Basics
 
 #### Sigrid Keydana, Kevin Kuo, and Rick Scavetta
 
