@@ -1,22 +1,22 @@
 # rstudio-conf 2019 Workshop materials
 
-Workshop | Instructor(s)| Abstract
+Workshop | Instructor(s)| More info
 ---------|--------------|--------
-[Introduction to Data Science in the Tidyverse](https://github.com/AmeliaMN/data-science-in-tidyverse) | Amelia McNamara, Hadley Wickham | [More info](#introduction-to-data-science-in-the-tidyverse)
-[Building Tidy Tools](https://rstd.io/tidytools19) | Charlotte Wickham, Hadley Wickham | [More info](#building-tidy-tools)
-[What They Forgot to Teach You About R](https://rstd.io/wtf-2019-rsc) | Jenny Bryan, Jim Hester | [More info](#what-they-forgot-to-teach-you-about-r)
-[Intro to Shiny and R Markdown](https://github.com/dtkaplan/shinymark) | Danny Kaplan | [More info](#intro-to-shiny-and-r-markdown)
-[Advanced R Markdown](https://arm.rbind.io/) | Alison Hill, Yihui Xie | [More info](#advanced-r-markdown)
-[Intermediate Shiny](https://github.com/aimeegott/RStudio-Conf-Intermediate-Shiny) | Aimee Gott, Winston Chang | [More info](#intermediate-shiny)
-[Using Shiny in Production](https://github.com/kellobri/spc-app) | Kelly O'Briant, Sean Lopp | [More info](#using-shiny-in-production)
-[Applied Machine Learning](https://github.com/topepo/rstudio-conf-2019) | Max Kuhn, Alex Hayes | [More info](#applied-machine-learning)
-[Introduction to Deep Learning](https://github.com/Scavetta/conf_tensorflow_training_day1) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [More info](#introduction-to-deep-learning)
-[Deep Learning: Beyond the Basics](https://github.com/rstudio/conf_tensorflow_training_day2) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [More info](#deep-learning-beyond-the-basics)
-[Big Data with R](https://github.com/rstudio/bigdataclass) | Edgar Ruiz, James Blair | [More info](#big-data-with-r)
-[Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teaching-workshop-2019-01) | Greg Wilson | [More info](#train-the-trainer-certification-workshop)
-[Shiny Train-the-Trainer Certification Workshop](http://teach-shiny.rbind.io) | Mine Çetinkaya-Rundel | [More info](#shiny-train-the-trainer-certification-workshop)
-[Tidyverse Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teach-tidy) | Garrett Grolemund | [More info](#tidyverse-train-the-trainer-certification-workshop)
-[RStudio Professional Administrator Certification Workshop](https://colorado.rstudio.com/rsc/pro-admin-training/overview/Overview.html) | Andrie de Vries | [More info](#rstudio-professional-administrator-certification-workshop)
+[Introduction to Data Science in the Tidyverse](https://github.com/AmeliaMN/data-science-in-tidyverse) | Amelia McNamara, Hadley Wickham | [>](#introduction-to-data-science-in-the-tidyverse)
+[Building Tidy Tools](https://rstd.io/tidytools19) | Charlotte Wickham, Hadley Wickham | [>](#building-tidy-tools)
+[What They Forgot to Teach You About R](https://rstd.io/wtf-2019-rsc) | Jenny Bryan, Jim Hester | [>](#what-they-forgot-to-teach-you-about-r)
+[Intro to Shiny and R Markdown](https://github.com/dtkaplan/shinymark) | Danny Kaplan | [>](#intro-to-shiny-and-r-markdown)
+[Advanced R Markdown](https://arm.rbind.io/) | Alison Hill, Yihui Xie | [>](#advanced-r-markdown)
+[Intermediate Shiny](https://github.com/aimeegott/RStudio-Conf-Intermediate-Shiny) | Aimee Gott, Winston Chang | [>](#intermediate-shiny)
+[Using Shiny in Production](https://github.com/kellobri/spc-app) | Kelly O'Briant, Sean Lopp | [>](#using-shiny-in-production)
+[Applied Machine Learning](https://github.com/topepo/rstudio-conf-2019) | Max Kuhn, Alex Hayes | [>](#applied-machine-learning)
+[Introduction to Deep Learning](https://github.com/Scavetta/conf_tensorflow_training_day1) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [>](#introduction-to-deep-learning)
+[Deep Learning: Beyond the Basics](https://github.com/rstudio/conf_tensorflow_training_day2) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [>](#deep-learning-beyond-the-basics)
+[Big Data with R](https://github.com/rstudio/bigdataclass) | Edgar Ruiz, James Blair | [>](#big-data-with-r)
+[Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teaching-workshop-2019-01) | Greg Wilson | [>](#train-the-trainer-certification-workshop)
+[Shiny Train-the-Trainer Certification Workshop](http://teach-shiny.rbind.io) | Mine Çetinkaya-Rundel | [>](#shiny-train-the-trainer-certification-workshop)
+[Tidyverse Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teach-tidy) | Garrett Grolemund | [>](#tidyverse-train-the-trainer-certification-workshop)
+[RStudio Professional Administrator Certification Workshop](https://colorado.rstudio.com/rsc/pro-admin-training/overview/Overview.html) | Andrie de Vries | [>](#rstudio-professional-administrator-certification-workshop)
 
 ---
 
