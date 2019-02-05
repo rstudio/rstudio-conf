@@ -13,9 +13,9 @@ Workshop | Instructor(s)| Abstract
 [Introduction to Deep Learning](https://github.com/Scavetta/conf_tensorflow_training_day1) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [More info](#introduction-to-deep-learning)
 [Deep Learning: Beyond the Basics](https://github.com/rstudio/conf_tensorflow_training_day2) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [More info](#deep-learning-beyond-the-basics)
 [Big Data with R](https://github.com/rstudio/bigdataclass) | Edgar Ruiz, James Blair | [More info](#big-data-with-r)
-[Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teaching-workshop-2019-01) | Greg Wilson
+[Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teaching-workshop-2019-01) | Greg Wilson | [More info](#train-the-trainer-certification-workshop)
 [Shiny Train-the-Trainer Certification Workshop](http://teach-shiny.rbind.io) | Mine Çetinkaya-Rundel | [More info](#shiny-train-the-trainer-certification-workshop)
-[Tidyverse Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teach-tidy) | Garrett Grolemund | | [More info](#tidyverse-train-the-trainer-certification-workshop)
+[Tidyverse Train-the-Trainer Certification Workshop](https://github.com/rstudio-education/teach-tidy) | Garrett Grolemund | [More info](#tidyverse-train-the-trainer-certification-workshop)
 [RStudio Professional Administrator Certification Workshop](https://colorado.rstudio.com/rsc/pro-admin-training/overview/Overview.html) | Andrie de Vries | [More info](#rstudio-professional-administrator-certification-workshop)
 
 ---
