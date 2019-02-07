@@ -9,7 +9,7 @@ Workshop | Instructor(s)| More info
 [Advanced R Markdown](https://arm.rbind.io/) | Alison Hill, Yihui Xie | [>](#advanced-r-markdown)
 [Intermediate Shiny](https://github.com/aimeegott/RStudio-Conf-Intermediate-Shiny) | Aimee Gott, Winston Chang | [>](#intermediate-shiny)
 [Using Shiny in Production](https://github.com/kellobri/spc-app) | Kelly O'Briant, Sean Lopp | [>](#using-shiny-in-production)
-[Applied Machine Learning](https://github.com/topepo/rstudio-conf-2019) | Max Kuhn, Alex Hayes | [>](#applied-machine-learning)
+[Applied Machine Learning](https://github.com/topepo/rstudio-conf-2019) | Max Kuhn, Davis Vaughn, Alex Hayes | [>](#applied-machine-learning)
 [Introduction to Deep Learning](https://github.com/Scavetta/conf_tensorflow_training_day1) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [>](#introduction-to-deep-learning)
 [Deep Learning: Beyond the Basics](https://github.com/rstudio/conf_tensorflow_training_day2) | Sigrid Keydana, Kevin Kuo, Rick Scavetta | [>](#deep-learning-beyond-the-basics)
 [Big Data with R](https://github.com/rstudio/bigdataclass) | Edgar Ruiz, James Blair | [>](#big-data-with-r)
