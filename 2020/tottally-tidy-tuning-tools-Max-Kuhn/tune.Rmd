@@ -1,0 +1,582 @@
+
+---
+title: "Totally Tidy Tuning Tools"
+author: Max Kuhn (RStudio)
+date: "`r Sys.Date()`"
+session: 01
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/css/aml-theme.css", "assets/css/aml-fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      # autoplay: 5000
+      highlightStyle: solarized-light
+      highlightLanguage: R
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+      beforeInit: "https://platform.twitter.com/widgets.js"
+    includes:
+      in_header: [assets/header.html]
+params:
+  wifi_network: "rstudio20"
+  wifi_password: "tidyverse20"
+  site_link: ""
+  cloud_link: ""
+  github_link: ""
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r knitr, include = FALSE}
+library(knitr)
+opts_chunk$set(digits = 3)
+library(tidymodels)
+library(AmesHousing)
+library(emo)
+thm <- theme_bw() + 
+  theme(
+    panel.background = element_rect(fill = "transparent", colour = NA), 
+    plot.background = element_rect(fill = "transparent", colour = NA),
+    legend.position = "top",
+    legend.background = element_rect(fill = "transparent", colour = NA),
+    legend.key = element_rect(fill = "transparent", colour = NA)
+  )
+theme_set(thm)
+```
+
+layout: false
+class: inverse, middle, center
+
+.font120[
+
+# Totally Tiny Tuning Tools
+
+## Max Kuhn (RStudio)
+
+]
+
+
+---
+class: middle, center
+
+background-size: cover 
+background-image: url(previously.png)
+
+---
+
+# The Ames Housing Data
+
+```{r ames-map, echo = FALSE, message = FALSE, fig.align='center', dev = "svg"}
+library(AmesHousing)
+library(leaflet)
+library(htmltools)
+library(Cairo)
+ames <- make_ames()
+
+col_key <- c(
+  'NAmes',     '#0000FF',
+  'CollgCr',   '#FF0000',
+  'OldTown',   '#FFFFFF',
+  'Edwards',   '#FF00B6',
+  'Somerst',   '#FF3030',
+  'NridgHt',   '#009FFF',
+  'Gilbert',   '#DD00FF',
+  'Sawyer',    '#9A4D42',
+  'NWAmes',    '#00FFBE',
+  'SawyerW',   '#1F9698',
+  'Mitchel',   '#FFACFD',
+  'BrkSide',   '#720055',
+  'Crawfor',   '#F1085C',
+  'IDOTRR',    '#FE8F42',
+  'Timber',    '#004CFF',
+  'NoRidge',   '#ffff00',
+  'StoneBr',   '#B1CC71',
+  'SWISU',     '#02AD24',
+  'ClearCr',   '#FFD300',
+  'MeadowV',   '#886C00',
+  'BrDale',    '#FFB79F',
+  'Blmngtn',   '#858567',
+  'Veenker',   '#A10300',
+  'NPkVill',   '#00479E',
+  'Blueste',   '#DC5E93',
+  'Greens',    '#93D4FF',
+  'GreenHills', '#e5f2e5', 
+  'Landmrk',   '#C8FF00'
+) 
+col_key <- as.data.frame(matrix(col_key, byrow = TRUE, ncol = 2))
+names(col_key) <- c("Neighborhood", "color")
+col_key <- col_key %>%
+    mutate(
+      Neighborhood =
+        dplyr::recode(
+          Neighborhood,
+          "Blmngtn" = "Bloomington_Heights",
+          "Bluestem" = "Bluestem",
+          "BrDale" = "Briardale",
+          "BrkSide" = "Brookside",
+          "ClearCr" = "Clear_Creek",
+          "CollgCr" = "College_Creek",
+          "Crawfor" = "Crawford",
+          "Edwards" = "Edwards",
+          "Gilbert" = "Gilbert",
+          "Greens" = "Greens",
+          "GreenHills" = "Green_Hills",
+          "IDOTRR" = "Iowa_DOT_and_Rail_Road",
+          "Landmrk" = "Landmark",
+          "MeadowV" = "Meadow_Village",
+          "Mitchel" = "Mitchell",
+          "NAmes" = "North_Ames",
+          "NoRidge" = "Northridge",
+          "NPkVill" = "Northpark_Villa",
+          "NridgHt" = "Northridge_Heights",
+          "NWAmes" = "Northwest_Ames",
+          "OldTown" = "Old_Town",
+          "SWISU" = "South_and_West_of_Iowa_State_University",
+          "Sawyer" = "Sawyer",
+          "SawyerW" = "Sawyer_West",
+          "Somerst" = "Somerset",
+          "StoneBr" = "Stone_Brook",
+          "Timber" = "Timberland",
+          "Veenker" = "Veenker"
+        ))
+
+lon_rnd <- range(ames$Longitude)
+lat_rnd <- range(ames$Latitude)
+
+ia_map <- leaflet(width = "100%") %>%
+  addProviderTiles(providers$Stamen.Toner)
+
+for(i in 1:nrow(col_key)) {
+  ia_map <- ia_map %>%
+    addCircles(
+      data = subset(ames, Neighborhood == col_key$Neighborhood[i]),
+      lng = ~Longitude, lat = ~Latitude,
+      color = col_key$color[i],
+      fill = TRUE,
+      fillColor = col_key$color[i],
+      radius = 6,
+      popup = htmlEscape(col_key$Neighborhood[i]),
+      opacity = .25)
+}
+ia_map
+```
+
+---
+
+# Pre-processing with {recipes}
+
+```{r recipe}
+library(tidymodels)
+library(AmesHousing)
+ames <- make_ames()
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  )  
+```
+
+---
+
+# Pre-processing with {recipes}
+
+```{r recipe-log}
+library(tidymodels)
+library(AmesHousing)
+ames <- make_ames()
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) #<<
+```
+
+
+---
+
+# Pre-processing with {recipes}
+
+```{r recipe-other}
+library(tidymodels)
+library(AmesHousing)
+ames <- make_ames()
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05)  #<<
+```
+
+
+---
+
+# Pre-processing with {recipes}
+
+
+```{r recipe-dummy}
+library(tidymodels)
+library(AmesHousing)
+ames <- make_ames()
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) #<<
+```
+
+
+---
+
+# Pre-processing with {recipes}
+
+```{r recipe-interact}
+library(tidymodels)
+library(AmesHousing)
+ames <- make_ames()
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) %>%
+  step_interact(~ starts_with("Bldg_Type"):Gr_Liv_Area) #<<
+```
+
+
+---
+
+# Pre-processing with {recipes}
+
+```{r recipe-spline}
+library(tidymodels)
+library(AmesHousing)
+ames <- make_ames()
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) %>%
+  step_interact(~ starts_with("Bldg_Type"):Gr_Liv_Area) %>%
+  step_ns(Longitude, Latitude, deg_free = 5) #<<
+```
+
+
+---
+
+# Creating Models with {parsnip}
+
+```{r glmnet}
+reg_mod <- linear_reg()
+```
+
+
+---
+
+# Creating Models with {parsnip}
+
+```{r glmnet-engine}
+reg_mod <- linear_reg() %>% 
+  set_engine("glmnet") #<<
+  # Could have been "lm", "stan", "keras", ...
+```
+
+---
+
+# Creating Models with {parsnip}
+
+```{r glmnet-engine-param}
+reg_mod <- linear_reg(penalty = 0.1, mixture = 0.5) %>% #<<
+  set_engine("glmnet") 
+  # Could have been "lm", "stan", "keras", ...
+```
+
+But how do we know that `penalty` = 0.1, `mixture` = 0.5, and 5 degree of freedom splines are what we should use?
+
+These are tuning parameters. 
+
+The `tune` package can be used to find good values for these parameters.
+
+How can we alter these objects to "tag" which arguments should be tuned? 
+
+---
+
+layout: false
+class: inverse, middle, center
+
+# I thought about making {tune} 
+
+# with the same intensity that 
+
+# Hilary Parker thinks about making `r emo::ji("coffee")`
+
+---
+
+# Tagging Parameters using {tune}
+
+```{r objects-again, tidy = FALSE}
+library(tune) # also will be in library(tidymodels)
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) %>%
+  step_interact(~ starts_with("Bldg_Type"):Gr_Liv_Area) %>%
+  step_ns(Longitude, Latitude, deg_free = 5) 
+
+
+reg_mod <- linear_reg(penalty = 0.1, mixture = 0.5) %>%
+  set_engine("glmnet") 
+```
+
+
+---
+
+# Tagging Parameters using {tune}
+
+```{r objects-tag, tidy = FALSE}
+library(tune) # also will be in library(tidymodels)
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) %>%
+  step_interact(~ starts_with("Bldg_Type"):Gr_Liv_Area) %>%
+  step_ns(Longitude, Latitude, deg_free = tune()) #<<
+
+
+reg_mod <- linear_reg(penalty = tune(), mixture = tune()) %>% #<<
+  set_engine("glmnet") 
+```
+```{r tune}
+# returns an expression of itself:
+tune()
+```
+
+---
+
+# Tagging Parameters using {tune}
+
+```{r objects-tag-more, tidy = FALSE}
+library(tune) # also will be in library(tidymodels)
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) %>%
+  step_interact(~ starts_with("Bldg_Type"):Gr_Liv_Area) %>%
+  step_ns(Longitude, deg_free = tune()) %>% #<<
+  step_ns(Latitude, deg_free = tune()) #<<
+
+reg_mod <- linear_reg(penalty = tune(), mixture = tune()) %>% #<<
+  set_engine("glmnet") 
+```
+
+
+---
+
+# Tagging Parameters using {tune}
+
+```{r objects-tag-id, tidy = FALSE}
+library(tune) # also will be in library(tidymodels)
+
+ames_rec <- 
+  recipe(
+    Sale_Price ~ Bldg_Type + Neighborhood + Year_Built + 
+      Gr_Liv_Area + Full_Bath + Year_Sold + Lot_Area +
+      Central_Air + Longitude + Latitude,
+    data = ames
+  ) %>%
+  step_log(Sale_Price, Lot_Area, Gr_Liv_Area, base = 10) %>%
+  step_other(Neighborhood, threshold = 0.05) %>%
+  step_dummy(all_nominal()) %>%
+  step_interact(~ starts_with("Bldg_Type"):Gr_Liv_Area) %>%
+  step_ns(Longitude, deg_free = tune("Longitude df")) %>% #<<
+  step_ns(Latitude, deg_free = tune("Latitude df")) #<<
+
+reg_mod <- linear_reg(penalty = tune(), mixture = tune()) %>%
+  set_engine("glmnet") 
+```
+
+
+---
+
+# Ingredients for Grid Search in tidymodels
+
+* **Model/recipe specification.**
+
+* **A resampling or validation data specification**
+
+* A pre-defined grid of candidate tuning parameters to evaluate. 
+
+* Performance metrics to calculate.
+
+```{r resample}
+set.seed(214828)
+ten_fold <- vfold_cv(ames)
+```
+
+
+---
+
+# Grid Search via {tune}
+
+```{r grid-comp, message = FALSE, cache = TRUE}
+set.seed(70801)
+grid_res <- tune_grid(ames_rec, reg_mod, resamples = ten_fold, grid = 10)
+grid_res
+```
+
+Kind of looks like the `rsample` objects with some extra list columns.
+
+We have a bunch of high-level functions that will work with these objects.
+
+
+---
+
+# Getting the Results that We Want
+
+```{r tune-funcs}
+collect_metrics(grid_res) %>% slice(1:4)
+show_best(grid_res, metric = "rmse", maximize = FALSE) # `select_best()` too
+```
+
+---
+
+# Plot Method Shows the Marginal Relationships
+
+```{r plot, out.width = '80%', fig.align='center', dev = 'svg', dev.args = list(bg = "transparent"), warning=FALSE, fig.width=8, fig.height=4}
+# This will improve. Maybe a `shinytune` package? 
+autoplot(grid_res, metric = "rsq")
+```
+
+---
+
+# Miscellaneous Notes
+
+* The default grid is a _space filling design_.
+
+* We capture all warnings and errors and store them on the `.notes` column.
+
+* You can save the predictions, fitted models/recipes with additional options.
+
+* The results using `verbose = TRUE` are `r emo::ji("100")`.
+
+* `foreach` is used to standard **parallel processing** tools can be used. 
+
+* You can alter the grid, performance metrics, and other aspects.
+
+* `tune` works well with our new `workflows` package. 
+
+---
+
+# Iterative Search via Bayesian Optimization
+
+```{r bayes, cache = TRUE, message = FALSE}
+ctrl <- control_bayes(verbose = TRUE)
+set.seed(70801)
+srch_res <- tune_bayes(ames_rec, reg_mod, resamples = ten_fold, initial = grid_res, control = ctrl)
+```
+
+.code90[
+
+```
+Optimizing rmse using the expected improvement
+
+── Iteration 1 ───────────────────────────────────────────────────────────
+
+i Current best:		rmse=0.07797 (@iter 0)
+i Gaussian process model
+✓ Gaussian process model
+i Generating 5000 candidates
+i Predicted candidates
+i penalty=0.000494, mixture=0.394, Longitude df=13, Latitude df=15
+i Estimating performance
+✓ Estimating performance
+ⓧ Newest results:	rmse=0.07823 (+/-0.00217)
+
+── Iteration 2 ───────────────────────────────────────────────────────────
+
+i Current best:		rmse=0.07797 (@iter 0)
+i Gaussian process model
+✓ Gaussian process model
+i Generating 5000 candidates
+
+<snip>
+── Iteration 10 ──────────────────────────────────────────────────────────
+
+i Current best:		rmse=0.07788 (@iter 6)
+i Gaussian process model
+✓ Gaussian process model
+i Generating 5000 candidates
+i Predicted candidates
+i penalty=0.943, mixture=0.0825, Longitude df=15, Latitude df=3
+i Estimating performance
+✓ Estimating performance
+ⓧ Newest results:	rmse=0.1664 (+/-0.00406)
+```
+
+]
+
+
+---
+
+# Fini
+
+`tune` is _almost_ on CRAN. For now:
+
+```r
+devtools::install_github("tidymodels/tune")
+```
+
+A good place to learn: [`https://tidymodels.github.io/tune/`](https://tidymodels.github.io/tune/)
+
+We are working on a `tidymodels` book (coming soon!) that will discuss this thoroughly. 
