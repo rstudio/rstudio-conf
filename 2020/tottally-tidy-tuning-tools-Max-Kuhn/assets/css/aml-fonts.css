@@ -1,0 +1,33 @@
+/* Based on Alison's original at
+ https://rstudio-conf-2020.github.io/slide-templates/xaringan/
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+body { 
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #272727;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: #447099;
+}
+
+.remark-code,
+.remark-inline-code{ 
+  font-family: 'Source Code Pro', monospace;
+}
+
+@media print {
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+
+
+
