@@ -490,7 +490,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
-<p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">If you’re responsible for analyses that need updating or repeating on a semi-regular basis, you might find yourself doing the same work over and over again. The principle of ""don’t repeat yourself"" from software engineering motivates us to use functions and packages, the core of repetition in the R universe. For analyses, it can be difficult to know how to use this principle and move beyond ""copying and pasting scripts and changing the data file and the object names and updating the dates and results in RMarkdown"", especially when there’s some element of human intervention required, whether it be for validating assumptions or cleaning artisanal data.  This talk will focus on those next steps, showcasing opportunities to stop repeating yourself and instead anticipate the needs of and communicate effectively with your future self (or the next person with your job!) using project-oriented workflows, clever interactivity, templated analyses, functions, and yes, your own packages.</span></p> </div></div></p></details><br>
+<p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">If you’re responsible for analyses that need updating or repeating on a semi-regular basis, you might find yourself doing the same work over and over again. The principle of ""don’t repeat yourself"" from software engineering motivates us to use functions and packages, the core of repetition in the R universe. For analyses, it can be difficult to know how to use this principle and move beyond ""copying and pasting scripts and changing the data file and the object names and updating the dates and results in RMarkdown"", especially when there’s some element of human intervention required, whether it be for validating assumptions or cleaning artisanal data.
+ This talk will focus on those next steps, showcasing opportunities to stop repeating yourself and instead anticipate the needs of and communicate effectively with your future self (or the next person with your job!) using project-oriented workflows, clever interactivity, templated analyses, functions, and yes, your own packages.</span></p> </div></div></p></details><br>
 
 
 **How Rmarkdown changed my life**
@@ -1090,6 +1091,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>by Alan Dipert
 <br>Materials:
 <br>
+
 
 
 ### rstudio::conf 2021
