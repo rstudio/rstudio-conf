@@ -883,6 +883,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In episode 100 of Not So Standard Deviations, the first ever episode prepared in advance, Hilary and Roger discuss creativity, its role in data science, and how it can be fostered through conversation. Also, follow up on coffee and oat milk.</span></p> </div></div></p></details><br>
 
+
 #### e-Posters
 
 ### rstudio::conf 2021
