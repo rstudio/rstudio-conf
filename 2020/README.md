@@ -514,7 +514,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Building a Medical Device with R**
 <br>by Ron Keizer
-<br>Materials:
+<br>Materials: https://github.com/rstudio/rstudio-conf/blob/master/2020/building-medical-device-with-r_Ron-Keizer.pdf
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The InsightRX precision dosing platform tailors in-patient drug doses to individual patients' characteristics and biomarkers, leveraging pharmacological models of drug metabolism and drug effects. These models are implemented in R, exposed through APIs, and called from a cloud-based web application. The core of our pharmacokinetic/pharmacodynamic simulation functionality is available open source at `github.com/InsightRX/PKPDsim` and `github.com/InsightRX/clinPK`. As a regulated device in Europe (and soon to be in the US) used in over 100 hospitals, the platform is necessarily developed under ""design control"", meaning that strict product planning and engineering practices are required. This has implications for how the application and APIs are developed and deployed, such as strict version control workflows and implementation of rigorous testing procedures. To meet the requirements for high availability and horizontal scaling, we use a combination of Plumber and OpenCPU, hosted on RStudio Connect and AWS Fargate/ECS, which cater to the various needs of the development and production environments.</span></p> </div></div></p></details><br>
