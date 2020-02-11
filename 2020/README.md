@@ -264,7 +264,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Accelerating Analytics with Apache Arrow**
 <br>by Neal Richardson
-<br>Materials:
+<br>Materials: [slides](https://enpiar.com/talks/rstudio-conf-2020/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The Apache Arrow project is a cross-language development platform for in-memory data designed to improve system performance, memory use, and interoperability. This talk presents recent developments in the 'arrow' package, which provides an R interface to the Arrow C++ library. We'll cover the goals of the broader Arrow project, how to get started with the 'arrow' package in R, some general concepts for working with data efficiently in Arrow, and a brief overview of upcoming features.</span></p> </div></div></p></details><br>
