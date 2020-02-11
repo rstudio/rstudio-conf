@@ -280,7 +280,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **What's new in TensorFlow for R**
 <br>by Daniel Falbel
-<br>Materials:
+<br>Materials: [slides](https://dfalbel.github.io/talks/2020-01-rstudio-conf/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">TensorFlow is the most popular open-source platform for machine learning and it's ecosystem is evolving incredibly fast. In this talk we will explore what's new in TensorFlow 2.0 as well as how to build data pre-processing pipelines using the tfdatasets package and how to use pre-trained models with tfhub.</span></p> </div></div></p></details><br>
