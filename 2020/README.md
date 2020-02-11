@@ -442,7 +442,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Technical debt is a social problem**
 <br>by Gordon Shotwell
-<br>Materials:
+<br>Materials: https://techdebt.shotwell.ca/
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Technical debt is a big problem for the R community. Even though R has excellent support for testing, documentation and packaging code it has the reputation that it is not suitable for production applications because data scientists don’t pay enough attention to technical debt within their codebases. Most people think of technical debt as an engineering problem. We choose to make our current work cheaper at the expense of needing to do more work down the road. But when you look closely at the root causes of technical debt they are almost always about interpersonal relationships. Developers have trouble empathizing with other users of their code and so don’t spend the time to make that code easy for future developers to use and understand. In this talk I argue that we should think about technical debt as a social problem because it gives us insight into why it’s so hard to pay back. I then provide a practical roadmap of how to introduce best practices into your data science team.</span></p> </div></div></p></details><br>
