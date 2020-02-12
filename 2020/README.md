@@ -745,7 +745,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Advances in tidyeval**
 <br>by Lionel Henry
-<br>Materials:
+<br>Materials: [slides](interactivity-and-programming-in-the-tidyverse_Lionel-Henry/interactivity-programming.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In tidyverse grammars such as dplyr you can refer to the columns in your data frames as if they were objects in the workspace. This syntax is optimised for interactivity and is a great fit for data analysis, but it makes it harder to write functions and reuse code. In this talk we present some advances in the tidy eval framework that make it easier to program around tidyverse pipelines without having to learn a lot of theory.</span></p> </div></div></p></details><br>
