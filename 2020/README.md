@@ -1012,7 +1012,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **The YAML Problem: Writing and working with YAML with ymlthis**
 <br>by Malcolm Barrett
-<br>Materials:
+<br>Materials: [poster](https://github.com/malcolmbarrett/ymlthis_poster)
 <br>
 
 
