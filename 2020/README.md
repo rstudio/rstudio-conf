@@ -1000,7 +1000,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Rstats support for transparency initiatives of the Brazilian National Treasury**
 <br>by Fernando Barbalho
-<br>Materials:
+<br>Materials: [poster](https://fernandobarbalho.github.io/SanFrancisco/#storytelling-with-dashboards)
 <br>
 
 
