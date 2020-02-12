@@ -34,7 +34,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 # Conference Sessions
 
 
-## Day 1, 2020-01-29	
+## Day 1, 2020-01-29
 ### 0900 Keynote 	
 
 
@@ -44,7 +44,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Open-source software is fundamentally necessary to ensure that the tools of data science are broadly accessible, and to provide a reliable and trustworthy foundation for reproducible research. This talk will delve into why open source software is so important and discuss the role of corporations as stewards of open source software. I'll also talk about how RStudio is structured and organized to pursue its mission of creating open source software for data science.</span></p> </div></div></p></details><br>
-	
+
 ### 1000, Keynote 	
 
 
@@ -54,8 +54,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Recent progress in machine learning has raised a series of urgent questions: How can we train and debug deep learning models? How can we understand what is going on inside a neural network? And, perhaps most important, how can we design systems that serve people best? We'll show a series of examples from the People+AI Research (PAIR) initiative at Google--ranging from data visualizations for researchers, to tools for medical practitioners, to guidelines for designers--that illustrate how thinking carefully about data can lead to better tools, more effective design, and help humans and AI work together.</span></p> </div></div></p></details><br>
-	
-### 1130 Session 1, Case Study	
+
+### 1130 Session 1, Case Study
 
 
 **Case Studies in Customer Success**
@@ -88,8 +88,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Anyone reading a newspaper or listening to the news is led to believe that AI is the solution to all problems. From self-driving cars to detecting disease to catching fraud, there doesn’t seem to be a situation that AI can’t tackle. Once “big data” is thrown into the mix, the AI solution is all but certain. But is AI always needed? Over the last eighteen months, Jumping Rivers has entered (and won) four Hackathons. All Hackathons were characterised with “big data” and the need to improve prediction. All Hackathons were won without using AI (or any sort of machine learning). This talk will focus on one particular competition around reducing leakage at Northumbrian Water. Using a combination of R, Shiny, and tidyverse (and a few other tricks), we were able to demonstrate within the short Hackathon time frame that clear presentation of data to the front line engineers was more likely to reduce leakage, than simply providing vague estimates of a potential future leak</span></p> </div></div></p></details><br>
-	
-### 1130 Session 1, Education	
+
+### 1130 Session 1, Education
 
 
 **Meet You Where You R**
@@ -122,8 +122,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">How do you make your R Markdown lessons feel friendly for learners you’ll never meet? How do you make it engaging so they sit and stay a while? How do you make it memorable so they come back to visit again? In this talk, I’ll share lessons learned from my experience of making a series of online statistics modules (co-authored by Hasse Walum) that feel accessible and fun-- housed entirely in an R Markdown site, complete with a whimsical, illustrated narrative about teacup giraffes. I’ll show how adding good characters with your audience in mind, good design, and good play helped me make the most of HTML output. To help you get started, I’ll share resources that Alison Hill and I have developed--including a series of cookbooks and out-of-the-box templates-- so that you will have a leg up on applying these ideas to R Markdown collections of your own.</span></p> </div></div></p></details><br>
-	
-### 1130 Session 1, Production	
+
+### 1130 Session 1, Production
 
 
 **Deploying End-To-End Data Science with Shiny, Plumber, and Pins**
@@ -156,8 +156,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Plumber is a package that allows R users to create APIs out of R functions. This flexible approach allows R processes to be accessed by toolchains and frameworks outside of R. In this talk, we'll look at useful patterns for developing and working with robust APIs built in R using Plumber.</p></details><br>
-	
-### 1130 Session 1, Programming	
+
+### 1130 Session 1, Programming
 
 
 **Simplified Data Quality Monitoring of Dynamic Longitudinal Data: A Functional Programming Approach**
@@ -190,8 +190,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Open source R packages on GitHub often take advantage of continuous integration services to automatically check their packages for errors. This is very useful to catch things quickly, as well and increasing confidence for proposed changes, as the Pull Requests can be checked before they are merged. Travis-CI and Appveyor are the most popular current methods. However newer services, Azure Pipelines and GitHub Actions, show promise for being more powerful and simpler to configure and debug. I will discuss these services and demonstrate some of their capabilities and how to configure them for your own use in packages and reports.</p></details><br>
-	
-	
+
+
 ### 1415 Session 2, Community
 
 **If you build it, they will come...but then what? Facilitating communities of practice in R**
@@ -224,8 +224,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">R has changed a lot since the meetup was founded 10 years ago. Back then we were using base graphics (or lattice) and the apply family of functions and we didn't have pipes. At the time there was an impressive 1800 packages on CRAN, now there are over 15,000 extending R's reach far beyond its traditional domain of statistics and machine learning into publishing, website building and video generation. The community has grown and changed dramatically during that time, with the New York meetup alone going from 25 to over 10,000 members. During this talk we go through a then-and-now of R code and community to palpably see how everything has changed.</span></p> </div></div></p></details><br>
-	
-### 1415 Session 2, Finance	
+
+### 1415 Session 2, Finance
 
 
 **15 Years of R in Quantitative Finance**
@@ -258,8 +258,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">A collection of data science stories about current problems that data scientists might face while working in academia, industry, and government. Some lessons learned, some situations avoided, what I learned, and how I survived my journey. First, I discuss the struggle of advocating for R when senior leaders decide Python is the only appropriate product. Then, I describe why donut charts are superior to pie charts, and why we should all be using them. Finally, the case of the uncatchable “drive-by” stakeholder and where to find them. The fight is real, and the path is long for the evangelical data scientist.</span></p></div></div></p></details><br>
-	
-### 1415 Session 2, Interface	
+
+### 1415 Session 2, Interface
 
 
 **Accelerating Analytics with Apache Arrow**
@@ -292,8 +292,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p></p></details><br>
-	
-### 1415 Session 2, Shiny	
+
+### 1415 Session 2, Shiny
 
 
 **Production-grade Shiny Apps with golem**
@@ -326,8 +326,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Shiny makes it easy to take domain logic from an existing R script and wrap some reactive logic around it to produce an interactive webpage where others can quickly explore different variables, parameter values, models/algorithms, etc. Although the interactivity is great for many reasons, once an interesting result is found, it’s more difficult to prove the correctness of the result since: (1) the result can only be (easily) reproduced via the Shiny app and (2) the relevant domain logic which produced the result is obscured by Shiny’s reactive logic. The R package shinymeta provides tools for capturing and exporting domain logic for execution outside of a Shiny runtime (so that others can reproduce Shiny-based result(s) from a new R session).</p></details><br>
-	
-### 1600 Session 3, Case Study	
+
+### 1600 Session 3, Case Study
 
 
 **Journalism with RStudio, R, and the tidyverse**
@@ -360,7 +360,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">There are two main challenges of working with longitudinal (panel) data: 1) Visualising the data, and 2) Understanding the model. Visualising longitudinal data is challenging as you often get a ""spaghetti plot”, where a line is drawn for each individual. When overlaid in one plot, it can have the appearance of a bowl of spaghetti. With even a small number of subjects, these plots are too overloaded to be read easily. For similar reasons, it is difficult to relate the model predictions back to the individual and keep the context of what the model means for the individual. For both visualisation, and modelling, it is challenging to capture interesting or unusual individuals, which are often lost in the noise. Better tools, and a more diverse set of grammar and verbs are needed to visualise and understand longitudinal data and models, to capture the individual experiences. In this talk, I introduce the R package, **brolgar** (BRowse over Longitudinal data Graphically and Analytically in R), which provides new tools, verbs, and grammar to identify and summarise interesting individual patterns in longitudinal data. This package extends upon ggplot2 with custom facets, and the new tidyverts time series packages to efficiently explore longitudinal data.</span></p></div></div></p></details><br>
-	
+
 ### 1600 Session 3, Learning and Using R
 
 **Flipbooks**
@@ -393,9 +393,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>For clinical trials a good deal of effort goes into producing both final trial reports and interim reports for data monitoring committees, and experience has shown that reviewers much prefer graphical to tabular reports. Interactive graphical reports go a step further and allow the most important information to be presented by default, while inviting the reviewer to drill down to see other details. The drill-down capability, implemented by hover text using the R plotly package, allows one to almost entirely dispense with tables because the hover text can contain the part of a table that pertains to the reviewer's current focal point in the graphical display, among other things. Also, there are major efficiency gains by having a high-level language for producing common elements of reports related to accrual, exclusions, descriptive statistics, adverse events, time to event, and longitudinal data. This talk will overview the hreport package, which relies on R, RMarkdown, knitr, plotly, Hmisc, and HTML5.  RStudio is an ideal report development environment for using these tools.</p></details><br>
-	
-	
-### 1600 Session 3, Pharma	
+
+
+### 1600 Session 3, Pharma
 
 
 **Approaches to Assay Processing Package Validation**
@@ -428,8 +428,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Engineers at Biosense Webster, a Johnson and Johnson medical device company that specializes in diagnosing and treating cardiac arrhythmias, write multiple test reports to comply with FDA regulatory standards. These intricate reports require 36 hours of an engineer’s time on average, constraining the engineers from completing investigations and studies in a timely matter. Writing scripts in R that create reproducible reports can significantly reduce the time spent by an engineer creating these reports allowing them to do a much thorough investigation with a larger scope. Through Shiny, engineers could conveniently have their parameters and recorded data processed and stored in a database by accessing a web link and filling out the required information within a user-friendly interface. Upon the generation of the report, accurate and properly formatted test reports, compliant to both the company and FDA regulatory standards, are produced through Rmarkdown and knitr knitting all the outputs with complete data analysis tools such as normality plots and process capability measurements to a word document that follows company required headers, footers, and headings. The reproducible report creation shown in this report can be extended to other types of test reports and protocols. The pilot phase that has been conducted has shown that complete report production has been decreased from 36 hours to an hour.</span></p></div></div></p></details><br>
-	
-### 1600 Session 3, Programming	
+
+### 1600 Session 3, Programming
 
 
 **Getting things logged**
@@ -462,9 +462,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Future is a minimal and unifying framework for asynchronous, parallel, and distributed computing in R. It is designed for robustness, consistency, scalability, extendability, and adoptability - all in the spirit of ""developer writes code once, user runs it anywhere"". It is being used in production for high-performance computing and asynchronous UX, among other things. In this talk, I will discuss common feature requests, recent progress we have made, and what is the pipeline.</span></p></div></div></p></details><br>
-	
-## Day 2, 2020-01-30	
-	
+
+## Day 2, 2020-01-30
+
 
 
 **Object of type ‘closure’ is not subsettable**
@@ -473,8 +473,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming! Programming involves considerably more troubleshooting and debugging than many of us expected (or signed up for). The ability to solve your own problems is an incredibly powerful stealth skill that is worth cultivating with intention. This talk will help you nurture your inner problem solver, covering both general debugging methods and specific ways to implement them in the R ecosystem.</span></p> </div></div></p></details><br>
-	
-### 1030 Session 1, Communication	
+
+### 1030 Session 1, Communication
 
 
 **Branding and Packaging Reports with R Markdown**
@@ -508,8 +508,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">R Markdown is a document format based on the R language and Markdown to intermingle computing with narratives in the same document. With this simple format, you can actually do a lot of things. For example, you can generate reports dynamically (no need to cut-and-paste any results because all results can be dynamically generated from R), write papers and books, create websites, and make presentations. In this talk, I'll use a single R Markdown document to give demos of the R packages rmarkdown, bookdown for authoring books (https://bookdown.org), blogdown for creating websites (https://github.com/rstudio/blogdown), rticles for writing journal papers (https://github.com/rstudio/rticles), xaringan for making slides (https://github.com/yihui/xaringan), flexdashboard for generating dashboards (https://github.com/rstudio/flexdashboard), learnr for tutorials (https://github.com/rstudio/learnr), rolldown for storytelling (https://github.com/yihui/rolldown), and the integration between Shiny and R Markdown. To make the best use of your time during the presentation, I recommend you to take a look at the rmarkdown website in advance: https://rmarkdown.rstudio.com.</span></p> </div></div></p></details><br>
-	
-### 1030 Session 1, Medicine	
+
+### 1030 Session 1, Medicine
 
 
 **Building a Medical Device with R**
@@ -542,8 +542,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Electronic Medical Records (EMRs) are a treasure trove of information, but tend to fall disappointingly short when it comes to visualizing and reporting data in a user friendly and intuitive manner. Building reports in an EMR can be a frustrating experience; the developer is at the mercy of how the data is stored within the EMR and the available EMR reporting tools can be bland and uninspiring. But reporting on data in the EMR doesn't have to be this way! Combining the data-rich EMR with R's robust reporting capabilities benefits both developers and consumers of data. This talk will describe how a cross-departmental project team uses an internal R package, RMarkdown reports scheduled via R Studio Connect, and an interactive flexdashboard app to quickly implement solutions to gaps in the reporting capabilities of the EMR. The flexibility of R relative to EMR reporting tools facilitates a design thinking approach to reporting allowing for more user input, customization and quick iteration. Furthermore, the web-based app we developed is able to be embedded within the EMR itself allowing for a more streamlined workflow.</span></p> </div></div></p></details><br>
-	
-### 1030 Session 1, Visualization	
+
+### 1030 Session 1, Visualization
 
 
 **The Glamour of Graphics**
@@ -576,8 +576,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p></p></details><br>
-	
-### 1030 Session 1, Workflow	
+
+### 1030 Session 1, Workflow
 
 
 **RMarkdown Driven Development**
@@ -610,8 +610,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">This talk is for R admins who want to learn how to set up Jupyter notebooks on RStudio Server Pro. We'll cover prerequisites, basic configuration, best practices for management, Jupyter Lab, and more.</span></p> </div></div></p></details><br>
-	
-### 1300 Session 2, ggplot2	
+
+### 1300 Session 2, ggplot2
 
 
 **Best practices for programming with ggplot2**
@@ -644,9 +644,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The ggplot2 package continue to be one of the most used frameworks for producing graphics in R. While being extremely flexible, the package itself can be constrained by the different types of graphic elements and statistic transformations available. Instead of continuing to add new features, the development in recent years have focused on making ggplot2 extensible by other packages, thus distributing development and maintenance. Despite the best of intentions, ggplot2 can feel daunting to extend, due unusual idiosyncrasies, a foreign object system, and a partly obscured rendering model. This talk intend to remove the mystery of extending ggplot2, by describing the basic ways that it can be extended and showcasing a couple of simple extensions that can be build with very little code. Lastly, it will include discussions of some best practices and gotchas that may come in handy when you start out.</span></p> </div></div></p></details><br>
-	
-### 1300 Session 2, Modeling	
-	
+
+### 1300 Session 2, Modeling
+
 
 
 **MLOps for R with Azure Machine Learning**
@@ -679,9 +679,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(34,34,34);""><span style=""font-style: italic;"">Often a machine learning research project starts with brainstorming, continues to one-off scripts while an idea forms, and finally, a package is written to disseminate the product. In this talk, I will share my experience rethinking this process by spreading the package writing across the whole process. While there are cognitive overheads involved with setting up a package framework, I will argue that these overheads can serve as a scaffolding for not only good code but robust research practices. The result of this experiment is the SBMR package: a native R package written to fit and investigate the results of Bipartite Stochastic Block Models that forms the backbone of my PhD dissertation. By going over the ups and downs of this process, I hope to leave the audience with inspiration for moving the package writing process closer to the start of their projects and melding research and code more closely to improve both.</span></span></p></div></div></p></details><br>
-	
-### 1300 Session 2, Organizational Thinking	
-	
+
+### 1300 Session 2, Organizational Thinking
+
 
 
 **Small Team, Big Value: Using R to Design Visualizations**
@@ -714,9 +714,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">ML in production is one of the most obvious ways that data science organizations create value in business. However, these models are at the very end of a long story of how quantitative research changes and enhances organizations. In this talk I will discuss how I have found DS organization to be truly transformative outside of ML in the loop. Bio: Eduardo Ariño de la Rubia is a DS manager and educator. He loves R and RStudio. He has a Masters in Negotiation, Conflict Resolution and Peacebuilding, which is probably the most useful training he could have received.</span></p> </div></div></p></details><br>
-	
-### 1300 Session 2, Programming	
-	
+
+### 1300 Session 2, Programming
+
 
 
 **Auto-magic package development: Building an R API for building Vega-Lite Specs**
@@ -749,9 +749,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In tidyverse grammars such as dplyr you can refer to the columns in your data frames as if they were objects in the workspace. This syntax is optimised for interactivity and is a great fit for data analysis, but it makes it harder to write functions and reuse code. In this talk we present some advances in the tidy eval framework that make it easier to program around tidyverse pipelines without having to learn a lot of theory.</span></p> </div></div></p></details><br>
-	
-### 1445, Lightning Talks	
-	
+
+### 1445, Lightning Talks
+
 
 
 **`livecode`: broadcast your live coding sessions from and to RStudio**
@@ -844,7 +844,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Becoming an R blogger**
 <br>by Rebecca Barter
-<br>Materials:
+<br>Materials: [slides and blog post](http://www.rebeccabarter.com/blog/2020-02-03_blogger/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Blogging is an excellent way to learn, improve your communication skills, and gain exposure in the R and data science communities. In this talk, I will discuss how and why I started blogging, and why you should too. I will guide you through choosing topics, writing your blog using RStudio and blogdown, hosting it on netlify, and sharing your blog with the world. This talk is for you if you've wanted to start a blog on R, data science, or to showcase your data analyses, but don't know where to start.</span></p> </div></div></p></details><br>
@@ -860,7 +860,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Rproject templates to automate and standardize your workflow**
 <br>by Caroline Ledbetter
-<br>Materials: [slides](https://slides.carolineledbetter.us/rprojects/) 
+<br>Materials: [slides](https://slides.carolineledbetter.us/rprojects/)
 [repo](https://github.com/ledbettc/slides/tree/master/rprojects)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -889,9 +889,9 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Forming good development habits for R projects is pretty straight-forward if you follow the lessons I've learned from my cat, whose advice includes ""be lazy"", ""keep your claws sharp"", and ""land on your feet"". Attendees of this talk will learn how to make life easier on colleagues and their future selves by using simple software engineering best practices to build their current projects. Each point will come with cat photos and code samples, the two best parts of the Internet!</span></p> </div></div></p></details><br>
-	
-### 1445, Career Advice Panel	
-	
+
+### 1445, Career Advice Panel
+
 
 
 **Career Advice for Data Scientists**
@@ -900,8 +900,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>This panel will be focused on how you build a career around R! Our panelists are all passionate about R and have each taken a different path to build a career around that passion. We'll be touching on topics like the different stages of career growth and how you find a community you can go to for support. If you're just getting started in your career, looking to make a transition, or interested in learning some great career-building skills, be sure to join us!</p></details><br>
-	
-### 1600 Keynote	
+
+### 1600 Keynote
 
 
 **NSSD Episode 100**
@@ -910,8 +910,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In episode 100 of Not So Standard Deviations, the first ever episode prepared in advance, Hilary and Roger discuss creativity, its role in data science, and how it can be fostered through conversation. Also, follow up on coffee and oat milk.</span></p> </div></div></p></details><br>
-	
-# posters	
+
+# posters
 
 
 **Communicating public health data with Shiny: West Nile virus risk, school vaccination rates, health equity, and more**
@@ -1096,6 +1096,4 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 ### rstudio::conf 2021
-rstudio::conf 2021 will be in Orlando FL, January 18th through the 21st. Register early to take advantage of the discounts - [rstd.io/conf](https://web.cvent.com/event/eceeaea8-5a66-4799-b989-65511ffe39aa/summary) 
-
-
+rstudio::conf 2021 will be in Orlando FL, January 18th through the 21st. Register early to take advantage of the discounts - [rstd.io/conf](https://web.cvent.com/event/eceeaea8-5a66-4799-b989-65511ffe39aa/summary)
