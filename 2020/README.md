@@ -340,7 +340,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Putting the Fun in Functional Data: A tidy pipeline to identify routes in NFL tracking data**
 <br>by Dani Chu
-<br>Materials:
+<br>Materials: [Slides](https://docs.google.com/presentation/d/1P9iT_TQUoxxCyvkfCLe5Y-9xBWpHh7btlP2mQ3XyNOM/edit?usp=sharing), [Twitter](https://twitter.com/chuurveg)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Currently in football many hours are spent watching game film to manually label the routes run on passing plays. Using tracking data, each route can be described as a sequence of spatial-temporal measurements that varies in length depending on the duration of the play. This data can be conveniently analyzed using nested columns in tidyr and purrr. We demonstrate how model-based curve clustering using Bernstein polynomial basis functions (i.e. Bézier curves) fit using the Expectation Maximization algorithm can cluster route trajectories. Each cluster can then be labelled to obtain route names for each route and create route trees for all receivers. The clusters and routes can be visualized nicely using ggplot and seen developing over time using gganimate.</span></p> </div></div></p></details><br>
@@ -686,7 +686,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Small Team, Big Value: Using R to Design Visualizations**
 <br>by Ian Lyttle
-<br>Materials: [slides](https://speakerdeck.com/ijlyttle/small-team-big-value-using-r-to-design-visualizations)
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Many R users can feel isolated due to the prevalence of Python or Tableau at their institutions. This talk will focus on how we use R to develop reference implementations of visualizations (using ggplot2), and to develop corporate-themed color maps (using the colorspace package) to bring value to the entire institution. Color maps can be translated into variety of formats, for Tableau, Qlik Sense, d3, etc., and deployed independently from R. For visualizations, our goal is to translate ggplot2 objects to Vega-Lite specifications, using a package we are developing: ggvega. Vega-Lite visualizations are web-native, and are rendered independently from R. Specifications can be designed to be extensible to new data, allowing them serve as templates, to be deployed and updated for use outside of R. Of course, despite isolation within an institution, our work with the larger R open-source communities provides a foundation on which to build; in fact, we have a lot of company and are having a lot of fun.</span></p> </div></div></p></details><br>
