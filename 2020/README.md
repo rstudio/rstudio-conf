@@ -220,7 +220,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **R: Then and Now**
 <br>by Jared Lander
-<br>Materials:
+<br>Materials: [slides](https://jaredlander.com/content/2020/01/RThenAndNow.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">R has changed a lot since the meetup was founded 10 years ago. Back then we were using base graphics (or lattice) and the apply family of functions and we didn't have pipes. At the time there was an impressive 1800 packages on CRAN, now there are over 15,000 extending R's reach far beyond its traditional domain of statistics and machine learning into publishing, website building and video generation. The community has grown and changed dramatically during that time, with the New York meetup alone going from 25 to over 10,000 members. During this talk we go through a then-and-now of R code and community to palpably see how everything has changed.</span></p> </div></div></p></details><br>
