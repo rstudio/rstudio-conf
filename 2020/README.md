@@ -220,8 +220,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **R: Then and Now**
 <br>by Jared Lander
-<br>Materials: [slides](https://jaredlander.com/content/2020/01/RThenAndNow.html)
-
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">R has changed a lot since the meetup was founded 10 years ago. Back then we were using base graphics (or lattice) and the apply family of functions and we didn't have pipes. At the time there was an impressive 1800 packages on CRAN, now there are over 15,000 extending R's reach far beyond its traditional domain of statistics and machine learning into publishing, website building and video generation. The community has grown and changed dramatically during that time, with the New York meetup alone going from 25 to over 10,000 members. During this talk we go through a then-and-now of R code and community to palpably see how everything has changed.</span></p> </div></div></p></details><br>
@@ -266,7 +265,6 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 **Accelerating Analytics with Apache Arrow**
 <br>by Neal Richardson
 <br>Materials: [slides](https://enpiar.com/talks/rstudio-conf-2020/)
-
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The Apache Arrow project is a cross-language development platform for in-memory data designed to improve system performance, memory use, and interoperability. This talk presents recent developments in the 'arrow' package, which provides an R interface to the Arrow C++ library. We'll cover the goals of the broader Arrow project, how to get started with the 'arrow' package in R, some general concepts for working with data efficiently in Arrow, and a brief overview of upcoming features.</span></p> </div></div></p></details><br>
@@ -367,7 +365,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Flipbooks**
 <br>by Evangeline Reynolds
-<br>Materials: 
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Good examples facilitate accomplishing new or unpracticed tasks in a programmatic workflow. Tools for communicating examples have improved in recent years. Especially embraced are tools that show code and its resultant output immediately thereafter --- the case of `Jupytr` notebooks and `Rmarkdown` documents. But creators using these tools often must choose between big-picture or narrow-focus demonstration; creators tend to either demo a complete code pipeline that accomplishes a realistic task or instead demonstrate a minimal example which makes clear the behavior of a particular function, but how it might be used in a larger project isn't clear. Flipbooks help address this problem, allowing the creator to present a full demonstration which accomplishes a real task, and gives the viewer the opportunity to focus on unfamiliar steps. A set of flipbook building functions parse code in a data manipulation or visualization pipeline and then build it back up incrementally. Aligned superimposition of new code and output atop previous code and output makes it easy to identify how each code change triggers changes in output. The presentation will guide attendees in creating their own Flipbooks (with Xaringan slides) or mini Flipbooks (gif output).</span></p> </div></div></p></details><br>
@@ -375,7 +373,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Learning R with humorous side projects**
 <br>by Ryan Timpe
-<br>Materials: [slides (pdf)](http://www.ryantimpe.com/rstudio2020.pdf), [post with original material](http://www.ryantimpe.com/post/rstudio/)
+<br>Materials:
+<br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p style=""text-align:left;"" class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">What should you name a new dinosaur discovery, according to neural networks? Which season of The Golden Girls should you watch when playing a drinking game? How can you build a LEGO set for the lowest price? R is constantly evolving, so as users, we’re constantly learning. Over the past few years, I’ve found that working on side projects is great for hands-on learning - and for me, the more absurd the project, the better. Side projects provide a safe, low-stakes environment to learn new packages and methodologies before using them in work or in production. Sharing those projects can help publicize the package and increase its accessibility, benefiting both the original author and future users. In this talk, I’ll share my experiences with side projects for learning state-of-the-art data science tools and growing as an R user, including how one project helped me land my dream job.</span></p> </div></div></p></details><br>
 
@@ -515,7 +514,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Building a Medical Device with R**
 <br>by Ron Keizer
-<br>Materials: [slides-pdf](https://github.com/rstudio/rstudio-conf/blob/master/2020/building-medical-device-with-r_Ron-Keizer.pdf)
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The InsightRX precision dosing platform tailors in-patient drug doses to individual patients' characteristics and biomarkers, leveraging pharmacological models of drug metabolism and drug effects. These models are implemented in R, exposed through APIs, and called from a cloud-based web application. The core of our pharmacokinetic/pharmacodynamic simulation functionality is available open source at `github.com/InsightRX/PKPDsim` and `github.com/InsightRX/clinPK`. As a regulated device in Europe (and soon to be in the US) used in over 100 hospitals, the platform is necessarily developed under ""design control"", meaning that strict product planning and engineering practices are required. This has implications for how the application and APIs are developed and deployed, such as strict version control workflows and implementation of rigorous testing procedures. To meet the requirements for high availability and horizontal scaling, we use a combination of Plumber and OpenCPU, hosted on RStudio Connect and AWS Fargate/ECS, which cater to the various needs of the development and production environments.</span></p> </div></div></p></details><br>
@@ -523,7 +522,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Development of a web-based clinical decision support application for platelet transfusion management**
 <br>by Justin Juskewitch
-<br>Materials: [slides (ppt)](misc-materials/Juskewitch-pltvxm-Rconf-200130_final.pptx)
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p style=""text-align:start;"" class=""carina-rte-public-DraftStyleDefault-block"">Development of a web-based clinical decision support application for platelet transfusion management using R and the Tidyverse</p> <p style=""text-align:start;"" class=""carina-rte-public-DraftStyleDefault-block"">Blood product transfusion is a high risk and costly medical procedure. Platelets (blood cells that initiate clotting) are a rare and expensive blood product with a short shelf life. Proper management of platelet transfusions is essential to clinical care, particularly for patients who have developed antibodies against specific platelet types due to pregnancy or past transfusions. By providing platelets that avoid a patient’s known antibodies, improved patient outcomes and better inventory management of a rare blood product are achieved. To address this need, we used R, Tidyverse, and several key packages (Shiny, shinydashboard, dplyr, purrr, httr, officer, flextables, futures) to develop a web-based application (PLTVXM) to help guide platelet inventory selection. PLTVXM queries information on available/pending platelet inventory (and eligible donors) from reports that run in our institutional reporting tool Tableau® via a Tableau Server REST API. Patient antibody and blood type information is securely retrieved from a clinical data lake via an in-house R package (“dart”) and a custom institutional API. The retrieved data is processed by a published algorithm implemented in R and incorporates user input to present sortable tables of patient-specific compatible platelet inventory (and donors) for consideration. The requisite documentation for platelet product reservation or donor recruitment is then autogenerated using institutional form templates. PLTVXM is deployed on an RStudio Connect server which allows seamless integration with our institution’s Active Directory identity management infrastructure. The pilot version of PLTVXM was created by physicians without formal computer programming training in two weeks. After successful demonstration, PLTVXM was approved for clinical validation and future use in our practice. Our experience highlights how R can facilitate creation of dynamic web-based applications for a wide range of business (or clinical) needs.</p> </div></div></p></details><br>
@@ -652,7 +651,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **MLOps for R with Azure Machine Learning**
 <br>by David Smith
-<br>Materials: [GitHub repo](https://aka.ms/mlops-r) | [slides (PDF)](https://github.com/revodavid/mlops-r/raw/master/MLOPS%20and%20R%20-%20rstudioconf%20-%2020200130.pdf)
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Azure Machine Learning service (Azure ML) is Microsoft’s cloud-based machine learning platform that enables data scientists and their teams to carry out end-to-end machine learning workflows at scale. With Azure ML's new open-source R SDK and R capabilities, you can take advantage of the platform’s enterprise-grade features to train, tune, manage and deploy R-based machine learning models and applications. In this talk, the attendees will learn how to: •Carry out ML workflows using the authoring experience of their choice, from no-code to code-first options that include Azure ML’s drag-and-drop visual interface for defining workflows and RStudio Server on the Data Science Instance, a hosted VM workstation, for using the Azure ML R SDK from the RStudio browser-based interface. •Use the Azure ML R SDK to manage cloud resources and train, hyperparameter tune, and log and visualize metrics for their models at scale on Azure compute. •Build ML Pipelines in R for defining and orchestrating reusable and reproducible ML workflows. •Deploy, manage, and monitor their R ML models and applications as web services on Azure Container Instance and Azure Kubernetes Service, with an emphasis on robust DevOps and CI/CD for orchestrating and streamlining their end-to-end data science development lifecycle.</span></p> </div></div></p></details><br>
@@ -687,7 +686,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Small Team, Big Value: Using R to Design Visualizations**
 <br>by Ian Lyttle
-<br>Materials: [slides](https://speakerdeck.com/ijlyttle/small-team-big-value-using-r-to-design-visualizations)
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Many R users can feel isolated due to the prevalence of Python or Tableau at their institutions. This talk will focus on how we use R to develop reference implementations of visualizations (using ggplot2), and to develop corporate-themed color maps (using the colorspace package) to bring value to the entire institution. Color maps can be translated into variety of formats, for Tableau, Qlik Sense, d3, etc., and deployed independently from R. For visualizations, our goal is to translate ggplot2 objects to Vega-Lite specifications, using a package we are developing: ggvega. Vega-Lite visualizations are web-native, and are rendered independently from R. Specifications can be designed to be extensible to new data, allowing them serve as templates, to be deployed and updated for use outside of R. Of course, despite isolation within an institution, our work with the larger R open-source communities provides a foundation on which to build; in fact, we have a lot of company and are having a lot of fun.</span></p> </div></div></p></details><br>
@@ -853,7 +852,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Mexican electoral quick count night with R**
 <br>by Maria Ortiz Mancera
-<br>Materials:
+<br>Materials: [slides](https://docs.google.com/presentation/d/e/2PACX-1vRpSMcvP9GZF59ILK4wUXTz84NjDWsi_TGNkk7hOwbpRvBahB5hr24-V4DNSTZtSIwkifhC9bA_jQJK/pub?start=false&loop=false&delayms=3000&slide=id.p)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In Mexico the elections take place on a Sunday, and the official results are presented a week later. To prevent unjustified victory claims during that period the electoral authority organizes a quick count the same night of the election. The quick count consists in selecting a random sample of the polling stations and estimating the percentage of votes in favor of each candidate. With highly competitive electoral processes the quick count has become very important, the rapidity and precision of its results auspicious an environment of trust, and it serves as a tool against fraud. In this application reproducibility is very important. On the scientific side, it is crucial to examine the veracity and robustness of the conclusions of the methodologies. However, in this case, reproducibility is more important still, as it helps to achieve transparency in the electoral procedure. Anyone can download the sample and compute the same results that were announced the night of the election. This transparency fosters trust in institutions and gives legitimacy to the outcome of the quick count. We believe that developing an R package with detailed vignettes made the procedure accessible for the public. The package also facilitated code development and estimation on the election night, when the models were run with partial samples every five minutes, for three different state elections and for the presidential election. Our models were one of 9 different approaches to do the estimation and yet our code is the only publicly available, we are championing for more openness on procedures by sharing our experience. As for the model we developed Bayesian hierarchical models that include demographic and geographic covariates, the purpose of the models is to reduce the biases associated to such covariates due to the fact that complete samples are rarely available to publish the results in a timely manner hence the results are announced using partial samples which have biases.</span></p> </div></div></p></details><br>
@@ -878,7 +877,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Every voice matters: An analysis of @WeAreRLadies**
 <br>by Katherine Simeon
-<br>Materials: [slides](https://github.com/katherinesimeon/WeAreRLadies-text-data/blob/master/slides/2020-01-30-rstudioconf.pdf), [repo](https://github.com/katherinesimeon/WeAreRLadies-text-data)
+<br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">As a rotating curation, @WeAreRLadies is a twitter account that has a different curator (i.e., tweeter) each week with a mission to highlight female and minority genders and their work in R. So far, curators have tweeted from 18 different countries and represent a variety of domains and levels of R expertise, ranging from R novices to those developing their own packages. With 45 R-Ladies curators to date, the account has become a popular R-related twitter resource, gaining more than 13,000 followers in the past year and hundreds of interactions each week. This talk will present a text analysis and reflection on over a year of Twitter text data from @WeAreRLadies. As the founder and maintainer of this account, I witness firsthand the bidirectional relationship between one’s learning journey and their use of R. In this talk, I will attempt to quantify this through a text analysis that explores how one’s experiences learning and using R relates to how they talk (or tweet) about it. By analyzing tweet text as well as other metrics provided by twitter (e.g., number of likes, replies, and clicks), I will showcase different ways curators have engaged with the R Twitter community and explore how account engagement has changed as the number of curators and followers continue to grow. I will also discuss how curators’ different areas of expertise have resulted in tweets and discussions that both demonstrate the variety of tools available in R, and spotlight unifying ideas and best practices in R programming. Finally, I will reflect on lessons learned and future directions for @WeAreRLadies, as well as its contribution to the R-Ladies Global initiative. Overall, this talk will discuss how diverse perspectives of @WeAreRLadies curators have enriched the conversations in the R Twitter community by validating different learning journeys and by promoting and amplifying underrepresented voices.</span></p> </div></div></p></details><br>
@@ -1006,8 +1005,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Teaching R Outside the Classroom: Supporting Instructors and Learners**
-<br>by Diya Das, Angela Li, & Katherine Simeon
-<br>Materials: [repo](https://github.com/katherinesimeon/rstudioconf2020-teachR-eposter)
+<br>by Diya Das
+<br>Materials:
 <br>
 
 
