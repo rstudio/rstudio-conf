@@ -83,7 +83,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **How to win an AI Hackathon, without using AI**
-<br>by Colin Gillespie, [twitter]()https://twitter.com/csgillespie
+<br>by Colin Gillespie, [twitter](https://twitter.com/csgillespie)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -101,8 +101,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Data Science Education in 2022**
-<br>by Carl Howe [twitter](https://twitter.com/cdhowe) ,Greg Wilson [twitter](https://twitter.com/gvwilson)
-<br>Materials: [slides](https://github.com/rstudio/rstudio-conf/blob/master/2020/data-science-education-2022_Carl-Howe/Future%20of%20Data%20Science%20Education.pdf), [github]()https://github.com/rstudio/rstudio-conf/tree/master/2020/data-science-education-2022_Carl-Howe
+<br>by Carl Howe, [twitter](https://twitter.com/cdhowe) and Greg Wilson, [twitter](https://twitter.com/gvwilson)
+<br>Materials: [slides](https://github.com/rstudio/rstudio-conf/blob/master/2020/data-science-education-2022_Carl-Howe/Future%20of%20Data%20Science%20Education.pdf), [github](https://github.com/rstudio/rstudio-conf/tree/master/2020/data-science-education-2022_Carl-Howe)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">More people are learning data science every day, and there are more ways for them to learn than ever before. To understand where we are and where we might be going, this talk looks at what data science education could look like two years from now: far enough away that we can dream, but close enough that we can only dream a little. We explore the balance between automated and collaborative learning, different ways to deliver different kinds of lessons to different kinds of people, and ways in which our tools and practices could improve.</span></p> </div></div></p></details><br>
@@ -151,7 +151,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Practical Plumber Patterns**
-<br>by James Blair [twitter](https://twitter.com/Blair09M}
+<br>by James Blair [twitter](https://twitter.com/Blair09M)
 <br>Materials: [slides(pdf)](https://github.com/rstudio/rstudio-conf/blob/master/2020/practical-plumber-patterns_James-Blair/slides.pdf), [github](https://github.com/blairj09/ppp)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -185,7 +185,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Azure Pipelines and GitHub Actions**
-<br>by Jim Hester, [twitter]()https://twitter.com/jimhester_
+<br>by Jim Hester, [twitter](https://twitter.com/jimhester)
 <br>Materials: [slides](https://speakerdeck.com/jimhester/github-actions-for-r)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -298,8 +298,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Production-grade Shiny Apps with golem**
 <br>by Colin Fay, [twitter](https://twitter.com/_ColinFay)
-<br>Materials: [slides](https://speakerdeck.com/colinfay/rstudio-conf-2020-production-grade-shiny-apps-with-golem), [github repo, golem: A Framework for Buildilng Robust Sniny Apps
-📜](https://github.com/ThinkR-open/golem)
+<br>Materials: [slides](https://speakerdeck.com/colinfay/rstudio-conf-2020-production-grade-shiny-apps-with-golem), [github repo, golem: A Framework for Buildilng Robust Sniny Apps](https://github.com/ThinkR-open/golem)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Shiny is an amazing tool when it comes to creating web applications with R. Almost anybody can get a small Shiny App in a matter of minutes, provided they have a basic knowledge of R. As of today, we can safely tell that it has become the de-facto tool for web application in the R world. Building a proof-of-concept application is easy, but things change when the application becomes larger and more complex, and especially when it comes to sending that app to production—until recently there hasn't been any real framework for building and deploying production-grade Shiny Apps. This is where 'golem' comes into play: offering Shiny developers an opinionated framework for creating production-ready Shiny Applications. With 'golem', Shiny developers now have a toolkit for making a stable, easy-to-maintain, and robust for production web application with R. 'golem' has been developed to abstract away the most common engineering tasks (for example, module creation, addition of external CSS or JavaScript file, ...), so you can focus on what matters: building the application. And once your application is ready to be deployed, 'golem' guides you through testing, and brings you tools for deploying to common platforms. In this talk, Colin and Vincent will present the 'golem' package, first talking about the ""why 'golem'?"", then presenting the general philosophy behind this framework, and help you get started building your first Shiny App with 'golem'.</span></p> </div></div></p></details><br>
@@ -470,7 +469,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Object of type ‘closure’ is not subsettable**
 <br>by Jenny Bryan, [twitter](https://twitter.com/JennyBryan)
-<br>Materials: [github](https://github.com/jennybc/debugging), [speakerdeck slides](https://speakerdeck.com/jennybc/object-of-type-closure-is-not-subsettable), [pdf slides](https://github.com/jennybc/debugging/blob/master/debugging-jenny-bryan.pdf]
+<br>Materials: [github](https://github.com/jennybc/debugging), [speakerdeck slides](https://speakerdeck.com/jennybc/object-of-type-closure-is-not-subsettable), [pdf slides](https://github.com/jennybc/debugging/blob/master/debugging-jenny-bryan.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming! Programming involves considerably more troubleshooting and debugging than many of us expected (or signed up for). The ability to solve your own problems is an incredibly powerful stealth skill that is worth cultivating with intention. This talk will help you nurture your inner problem solver, covering both general debugging methods and specific ways to implement them in the R ecosystem.</span></p> </div></div></p></details><br>
@@ -878,7 +877,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Every voice matters: An analysis of @WeAreRLadies**
 <br>by Katherine Simeon,
-<br>Materials: [slides (pdf)[(https://github.com/katherinesimeon/WeAreRLadies-text-data/blob/master/slides/2020-01-30-rstudioconf.pdf)
+<br>Materials: [slides (pdf)](https://github.com/katherinesimeon/WeAreRLadies-text-data/blob/master/slides/2020-01-30-rstudioconf.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">As a rotating curation, @WeAreRLadies is a twitter account that has a different curator (i.e., tweeter) each week with a mission to highlight female and minority genders and their work in R. So far, curators have tweeted from 18 different countries and represent a variety of domains and levels of R expertise, ranging from R novices to those developing their own packages. With 45 R-Ladies curators to date, the account has become a popular R-related twitter resource, gaining more than 13,000 followers in the past year and hundreds of interactions each week. This talk will present a text analysis and reflection on over a year of Twitter text data from @WeAreRLadies. As the founder and maintainer of this account, I witness firsthand the bidirectional relationship between one’s learning journey and their use of R. In this talk, I will attempt to quantify this through a text analysis that explores how one’s experiences learning and using R relates to how they talk (or tweet) about it. By analyzing tweet text as well as other metrics provided by twitter (e.g., number of likes, replies, and clicks), I will showcase different ways curators have engaged with the R Twitter community and explore how account engagement has changed as the number of curators and followers continue to grow. I will also discuss how curators’ different areas of expertise have resulted in tweets and discussions that both demonstrate the variety of tools available in R, and spotlight unifying ideas and best practices in R programming. Finally, I will reflect on lessons learned and future directions for @WeAreRLadies, as well as its contribution to the R-Ladies Global initiative. Overall, this talk will discuss how diverse perspectives of @WeAreRLadies curators have enriched the conversations in the R Twitter community by validating different learning journeys and by promoting and amplifying underrepresented voices.</span></p> </div></div></p></details><br>
@@ -894,7 +893,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Sliding Windows and Calendars**
 <br>by Davis Vaughan, [twitter](https://twitter.com/dvaughan32)
-<br>Materials: [slides[(https://davisvaughan.github.io/rstudio-conf-2020/lightning-talk.pdf)
+<br>Materials: [slides](https://davisvaughan.github.io/rstudio-conf-2020/lightning-talk.pdf)
 <br>🎥:
 
 
@@ -913,7 +912,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **NSSD Episode 100**
-<br>by Roger Peng [twitter](https://twitter.com/rdpeng), Hilary Parker [twitter}(https://twitter.com/hspter)
+<br>by Roger Peng [twitter](https://twitter.com/rdpeng), Hilary Parker [twitter](https://twitter.com/hspter)
 <br>Materials: [podcast episode](http://nssdeviations.com/100-live-from-rstudio-conf-2020)
 <br>🎥:
 <details><summary>Abstract</summary>
