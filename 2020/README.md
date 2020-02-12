@@ -365,7 +365,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Flipbooks**
 <br>by Evangeline Reynolds
-<br>Materials: [slides (pdf)](http://www.ryantimpe.com/rstudio2020.pdf), [post with original material](http://www.ryantimpe.com/post/rstudio/)
+<br>Materials: 
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Good examples facilitate accomplishing new or unpracticed tasks in a programmatic workflow. Tools for communicating examples have improved in recent years. Especially embraced are tools that show code and its resultant output immediately thereafter --- the case of `Jupytr` notebooks and `Rmarkdown` documents. But creators using these tools often must choose between big-picture or narrow-focus demonstration; creators tend to either demo a complete code pipeline that accomplishes a realistic task or instead demonstrate a minimal example which makes clear the behavior of a particular function, but how it might be used in a larger project isn't clear. Flipbooks help address this problem, allowing the creator to present a full demonstration which accomplishes a real task, and gives the viewer the opportunity to focus on unfamiliar steps. A set of flipbook building functions parse code in a data manipulation or visualization pipeline and then build it back up incrementally. Aligned superimposition of new code and output atop previous code and output makes it easy to identify how each code change triggers changes in output. The presentation will guide attendees in creating their own Flipbooks (with Xaringan slides) or mini Flipbooks (gif output).</span></p> </div></div></p></details><br>
@@ -373,7 +373,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Learning R with humorous side projects**
 <br>by Ryan Timpe
-<br>Materials:
+<br>Materials: [slides (pdf)](http://www.ryantimpe.com/rstudio2020.pdf), [post with original material](http://www.ryantimpe.com/post/rstudio/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p style=""text-align:left;"" class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">What should you name a new dinosaur discovery, according to neural networks? Which season of The Golden Girls should you watch when playing a drinking game? How can you build a LEGO set for the lowest price? R is constantly evolving, so as users, we’re constantly learning. Over the past few years, I’ve found that working on side projects is great for hands-on learning - and for me, the more absurd the project, the better. Side projects provide a safe, low-stakes environment to learn new packages and methodologies before using them in work or in production. Sharing those projects can help publicize the package and increase its accessibility, benefiting both the original author and future users. In this talk, I’ll share my experiences with side projects for learning state-of-the-art data science tools and growing as an R user, including how one project helped me land my dream job.</span></p> </div></div></p></details><br>
