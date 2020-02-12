@@ -221,6 +221,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 **R: Then and Now**
 <br>by Jared Lander
 <br>Materials: [slides](https://jaredlander.com/content/2020/01/RThenAndNow.html)
+
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">R has changed a lot since the meetup was founded 10 years ago. Back then we were using base graphics (or lattice) and the apply family of functions and we didn't have pipes. At the time there was an impressive 1800 packages on CRAN, now there are over 15,000 extending R's reach far beyond its traditional domain of statistics and machine learning into publishing, website building and video generation. The community has grown and changed dramatically during that time, with the New York meetup alone going from 25 to over 10,000 members. During this talk we go through a then-and-now of R code and community to palpably see how everything has changed.</span></p> </div></div></p></details><br>
@@ -265,6 +266,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 **Accelerating Analytics with Apache Arrow**
 <br>by Neal Richardson
 <br>Materials: [slides](https://enpiar.com/talks/rstudio-conf-2020/)
+
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The Apache Arrow project is a cross-language development platform for in-memory data designed to improve system performance, memory use, and interoperability. This talk presents recent developments in the 'arrow' package, which provides an R interface to the Arrow C++ library. We'll cover the goals of the broader Arrow project, how to get started with the 'arrow' package in R, some general concepts for working with data efficiently in Arrow, and a brief overview of upcoming features.</span></p> </div></div></p></details><br>
@@ -374,7 +376,6 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 **Learning R with humorous side projects**
 <br>by Ryan Timpe
 <br>Materials: [slides (pdf)](http://www.ryantimpe.com/rstudio2020.pdf), [post with original material](http://www.ryantimpe.com/post/rstudio/)
-<br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p style=""text-align:left;"" class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">What should you name a new dinosaur discovery, according to neural networks? Which season of The Golden Girls should you watch when playing a drinking game? How can you build a LEGO set for the lowest price? R is constantly evolving, so as users, we’re constantly learning. Over the past few years, I’ve found that working on side projects is great for hands-on learning - and for me, the more absurd the project, the better. Side projects provide a safe, low-stakes environment to learn new packages and methodologies before using them in work or in production. Sharing those projects can help publicize the package and increase its accessibility, benefiting both the original author and future users. In this talk, I’ll share my experiences with side projects for learning state-of-the-art data science tools and growing as an R user, including how one project helped me land my dream job.</span></p> </div></div></p></details><br>
 
