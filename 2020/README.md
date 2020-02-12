@@ -39,8 +39,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Open Source Software for Data Science**
-<br>by J.J. Allaire
-<br>Materials:
+<br>by J.J. Allaire [twitter](https://twitter.com/fly_upside_down)
+<br>Materials: [website](https://pair.withgoogle.com/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Open-source software is fundamentally necessary to ensure that the tools of data science are broadly accessible, and to provide a reliable and trustworthy foundation for reproducible research. This talk will delve into why open source software is so important and discuss the role of corporations as stewards of open source software. I'll also talk about how RStudio is structured and organized to pursue its mission of creating open source software for data science.</span></p> </div></div></p></details><br>
@@ -75,7 +75,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Building a new data science pipeline for the FT with RStudio Connect**
-<br>by GeorgeKastrinakis
+<br>by George Kastrinakis
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -83,7 +83,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **How to win an AI Hackathon, without using AI**
-<br>by Colin Gillespie
+<br>by Colin Gillespie, [twitter]()https://twitter.com/csgillespie
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -101,15 +101,15 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Data Science Education in 2022**
-<br>by Carl Howee9fe,Greg Wilson
-<br>Materials:
+<br>by Carl Howe [twitter](https://twitter.com/cdhowe) ,Greg Wilson [twitter](https://twitter.com/gvwilson)
+<br>Materials: [slides](https://github.com/rstudio/rstudio-conf/blob/master/2020/data-science-education-2022_Carl-Howe/Future%20of%20Data%20Science%20Education.pdf), [github]()https://github.com/rstudio/rstudio-conf/tree/master/2020/data-science-education-2022_Carl-Howe
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">More people are learning data science every day, and there are more ways for them to learn than ever before. To understand where we are and where we might be going, this talk looks at what data science education could look like two years from now: far enough away that we can dream, but close enough that we can only dream a little. We explore the balance between automated and collaborative learning, different ways to deliver different kinds of lessons to different kinds of people, and ways in which our tools and practices could improve.</span></p> </div></div></p></details><br>
 
 
 **Data science education as an economic and public health intervention in East Baltimore**
-<br>by Jeff Leek
+<br>by Jeff Leek, [twitter](https://twitter.com/jtleek)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -117,8 +117,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Of Teacups, Giraffes, & R Markdown**
-<br>by Desiree De Leon
-<br>Materials:
+<br>by Desiree De Leon, [twitter](https://twitter.com/dcossyle)
+<br>Materials: [website](https://tinystats.github.io/teacups-giraffes-and-statistics)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">How do you make your R Markdown lessons feel friendly for learners you’ll never meet? How do you make it engaging so they sit and stay a while? How do you make it memorable so they come back to visit again? In this talk, I’ll share lessons learned from my experience of making a series of online statistics modules (co-authored by Hasse Walum) that feel accessible and fun-- housed entirely in an R Markdown site, complete with a whimsical, illustrated narrative about teacup giraffes. I’ll show how adding good characters with your audience in mind, good design, and good play helped me make the most of HTML output. To help you get started, I’ll share resources that Alison Hill and I have developed--including a series of cookbooks and out-of-the-box templates-- so that you will have a leg up on applying these ideas to R Markdown collections of your own.</span></p> </div></div></p></details><br>
@@ -127,7 +127,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Deploying End-To-End Data Science with Shiny, Plumber, and Pins**
-<br>by Alex Gold
+<br>by Alex Gold, [twitter](https://twitter.com/alexkgold)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -135,8 +135,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **We’re hitting R a million times a day so we made a talk about it**
-<br>by Heather Nolis, Jacqueline Nolis
-<br>Materials:
+<br>by Heather Nolis [twitter](https://twitter.com/heatherklus), Jacqueline Nolis [twitter](https://twitter.com/skyetetra)
+<br>Materials: [slides (pdf)](https://putrinprod.com/talks/rstudioconf2020.pdf), [website](https://putrinprod.com/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Often reserved for Elite Engineers, production can be a perilous place for R users - but never fear! For the past year, we at T-Mobile have been sludging through production outages, nation-wide product launches, and all of the muck that floods from R models being hit over a million times every day. From “we’re strictly a java shop” to a devops team that proudly states “we support Java, node, and R,” this talk will cover the technical hiccups, interdisciplinary communication struggles, and an open-source R package {loadtest} that’s changed the way our team views performance testing. You too can dazzle your enterprise with the power of R.</span></p> </div></div></p></details><br>
@@ -151,8 +151,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Practical Plumber Patterns**
-<br>by James Blair
-<br>Materials:
+<br>by James Blair [twitter](https://twitter.com/Blair09M}
+<br>Materials: [slides(pdf)](https://github.com/rstudio/rstudio-conf/blob/master/2020/practical-plumber-patterns_James-Blair/slides.pdf), [github](https://github.com/blairj09/ppp)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Plumber is a package that allows R users to create APIs out of R functions. This flexible approach allows R processes to be accessed by toolchains and frameworks outside of R. In this talk, we'll look at useful patterns for developing and working with robust APIs built in R using Plumber.</p></details><br>
@@ -161,23 +161,23 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Simplified Data Quality Monitoring of Dynamic Longitudinal Data: A Functional Programming Approach**
-<br>by Jacqueline Gutman
-<br>Materials:
+<br>by Jacqueline Gutman, [twitter](https://twitter.com/dynamicdataduo)
+<br>Materials: 
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Ensuring the quality of data we deliver to customers or provide as inputs to models is often one of the most under-appreciated and yet time-consuming responsibilities of a modern data scientist. This task is challenging enough when working with static data, but when we have access to dynamic, longitudinal, continuously updating data, that complexity can become an asset. We will demonstrate how to to simplify data quality monitoring of dynamic data with a functional programming approach that enables early and actionable detection of data quality concerns.   Using purrr as well as tidyr and nested tibbles, we will illustrate the five key pillars of enjoyable, user-friendly data quality monitoring with relevant R code: Readability, Reproducibility, Efficiency, Robustness, and Compositionality.   Readability: FP empowers us to abstract away from the mechanics and implementation of comparing two or more related datasets and move towards declaring the intent of features and metrics we want to compare.   Reproducibility: By avoiding side-effects and dependencies on external states and inputs, and using functional units which can be easily tested over a variety of inputs, FP reduces the burden to create reproducible code. Perhaps more importantly, FP supports not just reproducibility of results, but reproducibility of workflows that can be continually applied to dynamic datasets.  Efficiency: FP enables more efficient code through lazy evaluation, caching, and simplifying implementation over parallel backends.  Robustness: FP allows greater testability of our code through modularization and elegant error-handling, with customized fail-safes for data that differs in expected ways over time.   Compositionality: FP encourages higher-level reasoning with functions, which in turn drives both readability--through higher-level, more abstract code--and robustness, through modifying function behavior in case errors are encountered.</p></details><br>
 
 
 **vctrs: Creating custom vector classes with the vctrs package**
-<br>by Jesse Sadler
-<br>Materials:
+<br>by Jesse Sadler [twitter](https://twitter.com/vivalosburros)
+<br>Materials: [slides (pdf)](https://www.jessesadler.com/slides/RStudio2020.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The base R types of vectors enable the representation of an amazingly wide array of data types. There is so much you can do with R. However, there may be times when your data does not fit into one of the base types and/or you want to add metadata to vectors. vctrs is a developer-focused package that provides a clear path for creating your own S3-vector class, while ensuring that the classes you build integrate into user expectations for how vectors work in R. This presentation will discuss the why and how of using vctrs through the example of debkeepr, a package for integrating historical non-decimal currencies such as pounds, shillings, and pence into R. The presentation will provide a step-by-step process for developing various types of vectors and thinking through the design process of how vectors of different classes should work together.</span></p> </div></div></p></details><br>
 
 
 **Asynchronous programming in R**
-<br>by Winston Chang
+<br>by Winston Chang, [twitter](https://twitter.com/winston_chang)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -185,8 +185,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Azure Pipelines and GitHub Actions**
-<br>by Jim Hester
-<br>Materials:
+<br>by Jim Hester, [twitter]()https://twitter.com/jimhester_
+<br>Materials: [slides](https://speakerdeck.com/jimhester/github-actions-for-r)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Open source R packages on GitHub often take advantage of continuous integration services to automatically check their packages for errors. This is very useful to catch things quickly, as well and increasing confidence for proposed changes, as the Pull Requests can be checked before they are merged. Travis-CI and Appveyor are the most popular current methods. However newer services, Azure Pipelines and GitHub Actions, show promise for being more powerful and simpler to configure and debug. I will discuss these services and demonstrate some of their capabilities and how to configure them for your own use in packages and reports.</p></details><br>
@@ -195,7 +195,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 ### 1415 Session 2, Community
 
 **If you build it, they will come...but then what? Facilitating communities of practice in R**
-<br>by Kate Hertweck
+<br>by Kate Hertweck, [twitter](https://twitter.com/k8hert)
 <br>Materials: [slides (pdf)](communities-of-practice-Kate-Hertweck/Hertweck_rstudioconf2020.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -203,15 +203,15 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Embracing R in the Geospatial Community**
-<br>by Tina Cormier
-<br>Materials:
+<br>by Tina Cormier, [twitter](https://twitter.com/TinaACormier)
+<br>Materials: [slides (pdf)](https://github.com/tacormier/rstudio-conf-2020/blob/master/presentation_pdf/Rstudio2020_Cormier_Rgeo.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Geospatial analysts work in a wide range of positions within almost every industry. They work in government, non-profit, academic, and private institutions using geospatial data and technology to answer questions about the environment, agriculture, climate, urban planning and design, marketing, public health, transportation, and myriad other topics. A typical day may include data prep/cleaning, field work, cartography, image analysis, vector analysis, feature engineering, modeling, or database management. This diverse group necessarily uses a diverse set of tools. In this talk, we will explore how R fits into the spatial analyst’s toolkit. What does the geo community think of R? Who uses it? What groups avoid it? What geo-packages are used most? How can we, as a community, make R more appealing for geospatial scientists?</span></p> </div></div></p></details><br>
 
 
 **The development of ""datos"" package for the R4DS Spanish translation**
-<br>by Riva Quiroga
+<br>by Riva Quiroga, [twitter](https://twitter.com/rivaquiroga)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -219,7 +219,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **R: Then and Now**
-<br>by Jared Lander
+<br>by Jared Lander, [twitter](https://twitter.com/jaredlander)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -263,7 +263,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Accelerating Analytics with Apache Arrow**
-<br>by Neal Richardson
+<br>by Neal Richardson, [twitter](https://twitter.com/enpiar)
 <br>Materials: [slides](https://enpiar.com/talks/rstudio-conf-2020/)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -271,15 +271,15 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Updates on Spark, MLflow, and the broader ML ecosystem**
-<br>by Javier Luraschi
-<br>Materials:
+<br>by Javier Luraschi, [twitter](https://twitter.com/javierluraschi)
+<br>Materials: [rpubs article](https://rpubs.com/jluraschi/rsconf-2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p></p></details><br>
 
 
 **What's new in TensorFlow for R**
-<br>by Daniel Falbel
+<br>by Daniel Falbel, [twitter](https://twitter.com/dfalbel)
 <br>Materials: [slides](https://dfalbel.github.io/talks/2020-01-rstudio-conf/)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -287,7 +287,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Deep Learning with R**
-<br>by Paige Bailey
+<br>by Paige Bailey, [twitter](https://twitter.com/DynamicWebPaige)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -297,15 +297,16 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Production-grade Shiny Apps with golem**
-<br>by Colin Fay
-<br>Materials:
+<br>by Colin Fay, [twitter](https://twitter.com/_ColinFay)
+<br>Materials: [slides](https://speakerdeck.com/colinfay/rstudio-conf-2020-production-grade-shiny-apps-with-golem), [github repo, golem: A Framework for Buildilng Robust Sniny Apps
+📜](https://github.com/ThinkR-open/golem)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Shiny is an amazing tool when it comes to creating web applications with R. Almost anybody can get a small Shiny App in a matter of minutes, provided they have a basic knowledge of R. As of today, we can safely tell that it has become the de-facto tool for web application in the R world. Building a proof-of-concept application is easy, but things change when the application becomes larger and more complex, and especially when it comes to sending that app to production—until recently there hasn't been any real framework for building and deploying production-grade Shiny Apps. This is where 'golem' comes into play: offering Shiny developers an opinionated framework for creating production-ready Shiny Applications. With 'golem', Shiny developers now have a toolkit for making a stable, easy-to-maintain, and robust for production web application with R. 'golem' has been developed to abstract away the most common engineering tasks (for example, module creation, addition of external CSS or JavaScript file, ...), so you can focus on what matters: building the application. And once your application is ready to be deployed, 'golem' guides you through testing, and brings you tools for deploying to common platforms. In this talk, Colin and Vincent will present the 'golem' package, first talking about the ""why 'golem'?"", then presenting the general philosophy behind this framework, and help you get started building your first Shiny App with 'golem'.</span></p> </div></div></p></details><br>
 
 
 **Making the Shiny Contest**
-<br>by Mine Çetinkaya-Rundel
+<br>by Mine Çetinkaya-Rundel, [twitter](https://twitter.com/minebocek)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -313,16 +314,16 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Styling Shiny apps with Sass and Bootstrap 4**
-<br>by Joe Cheng
-<br>Materials:
+<br>by Joe Cheng, [twitter](https://twitter.com/jcheng)
+<br>Materials: [slides](https://speakerdeck.com/jcheng5/styling-shiny)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Customizing the style--fonts, colors, margins, spacing--of Shiny apps has always been possible, but never as easy as we’d like it to be. Canned themes like those in the shinythemes package can easily make apps look slightly less generic, but that’s small consolation if your goal is to match the visual style of your university, corporation, or client.</span></p> <p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In theory, one can ""just"" use CSS to customize the appearance of your Shiny app, the same as any other web application. But in practice, the use of large CSS frameworks like Bootstrap means significant CSS expertise is required to comprehensively change the look of an app.</span></p> <p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Relief is on the way. As part of a round of upgrades to Shiny’s UI, we’ve made fundamental changes to the way R users can interact with CSS, using new R packages we’ve created around Sass and Bootstrap 4. In this talk, we’ll show some of the features of these packages and tell you how you can take advantage of them in your apps.</span></p> </div></div></p></details><br>
 
 
 **Reproducible Shiny apps with shinymeta**
-<br>by Carson Sievert
-<br>Materials: <a href="https://talks.cpsievert.me/20200129">Slides</a>, <a href="https://twitter.com/cpsievert">Twitter</a>
+<br>by Carson Sievert, [twitter](https://twitter.com/cpsievert)
+<br>Materials: <a href="https://talks.cpsievert.me/20200129">Slides</a>
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>Shiny makes it easy to take domain logic from an existing R script and wrap some reactive logic around it to produce an interactive webpage where others can quickly explore different variables, parameter values, models/algorithms, etc. Although the interactivity is great for many reasons, once an interesting result is found, it’s more difficult to prove the correctness of the result since: (1) the result can only be (easily) reproduced via the Shiny app and (2) the relevant domain logic which produced the result is obscured by Shiny’s reactive logic. The R package shinymeta provides tools for capturing and exporting domain logic for execution outside of a Shiny runtime (so that others can reproduce Shiny-based result(s) from a new R session).</p></details><br>
@@ -339,8 +340,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Putting the Fun in Functional Data: A tidy pipeline to identify routes in NFL tracking data**
-<br>by Dani Chu
-<br>Materials: [Slides](https://docs.google.com/presentation/d/1P9iT_TQUoxxCyvkfCLe5Y-9xBWpHh7btlP2mQ3XyNOM/edit?usp=sharing), [Twitter](https://twitter.com/chuurveg)
+<br>by Dani Chu, [Twitter](https://twitter.com/chuurveg)
+<br>Materials: [website](https://danichusfu.github.io/project/bigdatabowl/), [Slides](https://docs.google.com/presentation/d/1P9iT_TQUoxxCyvkfCLe5Y-9xBWpHh7btlP2mQ3XyNOM/edit?usp=sharing)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Currently in football many hours are spent watching game film to manually label the routes run on passing plays. Using tracking data, each route can be described as a sequence of spatial-temporal measurements that varies in length depending on the duration of the play. This data can be conveniently analyzed using nested columns in tidyr and purrr. We demonstrate how model-based curve clustering using Bernstein polynomial basis functions (i.e. Bézier curves) fit using the Expectation Maximization algorithm can cluster route trajectories. Each cluster can then be labelled to obtain route names for each route and create route trees for all receivers. The clusters and routes can be visualized nicely using ggplot and seen developing over time using gganimate.</span></p> </div></div></p></details><br>
@@ -348,15 +349,15 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **R + Tidyverse in Sports**
 <br>by Namita Nandakumar
-<br>Materials:
+<br>Materials: [slides](https://docs.google.com/presentation/d/1EqFki81LJk7FEf6KGfILqVIwMNXDfty68jsfu3dKBns/edit#slide=id.g35f391192_00)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">This talk will use a case study, most likely in hockey, to showcase the many ways in which R and the tidyverse can be used to analyze sports data as well as the unique priorities and considerations that are involved in applying statistical tools to sports problems.</span></p> </div></div></p></details><br>
 
 
 **Making better spaghetti (plots): Exploring longitudinal data with the brolgar package**
-<br>by Nicholas Tierney
-<br>Materials:
+<br>by Nicholas Tierney, [twitter](https://twitter.com/nj_tierney)
+<br>Materials: [github](https://github.com/njtierney/rstudioconf20), [slides](https://njt-rstudio20.netlify.com/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">There are two main challenges of working with longitudinal (panel) data: 1) Visualising the data, and 2) Understanding the model. Visualising longitudinal data is challenging as you often get a ""spaghetti plot”, where a line is drawn for each individual. When overlaid in one plot, it can have the appearance of a bowl of spaghetti. With even a small number of subjects, these plots are too overloaded to be read easily. For similar reasons, it is difficult to relate the model predictions back to the individual and keep the context of what the model means for the individual. For both visualisation, and modelling, it is challenging to capture interesting or unusual individuals, which are often lost in the noise. Better tools, and a more diverse set of grammar and verbs are needed to visualise and understand longitudinal data and models, to capture the individual experiences. In this talk, I introduce the R package, **brolgar** (BRowse over Longitudinal data Graphically and Analytically in R), which provides new tools, verbs, and grammar to identify and summarise interesting individual patterns in longitudinal data. This package extends upon ggplot2 with custom facets, and the new tidyverts time series packages to efficiently explore longitudinal data.</span></p></div></div></p></details><br>
@@ -372,24 +373,24 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Learning R with humorous side projects**
-<br>by Ryan Timpe
-<br>Materials:
+<br>by Ryan Timpe, [twitter](https://twitter.com/ryantimpe)
+<br>Materials: [website](http://www.ryantimpe.com/post/rstudio/), [slides(pdf)](http://www.ryantimpe.com/rstudio2020.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p style=""text-align:left;"" class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">What should you name a new dinosaur discovery, according to neural networks? Which season of The Golden Girls should you watch when playing a drinking game? How can you build a LEGO set for the lowest price? R is constantly evolving, so as users, we’re constantly learning. Over the past few years, I’ve found that working on side projects is great for hands-on learning - and for me, the more absurd the project, the better. Side projects provide a safe, low-stakes environment to learn new packages and methodologies before using them in work or in production. Sharing those projects can help publicize the package and increase its accessibility, benefiting both the original author and future users. In this talk, I’ll share my experiences with side projects for learning state-of-the-art data science tools and growing as an R user, including how one project helped me land my dream job.</span></p> </div></div></p></details><br>
 
 
 **Toward a grammar of psychological experiments**
-<br>by Danielle Navarro
-<br>Materials:
+<br>by Danielle Navarro, [twitter](https://twitter.com/djnavarro)
+<br>Materials: [slides](https://slides.com/djnavarro/rstudioconf2020#/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Why does a psychological scientist learn a programming language? While motivations are many and varied the two most prominent are data analysis and data collection. The R programming language is well placed to address the first need, but there are fewer options for programming behavioural experiments within the R ecosystem. The simplest experimental designs can be recast as surveys, for which there are many options, but studies in cognitive psychology, psychophysics or developmental psychology typically require more flexibility. In this talk I outline the design principles behind xprmntr, an R package that provides wrappers to the a javascript library (jsPsych) for constructing web based psychology experiments and uses the plumber package to call server side R code as needed. In doing so, I discuss limitations to the current implementation and what a ""grammar of experiments"" might look like.</span></p> </div></div></p></details><br>
 
 
 **R for Graphical Clinical Trial Reporting**
-<br>by Frank Harrell
-<br>Materials:
+<br>by Frank Harrell, [twitter](https://twitter.com/f2harrell)
+<br>Materials: [website](https://www.fharrell.com/talk/rstudio20/), [slides](http://hbiostat.org/talks/rstudio20.html#1)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p>For clinical trials a good deal of effort goes into producing both final trial reports and interim reports for data monitoring committees, and experience has shown that reviewers much prefer graphical to tabular reports. Interactive graphical reports go a step further and allow the most important information to be presented by default, while inviting the reviewer to drill down to see other details. The drill-down capability, implemented by hover text using the R plotly package, allows one to almost entirely dispense with tables because the hover text can contain the part of a table that pertains to the reviewer's current focal point in the graphical display, among other things. Also, there are major efficiency gains by having a high-level language for producing common elements of reports related to accrual, exclusions, descriptive statistics, adverse events, time to event, and longitudinal data. This talk will overview the hreport package, which relies on R, RMarkdown, knitr, plotly, Hmisc, and HTML5.  RStudio is an ideal report development environment for using these tools.</p></details><br>
@@ -399,8 +400,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Approaches to Assay Processing Package Validation**
-<br>by Ellis Hughes
-<br>Materials:
+<br>by Ellis Hughes, [twitter](https://twitter.com/ellis_hughes)
+<br>Materials: [github](https://github.com/thebioengineer/validation), [slides](https://thebioengineer.github.io/validation/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In this talk I will discuss the steps that have been created for validating internally generated R packages at SCHARP (Statistical Center for HIV/AIDS Research and Prevention) and the lessons learned while creating packages as a team. Housed within Fred Hutch, SCHARP is an instrumental partner in the research and clinical trials surrounding HIV prevention and vaccine development. Part of SCHARP’s work involves analyzing experimental biomarkers and endpoints which change as the experimental question, analysis methods, antigens measured, and assays evolve. Maintaining a validated code base that is rigid in its output format, but flexible enough to cater a variety of inputs with minimal custom coding has proven to be important for reproducibility and scalability. SCHARP has developed several key steps in the creation, validation, and documentation of R packages that take advantage of R’s packaging functionality. First, the programming team works with leadership to define specifications and lay out a roadmap of the package at the functional level. Next, statistical programmers work together to develop the package, taking advantage of the rich R ecosystem of packages for development such as roxygen2, devtools, usethis, and testthat. Once the code has been developed, the package is validated to ensure it passes all specifications using a combination of testthat and rmarkdown. Finally, the package is made available for use across the team on live data. These procedures set up a framework for validating assay processing packages that furthers the ability of Fred Hutch to provide world-class support for our clinical trials.</span></p> </div></div></p></details><br>
@@ -433,15 +434,15 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Getting things logged**
-<br>by Gergely Daroczi
-<br>Materials: [slides](http://bit.ly/daroczig-rstudio-conf-2020)
+<br>by Gergely Daroczi, [twiiter](https://twitter.com/daroczig)
+<br>Materials: [github](https://github.com/daroczig/logger), [slides](http://bit.ly/daroczig-rstudio-conf-2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">One of the greatest strength of R is the ease and speed of developing a prototype (let it be a report or dashboard, a statistical model or rule-based automation to solve a business problem etc), but deploying to production is not a broadly discussed topic despite its importance. This hands-on talk focuses on best practices and actual R packages to help transforming the prototypes developed by business analysts and data scientist into production jobs running in a secured and monitored environment that is easy to maintain -- discussing the importance of logging, securing credentials, effective helper functions to connect to database, open-source and SaaS job schedulers, dockerizing the run environment and scaling infrastructure.</span></p> </div></div></p></details><br>
 
 
 **Technical debt is a social problem**
-<br>by Gordon Shotwell
+<br>by Gordon Shotwell, [twitter](https://twitter.com/gshotwell)
 <br>Materials: https://techdebt.shotwell.ca/
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -450,15 +451,15 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Parallel computing with R using foreach, future, and other packages**
 <br>by Bryan Lewis
-<br>Materials:
+<br>Materials: [github](https://github.com/bwlewis/writing_foreach_adapters)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Steve Weston's foreach package defines a simple but powerful framework for map/reduce and list-comprehension-style parallel computation in R. One of its great innovations is the ability to support many interchangeable back-end computing systems so that *the same R code* can run sequentially, in parallel on your laptop, or across a supercomputer. Recent new packages like future package define elegant new programming approaches that can use the foreach framework to run across a wide variety of parallel computing systems. This talk introduces the basics of foreach and future packages with examples using a variety of back-end systems including MPI, Redis and R's default parallel package clusters.</span></p></div></div></p></details><br>
 
 
 **Future: Simple Async, Parallel & Distributed Processing in R - What's Next?**
-<br>by Henrik Bengtsson
-<br>Materials:
+<br>by Henrik Bengtsson, [twitter](https://twitter.com/henrikbengtsson)
+<br>Materials: [website](https://www.jottr.org/2020/02/01/future-rstudioconf2020-slides/), [slides](https://docs.google.com/presentation/d/1Wn5S91UGIOrc4IyXoV074ij5vGF8I0Km0tCfintyIa4/present?includes_info_params=1&eisi=CM2mhIXwsecCFQyuJgodBQAJ8A&slide=id.p)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Future is a minimal and unifying framework for asynchronous, parallel, and distributed computing in R. It is designed for robustness, consistency, scalability, extendability, and adoptability - all in the spirit of ""developer writes code once, user runs it anywhere"". It is being used in production for high-performance computing and asynchronous UX, among other things. In this talk, I will discuss common feature requests, recent progress we have made, and what is the pipeline.</span></p></div></div></p></details><br>
@@ -468,8 +469,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Object of type ‘closure’ is not subsettable**
-<br>by Jenny Bryan
-<br>Materials:
+<br>by Jenny Bryan, [twitter](https://twitter.com/JennyBryan)
+<br>Materials: [github](https://github.com/jennybc/debugging), [speakerdeck slides](https://speakerdeck.com/jennybc/object-of-type-closure-is-not-subsettable), [pdf slides](https://github.com/jennybc/debugging/blob/master/debugging-jenny-bryan.pdf]
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Your first “object of type ‘closure’ is not subsettable” error message is a big milestone for an R user. Congratulations, if there was any lingering doubt, you now know that you are officially programming! Programming involves considerably more troubleshooting and debugging than many of us expected (or signed up for). The ability to solve your own problems is an incredibly powerful stealth skill that is worth cultivating with intention. This talk will help you nurture your inner problem solver, covering both general debugging methods and specific ways to implement them in the R ecosystem.</span></p> </div></div></p></details><br>
@@ -486,8 +487,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Don’t repeat yourself, talk to yourself! Repeated reporting in the R universe.**
-<br>by Sharla Gelfand
-<br>Materials:
+<br>by Sharla Gelfand, [twitter](https://twitter.com/sharlagelfand)
+<br>Materials: [slides](https://sharstudioconf.netlify.com/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">If you’re responsible for analyses that need updating or repeating on a semi-regular basis, you might find yourself doing the same work over and over again. The principle of ""don’t repeat yourself"" from software engineering motivates us to use functions and packages, the core of repetition in the R universe. For analyses, it can be difficult to know how to use this principle and move beyond ""copying and pasting scripts and changing the data file and the object names and updating the dates and results in RMarkdown"", especially when there’s some element of human intervention required, whether it be for validating assumptions or cleaning artisanal data.
@@ -495,7 +496,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **How Rmarkdown changed my life**
-<br>by Rob Hyndman
+<br>by Rob Hyndman, [twitter](https://twitter.com/robjhyndman)
 <br>Materials: [talk notes and slides](https://robjhyndman.com/rmd2020)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -503,8 +504,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **One R Markdown Document, Fourteen Demos**
-<br>by Yihui Xie
-<br>Materials:
+<br>by Yihui Xie, [twitter](https://twitter.com/xieyihui)
+<br>Materials: [blog post](https://yihui.org/en/2020/02/rstudio-conf-2020/), [R script](https://slides.yihui.org/2020-rstudio-conf-rmarkdown-demo.R)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">R Markdown is a document format based on the R language and Markdown to intermingle computing with narratives in the same document. With this simple format, you can actually do a lot of things. For example, you can generate reports dynamically (no need to cut-and-paste any results because all results can be dynamically generated from R), write papers and books, create websites, and make presentations. In this talk, I'll use a single R Markdown document to give demos of the R packages rmarkdown, bookdown for authoring books (https://bookdown.org), blogdown for creating websites (https://github.com/rstudio/blogdown), rticles for writing journal papers (https://github.com/rstudio/rticles), xaringan for making slides (https://github.com/yihui/xaringan), flexdashboard for generating dashboards (https://github.com/rstudio/flexdashboard), learnr for tutorials (https://github.com/rstudio/learnr), rolldown for storytelling (https://github.com/yihui/rolldown), and the integration between Shiny and R Markdown. To make the best use of your time during the presentation, I recommend you to take a look at the rmarkdown website in advance: https://rmarkdown.rstudio.com.</span></p> </div></div></p></details><br>
@@ -513,7 +514,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Building a Medical Device with R**
-<br>by Ron Keizer
+<br>by Ron Keizer, [twitter](https://twitter.com/ronpirana)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -547,23 +548,23 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **The Glamour of Graphics**
-<br>by William Chase
-<br>Materials:
+<br>by William Chase, [twitter](https://twitter.com/W_R_Chase)
+<br>Materials: [slides](https://www.williamrchase.com/slides/assets/player/KeynoteDHTMLPlayer.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">I see a lot of ugly charts. This is to be expected as I work with a lot of academics and data scientists, neither of whom have been trained in how to design attractive charts. I myself produced many ugly charts during my years as a research scientist, when the design process basically came down to random tweaking until things ""looked good"". If only I could go back and tell young inexperienced me that there was a better way. In this talk, I will present that better way--a series of design principles that can take any chart from drab to fab. Rather than applying these techniques willy nilly, I will show how they form a layered ""Glamour of Graphics"" that is structured and can be easily applied to any chart. This Glamour of Graphics has some simple implementations in ggplot, where we will replace geoms, aesthetics, and scales with typography, color, and layout. Finally, I will discuss why looks matter when it comes to charts, and how by following the Glamour of Graphics you can design charts that are more persuasive and more accurately perceived.</span></p> </div></div></p></details><br>
 
 
 **3D ggplots with rayshader**
-<br>by Tyler Morgan-Wall
-<br>Materials:
+<br>by Tyler Morgan-Wall, [twitter](https://twitter.com/tylermorganwall)
+<br>Materials: [slides](https://tylermw.com/presentations/rstudio2020/assets/player/KeynoteDHTMLPlayer.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Learn how a single line of code can transform your data visualizations into stunning 3D using the rayshader package. In this talk, I will show how you can use rayshader to create beautiful 3D figures and animations to help promote your research and analyses to the public. Find out how to use principles of cinematography to take users on a 3D tour of your data, scripted entirely within R. Leaving the 3D pie charts in the pantry at home, I will discuss how to build interpretable, engaging, and informative plots using all three dimensions.</span></p> </div></div></p></details><br>
 
 
 **Designing Effective Visualizations**
-<br>by Miriah Meyer
+<br>by Miriah Meyer, [twitter](https://twitter.com/miriah_meyer)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -571,7 +572,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Tidyverse 2019-2020**
-<br>by Hadley Wickham
+<br>by Hadley Wickham, [twitter](https://twitter.com/hadleywickham)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -581,24 +582,24 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **RMarkdown Driven Development**
-<br>by Emily Riederer
-<br>Materials:
+<br>by Emily Riederer, [twitter](https://twitter.com/EmilyRiederer)
+<br>Materials: [article](https://emilyriederer.netlify.com/post/rmddd-tech-appendix/), [slides](https://www.slideshare.net/EmilyRiederer/rmarkdown-driven-development-rstudioconf-2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">RMarkdown enables analysts to engage with code interactively, embrace literate programming, and rapidly produce a wide variety of high-quality data products such as documents, emails, dashboards, and websites. However, RMarkdown is less commonly explored and celebrated for the important role it can play in helping R users grow into developers. In this talk, I will provide an overview of RMarkdown Driven Development: a workflow for converting one-off analysis into a well-engineered and well-designed R package with deep empathy for user needs. We will explore how the methodical incorporation of good coding practices such as modularization and testing naturally evolves a single-file RMarkdown into an R project or package. Along the way, we will discuss big-picture questions like “optimal stopping” (why some data products are better left as single files or projects) and concrete details such as the {here} and {testthat} packages which can provide step-change improvements to project sustainability. </span></p> </div></div></p></details><br>
 
 
 **renv: Project Environments to R**
-<br>by Kevin Ushey
-<br>Materials:
+<br>by Kevin Ushey, [twitter](https://twitter.com/kevin_ushey)
+<br>Materials: [website](https://rstudio.github.io/renv/), [slides](https://kevinushey-2020-rstudio-conf.netlify.com/slides.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The renv package helps you create reproducible environments for your R projects. With renv, you can make your R projects more: Isolated: Installing a new or updated package for one project won’t break your other projects, and vice versa. Portable: Easily transport your projects from one computer to another, even across different platforms. renv makes it easy to install the packages your project depends on. Reproducible: renv records the exact package versions you depend on, and ensures those exact versions are the ones that get installed wherever you go. In this presentation, I'll introduce renv and some of its main workflows.</span></p> </div></div></p></details><br>
 
 
 **RStudio 1.3 Sneak Preview**
-<br>by Jonathan McPherson
-<br>Materials:
+<br>by Jonathan McPherson, [@RStudioTips](https://twitter.com/rstudiotips)
+<br>Materials: [slides](https://speakerdeck.com/jmcphers/rstudio-1-dot-3-sneak-preview)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p style=""text-align:left;"" class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">RStudio 1.3, currently available as a preview release, includes a number of new capabilities that will help you be more productive in R. It's also more configurable, accessible, and flexible. In this talk, you'll learn to take advantage of these new tools.</span></p> </div></div></p></details><br>
@@ -615,7 +616,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Best practices for programming with ggplot2**
-<br>by Dewey Dunnington
+<br>by Dewey Dunnington, [twitter](https://twitter.com/paleolimbot)
 <br>Materials: [slides](https://fishandwhistle.net/slides/rstudioconf2020/), [vigette](https://ggplot2.tidyverse.org/dev/articles/ggplot2-in-packages.html)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -623,24 +624,24 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Spruce up your ggplot2 visualizations with formatted text**
-<br>by Claus Wilke
-<br>Materials:
+<br>by Claus Wilke, [twitter](https://twitter.com/ClausWilke)
+<br>Materials: [slides](https://www.slideshare.net/ClausWilke/spruce-up-your-ggplot2-visualizations-with-formatted-text)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The ggtext package provides various functions to add formatted text to ggplot2 figures, both in the form of plot or axis labels and in the form of text labels or text boxes inside the plot panel. Text formatting can be achieved through a small subset of markdown, HTML, and CSS directives. Features currently supported include italics, bold, super- and sub-script, as well as changing font size, font family, and color. Basic support for adding images to formatted text is also available.</span></p> </div></div></p></details><br>
 
 
 **The little package that could: taking visualizations to the next level with the scales package**
-<br>by Dana Seidel
-<br>Materials:
+<br>by Dana Seidel, [twitter](https://twitter.com/dpseidel)
+<br>Materials: [slides](https://www.danaseidel.com/rstudioconf2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Precise axes, proper data transformation, and informative visual data mappings are critical components to any polished visualization. The scales package, the unsung hero behind ggplot2’s scale_* infrastructure, includes functions to help any R user manipulate and polish their visualizations. In this presentation, we will explore the functionality of this small but mighty package: demonstrating its functions for polishing guides, e.g. breaks and labels, managing data transformations, and for mapping aesthetic palettes to data.</span></p> </div></div></p></details><br>
 
 
 **Extending your ability to extend ggplot2**
-<br>by Thomas Lin Pedersen
-<br>Materials:
+<br>by Thomas Lin Pedersen, [twitter](https://twitter.com/thomasp85)
+<br>Materials: [slides](https://www.data-imaginist.com/slides/rstudioconf2020/assets/player/KeynoteDHTMLPlayer.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The ggplot2 package continue to be one of the most used frameworks for producing graphics in R. While being extremely flexible, the package itself can be constrained by the different types of graphic elements and statistic transformations available. Instead of continuing to add new features, the development in recent years have focused on making ggplot2 extensible by other packages, thus distributing development and maintenance. Despite the best of intentions, ggplot2 can feel daunting to extend, due unusual idiosyncrasies, a foreign object system, and a partly obscured rendering model. This talk intend to remove the mystery of extending ggplot2, by describing the basic ways that it can be extended and showcasing a couple of simple extensions that can be build with very little code. Lastly, it will include discussions of some best practices and gotchas that may come in handy when you start out.</span></p> </div></div></p></details><br>
@@ -650,16 +651,16 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **MLOps for R with Azure Machine Learning**
-<br>by David Smith
-<br>Materials:
+<br>by David Smith, [twitter](https://twitter.com/revodavid)
+<br>Materials: [github](https://github.com/revodavid/mlops-r), [slides (pdf)](https://github.com/revodavid/mlops-r/blob/master/MLOPS%20and%20R%20-%20rstudioconf%20-%2020200130.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Azure Machine Learning service (Azure ML) is Microsoft’s cloud-based machine learning platform that enables data scientists and their teams to carry out end-to-end machine learning workflows at scale. With Azure ML's new open-source R SDK and R capabilities, you can take advantage of the platform’s enterprise-grade features to train, tune, manage and deploy R-based machine learning models and applications. In this talk, the attendees will learn how to: •Carry out ML workflows using the authoring experience of their choice, from no-code to code-first options that include Azure ML’s drag-and-drop visual interface for defining workflows and RStudio Server on the Data Science Instance, a hosted VM workstation, for using the Azure ML R SDK from the RStudio browser-based interface. •Use the Azure ML R SDK to manage cloud resources and train, hyperparameter tune, and log and visualize metrics for their models at scale on Azure compute. •Build ML Pipelines in R for defining and orchestrating reusable and reproducible ML workflows. •Deploy, manage, and monitor their R ML models and applications as web services on Azure Container Instance and Azure Kubernetes Service, with an emphasis on robust DevOps and CI/CD for orchestrating and streamlining their end-to-end data science development lifecycle.</span></p> </div></div></p></details><br>
 
 
 **Totally Tidy Tuning Techniques**
-<br>by Max Kuhn
-<br>Materials:
+<br>by Max Kuhn, [twitter](https://twitter.com/topepos)
+<br>Materials: [github](https://github.com/rstudio/rstudio-conf/tree/master/2020/totally-tidy-tuning-tools-Max-Kuhn)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Many models have structural parameters that cannot be directly estimated from the data. These tuning parameters can have a significant effect on model performance and require some mechanism for finding reasonable values. The tune and workflow packages enable tidymodels users to optimize these parameters using a variety of efficient grid search methods as well as with iterative search techniques (such as Bayesian optimization).</span></p> </div></div></p></details><br>
@@ -674,8 +675,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Stochastic Block Models with R: Statistically rigerous clusting with rigorous code**
-<br>by Nick Strayer
-<br>Materials:
+<br>by Nick Strayer, [twitter](https://twitter.com/NicholasStrayer)
+<br>Materials: [slides](http://nickstrayer.me/rstudioconf_sbm/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(34,34,34);""><span style=""font-style: italic;"">Often a machine learning research project starts with brainstorming, continues to one-off scripts while an idea forms, and finally, a package is written to disseminate the product. In this talk, I will share my experience rethinking this process by spreading the package writing across the whole process. While there are cognitive overheads involved with setting up a package framework, I will argue that these overheads can serve as a scaffolding for not only good code but robust research practices. The result of this experiment is the SBMR package: a native R package written to fit and investigate the results of Bipartite Stochastic Block Models that forms the backbone of my PhD dissertation. By going over the ups and downs of this process, I hope to leave the audience with inspiration for moving the package writing process closer to the start of their projects and melding research and code more closely to improve both.</span></span></p></div></div></p></details><br>
@@ -685,16 +686,16 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Small Team, Big Value: Using R to Design Visualizations**
-<br>by Ian Lyttle
-<br>Materials:
+<br>by Ian Lyttle, [twitter](https://twitter.com/ijlyttle)
+<br>Materials: [slides](https://speakerdeck.com/ijlyttle/small-team-big-value-using-r-to-design-visualizations)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Many R users can feel isolated due to the prevalence of Python or Tableau at their institutions. This talk will focus on how we use R to develop reference implementations of visualizations (using ggplot2), and to develop corporate-themed color maps (using the colorspace package) to bring value to the entire institution. Color maps can be translated into variety of formats, for Tableau, Qlik Sense, d3, etc., and deployed independently from R. For visualizations, our goal is to translate ggplot2 objects to Vega-Lite specifications, using a package we are developing: ggvega. Vega-Lite visualizations are web-native, and are rendered independently from R. Specifications can be designed to be extensible to new data, allowing them serve as templates, to be deployed and updated for use outside of R. Of course, despite isolation within an institution, our work with the larger R open-source communities provides a foundation on which to build; in fact, we have a lot of company and are having a lot of fun.</span></p> </div></div></p></details><br>
 
 
 **UnicoRns are real**
-<br>by Travis Gerke
-<br>Materials:
+<br>by Travis Gerke, [twitter](https://twitter.com/travisgerke)
+<br>Materials: [github](https://github.com/tgerke/unicoRns-are-real), [slides](https://unicorns-are-real.netlify.com/)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Common advice from experienced data scientists to job-seekers is to avoid job postings that describe a ""data science unicorn"": someone who has experience performing an unrealistically large array of technical and business-related job duties. Seeking a unicorn is viewed as a potential indicator that the company fails to understand their data science needs, and that new hires will not be poised for success due to lacking support and resources [Robinson &amp; Nolis, 2019]. The R language, particularly when used with RStudio products, has evolved to enable production-level activities in the areas of data wrangling, reporting/dashboarding, database/software engineering, machine learning, and web application development. It is increasingly plausible that a data scientist will be able to efficiently perform a wide variety of job functions with experience only in a single language (R). Indeed, even entry level R users may tread into ""unicorn"" territory. Current standards for data scientist job descriptions and salaries do not accommodate this nuance, leaving both job-seekers and hiring managers unable to distinguish job requirements which should be read as warning signs from listings which are idyllic matches for the modern R unicorn. In this talk, we present data aggregated from several large compensation analytics companies which summarize current benchmarks for data science job descriptions and corresponding salary ranges. We then suggest job description language to target modern R users, considering both job duty compatibility and job post findability. These descriptions are presented with likely salary range pairings. Attention is given to deviations from traditional degree requirements, years of experience, and demands for multiple programming language literacy which may lack relevance for the R unicorn. Our overarching goal is to provide job description templates which encourage optimal matchmaking between R job seekers and organizations in need of their talents.</span></p> </div></div></p></details><br>
@@ -720,16 +721,16 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Auto-magic package development: Building an R API for building Vega-Lite Specs**
-<br>by Alicia Schep
-<br>Materials:
+<br>by Alicia Schep, [twitter](https://twitter.com/AliciaSchep)
+<br>Materials: [slides](https://docs.google.com/presentation/d/e/2PACX-1vRUDiM3DaPjYP5b1BafSraf8GWwJk_jy6YV_l9lZgeBVwKDSfqiHcTn8M-Qm-6U7frMX7SLqQthJxah/pub?start=false&loop=false&delayms=3000&slide=id.p)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Vega-lite is a high-level grammar of interactive graphics implemented in Javascript; it renders interactive visualizations in the browser based on a JSON specification. In Python and Javascript, the Altair and vega-lite-api packages have demonstrated how the development of APIs to build Vega-Lite graphics can be partially automated based on the Vega-Lite JSON schema, which describes the required format for a Vega-Lite JSON specification. This talk will describe the development of the ‘vlbuildr’ package for building Vega-Lite specifications in R and the ‘vlmetabuildr’ package for building the ‘vlbuildr’ package. The ‘vlbuildr’ package seeks to provide a pipe-friendly, “R-like” functional interface for building up simple to complex specifications for Vega-Lite graphics, which can in turn be rendered as an HtmlWidget by the ‘vegawidget’ R package. Building such an API in a fully automated way from the Vega-Lite schema presents considerable challenges, so the approach taken here was to rely on partial automation. Human judgement dictates the basic contours of the API, such as what groups of functions to include and how various types of building blocks will go together. The part that is automated is filling in many details such as the different variants of a group of functions, the exact parameters needed for each function, and the documentation of those parameters -- the parts that would be extremely tedious to port over!</span></p> </div></div></p></details><br>
 
 
 **Bridging the gap between SQL and R: Introducing queryparser and tidyquery**
-<br>by Ian Cook
-<br>Materials:
+<br>by Ian Cook, [twitter](https://twitter.com/ianmcook)
+<br>Materials: [github](https://github.com/ianmcook/rstudioconf2020), [slides (pdf)](https://github.com/ianmcook/rstudioconf2020/blob/master/bridging_the_gap_between_sql_and_r.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Like it or not, SQL is the closest thing we have to a universal language for working with structured data. Celebrating its 50th birthday in 2020, SQL today integrates with thousands of applications and has millions of users worldwide. Data analysts using SQL represent a large audience of potential R users motivated to expand their data science skills. But learning R can be frustrating for SQL users. One major frustration is the inability to directly query R data frames with SQL SELECT statements. Eager to use R for tasks that are not possible with SQL (like data visualization and machine learning), these users are dismayed to find that they must first learn an unfamiliar syntax for data manipulation. The popularity of the sqldf package (which automatically exports an R data frame into an embedded database, then runs a SQL query on it) demonstrates this frustration. But now there is a way to directly query an R data frame without moving the data out of R. In this talk, I introduce tidyquery, a new R package that runs SQL queries directly on R data frames. tidyquery is powered by dplyr and by queryparser, a new pure-R, no-dependency SQL query parser.</span></p> </div></div></p></details><br>
@@ -744,7 +745,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Advances in tidyeval**
-<br>by Lionel Henry
+<br>by Lionel Henry, [twitter](https://twitter.com/_lionelhenry)
 <br>Materials: [slides](interactivity-and-programming-in-the-tidyverse_Lionel-Henry/interactivity-programming.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -755,8 +756,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **`livecode`: broadcast your live coding sessions from and to RStudio**
-<br>by Colin Rundel
-<br>Materials:
+<br>by Colin Rundel, [twitter](https://twitter.com/rundel)
+<br>Materials: [repo](https://github.com/rundel/Presentations/tree/master/RStudioConf2020), [slides](http://rundel.github.io/Presentations/RStudioConf2020/RStudioConf2020.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In this talk we will demonstrate `livecode`, a new R package for broadcasting code for live code demonstrations. This package implements a simple webserver (using `httpuv`) to dynamically publishes the content of a code file (i.e. `.R` or `.Rmd`) as you edit it live. This enables your students to have near realtime access to your code as you write it. The broadcast file can be viewed with any webbrowser but the package is specifically designed to be used within RStudio leveraging its builtin viewer. This gives students have direct access to the shared code within the IDE, allowing direct copying into their own source files and/or the console and thereby improving their ability to interact and experiment with your code.</span></p> </div></div></p></details><br>
@@ -771,7 +772,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Course Material Creation in the R Ecosystem**
-<br>by Kelly Bodwin
+<br>by Kelly Bodwin, [twitter](https://twitter.com/KellyBodwin)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -779,7 +780,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Data Science for Software Engineers: busting software myths with R**
-<br>by Yim Register
+<br>by Yim Register, [twitter](https://twitter.com/yimregister)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -787,23 +788,23 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Learn to teach, for goodness sake.**
-<br>by Mike K Smith
-<br>Materials:
+<br>by Mike K Smith, [twitter](https://twitter.com/MikeKSmith)
+<br>Materials: [slides (pdf)](https://github.com/MikeKSmith/RStudioConf2020/blob/master/Learn%20to%20teach_MikeKSmith.pdf), [github](https://github.com/MikeKSmith/RStudioConf2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Even though I’ve completed 4 marathons, you certainly shouldn’t come to me for a training plan on how to achieve your goals for any race you’re about to run. So why do we often turn to “experienced R users” to help us learn R or train an organization? The RStudio certified trainers have been taught modern, evidence-based teaching practices which they use in planning training sessions in order to help delegates achieve THEIR learning goals effectively in a given time-frame. My talk will illustrate some of these teaching concepts and how, by becoming a certified trainer, you can help others learn about R more effectively.</span></p> </div></div></p></details><br>
 
 
 **Learning by Teaching: Mentoring at the R4DS Online Learning Community**
-<br>by Jon Harmon
-<br>Materials:
+<br>by Jon Harmon, [twitter](https://twitter.com/JonTheGeek)
+<br>Materials: [slides](https://bit.ly/r4dsrstudio2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">I host a weekly R Office Hour on the R4DS Online Learning Community Slack. By doing so, I have learned more about R than I ever would have thought. Here I'll present concrete examples of how R users can participate in the R community to expand their skills. R users of all skill levels can develop their skills by helping one another learn. Committing to help people with their coding challenges leads to exploration of answers in areas you might otherwise not examine.</span></p> </div></div></p></details><br>
 
 
 **Peer review in data science courses**
-<br>by Therese Anders
+<br>by Therese Anders, [twitter](https://twitter.com/thereanders)
 <br>Materials: [:zap: slides](http://therese.rbind.io/software/)  [:package: package](https://rundel.github.io/ghclass/index.html)  [:octocat: github](https://github.com/thereseanders)
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -811,7 +812,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **The Five Principles of Data Science Education**
-<br>by Hunter Glanz
+<br>by Hunter Glanz, [twitter](https://twitter.com/hglanz)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
@@ -819,32 +820,32 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **TidyBlocks: using the language of the tidyverse in a blocks-based interface**
-<br>by Maya Gansa
-<br>Materials:
+<br>by Maya Gansa, [twitter](https://twitter.com/Mayacelium)
+<br>Materials: [video](https://vimeo.com/350227891)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">As an intern at RStudio, I developed a blocks-based coding language mimicking the verb-driven programming of the tidyverse. Blocks-based coding environments are a popular way to introduce programming to novices. Instead of typing in code, users click blocks together to create loops, conditionals, and expressions. Studies have shown that students are more successful and more interested in coding when introduced through a block-based language like Scratch or Snap! rather than a text-based language. However, it's much easier to express control flow with these tools than to manipulate data: adding 1 to a variable requires several steps, and there are no built-in capabilities for working with tabular data. On the other hand, R's tidyverse libraries provide a predictable, consistent grammar for doing these tasks. As an intern at RStudio, I developed a blocks-based coding language mimicking the verb driven programming of the tidyverse. Tabular data can be imported and transformed using verbs like filter, select, and summarize, and functions can be strung together using pipes, which users can think of as meaning ""and then"". The talk will include a demo of TidyBlocks and a description of how we're testing and improving it.</span></p> </div></div></p></details><br>
 
 
 **Making a tidy dress**
-<br>by Amelia McNamara
-<br>Materials:
+<br>by Amelia McNamara, [twitter](https://twitter.com/AmeliaM)
+<br>Materials: [slides (pdf)](http://amelia.mn/MakingATidyDress.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">After at least a year of dreaming about it, I finally produced the #rstats/#tidyverse dress of my dreams. This involved designing fabric, getting it custom printed, making a pattern from an existing garment, and sewing the dress. (https://twitter.com/AmeliaMN/status/1162359039784673282?s=20) I learned a lot of useful lessons during this project, including ""do unit tests"" (make a practice dress) and ""document your work"" (get your BFF to take pictures of you).</span></p> </div></div></p></details><br>
 
 
 **Datasets in Reproducible Research with 'pins'**
-<br>by Javier Luraschi
-<br>Materials:
+<br>by Javier Luraschi, [twitter](https://twitter.com/javierluraschi)
+<br>Materials: [rpubs article](https://rpubs.com/jluraschi/strange-downloads)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Open source code is an essential piece in making science reproducible. Tools like 'rmarkdown' and GitHub facilitate running and sharing outcomes with colleagues and with the broad scientific community at large. However, it is less clear what tools should be used to retrieve, store and share datasets; while it is possible to make datasets part of your workflows today, it is usually hard and we are often left with manually sharing or downloading links to datasets. Not only that, but it's also hard to share or discover datasets. In this talk we will introduce for the first time the 'pins' package. A package designed to: pin, discover and share resources. Meaning that, you can use 'pins' to simplify your data science workflows by easily fetching resources from GitHub, Kaggle, CRAN and RStudio Connect. We will present a 'pin' as a generic resource that can contain tabular datasets like CSVs, unstructured data like JSON files, image archives as ZIP files and so on. This talk will be highly interactive showing you how to get started by installing 'pins' from CRAN, retrieve and cache resources, share and discover useful and fun data resources to improve and enhance your day-to-day workflows.</span></p> </div></div></p></details><br>
 
 
 **Becoming an R blogger**
-<br>by Rebecca Barter
-<br>Materials:
+<br>by Rebecca Barter, [twitter](https://twitter.com/rlbarter)
+<br>Materials: [github](https://github.com/rlbarter/rstudio-conf-2020-blogger-slides), [slides (pdf)](https://github.com/rlbarter/rstudio-conf-2020-blogger-slides/blob/master/Becoming%20an%20R%20blogger.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Blogging is an excellent way to learn, improve your communication skills, and gain exposure in the R and data science communities. In this talk, I will discuss how and why I started blogging, and why you should too. I will guide you through choosing topics, writing your blog using RStudio and blogdown, hosting it on netlify, and sharing your blog with the world. This talk is for you if you've wanted to start a blog on R, data science, or to showcase your data analyses, but don't know where to start.</span></p> </div></div></p></details><br>
@@ -868,28 +869,35 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Sound annotation with Shiny and wavesurfer**
-<br>by Athos Damiani
-<br>Materials:
+<br>by Athos Damiani, [twitter](https://twitter.com/athos_damiani)
+<br>Materials: [slides](https://athospd.github.io/rstudio-conf-2020/index.html#1)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">We observed a huge improvements of Machine Learning tools but the main effort were to help at post annotated dataset step. We still struggle to build a trusty pipeline to make these annotations. The package wavesurfer brings to R users the ability to annotate audio files with ease and reliability, exploring the friendly user interface of Shiny to make this hard and laborious part of the project more joyful and efficient.</span></p> </div></div></p></details><br>
 
 
 **Every voice matters: An analysis of @WeAreRLadies**
-<br>by Katherine Simeon
-<br>Materials:
+<br>by Katherine Simeon,
+<br>Materials: [slides (pdf)[(https://github.com/katherinesimeon/WeAreRLadies-text-data/blob/master/slides/2020-01-30-rstudioconf.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">As a rotating curation, @WeAreRLadies is a twitter account that has a different curator (i.e., tweeter) each week with a mission to highlight female and minority genders and their work in R. So far, curators have tweeted from 18 different countries and represent a variety of domains and levels of R expertise, ranging from R novices to those developing their own packages. With 45 R-Ladies curators to date, the account has become a popular R-related twitter resource, gaining more than 13,000 followers in the past year and hundreds of interactions each week. This talk will present a text analysis and reflection on over a year of Twitter text data from @WeAreRLadies. As the founder and maintainer of this account, I witness firsthand the bidirectional relationship between one’s learning journey and their use of R. In this talk, I will attempt to quantify this through a text analysis that explores how one’s experiences learning and using R relates to how they talk (or tweet) about it. By analyzing tweet text as well as other metrics provided by twitter (e.g., number of likes, replies, and clicks), I will showcase different ways curators have engaged with the R Twitter community and explore how account engagement has changed as the number of curators and followers continue to grow. I will also discuss how curators’ different areas of expertise have resulted in tweets and discussions that both demonstrate the variety of tools available in R, and spotlight unifying ideas and best practices in R programming. Finally, I will reflect on lessons learned and future directions for @WeAreRLadies, as well as its contribution to the R-Ladies Global initiative. Overall, this talk will discuss how diverse perspectives of @WeAreRLadies curators have enriched the conversations in the R Twitter community by validating different learning journeys and by promoting and amplifying underrepresented voices.</span></p> </div></div></p></details><br>
 
 
 **Lessons about R I learned from my cat**
-<br>by Amanda Gadrow
+<br>by Amanda Gadrow, [twitter](https://twitter.com/ajmcoqui)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Forming good development habits for R projects is pretty straight-forward if you follow the lessons I've learned from my cat, whose advice includes ""be lazy"", ""keep your claws sharp"", and ""land on your feet"". Attendees of this talk will learn how to make life easier on colleagues and their future selves by using simple software engineering best practices to build their current projects. Each point will come with cat photos and code samples, the two best parts of the Internet!</span></p> </div></div></p></details><br>
 	
+
+**Sliding Windows and Calendars**
+<br>by Davis Vaughan, [twitter](https://twitter.com/dvaughan32)
+<br>Materials: [slides[(https://davisvaughan.github.io/rstudio-conf-2020/lightning-talk.pdf)
+<br>🎥:
+
+
 ### 1445, Career Advice Panel	
 	
 
@@ -905,8 +913,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **NSSD Episode 100**
-<br>by Roger Peng, Hilary Parker
-<br>Materials:
+<br>by Roger Peng [twitter](https://twitter.com/rdpeng), Hilary Parker [twitter}(https://twitter.com/hspter)
+<br>Materials: [podcast episode](http://nssdeviations.com/100-live-from-rstudio-conf-2020)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">In episode 100 of Not So Standard Deviations, the first ever episode prepared in advance, Hilary and Roger discuss creativity, its role in data science, and how it can be fostered through conversation. Also, follow up on coffee and oat milk.</span></p> </div></div></p></details><br>
@@ -939,8 +947,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Highlights from the Shiny Developer Community**
-<br>by Eric Nantz
-<br>Materials: [rpodcast.shinyapps.io/highlights-shiny](https://rpodcast.shinyapps.io/highlights-shiny)
+<br>by Eric Nantz, [twitter](https://twitter.com/theRcast)
+<br>Materials: [website](https://shinydevseries.com/), [rpodcast.shinyapps.io/highlights-shiny](https://rpodcast.shinyapps.io/highlights-shiny)
 <br>
 
 
@@ -975,7 +983,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Leverage GPU computation in R using Pytorch**
-<br>by van vincent
+<br>by Van Vincent
 <br>Materials:
 <br>
 
@@ -1053,7 +1061,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Using R to analyze, understand, and communicate tidal wetland data**
-<br>by Kim Cressman
+<br>by Kim Cressman, [twitter](https://twitter.com/swmpkim)
 <br>Materials: [https://github.com/swmpkim/rstudioconf2020_eposter](https://github.com/swmpkim/rstudioconf2020_eposter)
 <br>
 
@@ -1089,8 +1097,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Visualizing zillions of features**
-<br>by Alan Dipert
-<br>Materials:
+<br>by Alan Dipert, [twitter](https://twitter.com/alandipert)
+<br>Materials: [poster (pdf)](https://tailrecursion.com/~alan/documents/2020-01-28-RStudio-Conf-Integration-Testing-ePoster.pdf)
 <br>
 
 
