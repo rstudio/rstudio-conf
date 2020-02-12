@@ -686,7 +686,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Small Team, Big Value: Using R to Design Visualizations**
 <br>by Ian Lyttle
-<br>Materials:
+<br>Materials: [slides](https://speakerdeck.com/ijlyttle/small-team-big-value-using-r-to-design-visualizations)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Many R users can feel isolated due to the prevalence of Python or Tableau at their institutions. This talk will focus on how we use R to develop reference implementations of visualizations (using ggplot2), and to develop corporate-themed color maps (using the colorspace package) to bring value to the entire institution. Color maps can be translated into variety of formats, for Tableau, Qlik Sense, d3, etc., and deployed independently from R. For visualizations, our goal is to translate ggplot2 objects to Vega-Lite specifications, using a package we are developing: ggvega. Vega-Lite visualizations are web-native, and are rendered independently from R. Specifications can be designed to be extensible to new data, allowing them serve as templates, to be deployed and updated for use outside of R. Of course, despite isolation within an institution, our work with the larger R open-source communities provides a foundation on which to build; in fact, we have a lot of company and are having a lot of fun.</span></p> </div></div></p></details><br>
