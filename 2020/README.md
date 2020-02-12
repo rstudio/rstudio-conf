@@ -49,7 +49,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Data, visualization, and designing with AI**
-<br>by Fernanda Viegas, Martin Wattenber
+<br>by Fernanda Viegas [twitter](twitter.com/viegasf), Martin Wattenber [twitter](twitter.com/wattenberg)
 <br>Materials:
 <br>🎥:
 <details><summary>Abstract</summary>
