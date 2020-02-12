@@ -616,7 +616,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Best practices for programming with ggplot2**
 <br>by Dewey Dunnington
-<br>Materials:
+<br>Materials: [slides](https://fishandwhistle.net/slides/rstudioconf2020/), [vigette](https://ggplot2.tidyverse.org/dev/articles/ggplot2-in-packages.html)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The ggplot2 package is widely acknowledged as a powerful, dynamic, and easy-to-learn graphics framework when used in an interactive environment. Using ggplot2 in a package or Shiny app environment adds several constraints which are sometimes circumvented using ggplot2 behaviour that may change in the future. Some best practices include (1) using the `.data` pronoun to refer to the layer data within `aes()` and `vars()` instead of the original variable name, (2) ensuring that `plot()` methods that use ggplot2 explicitly `print()` one or more ggplot objects, (3) defining extension themes that modify a complete theme within ggplot2 (like `theme_gray()`), and (4) testing graphical output using the vdiffr package. Collectively, these practices result in better error messages with unexpected user input and ensure compatibility with most versions of ggplot2, including those to come in the future.</span></p> </div></div></p></details><br>
