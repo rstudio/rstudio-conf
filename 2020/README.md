@@ -333,6 +333,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 **Journalism with RStudio, R, and the tidyverse**
 <br>by Larry Fenn
 <br>Materials: [slides (pptx)](misc-materials/larry_fenn_rconf.pptx)
+<br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The Associated Press data team primarily uses R and the tidyverse as the main tool for doing data processing and analysis. In this talk, some of the technology behind the published stories will be showcased: - Using dbplyr to work off a hosted database containing 380 million opioid records to identify ""pill mills"". - Using open-sourced AP style templates for R Markdown and ggplot to quickly produce graphics and reports off breaking news. - Using R Markdown and htmlwidgets to give reporters and editors interactive reports to identify reporting leads.</span></p> </div></div></p></details><br>
 
