@@ -196,7 +196,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **If you build it, they will come...but then what? Facilitating communities of practice in R**
 <br>by Kate Hertweck
-<br>Materials:
+<br>Materials: [slides (pdf)](communities-of-practice-Kate-Hertweck/Hertweck_rstudioconf2020.pdf)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Why did you learn R? Chances are good that if you're an attendee of rstudio::conf, you've found a community of R coders who are willing to share their knowledge and learn with you. While it's possible to develop expert R coding skills in isolation, most software development and data analysis projects benefit from groups of people working collaboratively, and R communities are unparalleled in their inclusivity and commitment to learning collectively. Such communities, whether they support R coders at a single institution, geographic region, or online, require deliberate planning and effort to develop and sustain. How do you create a group culture that encompasses R users of various skill levels who may be working on diverse problems? How do you assess what members of a community need or prefer? How do you encourage investment and cohesion so the group will sustain itself? This talk will describe potential pitfalls and impediments to creating and facilitating cooperative learning communities for R coding, and will allow you to identify potential strategies for overcoming these challenges so you can continue giving back to the R communities that supported you along the way.</span></p> </div></div></p></details><br>
