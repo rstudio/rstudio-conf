@@ -1054,7 +1054,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Using R to analyze, understand, and communicate tidal wetland data**
 <br>by Kim Cressman
-<br>Materials:
+<br>Materials: [https://github.com/swmpkim/rstudioconf2020_eposter](https://github.com/swmpkim/rstudioconf2020_eposter)
 <br>
 
 
