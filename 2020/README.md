@@ -941,7 +941,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Highlights from the Shiny Developer Community**
 <br>by Eric Nantz
-<br>Materials:
+<br>Materials: [rpodcast.shinyapps.io/highlights-shiny](https://rpodcast.shinyapps.io/highlights-shiny)
 <br>
 
 
