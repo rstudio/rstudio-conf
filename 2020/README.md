@@ -246,7 +246,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Rpanda trading simulation - from an idea to a multi-user shiny app**
 <br>by Nima Safaian
-<br>Materials:
+<br>Materials: [github](https://github.com/bigdatalib/rstudioConference20/), [slides](https://bigdatalib.shinyapps.io/project)
 <br>🎥:
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The idea of rpanda commodities trading simulation was many years in the making. As energy trading professionals working in the industry, we had developed insights around how to make risk/reward market calls, and what skills make someone an exceptional commodities trader. Traders are one of the most expensive seats in terms of monetizing value from the assets. We developed rpanda as a simulated environment which replicates closely how real-life physical commodities trading works in order to assist talent development and selection, both in academics and enterprise. My co-founder and I did not know how to design production-ready software, but we always had used R/Shiny for market analysis in our corporate jobs. Rather than hiring expensive app developers, we decided to do it ourselves. We used Rstudio development stack such as Rstudio Connect and open source tools, like plumber to turn our idea into a production-ready app that is used by University of Alberta classes. In this presentation, we share our journey, technical challenges, and how we overcame them.</span></p> </div></div></p></details><br>
