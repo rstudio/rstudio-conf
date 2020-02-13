@@ -988,8 +988,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **mapdeck - more than a map**
-<br>by David Cooley
-<br>Materials:
+<br>by David Cooley, twitter: [@_davecooley](https://twitter.com/_davecooley) and [@SymbolixAU](https://twitter.com/symbolixAU)
+<br>Materials: [poster](https://resources.symbolix.com.au/2020/01/29/rstudioconf2020/), [package-github](https://github.com/SymbolixAU/mapdeck)
 <br>
 
 
