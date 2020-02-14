@@ -1025,13 +1025,13 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Tidy Eval for Wide Datasets**
 <br>by L. D. Nicolas May
-<br>Materials:
+<br>Materials: 
 <br>
 
 
 **Transparency in Evaluation of Machine Learning Models**
-<br>by Andy Troiano
-<br>Materials:
+<br>by Andy Troiano [twitter](https://twitter.com/andytroiano)
+<br>Materials: [poster](https://gridiron-media.s3.us-east-2.amazonaws.com/r_studio_conf/e_poster.html), [website](https://gridironai.com/football/)
 <br>
 
 
