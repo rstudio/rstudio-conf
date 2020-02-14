@@ -970,8 +970,8 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Introducing R to teenagers - A learnr experience**
-<br>by Ezgi Karaesmen
-<br>Materials:
+<br>by Ezgi Karaesmen, [website](https://www.ezgikaraesmen.com/), [twitter](https://twitter.com/e_Karaesmen)
+<br>Materials: [tutorial](https://suchestoncampbell-lab.shinyapps.io/SummerCamp2019/), [code for tutorial](https://github.com/karaesmen/SummerCamp2019/tree/master/tutorial), [code for eposter](https://github.com/karaesmen/SummerCamp2019/tree/master/eposter)
 <br>
 
 
