@@ -1037,7 +1037,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Using Amazon Web Services in R with the Paws Package**
 <br>by Adam Banker
-<br>Materials:
+<br>Materials: [poster](https://github.com/paws-r/presentations/blob/master/20200128_RStudio_Conference/rstudio_conf_e_poster_2020.pdf), [github](https://github.com/paws-r/paws), [website](https://paws-r.github.io/)
 <br>
 
 
