@@ -178,7 +178,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Asynchronous programming in R**
 <br>by Winston Chang, [twitter](https://twitter.com/winston_chang)
-<br>Materials:
+<br>Materials: [repo](https://github.com/rstudio/rstudio-conf/tree/master/2020/Async-programming-later_Winston-Chang)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/asynchronous-programming-in-r-winston-chang)
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block"">Writing regular R code is straightforward: you tell R to do something, it does it, and then it returns control back to you. This is called synchronous programming. However, if you use R to coordinate threads, processes, or network communication, the regular model may be unable to do what you want, or it may only be able to do it with a significant performance penalty. In this talk I'll explain how <span style=""font-style: italic;"">asynchronous</span> programming with the <span style=""font-weight: bold;"">later</span> package can handle these kinds of programming problems. I'll also show how to provide a synchronous interface for asynchronous code, so that users will have a simple, familiar way to use your code.</p> </div></div></p></details><br>
