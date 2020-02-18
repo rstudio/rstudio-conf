@@ -33,6 +33,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 # Conference Sessions
 
+[rstudio::conf 2020 website and agenda](https://cvent.me/4yPnw)
 
 ## Day 1, 2020-01-29	
 ### 0900 Keynote 	
