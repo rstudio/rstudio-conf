@@ -924,7 +924,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Communicating public health data with Shiny: West Nile virus risk, school vaccination rates, health equity, and more**
 <br>by Hannah Steinberg
-<br>Materials:
+<br>Materials: [poster](https://github.com/hsteinberg/presentations), [Shiny apps](https://ccdphcd.shinyapps.io/home/)
 <br>
 
 
