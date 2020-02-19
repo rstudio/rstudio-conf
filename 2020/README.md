@@ -231,7 +231,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **15 Years of R in Quantitative Finance**
 <br>by Brandon Farr, [LinkedIn](https://www.linkedin.com/in/brandon-farr-1574623)
-<br>Materials:
+<br>Materials: [slides (pdf)](misc-materials/rsc2020 - 15 Years of R in Quantitative Finance.pdf)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/15-years-of-r-in-quantitative-finance-brandon-farr)
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Use of R in the investment industry is established and growing. This talk will discuss changes seen in 15 years of practice within asset management firms. I hope discussion of lessons learned and recommendations will benefit those currently in finance and those interested in hearing how the flexibility of R manifests in the financial world.</span></p> </div></div></p></details><br>
