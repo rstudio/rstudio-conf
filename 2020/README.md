@@ -231,7 +231,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **15 Years of R in Quantitative Finance**
 <br>by Brandon Farr, [LinkedIn](https://www.linkedin.com/in/brandon-farr-1574623)
-<br>Materials: [slides (pdf)](misc-materials/rsc2020 - 15 Years of R in Quantitative Finance.pdf)
+<br>Materials: [slides (pdf)](misc-materials/rsc2020-15-Years-of-R-in-Quantitative-Finance.pdf)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/15-years-of-r-in-quantitative-finance-brandon-farr)
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Use of R in the investment industry is established and growing. This talk will discuss changes seen in 15 years of practice within asset management firms. I hope discussion of lessons learned and recommendations will benefit those currently in finance and those interested in hearing how the flexibility of R manifests in the financial world.</span></p> </div></div></p></details><br>
@@ -531,7 +531,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Forecasting Platelet Blood Bag Demand to Reduce Inventory Wastage at the Stanford Blood Center**
 <br>by Qian Zhao
-<br>Materials: [slides (pdf)](misc-materials/rsc2020 - 15 Years of R in Quantitative Finance.pdf)
+<br>Materials: [slides(pdf)](misc-materials/platelet-qian.pdf)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/forecasting-platelet-blood-bag-demand-to-reduce-inventory-wastage-at-the-stanford-blood-center-emily-guthrie-qian-zhao-chelsea-king)
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">The Stanford Blood Center collects and distributes blood products to Stanford Hospital. One of these is platelets, a vital clot-forming blood component with a limited shelf life of a few days. Previous work (Guan et al. , 2017) formulated an optimization problem using features aggregated from the available data to solve the problem of reducing waste. An R package was created for a three-day ordering strategy but has not been put into production due to lack of human trust in modelling accuracy. In summer 2019, the Stanford Data Science for Social Good team, decided to make use of additional patient-level data and models to predict platelet consumption rather than relying solely on aggregated data. Modeling the transfusion recipients into different subpopulations allows for finer-grained predictions on a patient level. We make extensive use of R packages, such as the tidyverse and R Shiny, to conduct exploratory data analysis, build models, and create a user-intuitive dashboard. The Shiny dashboard is designed to display consumption predictions aggregated across all models, consumption predictions for each subpopulation, and historical performance of the model, thereby serving as a valuable tool in building the trust necessary for adopting the algorithmic ordering strategies. Reference Guan, L., Tian, X., et al. (2017). “Big data modeling to predict platelet usage and minimize wastage in a tertiary care system.” PNAS (43) 114: 11368 - 11373. Retrieved from: www.pnas.org/cgi/doi/10.1073/pnas.1714097114</span></p> </div></div></p></details><br>
