@@ -230,7 +230,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **15 Years of R in Quantitative Finance**
-<br>by Brandon Farr
+<br>by Brandon Farr, [LinkedIn](https://www.linkedin.com/in/brandon-farr-1574623)
 <br>Materials:
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/15-years-of-r-in-quantitative-finance-brandon-farr)
 <details><summary>Abstract</summary>
