@@ -298,7 +298,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Production-grade Shiny Apps with golem**
-<br>by Colin Fay, [twitter](https://twitter.com/_ColinFay)
+<br>by Colin Fay, [twitter](https://twitter.com/_ColinFay) & Vincent Guyader [twitter](https://twitter.com/VincentGuyader)
 <br>Materials: [slides](https://speakerdeck.com/colinfay/rstudio-conf-2020-production-grade-shiny-apps-with-golem), [github repo, golem: A Framework for Buildilng Robust Sniny Apps](https://github.com/ThinkR-open/golem)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/production-grade-shiny-apps-with-golem-colin-fay)
 <details><summary>Abstract</summary>
