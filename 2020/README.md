@@ -965,9 +965,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 
 **Introducing {gs}: a grammar of recurring calendar events**
-<br>by James Laird-Smith
-<br>Materials:
-<br>
+<br>by James Laird-Smith, [website](https://www.jameslairdsmith.com/), [twitter](https://twitter.com/JLS_DataScience)<br>Materials: [eposter](https://jameslairdsmith.github.io/gs_eposter/), [repo](https://github.com/jameslairdsmith/gs_eposter)
 
 
 **Introducing R to teenagers - A learnr experience**
