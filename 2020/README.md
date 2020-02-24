@@ -382,7 +382,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Toward a grammar of psychological experiments**
 <br>by Danielle Navarro, [twitter](https://twitter.com/djnavarro)
-<br>Materials: [slides](https://slides.com/djnavarro/rstudioconf2020#/)
+<br>Materials: [slides](https://slides.com/djnavarro/rstudioconf2020#/), [package](https://github.com/djnavarro/jaysire)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/toward-a-grammar-of-psychological-experiments-danielle-navarro)
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Why does a psychological scientist learn a programming language? While motivations are many and varied the two most prominent are data analysis and data collection. The R programming language is well placed to address the first need, but there are fewer options for programming behavioural experiments within the R ecosystem. The simplest experimental designs can be recast as surveys, for which there are many options, but studies in cognitive psychology, psychophysics or developmental psychology typically require more flexibility. In this talk I outline the design principles behind xprmntr, an R package that provides wrappers to the a javascript library (jsPsych) for constructing web based psychology experiments and uses the plumber package to call server side R code as needed. In doing so, I discuss limitations to the current implementation and what a ""grammar of experiments"" might look like.</span></p> </div></div></p></details><br>
