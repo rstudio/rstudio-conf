@@ -205,7 +205,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **Embracing R in the Geospatial Community**
 <br>by Tina Cormier, [twitter](https://twitter.com/TinaACormier)
-<br>Materials: [slides (pdf)](https://github.com/tacormier/rstudio-conf-2020/blob/master/presentation_pdf/Rstudio2020_Cormier_Rgeo.pdf)
+<br>Materials: [slides (pdf)](https://github.com/tacormier/rstudio-conf-2020/blob/master/presentation_pdf/Rstudio2020_Cormier_Rgeo.pdf), [github-repo](https://github.com/tacormier/rstudio-conf-2020)
 <br>🎥: [recording](https://resources.rstudio.com/rstudio-conf-2020/embracing-r-in-the-geospatial-community-tina-cormier)
 <details><summary>Abstract</summary>
 <p><div class=""ag87-crtemvc-hsbk""><div class=css-zuif4x><p class=""carina-rte-public-DraftStyleDefault-block""><span style=""color: rgb(0,0,0);"">Geospatial analysts work in a wide range of positions within almost every industry. They work in government, non-profit, academic, and private institutions using geospatial data and technology to answer questions about the environment, agriculture, climate, urban planning and design, marketing, public health, transportation, and myriad other topics. A typical day may include data prep/cleaning, field work, cartography, image analysis, vector analysis, feature engineering, modeling, or database management. This diverse group necessarily uses a diverse set of tools. In this talk, we will explore how R fits into the spatial analyst’s toolkit. What does the geo community think of R? Who uses it? What groups avoid it? What geo-packages are used most? How can we, as a community, make R more appealing for geospatial scientists?</span></p> </div></div></p></details><br>
