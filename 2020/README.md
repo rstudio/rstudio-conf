@@ -1000,7 +1000,7 @@ What They Forgot to Teach You about R Workshop	|	Kara Woo, Jenny Bryan, Jim Hest
 
 **R for Equity-Focused Improvement: Using R Markdown, Shiny, and GGPlot to Empower Education Leaders in California**
 <br>by Adriana Rodriguez
-<br>Materials:
+<br>Materials: [poster] (https://github.com/adriana-ro/rstudio_conf_2020/blob/master/rstudio_conf_2020_poster.pdf)
 <br>
 
 
