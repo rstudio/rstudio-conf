@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+a, a > code {
+  color: #D55E00FF;
+    text-decoration: none;
+}
+em {
+  color: #348B84;
+  font-style: normal;
+  font-family: 'bagnard';
+}
+del {
+  color: #E5E5E5;
+    text-decoration: none;
+  font-weight: normal;
+}
+.inverse del {
+  color: #6C7B7F;
+}
+.bg-beige{
+  background-color: rgba(232, 232, 216, 0.9);
+}
+.large { font-size: 175% }
+.hide-count .remark-slide-number {
+  display: none;
+}
+.text-poster {
+  font-family: 'Cinzel', serif;
+}
+.inverse {
+  color: #b9bfca;
+    background-color: #282D35
+}
+.inverse.remark-slide-number {
+  color: #b9bfca;
+}
+.remark-code-line-highlighted {
+  color: #D55E00FF;
+    background-color: transparent;
+}
+.remark-inline-code {
+  color: #b9bfca;
+}
+#starting-an-r-bookclub-cooking-up-friendships-in-isolation {
+  font-family: 'bagnard';
+  color: #348B84;
+}
+@font-face {
+  font-family: 'bagnard';
+  src:local("bagnard.otf");
+}
+.bkgimg {
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.title-box {
+  padding: 10px !important;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+}
+.cover{
+  background-color: #CECCB1;
+}
+#cover-img {
+  width: 50%;
+}
+.right-align {
+  text-align: right;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: #348B84;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+h1,h2,h3 {
+  color: #EE2B00;
+  font-family: 'Poiret One';
+  text-transform: uppercase;
+}
+
+#collab:hover {
+   color: #348B84 !important;
+}
+
+.wrapper-three {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+  grid-gap: 30px;
+  padding: 50px;
+  padding-top: 20%;
+}

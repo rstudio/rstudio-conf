@@ -1,0 +1,212 @@
+---
+title: "Starting an R Bookclub: Cooking up Friendships in Isolation"
+author: "Maya Gans"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: [css/xaringan-themer.css, css/styles.css]
+    nature:
+      titleSlideClass: ["bottom", "left"]
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(highlight = TRUE)
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+mono_light(
+  white_color = "#fff",
+  header_font_google = google_font("Poiret One", "600"),
+  text_font_google = google_font("Josefin Sans", "300", "300i"),
+  code_font_google = google_font("Fira Code"),
+  text_font_size = "24px",
+  code_font_size = "1.2em"
+)
+opaque_box <- function(x) {
+  htmltools::tags$div(
+    class = "f1 bg-beige pa6 shadow-3 h-75 title-box",
+    htmltools::tags$h1(htmltools::tags$em(x))
+  )
+}
+```
+
+class: hide-count, cover
+
+.right-align[
+# Starting an R Bookclub: Cooking up Friendships in Isolation
+Maya Gans <br/>
+<a href="https://twitter.com/Mayacelium">@Mayacelium</a><br/>
+Slides: <a href="bit.ly/r4dsbookclub">bit.ly/r4dsbookclub</a>
+]
+
+<img src="img/cover.png" style="width:35%;position: absolute;bottom: 40px;">
+
+
+---
+
+class: center, middle, hide-count bkgimg
+background-image: url(img/bkg-8.png)
+background-size: cover
+
+`r opaque_box("Developing a Dish")`
+
+---
+
+class: cover
+
+---
+
+class: center, middle, hide-count bkgimg
+background-image: url(img/bkg-3.png)
+background-size: cover
+
+`r opaque_box("Essential Ingredients")`
+
+---
+
+class: cover
+
+<img src="img/artdeco-1.png" style="width:20%;position: absolute;top: 25px;left:250px;"></img>
+<img src="img/artdeco-1.png" style="width:20%;position: absolute;bottom: 25px;right:250px;transform: rotate(180deg)"></img>
+
+<div style="border:solid 5px #EE2B00;left:5%;top:20%;text-align:center;padding:20px;width:50%;position:absolute;"><h1>A Microcosm <br> in the Macrocosm</h1></div>
+
+<div style="border:solid 5px #EE2B00;right:5%;bottom:20%;text-align:center;padding:20px;width:50%;position: absolute;"><h1>Async compatible</h1></div>
+
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-4.png)
+background-size: cover
+
+`r opaque_box("Experimenting <br> with Flavors")`
+
+---
+
+class: cover
+
+<img src="img/artdeco-2.png" style="width:10%;position: absolute;top: 130px;right:100px;"></img>
+<img src="img/artdeco-2.png" style="width:10%;position: absolute;top: 130px;right:250px;"></img>
+<img src="img/artdeco-2.png" style="width:10%;position: absolute;top: 130px;right:400px;"></img>
+
+<div style="border: solid 5px #EE2B00;
+    text-align: center;
+    position: absolute;
+    padding: 50px;
+    top: 20%;
+    left: 10%;"><h1>Reviewing</h1></div>
+
+<img src="img/arrow.png" style="width:10%;position: absolute;top:50%;left:45%;"></img>
+
+<img src="img/artdeco-3.png" style="width:10%;position: absolute;bottom: 140px;left:100px;transform: rotate(180deg)"></img>
+
+<img src="img/artdeco-3.png" style="width:10%;position: absolute;bottom: 140px;left:245px;transform: rotate(180deg)"></img>
+
+<img src="img/artdeco-3.png" style="width:10%;position: absolute;bottom: 140px;left:390px;transform: rotate(180deg)"></img>
+
+<div style="border: solid 5px #EE2B00;
+    text-align: center;
+    position: absolute;
+    padding: 50px;
+    top: 40%;
+    left: 60%;"><h1>Creating</h1></div>
+
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-5.png)
+background-size: cover
+
+`r opaque_box("The Secret Sauce")`
+
+---
+
+class: cover
+
+<div style="border:solid 5px #EE2B00;left:5%;top:10%;text-align:center;padding:20px;width:50%;position:absolute;"><h1>Facilitator</h1></div>
+
+<img src="img/artdeco-1.png" style="width:20%;position: absolute;top:110px;left:800px;"></img>
+
+<img src="img/artdeco-3.png" style="width:10%;position: absolute;top:255px;left:200px;transform: rotate(180deg)"></img>
+    
+<div style="border: solid 5px #EE2B00;
+    right: 5%;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    height: 45%;"><a target="_blank" href="https://github.com/r4ds/bookclub-Advanced_R"><h1 style="padding-top:50px;color:white;" id="collab">Collaborative <br> Infrastructure</h1></div>
+
+---
+
+class: cover
+
+<div style="border:solid 5px #EE2B00;left:5%;top:10%;text-align:center;padding:20px;width:50%;position:absolute;"><h1>Facilitator</h1></div>
+
+<img src="img/artdeco-1.png" style="width:20%;position: absolute;top:110px;left:800px;"></img>
+
+<img src="img/artdeco-3.png" style="width:10%;position: absolute;top:255px;left:200px;transform: rotate(180deg)"></img>
+    
+<a target="_blank" href="https://github.com/r4ds/bookclub-Advanced_R">
+<div style="border: solid 5px #EE2B00;
+    right: 5%;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    height: 45%;
+    background: url(img/github2.png);"></div>
+</a>
+    
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-6.png)
+background-size: cover
+
+`r opaque_box("A Memorable Meal")`
+
+---
+class: cover
+
+<img src="img/artdeco-2.png" style="width:10%;position: absolute;top: 110px;right:870px;"></img>
+<img src="img/artdeco-2.png" style="width:10%;position: absolute;top: 110px;right:210px;"></img>
+<img src="img/artdeco-2.png" style="width:10%;position: absolute;top: 110px;right:530px;"></img>
+
+<div class="wrapper-three">
+<div style="border:solid 5px #EE2B00;padding: 20px;">GitHub <br> Collaboration</div>
+<div style="border:solid 5px #EE2B00;padding: 20px;">RMarkdown <br> Skills</div>
+<div style="border:solid 5px #EE2B00;padding: 20px;">Presentation <br> Skills</div>
+</div>
+
+
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-21.png)
+background-size: cover
+
+`r opaque_box("Copycat Recipe")`
+
+---
+
+class: cover
+
+<div class="wrapper">
+   <img src="img/artdeco-4.png" style="width:70%;padding-top:40px;"></img>
+  <div style="padding-left:20px;padding-top:40%;">
+    <div style="border:solid 5px #EE2B00;padding: 20px;color:#EE2B00;text-align:center;">8 WORLDWIDE COHORTS</div>
+    <h1 style="color:#348B84;">DO IT YOURSELF!</h1>
+    <a href="R4DS.io/join ">R4DS</a>
+  </div>
+</div>
