@@ -91,6 +91,11 @@ h1,h2,h3 {
    color: #348B84 !important;
 }
 
+#collab {
+  padding-top:50px;
+  color:white;
+}
+
 .wrapper-three {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -100,4 +105,206 @@ h1,h2,h3 {
   grid-gap: 30px;
   padding: 50px;
   padding-top: 20%;
+}
+
+#cover {
+  width:35%;
+  position: absolute;
+  bottom:40px;
+}
+
+#artdeco-1 {
+  width:20%;
+  position:absolute;
+  top:25px;
+  left:250px;
+}
+
+#artdeco-2 {
+  width:20%;
+  position:absolute;
+  bottom:25px;
+  right:250px;
+  transform: rotate(180deg);
+}
+
+#artdeco-3 {
+  width:10%;
+  position: absolute;
+  top: 130px;
+  right:100px;
+}
+
+#artdeco-4 {
+  width:10%;
+  position: absolute;
+  top: 130px;
+  right:250px;
+}
+
+#artdeco-5 {
+  width:10%;
+  position: absolute;
+  top: 130px;
+  right:400px;
+}
+
+#artdeco-6 {
+  width:10%;
+  position: absolute;
+  bottom: 140px;
+  left:100px;
+  transform: rotate(180deg)
+}
+
+#artdeco-7 {
+  width:10%;
+  position: absolute;
+  bottom: 140px;
+  left:245px;
+  transform: rotate(180deg);
+}
+
+#artdeco-8{
+  width:10%;
+  position: absolute;
+  bottom: 140px;
+  left:390px;
+  transform: rotate(180deg);
+}
+
+#artdeco-9 {
+  width:20%;
+  position: absolute;
+  top:110px;
+  left:800px;
+}
+
+#artdeco-10 {
+  width:10%;
+  position: absolute;
+  top:255px;
+  left:200px;
+  transform: rotate(180deg);
+}
+
+#artdeco-11 {
+  width:10%;
+  position: absolute;
+  top: 110px;
+  right:870px;
+}
+
+#artdeco-12 {
+  width:10%;
+  position: absolute;
+  top: 110px;
+  right:210px;
+}
+
+#artdeco-13 {
+  width:10%;
+  position: absolute;
+  top: 110px;
+  right:530px;
+}
+
+#artdeco-14 {
+  width:70%;
+  padding-top:40px;
+}
+
+#essential-1 {
+  border:solid 5px #EE2B00;
+  left:5%;
+  top:20%;
+  text-align:center;
+  padding:20px;
+  width:50%;
+  position:absolute;
+}
+
+#essential-2 {
+  border:solid 5px #EE2B00;
+  right:5%;
+  bottom:20%;
+  text-align:center;
+  padding:20px;
+  width:50%;
+  position: absolute;
+}
+
+#experimenting-1 {
+    border: solid 5px #EE2B00;
+    text-align: center;
+    position: absolute;
+    padding: 50px;
+    top: 20%;
+    left: 10%;
+}
+
+#experimenting-2 {
+    border: solid 5px #EE2B00;
+    text-align: center;
+    position: absolute;
+    padding: 50px;
+    top: 40%;
+    left: 60%;
+}
+
+#arrow {
+  width:10%;
+  position: absolute;
+  top:50%;
+  left:45%;
+}
+
+#sauce-1 {
+  border:solid 5px #EE2B00;
+  left:5%;
+  top:10%;
+  text-align:center;
+  padding:20px;
+  width:50%;
+  position:absolute;
+}
+
+#sauce-2 {
+    border: solid 5px #EE2B00;
+    right: 5%;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    height: 45%;
+}
+
+#sauce-3 {
+    border: solid 5px #EE2B00;
+    right: 5%;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    height: 45%;
+    background: url(../img/github2.png);
+}
+
+.little-wrapper {
+  border:solid 5px #EE2B00;
+  padding: 20px;
+}
+
+#wrapper-inner {
+  padding-left:20px;
+  padding-top:40%;
+}
+
+#inner-content {
+  border:solid 5px #EE2B00;
+  padding: 20px;
+  color:#EE2B00;
+  text-align:center;
 }
