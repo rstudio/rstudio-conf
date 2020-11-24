@@ -77,8 +77,13 @@ class: cover
 <img src="img/artdeco-1.png" id="artdeco-1"></img>
 <img src="img/artdeco-1.png" id="artdeco-2"></img>
 
-<div id="essential-1"><h1>A Microcosm <br> in the Macrocosm</h1></div>
-<div id="essential-2"><h1>Async compatible</h1></div>
+.essential-1[
+# A Microcosm <br> in the Macrocosm
+]
+
+.essential-2[
+# Async Compatible
+]
 
 ---
 
@@ -96,7 +101,9 @@ class: cover
 <img src="img/artdeco-2.png" id="artdeco-4"></img>
 <img src="img/artdeco-2.png" id="artdeco-5"></img>
 
-<div id="experimenting-1"><h1>Reviewing</h1></div>
+.experimenting-1[
+#Reviewing
+]
 
 <img src="img/arrow.png" id="arrow"></img>
 
@@ -104,7 +111,9 @@ class: cover
 <img src="img/artdeco-3.png" id="artdeco-7"></img>
 <img src="img/artdeco-3.png" id="artdeco-8"></img>
 
-<div id="experimenting-2"><h1>Creating</h1></div>
+.experimenting-2[
+#Creating
+]
 
 ---
 
@@ -118,18 +127,24 @@ background-size: cover
 
 class: cover
 
-<div id="sauce-1"><h1>Facilitator</h1></div>
+.sauce-1[
+# Facilitator
+]
 
 <img src="img/artdeco-1.png" id="artdeco-9"></img>
 <img src="img/artdeco-3.png" id="artdeco-10"></img>
     
-<div id="sauce-2"><a target="_blank" href="https://github.com/r4ds/bookclub-Advanced_R"><h1 id="collab">Collaborative <br> Infrastructure</h1></div>
+.sauce-2[
+#[Collaborative <br> Infrastructure](https://github.com/r4ds/bookclub-Advanced_R)
+]
 
 ---
 
 class: cover
 
-<div id="sauce-1"><h1>Facilitator</h1></div>
+.sauce-1[
+# Facilitator
+]
 
 <img src="img/artdeco-1.png" id="artdeco-9"></img>
 <img src="img/artdeco-3.png" id="artdeco-10"></img>
@@ -153,12 +168,17 @@ class: cover
 <img src="img/artdeco-2.png" id="artdeco-12"></img>
 <img src="img/artdeco-2.png" id="artdeco-13"></img>
 
-<div class="wrapper-three">
-<div class="little-wrapper">GitHub <br> Collaboration</div>
-<div class="little-wrapper">RMarkdown <br> Skills</div>
-<div class="little-wrapper">Presentation <br> Skills</div>
-</div>
-
+.wrapper-three[
+  .little-wrapper[ 
+    GitHub <br> Collaboration 
+  ]
+  .little-wrapper[ 
+    RMarkdown <br> Skills 
+  ]
+  .little-wrapper[ 
+    Presentation <br> Skills 
+  ]
+]
 
 ---
 
