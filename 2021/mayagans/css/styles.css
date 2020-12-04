@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
+@font-face {
+  font-family: 'bagnard';
+  src: url('../fonts/Bagnard.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Bagnard.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Bagnard.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Bagnard.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Bagnard.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Bagnard.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 a, a > code {
   color: #D55E00FF;
     text-decoration: none;
