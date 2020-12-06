@@ -7,7 +7,7 @@ Slides:
 Examples of internal R packages:
 
 - My [blog post](https://emilyriederer.netlify.app/post/resource-roundup-r-industry/) synthesizes three great blog posts on R use at the BBC, the Urban Institute, AirBnb
-- [My 2017 rstudio::conf talk](https://rstudio.com/resources/rstudioconf-2018/tidycf-turning-analysis-on-its-head-by-turning-cashflows-on-their-sides/) on a case study of R use and culture change in consumer finance
+- [My 2018 rstudio::conf talk](https://rstudio.com/resources/rstudioconf-2018/tidycf-turning-analysis-on-its-head-by-turning-cashflows-on-their-sides/) on a case study of R use and culture change in consumer finance
 
 Getting started:
 
