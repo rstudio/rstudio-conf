@@ -1,6 +1,6 @@
 # Slides and code for "Recent Additions to `tidymodels`"
 
-<a href="url"><img src="images/tidymodels_wall_really_long.png" align="left" width="600" ></a>
+<p><a href="url"><img src="images/tidymodels_wall_really_long.png" align="left" width="600" ></a></p>
 
 
 ## Files
