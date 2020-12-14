@@ -1,14 +1,14 @@
 # Slides and code for "Recent Additions to `tidymodels`"
 
-<p><a href="url"><img src="images/tidymodels_wall_really_long.png" align="left" width="600" ></a></p>
+<div><a href="url"><img src="images/tidymodels_wall_really_long.png" align="left" width="600" ></a></div>
 
 
 ## Files
 
 
-`tidymodels.Rmd` contains the `xaringan` version of the slides that make the HTML and PDF versions. 
+* `tidymodels.Rmd` contains the `xaringan` version of the slides that make the HTML and PDF versions. 
 
-`racing_code.R` and `sa_code.R` have the code for the examples shown in the presentation. 
+* `racing_code.R` and `sa_code.R` have the code for the examples shown in the presentation. 
 
 
 ## Resources for learning more
