@@ -1,6 +1,6 @@
 # Slides and code for "Recent Additions to `tidymodels`"
 
-[images/tidymodels_banner.png]()
+![](images/tidymodels_banner.png)
 
 ## Files
 
