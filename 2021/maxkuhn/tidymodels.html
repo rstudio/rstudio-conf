@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Recent Additions to tidymodels</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Max Kuhn" />
+    <script src="libs/header-attrs-2.5/header-attrs.js"></script>
+    <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+    <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+    <link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="mtheme_max.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme_max.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Recent Additions to tidymodels
+### Max Kuhn
+
+---
+
+
+
+
+
+# tidymodels and Me
+
+.pull-left[
+
+I'm a statistician and software Engineer for RStudio working on modeling. 
+
+Formerly 6y in infectious disease diagnostics and 12y in drug discovery. 
+
+`max@rstudio.com`, <i class="fab  fa-github "></i> topepo, <i class="fab  fa-twitter "></i> topepos 
+
+<i class="fas  fa-link "></i> [`https://rstd.io/global2021/maxkuhn`](https://rstd.io/global2021/maxkuhn) 
+
+]
+.pull-right[
+
+tidymodels is a collection of modeling packages designed with the same principles as the tidyverse. 
+
+]
+
+
+&lt;br&gt; 
+
+&lt;img src="images/tidymodels_wall_really_long.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Recent Updates
+
+
+
+.pull-left[
+
+Interfaces:
+
+* `workflows` have a new interface for adding raw data columns (e.g. no formula or recipe)
+
+* `recipes` now support all of the new `tidyselect` selectors
+
+* `recipes` can now use `bake()` instead of `juice()` for the training set. 
+
+* The `autoplot()` method for `tune` objects works better for regular grids. 
+
+]
+.pull-right[
+
+
+Efficiency: 
+
+* Parallel processing via PSOCK clusters on windows is less awful. 
+
+* `tune` can now use a larger number of parallel workers when tuning. 
+
+* For the 3 models that use them, sparse matrices can be passed from recipes to model functions. 
+
+
+]
+
+Today I'll be demonstrating a new package called [**`finetune`**](https://finetune.tidymodels.org/). 
+
+---
+
+# Example Problem
+
+For our example, the [cell segmentation data](https://modeldata.tidymodels.org/reference/cells.html) are used to create a two-class classification model using a support vector machine (SVM).
+
+* We'll tune this model over `cost` and `rbf_sigma`.
+
+This talk is about new ways of **finding optimal values of these parameters**. 
+
+The data are resampled using 10-fold cross-validation. 
+
+The model definition and complete code set can be found at [`https://rstd.io/global2021/maxkuhn`](https://rstd.io/global2021/maxkuhn) . 
+
+
+---
+
+# Climbing a Hill
+
+We want to find good values of two tuning parameters (`cost` and `rbf_sigma`) that maximize the area under the ROC curve of the model.  The true 2D surface: 
+
+
+
+.pull-left[
+
+&lt;img src="images/roc_surface.png" width="2560" /&gt;
+
+]
+.pull-right[
+
+
+&lt;img src="images/roc_surface_tilt.png" width="3056" /&gt;
+
+]
+
+
+---
+
+# Racing Methods
+
+Racing methods can be used on pre-defined grids of tuning parameters. 
+
+As the models are resampled (to compute performance), interim analyses are used to eliminate candidate parameters that have a low probability of of being the best. 
+
+The `finetune` package can use racing via ANOVA models that test for differences in parameters. A second method, based on win/loss statistics, can also be used. 
+
+ * See _Futility Analysis in the Cross-Validation of Machine Learning Models_ (Kuhn, 2014, [_arXiv.org_](https://arxiv.org/abs/1405.6974))
+
+Let's use a grid of 20 SVM tuning parameters generated using a space-filling design to demonstrate. 
+
+
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-1-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+```
+## NULL
+```
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+&lt;br&gt;
+
+Resampling iterations 1 and 2 proceed as normal.
+
+]
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-2-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+&lt;br&gt;
+
+Resampling iterations 1 and 2 proceed as normal.
+
+
+]
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-3-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+&lt;br&gt;
+
+At iteration 3, testing begins and many (poor) candidate models are removed. 
+
+]
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-4-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+&lt;br&gt;
+
+]
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-5-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+]
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-6-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+]
+
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-7-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+]
+
+---
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-8-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+]
+
+---
+
+# Illustrating the Race
+
+
+.pull-left[
+
+&lt;img src="images/race-iter-9-1.svg" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+.pull-right[
+
+_20 models go in... one comes out_
+
+&lt;br&gt;
+
+The resampling method is simple 10-fold cross-validation. 
+
+&lt;br&gt;
+
+The 9th iteration removes the last competitor. 
+
+Iteration 10 just resamples the single model that remains. 
+
+A total of 74 models were fit instead of 200 (=37%).
+
+]
+
+
+
+---
+
+# Example Code for Racing
+
+
+
+```r
+set.seed(99)
+svm_race &lt;-
+  svm_wflow %&gt;% 
+  tune_race_anova(resamples = cell_folds, grid = 20)
+```
+
+
+Using the `verbose_elim` option:
+
+```
+ℹ Racing will maximize the roc_auc metric.
+ℹ Resamples are analyzed in a random order.
+ℹ Fold10: 17 eliminated;  3 candidates remain.
+ℹ Fold09:  1 eliminated;  2 candidates remain.
+ℹ Fold05:  0 eliminated;  2 candidates remain.
+ℹ Fold01:  0 eliminated;  2 candidates remain.
+ℹ Fold07:  0 eliminated;  2 candidates remain.
+ℹ Fold03:  0 eliminated;  2 candidates remain.
+ℹ Fold06: All but one parameter combination were eliminated.
+```
+
+
+`tune_race_win_loss()` can also be used. 
+
+---
+
+# Simulated Annealing Search
+
+
+.pull-left[
+
+Simulated annealing (SA) is an old search routine that conducts a biased random walk around the tuning parameter space. 
+
+ * The bias comes from the walk highly favoring steps that show better model results. 
+ 
+From an initial point, the next point is generated using a random value within a _neighborhood_ of the current point. 
+
+ * An example of candidate points in a neighborhood is shown  👉
+
+SA accepts suboptimal results early in the search process and less as time goes on. 
+
+
+]
+.pull-right[
+
+![](images/neighbors-1.svg)&lt;!-- --&gt;
+
+]
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_4.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_5.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_6.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_7.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_8.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_9.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_10.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_11.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_12.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_13.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_14.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_15.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_16.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_17.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_18.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_19.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_20.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_21.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_22.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_23.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_24.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_25.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_26.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_27.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_28.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_29.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_30.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_31.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_32.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_33.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Simulated Annealing Search
+
+
+&lt;img src="images/sa_34.svg" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Example Code for Simulated Annealing 
+
+
+
+```r
+set.seed(1234)
+svm_sa &lt;-
+  svm_wflow %&gt;%
+  tune_sim_anneal(
+    resamples = cell_folds,
+    initial = svm_initial,
+    iter = 30
+  )
+```
+
+
+With the option `verbose = TRUE`:
+
+```
+Optimizing roc_auc
+Initial best: 0.86627
+ 1 ♥ new best           roc_auc=0.87157	(+/-0.007672)
+ 2 ─ discard suboptimal roc_auc=0.86362	(+/-0.008314)
+ 3 ♥ new best           roc_auc=0.87554	(+/-0.00752)
+ 4 ◯ accept suboptimal  roc_auc=0.87044	(+/-0.0077)
+ 5 ♥ new best           roc_auc=0.87764	(+/-0.007252)
+ 6 ♥ new best           roc_auc=0.87999	(+/-0.007074)
+ 7 ♥ new best           roc_auc=0.88168	(+/-0.00707)
+ 8 ◯ accept suboptimal  roc_auc=0.871	  (+/-0.007702)
+ 9 ◯ accept suboptimal  roc_auc=0.86378	(+/-0.008341)
+```
+
+
+---
+
+# Thanks for Watching!
+
+
+Resources for learning more: 
+
+ * [`tidymodels.org`](https://www.tidymodels.org/)
+ 
+ * [_Tidy Modeling with R_](https://www.tmwr.org/) book
+    
+    - Chapter 13 (_Grid Search_) has details on racing methods
+    
+    - Chapter 14 (_Iterative search_) describes simulated annealing
+ 
+ * [`finetune` webpage](https://finetune.tidymodels.org/) and [blog post](https://www.tidyverse.org/blog/2020/12/finetune-0-0-1/)
+ 
+ 
+ 
+ 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
