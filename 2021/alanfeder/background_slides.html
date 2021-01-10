@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Categorical Embeddings: New Ways to Simplify Complex Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Alan Feder    Principal Data Scientist   Invesco" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Categorical Embeddings: New Ways to Simplify Complex Data
+## rstudio::global(2020)
+### Alan Feder <br /> <br />Principal Data Scientist <br /> Invesco
+
+---
+
+
+
+
+
+
+# Two Types of Data
+
+* **Continuous**: Numbers
+  + e.g. 3, 6.5, -8.39, `\(\pi\)`
+* **Categorical**: Categories
+  + *Ordinal*: e.g. Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree
+  + *Nominal*: e.g. color, zip code 
+  
+---
+
+# Modeling with tabular data
+
+* e.g. from `readr::read_csv()` or `readxl::read_excel()`
+
+Most statistical or supervised learning models implicitly assume that all your data is numeric
+
+* e.g. Inverting matrices for linear regression or gradient descent for neural networks
+
+--
+
+## Categorical data is common
+
+* Election data may include state or zip code
+* Marketing data may include profession or education level
+* Financial data may include country or industry  
+
+---
+
+# Common ways of dealing with categories
+
+* Ignore
+  + But the data may be important!
+* Label encode
+  + Implies ordering, which might not be correct (e.g. is Red &lt; Yellow &lt; Blue???)
+* Create dummy variables (i.e. one-hot encode)
+  + Do you really want one column for each of 42,000 zip codes?
+
+---
+
+# Categorical Embeddings
+
+* Conceptually similar to word embeddings (e.g. Word2Vec or GloVe)
+* Represented as a vector of numbers (e.g. length 2 or length 300)
+* Each element of that vector represents something about the category itself
+
+--
+
+## Benefits
+
+* Represent all categories as a few numeric variables
+* Learn more about your data with feature reduction (e.g. PCA or UMAP)
+* Use them in your favorite models - even non-neural networks
+
+--
+
+## Creating Embeddings
+
+* Fit with neural networks
+  + Can do it with `tensorflow`/`keras` or `torch`
+* Now -- there is a tidymodels extension package: `embed`! 
+
+---
+
+# Conclusions
+
+* Categorical embeddings are a useful way to use categorical data without creating dummy variables.
+* The `embed::step_embed()` function is a great way of creating these embeddings in a tidy framework.
+* You can then use these embeddings as inputs to a different model or by analyzing them directly (or both!)
+
+## Future areas of study
+
+* How to decide on embedding length? (`num_terms = `)
+* Hidden layers? (`hidden_units = `)
+* Fit alongside other continuous predctors (`predictors = `)
+
+---
+
+class: middle
+
+# Acknowledgements
+
+* I first learned about categorical embeddings from [fastai: Practical Deep Learning for Coders](https://course.fast.ai/)
+* Data and analysis steps taken from [TensorFlow training at RStudio::conf(2019)](https://github.com/rstudio/conf_tensorflow_training_day2) by Sigrid Keydana, Kevin Kuo, Rick Scavetta
+* Slide format created with [xaringan](https://github.com/yihui/xaringan) by Yihui Xie
+
+---
+
+class: center, middle
+
+# Thank you
+
+slides &amp; code: [https://github.com/AlanFeder/rstudio_2020_embed](https://github.com/AlanFeder/rstudio_2020_embed)   
+
+contact: AlanFeder@gmail.com   
+
+Twitter: @AlanFeder
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
