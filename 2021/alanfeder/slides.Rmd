@@ -1,0 +1,120 @@
+---
+title: "Categorical Embeddings: New Ways to Simplify Complex Data"
+subtitle: "rstudio::global(2020)"
+author: "Alan Feder <br /> <br />Principal Data Scientist <br /> Invesco"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      ratio: '16:9'
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+---
+class: hide-count
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{css echo=FALSE}
+.hide-count .remark-slide-number {
+  display: none;
+}
+```
+
+# Libraries
+
+```{r libraries, message=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(reticulate)
+use_condaenv("r-keras2")
+library(keras)
+library(embed) #<<
+
+set.seed(1818)
+```
+
+---
+class: hide-count
+
+# Data
+
+```r
+data(sales, package = "DMwR2")
+glimpse(sales)
+```
+
+```{r import-data, include=FALSE}
+data(sales, package = "DMwR2")
+sales
+```
+
+```{r show-data, echo=FALSE}
+glimpse(sales)
+```
+
+```{r n-distinct-prods}
+n_distinct(sales$Prod)
+```
+
+```{r split-train}
+sales_split <- initial_split(sales, strata = Insp)
+sales_train <- training(sales_split)
+```
+
+---
+class: hide-count
+
+# Recipe
+
+```{r create-recipe}
+sales_recipe <- recipe(sales_train) %>%
+  update_role(Quant, Val, Prod, new_role = "predictor") %>%
+  update_role(Insp, new_role = "outcome") %>%
+  step_rm(ID) %>%
+  step_naomit(Quant, Val) %>%
+  step_filter(Insp != "unkn") %>%
+  step_center(Quant, Val) %>%
+  step_scale(Quant, Val) %>%
+  step_embed(Prod, num_terms = 4, hidden_units = 16, outcome = vars(Insp), #<<
+             options = embed_control(loss = "binary_crossentropy", epochs = 10)) #<<
+```
+
+```{r create-embeds, message=FALSE, warning=FALSE}
+trained_sales_recipe <- prep(sales_recipe)
+```
+
+---
+class: hide-count
+
+# Embeddings
+
+```r
+trained_sales_recipe$steps[[6]]$mapping$Prod %>%
+  relocate(..level) %>%
+  head(5)
+```
+
+```{r show-prod, echo=FALSE}
+trained_sales_recipe$steps[[6]]$mapping$Prod %>%
+  relocate(..level) %>%
+  head(5) %>%
+  knitr::kable(format = "html")
+```
+
+---
+class: hide-count
+
+# Thank you!
+
+* slides, code, and more details: https://github.com/rstudio/rstudio-conf/tree/master/2021/alanfeder
+* contact: AlanFeder@gmail.com  
+* Twitter: @AlanFeder
+
+# Acknowledgements
+
+* I first learned about categorical embeddings from **fastai: Practical Deep Learning for Coders**, by Jeremy Howard
+* Data and analysis steps taken from **TensorFlow training** at **RStudio::conf(2019)**, by Sigrid Keydana, Kevin Kuo, and Rick Scavetta
