@@ -1,4 +1,4 @@
-# Slides and code for "`plumber` + `future`: Async Web APIs"
+# Slides and resources for "`plumber` + `future`: Async Web APIs"
 
 <table style="margin:0px">
   <tr>
