@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 @font-face {
   font-family: 'bagnard';
@@ -326,4 +327,67 @@ h1,h2,h3 {
 
 #-collaborative-br-infrastructure-https-github-com-r4ds-bookclub-advanced_r- {
   padding-top:60px;
+}
+
+.mygrid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "RECIPE RECIPE TYPE TYPE"
+    "LHS LHS RHS RHS"
+    "LHS LHS RHS RHS";
+    height: 100%;
+    width: 100%;
+}
+
+.RECIPE { grid-area: RECIPE; }
+
+.TYPE { grid-area: TYPE; }
+
+.LHS {
+  grid-area: LHS;
+  padding-left: 60px;
+  padding-top: 25px;
+}
+
+.RHS { grid-area: RHS; }
+
+
+/* For presentation only, no need to copy the code below */
+.mygrid-container * {
+  position: relative;
+}
+
+.mygrid-container *:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recipe-row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.recipe-column {
+  flex: 50%;
+  padding: 10px; /* Should be removed. Only for demonstration */
+  padding-left:30px;
+}
+
+.recipe-card {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #f5f2d0;
+  padding:20px;
+  height: 80%;
+}
+
+.recipe-link {
+  color: #EE2B00;
+}
+
+.recipe-link:hover {
+  color: #348B84;
 }

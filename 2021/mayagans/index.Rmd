@@ -159,7 +159,7 @@ class: center, middle, hide-count
 background-image: url(img/bkg-6.png)
 background-size: cover
 
-`r opaque_box("A Memorable Meal")`
+`r opaque_box("Side Dishes")`
 
 ---
 class: cover
@@ -192,11 +192,80 @@ background-size: cover
 
 class: cover
 
-<div class="wrapper">
-   <img src="img/artdeco-4.png" id="artdeco-14"></img>
-  <div id="wrapper-inner">
-    <div id="inner-content">8 WORLDWIDE COHORTS</div>
-    <h1 style="color:#348B84;">DO IT YOURSELF!</h1>
-    <a href="R4DS.io/join ">R4DS</a>
+<div style="width: 80%;
+    height: 0.5%;
+    background-color: black;
+    top: 30%;
+    left: 10%;
+    position: absolute;"></div>
+
+<div style="width:0.45%;
+    height: 50%;
+    background-color: black;
+    top: 35%;
+    left: 45%;
+    position: absolute;"></div>
+    
+<div class="recipe-card">
+<div class="mygrid-container">
+  <div class="RECIPE">
+  <p style="width:50%:margin:auto;font-size:80px;text-align:center;bottom:30px;"">RECIPE</p>
   </div>
+  
+  <div class="TYPE">
+  <div class="recipe-row">
+  <div class="recipe-column">
+   <ul>
+   <li>BREAKFAST</li>
+   <li>LUNCH</li>
+   <li>DINNER</li>
+   <li>SNACK</li>
+   </ul>
+  </div>
+  <div class="recipe-column">
+    <ul>
+  <li>SIDE DISH</li>
+   <li>CONDIMENT</li>
+   <li>DESSERT</li>
+   <li>OTHER</li>
+    </ul>
+  </div>
+</div>
+</div>
+ 
+  <div class="LHS">
+    <b>NAME:</b> <br>
+    <span style="font-family:'Indie Flower'">Your First Bookclub</span>
+    
+    <br>
+    <br>
+    <br>
+  
+    <b>FROM THE KITCHEN OF:</b> <br>
+    <span style="font-family:'Indie Flower'">
+      <a class="recipe-link" href="https://rfordatascience.slack.com/join/shared_invite/zt-kc7mjo0y-dAy84hYz1V8QlGD2Iu_zLg#/">R4DS</a>
+    </span>
+    
+    <br>
+    <br>
+    <br>
+    
+    <b>SERVINGS:</b> <br>
+    <span style="font-family:'Indie Flower'">8 Worldwide Cohorts!</span>
+  </div>
+  
+  <div class="RHS" style="line-height:1.75;font-family:'Indie Flower';bottom:30px;";>
+      <ol>
+      <li><a class="recipe-link" href="https://bookdown.org/">Pick a book!</a></li>
+      <li>Find an online community</li>
+      <li>Post about it on social media</li>
+      <li>Chop book into slices</li>
+      <li>Let what works marinade</li>
+      <li>Sprinkle with applications</li>
+      <li>Have fun!</li>
+    </ol>
+  </div>
+  
+</div>
+</div>
 </div>
