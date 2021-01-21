@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@font-face {
+  font-family: 'bagnard';
+  src: url('../fonts/Bagnard.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Bagnard.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Bagnard.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Bagnard.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Bagnard.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Bagnard.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+a, a > code {
+  color: #D55E00FF;
+    text-decoration: none;
+}
+em {
+  color: #348B84;
+  font-style: normal;
+  font-family: 'bagnard';
+}
+del {
+  color: #E5E5E5;
+    text-decoration: none;
+  font-weight: normal;
+}
+.inverse del {
+  color: #6C7B7F;
+}
+.bg-beige{
+  background-color: rgba(232, 232, 216, 0.9);
+}
+.large { font-size: 175% }
+.hide-count .remark-slide-number {
+  display: none;
+}
+.text-poster {
+  font-family: 'Cinzel', serif;
+}
+.inverse {
+  color: #b9bfca;
+    background-color: #282D35
+}
+.inverse.remark-slide-number {
+  color: #b9bfca;
+}
+.remark-code-line-highlighted {
+  color: #D55E00FF;
+    background-color: transparent;
+}
+.remark-inline-code {
+  color: #b9bfca;
+}
+#starting-an-r-bookclub-cooking-up-friendships-in-isolation {
+  font-family: 'bagnard';
+  color: #348B84;
+}
+@font-face {
+  font-family: 'bagnard';
+  src:local("bagnard.otf");
+}
+.bkgimg {
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.title-box {
+  padding: 10px !important;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+}
+.cover{
+  background-color: #CECCB1;
+}
+#cover-img {
+  width: 50%;
+}
+.right-align {
+  text-align: right;
+}
+a {
+  color: white;
+}
+a:hover {
+  color: #348B84;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+h1,h2,h3 {
+  color: #EE2B00;
+  font-family: 'Poiret One';
+  text-transform: uppercase;
+}
+
+#collab:hover {
+   color: #348B84 !important;
+}
+
+#collab {
+  padding-top:50px;
+  color:white;
+}
+
+.wrapper-three {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: red;
+  grid-gap: 30px;
+  padding: 50px;
+  padding-top: 20%;
+}
+
+#cover {
+  width:35%;
+  position: absolute;
+  bottom:40px;
+}
+
+#artdeco-1 {
+  width:20%;
+  position:absolute;
+  top:25px;
+  left:250px;
+}
+
+#artdeco-2 {
+  width:20%;
+  position:absolute;
+  bottom:25px;
+  right:250px;
+  transform: rotate(180deg);
+}
+
+#artdeco-3 {
+  width:10%;
+  position: absolute;
+  top: 130px;
+  right:100px;
+}
+
+#artdeco-4 {
+  width:10%;
+  position: absolute;
+  top: 130px;
+  right:250px;
+}
+
+#artdeco-5 {
+  width:10%;
+  position: absolute;
+  top: 130px;
+  right:400px;
+}
+
+#artdeco-6 {
+  width:10%;
+  position: absolute;
+  bottom: 140px;
+  left:100px;
+  transform: rotate(180deg)
+}
+
+#artdeco-7 {
+  width:10%;
+  position: absolute;
+  bottom: 140px;
+  left:245px;
+  transform: rotate(180deg);
+}
+
+#artdeco-8{
+  width:10%;
+  position: absolute;
+  bottom: 140px;
+  left:390px;
+  transform: rotate(180deg);
+}
+
+#artdeco-9 {
+  width:20%;
+  position: absolute;
+  top:110px;
+  left:800px;
+}
+
+#artdeco-10 {
+  width:10%;
+  position: absolute;
+  top:255px;
+  left:200px;
+  transform: rotate(180deg);
+}
+
+#artdeco-11 {
+  width:10%;
+  position: absolute;
+  top: 110px;
+  right:870px;
+}
+
+#artdeco-12 {
+  width:10%;
+  position: absolute;
+  top: 110px;
+  right:210px;
+}
+
+#artdeco-13 {
+  width:10%;
+  position: absolute;
+  top: 110px;
+  right:530px;
+}
+
+#artdeco-14 {
+  width:70%;
+  padding-top:40px;
+}
+
+.essential-1 {
+  border:solid 5px #EE2B00;
+  left:5%;
+  top:20%;
+  text-align:center;
+  padding:20px;
+  width:50%;
+  position:absolute;
+}
+
+.essential-2 {
+  border:solid 5px #EE2B00;
+  right:5%;
+  bottom:20%;
+  text-align:center;
+  padding:20px;
+  width:50%;
+  position: absolute;
+}
+
+.experimenting-1 {
+    border: solid 5px #EE2B00;
+    text-align: center;
+    position: absolute;
+    padding: 50px;
+    top: 20%;
+    left: 10%;
+}
+
+.experimenting-2 {
+    border: solid 5px #EE2B00;
+    text-align: center;
+    position: absolute;
+    padding: 50px;
+    top: 40%;
+    left: 60%;
+}
+
+#arrow {
+  width:10%;
+  position: absolute;
+  top:50%;
+  left:45%;
+}
+
+.sauce-1 {
+  border:solid 5px #EE2B00;
+  left:5%;
+  top:10%;
+  text-align:center;
+  padding:20px;
+  width:50%;
+  position:absolute;
+}
+
+.sauce-2 {
+    border: solid 5px #EE2B00;
+    right: 5%;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    height: 45%;
+}
+
+#sauce-3 {
+    border: solid 5px #EE2B00;
+    right: 5%;
+    bottom: 15%;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    position: absolute;
+    height: 45%;
+    background: url(../img/github2.png);
+}
+
+#sauce-3:hover {
+  background: url(../img/github2.png);
+  filter: sepia(1);
+}
+
+.little-wrapper {
+  border:solid 5px #EE2B00;
+  padding: 20px;
+}
+
+#wrapper-inner {
+  padding-left:20px;
+  padding-top:40%;
+}
+
+#inner-content {
+  border:solid 5px #EE2B00;
+  padding: 20px;
+  color:#EE2B00;
+  text-align:center;
+}
+
+#-collaborative-br-infrastructure-https-github-com-r4ds-bookclub-advanced_r- {
+  padding-top:60px;
+}
+
+.mygrid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "RECIPE RECIPE TYPE TYPE"
+    "LHS LHS RHS RHS"
+    "LHS LHS RHS RHS";
+    height: 100%;
+    width: 100%;
+}
+
+.RECIPE { grid-area: RECIPE; }
+
+.TYPE { grid-area: TYPE; }
+
+.LHS {
+  grid-area: LHS;
+  padding-left: 60px;
+  padding-top: 25px;
+}
+
+.RHS { grid-area: RHS; }
+
+
+/* For presentation only, no need to copy the code below */
+.mygrid-container * {
+  position: relative;
+}
+
+.mygrid-container *:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.recipe-row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.recipe-column {
+  flex: 50%;
+  padding: 10px; /* Should be removed. Only for demonstration */
+  padding-left:30px;
+}
+
+.recipe-card {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #f5f2d0;
+  padding:20px;
+  height: 80%;
+}
+
+.recipe-link {
+  color: #EE2B00;
+}
+
+.recipe-link:hover {
+  color: #348B84;
+}

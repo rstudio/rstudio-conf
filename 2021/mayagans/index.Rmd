@@ -1,0 +1,271 @@
+---
+title: "Starting an R Bookclub: Cooking up Friendships in Isolation"
+author: "Maya Gans"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    seal: false
+    lib_dir: libs
+    css: [css/xaringan-themer.css, css/styles.css]
+    nature:
+      titleSlideClass: ["bottom", "left"]
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(highlight = TRUE)
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+mono_light(
+  white_color = "#fff",
+  header_font_google = google_font("Poiret One", "600"),
+  text_font_google = google_font("Josefin Sans", "300", "300i"),
+  code_font_google = google_font("Fira Code"),
+  text_font_size = "24px",
+  code_font_size = "1.2em"
+)
+opaque_box <- function(x) {
+  htmltools::tags$div(
+    class = "f1 bg-beige pa6 shadow-3 h-75 title-box",
+    htmltools::tags$h1(htmltools::tags$em(x))
+  )
+}
+```
+
+class: hide-count, cover
+
+.right-align[
+# Starting an R Bookclub: Cooking up Friendships in Isolation
+Maya Gans <br/>
+<a href="https://twitter.com/Mayacelium">@Mayacelium</a><br/>
+Slides: <a href="bit.ly/r4dsbookclub">bit.ly/r4dsbookclub</a>
+]
+
+<img src="img/cover.png" id="cover">
+
+
+---
+
+class: center, middle, hide-count bkgimg
+background-image: url(img/bkg-8.png)
+background-size: cover
+
+`r opaque_box("Developing a Dish")`
+
+---
+
+class: cover
+
+---
+
+class: center, middle, hide-count bkgimg
+background-image: url(img/bkg-3.png)
+background-size: cover
+
+`r opaque_box("Essential Ingredients")`
+
+---
+
+class: cover
+
+<img src="img/artdeco-1.png" id="artdeco-1"></img>
+<img src="img/artdeco-1.png" id="artdeco-2"></img>
+
+.essential-1[
+# A Microcosm <br> in the Macrocosm
+]
+
+.essential-2[
+# Async Compatible
+]
+
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-4.png)
+background-size: cover
+
+`r opaque_box("Experimenting <br> with Flavors")`
+
+---
+
+class: cover
+
+<img src="img/artdeco-2.png" id="artdeco-3"></img>
+<img src="img/artdeco-2.png" id="artdeco-4"></img>
+<img src="img/artdeco-2.png" id="artdeco-5"></img>
+
+.experimenting-1[
+#Reviewing
+]
+
+<img src="img/arrow.png" id="arrow"></img>
+
+<img src="img/artdeco-3.png" id="artdeco-6"></img>
+<img src="img/artdeco-3.png" id="artdeco-7"></img>
+<img src="img/artdeco-3.png" id="artdeco-8"></img>
+
+.experimenting-2[
+#Creating
+]
+
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-5.png)
+background-size: cover
+
+`r opaque_box("The Secret Sauce")`
+
+---
+
+class: cover
+
+.sauce-1[
+# Facilitator
+]
+
+<img src="img/artdeco-1.png" id="artdeco-9"></img>
+<img src="img/artdeco-3.png" id="artdeco-10"></img>
+    
+.sauce-2[
+#[Collaborative <br> Infrastructure](https://github.com/r4ds/bookclub-Advanced_R)
+]
+
+---
+
+class: cover
+
+.sauce-1[
+# Facilitator
+]
+
+<img src="img/artdeco-1.png" id="artdeco-9"></img>
+<img src="img/artdeco-3.png" id="artdeco-10"></img>
+    
+<a target="_blank" href="https://github.com/r4ds/bookclub-Advanced_R">
+<div id="sauce-3"></div>
+</a>
+    
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-6.png)
+background-size: cover
+
+`r opaque_box("Side Dishes")`
+
+---
+class: cover
+
+<img src="img/artdeco-2.png" id="artdeco-11"></img>
+<img src="img/artdeco-2.png" id="artdeco-12"></img>
+<img src="img/artdeco-2.png" id="artdeco-13"></img>
+
+.wrapper-three[
+  .little-wrapper[ 
+    GitHub <br> Collaboration 
+  ]
+  .little-wrapper[ 
+    RMarkdown <br> Skills 
+  ]
+  .little-wrapper[ 
+    Presentation <br> Skills 
+  ]
+]
+
+---
+
+class: center, middle, hide-count
+background-image: url(img/bkg-21.png)
+background-size: cover
+
+`r opaque_box("Copycat Recipe")`
+
+---
+
+class: cover
+
+<div style="width: 80%;
+    height: 0.5%;
+    background-color: black;
+    top: 30%;
+    left: 10%;
+    position: absolute;"></div>
+
+<div style="width:0.45%;
+    height: 50%;
+    background-color: black;
+    top: 35%;
+    left: 45%;
+    position: absolute;"></div>
+    
+<div class="recipe-card">
+<div class="mygrid-container">
+  <div class="RECIPE">
+  <p style="width:50%:margin:auto;font-size:80px;text-align:center;bottom:30px;"">RECIPE</p>
+  </div>
+  
+  <div class="TYPE">
+  <div class="recipe-row">
+  <div class="recipe-column">
+   <ul>
+   <li>BREAKFAST</li>
+   <li>LUNCH</li>
+   <li>DINNER</li>
+   <li>SNACK</li>
+   </ul>
+  </div>
+  <div class="recipe-column">
+    <ul>
+  <li>SIDE DISH</li>
+   <li>CONDIMENT</li>
+   <li>DESSERT</li>
+   <li>OTHER</li>
+    </ul>
+  </div>
+</div>
+</div>
+ 
+  <div class="LHS">
+    <b>NAME:</b> <br>
+    <span style="font-family:'Indie Flower'">Your First Bookclub</span>
+    
+    <br>
+    <br>
+    <br>
+  
+    <b>FROM THE KITCHEN OF:</b> <br>
+    <span style="font-family:'Indie Flower'">
+      <a class="recipe-link" href="https://rfordatascience.slack.com/join/shared_invite/zt-kc7mjo0y-dAy84hYz1V8QlGD2Iu_zLg#/">R4DS</a>
+    </span>
+    
+    <br>
+    <br>
+    <br>
+    
+    <b>SERVINGS:</b> <br>
+    <span style="font-family:'Indie Flower'">8 Worldwide Cohorts!</span>
+  </div>
+  
+  <div class="RHS" style="line-height:1.75;font-family:'Indie Flower';bottom:30px;";>
+      <ol>
+      <li><a class="recipe-link" href="https://bookdown.org/">Pick a book!</a></li>
+      <li>Find an online community</li>
+      <li>Post about it on social media</li>
+      <li>Chop book into slices</li>
+      <li>Let what works marinade</li>
+      <li>Sprinkle with applications</li>
+      <li>Have fun!</li>
+    </ol>
+  </div>
+  
+</div>
+</div>
+</div>
