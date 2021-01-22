@@ -1,0 +1,13 @@
+xaringan-webcam	::
+xaringan-fit-screen	::
+unnamed-chunk-1	::	airquality	head
+unnamed-chunk-2	::	airquality	head
+unnamed-chunk-3	plot
+unnamed-chunk-4	::
+unnamed-chunk-5	$	airquality	hist
+unnamed-chunk-6	$	::	airquality	capture.output	hist
+unnamed-chunk-7	alt
+unnamed-chunk-8	~	boxplot	InsectSprays
+unnamed-chunk-9	::	~	boxplot	capture.output	InsectSprays
+unnamed-chunk-10	alt
+unnamed-chunk-11	alt

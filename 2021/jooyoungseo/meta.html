@@ -1,0 +1,46 @@
+<div data-at-shortcutkeys = "&#123;&quot;k&quot;: &quot;Go the previous slide&quot;, &quot;j&quot;: &quot;Go the next slide&quot;, &quot;b&quot;: &quot;Toggle black out a slide&quot;, &quot;m&quot;: &quot;Toggle mirror a slide&quot;, &quot;f&quot;: &quot;Toggle fullscreen mode&quot;, &quot;w&quot;: &quot;Toggle widescreen mode&quot;, &quot;c&quot;: &quot;Clone slides to a new browser window&quot;, &quot;p&quot;: &quot;Toggle the presenter mode&quot;&#125;"></div>
+
+<script>
+// Accessible JS script for slide control, written by JooYoung Seo (jooyoung@psu.edu) 10/21/2020.
+document.addEventListener('DOMContentLoaded', function() {
+  var slideListNum = document.getElementsByClassName("remark-slide-number");
+
+  for (var i = 0; i < slideListNum.length; i++) {
+//    slideListNum[i].setAttribute('tabindex', '0');
+    slideListNum[i].setAttribute('aria-label', 'Slide Control Region');
+//    slideListNum[i].setAttribute('accesskey', 'G');
+//    slideListNum[i].setAttribute('role', 'application');
+  }
+
+  var slideList = document.getElementsByClassName("remark-slide-content");
+
+  for (var i = 0; i < slideList.length; i++) {
+    slideList[i].setAttribute('role', 'main');
+    slideList[i].setAttribute('aria-live', 'assertive');
+    slideList[i].setAttribute('aria-labelledby', 'sp-note');
+  }
+
+
+  var noteList = document.getElementsByClassName("remark-notes");
+
+  for (var i = 0; i < noteList.length; i++) {
+    noteList[i].setAttribute('role', 'comment');
+//    noteList[i].setAttribute('aria-label', 'Notes');
+    noteList[i].setAttribute('aria-live', 'assertive');
+    noteList[i].setAttribute('id', 'sp-note');
+  }
+
+
+});
+</script>
+
+<style>
+.sp-note {
+  position: absolute;
+  left:0px;
+  top:-500px;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+</style>
