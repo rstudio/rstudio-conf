@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Accessible Data Science beyond Visual Models</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="JooYoung Seo" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/fc.css" rel="stylesheet" />
+    <link href="libs/remark-css/fc-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css/hygge.css" rel="stylesheet" />
+    <div data-at-shortcutkeys = "&#123;&quot;k&quot;: &quot;Go the previous slide&quot;, &quot;j&quot;: &quot;Go the next slide&quot;, &quot;b&quot;: &quot;Toggle black out a slide&quot;, &quot;m&quot;: &quot;Toggle mirror a slide&quot;, &quot;f&quot;: &quot;Toggle fullscreen mode&quot;, &quot;w&quot;: &quot;Toggle widescreen mode&quot;, &quot;c&quot;: &quot;Clone slides to a new browser window&quot;, &quot;p&quot;: &quot;Toggle the presenter mode&quot;&#125;"></div>
+
+    <script>
+    // Accessible JS script for slide control, written by JooYoung Seo (jooyoung@psu.edu) 10/21/2020.
+    document.addEventListener('DOMContentLoaded', function() {
+      var slideListNum = document.getElementsByClassName("remark-slide-number");
+
+      for (var i = 0; i < slideListNum.length; i++) {
+    //    slideListNum[i].setAttribute('tabindex', '0');
+        slideListNum[i].setAttribute('aria-label', 'Slide Control Region');
+    //    slideListNum[i].setAttribute('accesskey', 'G');
+    //    slideListNum[i].setAttribute('role', 'application');
+      }
+
+      var slideList = document.getElementsByClassName("remark-slide-content");
+
+      for (var i = 0; i < slideList.length; i++) {
+        slideList[i].setAttribute('role', 'main');
+        slideList[i].setAttribute('aria-live', 'assertive');
+        slideList[i].setAttribute('aria-labelledby', 'sp-note');
+      }
+
+
+      var noteList = document.getElementsByClassName("remark-notes");
+
+      for (var i = 0; i < noteList.length; i++) {
+        noteList[i].setAttribute('role', 'comment');
+    //    noteList[i].setAttribute('aria-label', 'Notes');
+        noteList[i].setAttribute('aria-live', 'assertive');
+        noteList[i].setAttribute('id', 'sp-note');
+      }
+
+
+    });
+    </script>
+
+    <style>
+    .sp-note {
+      position: absolute;
+      left:0px;
+      top:-500px;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Accessible Data Science beyond Visual Models
+## <br/>Non-Visual Interactions with R and RStudio Packages
+### JooYoung Seo
+### Penn State University
+
+---
+
+
+
+
+
+class: center, middle, inverse
+
+# How Do I Use Computer?
+???
+Start with a basic question.
+---
+class: center, middle
+
+# Interaction with Computer
+
+.pull-left-50[
+.content-box-green[.large[.large[## Input
+]]
+![Keyboard and mouse](https://cdn.pixabay.com/photo/2015/09/09/21/38/keyboard-933568_1280.jpg)
+]]
+
+.pull-right-50[
+.content-box-red[.large[.large[## Output]]
+![Monitor](https://cdn.pixabay.com/photo/2016/10/16/16/33/dual-screen-1745705_1280.png)
+]]
+???
+Put it another way. How do I interact with computer input and output?
+---
+class: center, middle
+
+# Non-Visual Interaction
+
+.pull-left-50[
+.content-box-green[.large[.large[## Input
+]]
+![Keyboard only](https://pikwizard.com/photos/computer-keyboard-on-close-up-photography--44cb24f8ac7dd255a5b8cd7647be5674-m.jpg)
+]]
+
+???
+Non-visual interaction
+--
+
+.pull-right-50[.content-box-red[.large[.large[
+## Output
+]]
+![Speaker](https://cdn.pixabay.com/photo/2014/04/02/10/41/speaker-304215_960_720.png)
+]]
+???
+Non-visual interaction: keyboard only and speaker instead of computer screen.---
+---
+background-image: url(https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png)
+background-size: contain
+
+???
+Import, Tidy, Transform, Visualize, and Model
+---
+class: center, middle, inverse
+
+# Why R?
+
+## CLI == fully accessible via keyboard.
+
+## Rmd -&gt; reproducibility -&gt; accessibility.
+
+## Accessible open-source packages.
+
+???
+Why R?
+
+As opposed to point-and-click UI, R is a command-line env.
+
+This means that you can everything within terminal console using keyboard only.
+
+Good benefit for keyboard users.
+
+Rmd is a plain text. can be written with any text editor.
+---
+# What about IDE Accessibility?
+
+.pull-left-50[.large[.large[
+## RStudio IDE
+
+![:image 70%, RStudio logo](fig/RStudio-Logo-Flat.png)
+
+* Desktop &gt;= v1.3
+* Server &gt;= v1.3 (recommendable)
+]]]
+
+.pull-right-50[.large[.large[
+## VSCode
+
+![:image 30%, VSCode logo](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png)
+
+### Extensions
+
+* R
+* R Debugger
+* R LSP Client
+]]]
+???
+Why not using IDE?
+---
+class: center, middle
+
+# [Using RStudio Server in Windows WSL2](https://support.rstudio.com/hc/en-us/articles/360049776974-Using-RStudio-Server-in-Windows-WSL2)
+
+???
+Use WSL2
+---
+background-image: url(https://d33wubrfki0l68.cloudfront.net/246f0b63660ced61cdb88fae68a6d323ffc464cc/dd74c/2020/03/04/rstudio-1-3-preview-accessibility/accessibility-options.png)
+background-size: contain
+
+.footnote[Contact at [`accessibility@rstudio.com`](mailto:accessibility@rstudio.com)]
+
+???
+RStudio accessibility option.
+---
+background-image: url(https://blog.rstudio.com/2020/03/04/rstudio-1-3-preview-accessibility/focus-indicator-loop.gif)
+background-size: contain
+
+.footnote[Contact at [`accessibility@rstudio.com`](mailto:accessibility@rstudio.com)]
+
+???
+tab key moving focus
+---
+# Accessible Packages
+
+* [{gt}](https://github.com/rstudio/gt): data.frame and tibble.
+* [{sonify}](https://cran.r-project.org/web/packages/sonify/): scatter plot and line chart.
+* [{BrailleR}](https://github.com/ajrgodfrey/BrailleR): histogram, barplot, and boxplot.
+* [{shiny}](https://github.com/rstudio/shiny): interactive navigation.
+* [{rmarkdown}](https://github.com/rstudio/rmarkdown): Swiss army knife for accessibility.
+???
+Accessible packages
+---
+class: center, middle, inverse
+
+# Interaction with Data Frame
+
+???
+Interaction with Data Frame
+---
+# Problem?
+
+.pull-left-50[
+
+```r
+utils::View(head(airquality))
+```
+]
+
+.pull-right-50[
+![Default data viewer](fig/default-View.png)
+]
+
+
+???
+utils::View() is not accessible
+---
+# {gt}&lt;sup&gt;*&lt;/sup&gt;
+
+
+```r
+# In place of `View()`:
+gt::gt(head(airquality))
+```
+
+```{=html}
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#pccenaqsga .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pccenaqsga .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pccenaqsga .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pccenaqsga .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pccenaqsga .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pccenaqsga .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pccenaqsga .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pccenaqsga .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pccenaqsga .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pccenaqsga .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#pccenaqsga .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#pccenaqsga .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pccenaqsga .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#pccenaqsga .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pccenaqsga .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pccenaqsga .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pccenaqsga .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pccenaqsga .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pccenaqsga .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pccenaqsga .gt_left {
+  text-align: left;
+}
+
+#pccenaqsga .gt_center {
+  text-align: center;
+}
+
+#pccenaqsga .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pccenaqsga .gt_font_normal {
+  font-weight: normal;
+}
+
+#pccenaqsga .gt_font_bold {
+  font-weight: bold;
+}
+
+#pccenaqsga .gt_font_italic {
+  font-style: italic;
+}
+
+#pccenaqsga .gt_super {
+  font-size: 65%;
+}
+
+#pccenaqsga .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;div id="pccenaqsga" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"&gt;&lt;table class="gt_table"&gt;
+  
+  &lt;thead class="gt_col_headings"&gt;
+    &lt;tr&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1"&gt;Ozone&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1"&gt;Solar.R&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1"&gt;Wind&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1"&gt;Temp&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1"&gt;Month&lt;/th&gt;
+      &lt;th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1"&gt;Day&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class="gt_table_body"&gt;
+    &lt;tr&gt;&lt;td class="gt_row gt_right"&gt;41&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;190&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;7.4&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;67&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class="gt_row gt_right"&gt;36&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;118&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;8.0&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;72&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;2&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class="gt_row gt_right"&gt;12&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;149&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;12.6&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;74&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;3&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class="gt_row gt_right"&gt;18&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;313&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;11.5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;62&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;4&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class="gt_row gt_right"&gt;NA&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;NA&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;14.3&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;56&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class="gt_row gt_right"&gt;28&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;NA&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;14.9&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;66&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;5&lt;/td&gt;
+&lt;td class="gt_row gt_right"&gt;6&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;&lt;/div&gt;
+```
+
+.footnote[[*]: Iannone, Cheng, and Schloerke (2020).]
+???
+gt for data.frame
+---
+class: center, middle, inverse
+
+# Interaction with Scatter Plot
+
+???
+Interaction with Scatter Plot
+---
+# {sonify}&lt;sup&gt;*&lt;/sup&gt;
+
+.pull-left-50[
+
+```r
+plot(x = 1:5, y = 1:5)
+```
+
+![](fig/unnamed-chunk-3-1.png)&lt;!-- --&gt;
+]
+
+--
+
+.pull-right-50[
+
+```r
+sonify::sonify(x = 1:5, y = 1:5)
+```
+]
+
+.footnote[[*]: Siegert and Williams (2017).]
+???
+sonification
+---
+class: center, middle, inverse
+
+# Interaction with Histogram
+
+&lt;audio autoplay&gt;
+&lt;source src="sonify.wav" type="audio/wav"/&gt;
+&lt;/audio&gt;
+
+???
+Interaction with Histogram
+---
+class: center, middle
+
+# Visual Histogram
+
+
+```r
+hist(airquality$Ozone, col = "lightgreen")
+```
+
+![](fig/unnamed-chunk-5-1.png)&lt;!-- --&gt;
+???
+Visual Histogram
+---
+# {BrailleR}&lt;sup&gt;*&lt;/sup&gt;
+
+
+
+```r
+BrailleR::VI(hist(airquality$Ozone))
+```
+
+
+```
+##  [1] "This is a histogram, with the title: Histogram of airquality$Ozone"
+##  [2] "\"airquality$Ozone\" is marked on the x-axis."                     
+##  [3] "Tick marks for the x-axis are at: 0, 50, 100, and 150 "            
+##  [4] "There are a total of 116 elements for this variable."              
+##  [5] "Tick marks for the y-axis are at: 0, 10, 20, and 30 "              
+##  [6] "It has 9 bins with equal widths, starting at 0 and ending at 180 ."
+##  [7] "The mids and counts for the bins are:"                             
+##  [8] "mid = 10  count = 37 "                                             
+##  [9] "mid = 30  count = 34 "                                             
+## [10] "mid = 50  count = 14 "                                             
+## [11] "mid = 70  count = 15 "                                             
+## [12] "mid = 90  count = 9 "                                              
+## [13] "mid = 110  count = 4 "                                             
+## [14] "mid = 130  count = 2 "                                             
+## [15] "mid = 150  count = 0 "                                             
+## [16] "mid = 170  count = 1"
+```
+
+.footnote[[*]: Godfrey, Warren, Murrell, Bilton, and Sorge (2020).]
+
+???
+BrailleR package for histogram
+---
+class: center, middle, inverse
+
+# Interaction with Boxplot
+
+???
+Interaction with Boxplot
+---
+class: center, middle
+
+# Visual Boxplot
+
+
+```r
+boxplot(count ~ spray, data = InsectSprays, col = "lightgray")
+```
+
+![](fig/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+???
+Visual Boxplot
+---
+# {BrailleR}
+
+
+
+```r
+BrailleR::VI(boxplot(count ~ spray, data = InsectSprays, col = "lightgray"))
+```
+
+
+```
+##  [1] "This graph has 6 boxplots printed vertically"                            
+##  [2] "with the title: "                                                        
+##  [3] "\"\" appears on the x-axis."                                             
+##  [4] "\"\" appears on the y-axis."                                             
+##  [5] "Tick marks for the y-axis are at: 0, 5, 10, 15, 20, and 25 "             
+##  [6] "Group A has 12 values."                                                  
+##  [7] "There are no outliers marked for this group "                            
+##  [8] "The whiskers extend to 7 and 23 from the ends of the box, "              
+##  [9] "which are at 11 and 18.5 "                                               
+## [10] "The median, 14 is 40 % from the lower end of the box to the upper end."  
+## [11] "The upper whisker is 1.12 times the length of the lower whisker."        
+## [12] "Group B has 12 values."                                                  
+## [13] "There are no outliers marked for this group "                            
+## [14] "The whiskers extend to 7 and 21 from the ends of the box, "              
+## [15] "which are at 12 and 18 "                                                 
+## [16] "The median, 16.5 is 75 % from the lower end of the box to the upper end."
+## [17] "The upper whisker is 0.6 times the length of the lower whisker."         
+## [18] "Group C has 12 values."                                                  
+## [19] "An outlier is marked at: 7 "                                             
+## [20] "The whiskers extend to 0 and 4 from the ends of the box, "               
+## [21] "which are at 1 and 3 "                                                   
+## [22] "The median, 1.5 is 25 % from the lower end of the box to the upper end." 
+## [23] "The upper whisker is 1 times the length of the lower whisker."           
+## [24] "Group D has 12 values."                                                  
+## [25] "An outlier is marked at: 12 "                                            
+## [26] "The whiskers extend to 2 and 6 from the ends of the box, "               
+## [27] "which are at 3.5 and 5 "                                                 
+## [28] "The median, 5 is 100 % from the lower end of the box to the upper end."  
+## [29] "The upper whisker is 0.67 times the length of the lower whisker."        
+## [30] "Group E has 12 values."                                                  
+## [31] "There are no outliers marked for this group "                            
+## [32] "The whiskers extend to 1 and 6 from the ends of the box, "               
+## [33] "which are at 2.5 and 5 "                                                 
+## [34] "The median, 3 is 20 % from the lower end of the box to the upper end."   
+## [35] "The upper whisker is 0.67 times the length of the lower whisker."        
+## [36] "Group F has 12 values."                                                  
+## [37] "There are no outliers marked for this group "                            
+## [38] "The whiskers extend to 9 and 26 from the ends of the box, "              
+## [39] "which are at 12 and 23 "                                                 
+## [40] "The median, 15 is 27 % from the lower end of the box to the upper end."  
+## [41] "The upper whisker is 1 times the length of the lower whisker."           
+## [42] ""
+```
+
+???
+BrailleR package for Boxplot
+---
+class: center, middle, inverse
+
+# Math
+???
+Math
+---
+# {rmarkdown}
+
+```yaml
+---
+output: html_document
+---
+```
+```markdown
+$$\begin{array}{ccc}
+x_{11} &amp; x_{12} &amp; x_{13}\\
+x_{21} &amp; x_{22} &amp; x_{23}
+\end{array}$$
+```
+???
+Math content using Rmd
+---
+# {rmarkdown}&lt;sup&gt;*&lt;/sup&gt;
+
+`$$\begin{array}{ccc}
+x_{11} &amp; x_{12} &amp; x_{13}\\
+x_{21} &amp; x_{22} &amp; x_{23}
+\end{array}$$`
+
+.footnote[[*]: Allaire, Xie, McPherson, Luraschi, Ushey, Atkins, Wickham, Cheng, Chang, and Iannone (2020).]
+???
+result
+---
+class: center, middle, inverse
+
+# {shiny}
+
+???
+shiny
+---
+# {shiny}&lt;sup&gt;*&lt;/sup&gt;
+
+## Accessibility Improvements
+
+```r
+# Version &gt; 1.5
+remotes::install_github("rstudio/shiny")
+```
+
+.footnote[[*]: Chang, Cheng, Allaire, Sievert, Schloerke, Xie, Allen, McPherson, Dipert, and Borges (2020).]
+
+???
+internship super excited to tell you
+---
+# {shiny}
+
+## Bootstrap Accessibility
+
+* Added [bootstrap accessibility plugin](https://github.com/paypal/bootstrap-accessibility-plugin).
+
+* Enhancements: alert, tooltip, popover, modal dialog, dropdown, tab Panel, collapse, and carousel elements.
+???
+Bootstrap a11y
+---
+# {shiny}
+
+## Widget Accessibility
+
+???
+Widget a11y
+--
+
+`selectInput()`
+
+???
+`selectInput()`
+--
+
+`fileInput()`
+
+???
+`fileInput()`
+--
+
+`icon()`
+
+???
+`icon()`
+--
+
+`radioButtons()`
+
+???
+`radioButtons()`
+--
+
+`checkboxGroupInput()`
+
+???
+`checkboxGroupInput()`
+--
+
+`dateInput()`
+
+???
+`dateInput()`
+--
+
+`dateRangeInput()`
+
+???
+`dateRangeInput()`
+--
+
+`*Output()` and `update*Input()`
+???
+`*Output()` and `update*Input()`
+---
+# {shiny}
+
+## Semantics Accessibility
+
+???
+Semantics Accessibility
+--
+
+### Alt Text
+
+* `renderPlot(..., alt = "Plot object")`
+
+???
+static alt text
+--
+
+* `renderPlot(..., alt = reactive({ ... }))`
+
+???
+Dynamic alt text
+--
+
+### Shiny App Language
+
+* `fluidPage(..., lang = "en")`
+
+???
+ISO 639-1 language code
+--
+
+### Landmarks
+
+* "main" role for `mainPanel()`; "complementary" for `sidebarPanel()`
+
+???
+Landmarks
+
+"main" role for `mainPanel()`; "complementary" for `sidebarPanel()`
+---
+class: middle, center, inverse
+
+# Data Science Requires *Insight* (NOT Sight)
+
+???
+Data Science Requires Insight (NOT Sight)
+---
+class: center, middle, inverse
+
+# Thank You!
+
+???
+Thank you
+---
+# Contact
+
+## &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/&gt;&lt;/svg&gt;: [`@seo_jooyoung`](https://twitter.com/seo_jooyoung)
+
+## &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 496 512"&gt;&lt;path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/&gt;&lt;/svg&gt;: [`@jooyoungseo`](https://github.com/jooyoungseo)
+
+## &lt;svg style="height:0.8em;top:.04em;position:relative;" viewBox="0 0 512 512"&gt;&lt;path d="M172.2 226.8c-14.6-2.9-28.2 8.9-28.2 23.8V301c0 10.2 7.1 18.4 16.7 22 18.2 6.8 31.3 24.4 31.3 45 0 26.5-21.5 48-48 48s-48-21.5-48-48V120c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24v248c0 89.5 82.1 160.2 175 140.7 54.4-11.4 98.3-55.4 109.7-109.7 17.4-82.9-37-157.2-112.5-172.2zM209 0c-9.2-.5-17 6.8-17 16v31.6c0 8.5 6.6 15.5 15 15.9 129.4 7 233.4 112 240.9 241.5.5 8.4 7.5 15 15.9 15h32.1c9.2 0 16.5-7.8 16-17C503.4 139.8 372.2 8.6 209 0zm.3 96c-9.3-.7-17.3 6.7-17.3 16.1v32.1c0 8.4 6.5 15.3 14.8 15.9 76.8 6.3 138 68.2 144.9 145.2.8 8.3 7.6 14.7 15.9 14.7h32.2c9.3 0 16.8-8 16.1-17.3-8.4-110.1-96.5-198.2-206.6-206.7z"/&gt;&lt;/svg&gt;: [jooyoungseo.com](https://jooyoungseo.com)
+
+???
+Contact info
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="js/macro.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
