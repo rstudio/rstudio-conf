@@ -1,0 +1,12 @@
+---
+title: "Error Report"
+output: blastula::blastula_email
+---
+
+#### Version: `r version`
+#### Script: `r script_name`
+#### Chunk: `r script_chunk`
+#### Error: `r paste0(error_msg)`
+
+#### Please see the error text log: (copy and paste or click) 
+\\\\path\\subfolder
