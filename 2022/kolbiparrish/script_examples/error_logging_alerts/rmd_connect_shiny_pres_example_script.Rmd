@@ -1,0 +1,320 @@
+---
+title: "R Markdown + RStudio Connect + R Shiny: A Recipe for Automated Data Processing, Error Logging, and Process Monitoring"
+subtitle: "Example RMD with error and process monitoring logging, for automating via RStudio Connect"
+author: "Kolbi Parrish"
+date: "4/25/2022"
+output: html_document
+---
+
+## Constants and Log Setup
+```{r path_setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(data.table)
+library(loggit)
+library(blastula)
+
+# Constants ----
+# Labels given to processing script for use in process log file
+process_title <- 'r_conf_ex_script'
+script_start_id <- 'r_conf_ex_script_start'
+script_end_id <- 'r_conf_ex_script_end'
+
+# Run id for logging
+run_id <- paste0(format(Sys.time(), "%Y%m%d%H%M%S"))
+
+# Label given to a particular section of code/data source that is processed in the script (helpful if processing multiple sources within a single script using different trigger criteria)
+odp_covid_process_id <- 'odp_covid'
+
+# Add write paths for file logs here
+DEV_PATH <- "/mnt/projects/connect-izb/rmd_generate_dev/sandbox/"
+PROD_PATH <- "/mnt/projects/connect-izb/rmd_generate/sandbox/"
+
+# Specify name of production code repository (assumes there is development and production code separation). An environmental variable called "environment" with value of "PROD" is added to the production publication on RStudio Connect; the logic in this script will output logs to DEV_PATH or PROD_PATH, depending on which version of code is running
+PROD_REPO <- "DPI_conference_content"
+
+# Date used in creation of daily log file
+date_to_print <- format(Sys.Date(), "%Y%m%d")
+
+# Initialize variables
+connect_loc <- ""
+
+# Script name (used for error and process logging)
+script_name <- 'rmd_connect_shiny_pres_example_script.Rmd'
+
+# Connect Environment
+if (str_detect(getwd(), "/opt/rstudio-connect/mnt/")) {
+  r_environment <- "connect"
+  
+  # Get values for R Connect environmental variables
+  INSERT_ERROR_FOR_DEMO <- Sys.getenv("INSERT_ERROR_FOR_DEMO")
+  
+  OVERRIDE_FLAG <- Sys.getenv("OVERRIDE_FLAG")
+  
+  # Production
+  if(toupper(Sys.getenv("environment")) == "PROD"){
+    connect_loc <- PROD_PATH
+    version <- "PROD"
+  }
+  # Development
+  else{
+    connect_loc <- DEV_PATH
+    version <- "DEV"
+  }
+}# end if 
+
+# Rstudio Environment
+if (str_detect(getwd(), "/mnt/projects/epi/")){
+  wd_len_split <- length(unlist(str_split(getwd(), "/")))
+  file <- unlist(strsplit(getwd(), "/"))[8]
+  r_environment <- "rstudio"
+  
+  INSERT_ERROR_FOR_DEMO <- 0
+  
+  OVERRIDE_FLAG <- 0
+  
+  # Production 
+  if (file == PROD_REPO){
+    connect_loc <- PROD_PATH
+    version <- "PROD"
+  }
+  # Development
+  else{
+    connect_loc <- DEV_PATH
+    version <- "DEV"
+  }
+}# end if
+
+# Read in process flag log (tracks process start and end - used to create processing summary plot in R Shiny process monitoring app)
+flag_log_path <- paste0(connect_loc, 'logs/', r_environment, '/process_flag_logs/')
+
+flag_log <- fread(paste0(flag_log_path, "flag_log.csv")) %>%
+  filter(process == process_title) %>%
+  group_by(id) %>%
+  filter(timestamp == max(timestamp, na.rm = TRUE)) %>%
+  distinct() %>%
+  ungroup()
+
+# Specify path to data processing error and info log files by environment
+set_logfile(paste0(connect_loc, "logs/", r_environment, "/error_warning_info_logs/data_processing_error_info_log_connect_", date_to_print,".log"))
+
+# Functions ----
+# Writing to flag log
+  write_to_flag <- function(file_path, process_name, id_name, flag_name, timestamp_name = Sys.time(), new = FALSE){
+    table_to_write <- data.table(process = process_name, id = id_name, flag = flag_name, timestamp = format(as.POSIXct(timestamp_name), "%Y-%m-%d %H:%M:%S"))
+    if(!new){
+      write.table(table_to_write, file_path, sep = ",", row.names = FALSE, append = T, col.names = F, quote = F)
+    }else{
+      write.table(table_to_write, file_path, sep = ",", row.names = FALSE, append = F, col.names = T, quote = F)
+    }
+  }# end write_to_flag
+
+# Logic to determine if data has updated since last processing - if yes, continue to process code & if not, exit the script ----
+# Processing flag log to get the last logged timestamp for data sources
+odp_covid_last_timestamp <- flag_log %>%
+  filter(id == "odp_covid")%>% 
+  select(timestamp) %>% 
+  pull()
+
+# Querying data source to get the current source file date
+odp_covid_current_timestamp <- fread("https://data.chhs.ca.gov/dataset/f333528b-4d38-4814-bebb-12db1f10f535/resource/046cdd2b-31e5-4d34-9ed3-b48cdbc4be7a/download/covid19cases_test.csv") %>%
+    select(date) %>%
+    filter(date == max(date, na.rm = TRUE)) %>%
+    distinct() %>%
+    collect() %>% 
+    mutate(date = format(date, '%Y-%m-%d %H:%M:%S')) %>%
+    pull()
+
+ # If the date/timestamp isn't updated, exit, otherwise record the new date/timestamp and set the flag-----------
+  if (odp_covid_current_timestamp <= odp_covid_last_timestamp && OVERRIDE_FLAG != 1) {
+    knitr::knit_exit()
+  }else{
+      write_to_flag(paste0(flag_log_path, "flag_log.csv"), process_title, odp_covid_process_id, run_id, odp_covid_current_timestamp)
+      odp_covid_update_flag <- TRUE
+  }# end else
+```
+
+## Script Running Flag Check & Setup (prevents script from re-running when it's already running)
+```{r start_trigger_setup}
+
+# RMD chunk name (used for error and process logging)
+chunk_name <- "start_trigger_setup"
+
+# Initialize retry attempts
+attempt <- 0
+
+# Initialize error flag
+error_flag <- ""
+
+while(attempt <= 0 & (error_flag == "" | error_flag == "true")) {
+  attempt <- attempt + 1
+  tryCatch({
+    loggit("INFO", paste("Start of", script_name, chunk_name, "chunk"), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+
+    # If script has already started/running, exit current run
+    is_script_start <- flag_log %>%
+      filter(id == script_start_id)
+    
+    is_script_start_file <- file.exists(paste0(flag_log_path, "R Conf Ex Running.log"))
+    if(is_script_start_file){
+      knitr::knit_exit()
+    }else{
+      write_to_flag(paste0(flag_log_path, "flag_log.csv"), process_title, script_start_id, run_id, Sys.time())
+      file.create(paste0(flag_log_path, "R Conf Ex Running.log"))      
+    }
+
+  # Set error_flag to false (to break retry loop in the event of no error)
+  error_flag <- "false"
+  },
+  
+  # Error handling - can add error conditions here
+  error = function(e){
+          # Set error_flag to true (to continue retry loop in the event of an error, up to max number of retries)
+          error_flag <<- "true"
+          error_msg <<- e
+
+          loggit("ERROR", paste("One or more errors occurred in the", script_name, chunk_name, "chunk. The first error encountered was - ", gsub(":", "-", e)), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+  },
+  # Finally specifies handling that occurs irrespective of error status (in this instance, log that the end of the rmd chunk was reached)
+  
+  finally = {
+          loggit("INFO", paste("End of", script_name, chunk_name, "chunk"), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+  }
+  )
+}
+
+# Email setup
+if (error_flag == "true"){
+  script_chunk <- chunk_name
+  script_name <- script_name
+  rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = FALSE)
+  render_connect_email(input = "error_report.Rmd") %>%
+    attach_connect_email(subject = paste0("[", version,"]", " Error Detected"))
+  knitr::knit_exit()
+}else{
+  rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = TRUE)
+}
+```
+
+## Data Processing with Error and Process Logging
+```{r data_processing, warning = FALSE, message=FALSE}
+# RMD chunk name (used for error and process logging)
+  chunk_name <- "data_processing"
+
+# Only run processing code if data source has updates since last run OR if the R Connect OVERRIDE_FLAG environmental variable is set to 1
+if(odp_covid_update_flag==TRUE || OVERRIDE_FLAG == 1){
+    
+  # Initialize retry attempts
+  attempt <- 0
+  
+  # Initialize error flag
+  error_flag <- ""
+  
+  while(attempt <= 2 & (error_flag == "" | error_flag == "true")) {
+    
+    attempt <- attempt + 1
+    
+    tryCatch({
+      loggit("INFO", paste("Start of", script_name, chunk_name, "chunk"), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+  
+        data <- fread("https://data.chhs.ca.gov/dataset/f333528b-4d38-4814-bebb-12db1f10f535/resource/046cdd2b-31e5-4d34-9ed3-b48cdbc4be7a/download/covid19cases_test.csv") %>%
+    filter(date == max(date, na.rm = TRUE))
+  
+  # Code added to demonstrate what happens when an error is detected. To trigger error for demonstration, set an "INSERT_ERROR_FOR_DEMO" environmental variable to a value of 1 on Connect
+  if(INSERT_ERROR_FOR_DEMO == 1){
+    data <- data %>%
+     filter(nonexistent_col == "OOPS") 
+  }
+  
+  # You can add file write code, processing, and/or visualization code here. Alternatively, another RMD chunk can be used.
+        
+      # Set error_flag to false (to break retry loop in the event of no error)
+      error_flag <- "false"
+  
+    },
+    
+    # Error handling - can add error conditions here
+    error = function(e){
+      # Set error_flag to true (to continue retry loop in the event of an error, up to max number of retries)
+      error_flag <<- "true"
+      error_msg <<- e
+  
+      loggit("ERROR", paste("One or more errors occurred in the", script_name, chunk_name, "chunk. The first error encountered was - ", gsub(":", "-", e)), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+    },
+    
+    # Finally specifies handling that occurs irrespective of error status (in this instance, log that the end of the rmd chunk was reached)
+    finally = {
+      loggit("INFO", paste("End of", script_name, chunk_name, "chunk"), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+    }
+    )
+  }
+  
+  if (error_flag == "true"){
+    script_chunk <- chunk_name
+    script_name <- script_name
+    rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = FALSE)
+    render_connect_email(input = "error_report.Rmd") %>%
+      attach_connect_email(subject = paste0("[", version,"]", " Error Detected"))
+    
+    knitr::knit_exit()
+  }else{
+    rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = TRUE)
+  }
+}
+```
+
+## Setting Ending Triggers
+```{r end_trigger}
+
+# RMD chunk name (used for error and process logging)
+chunk_name <- "end_trigger"
+
+# Initialize retry attempts
+attempt <- 0
+
+# Initialize error flag
+error_flag <- ""
+
+while(attempt <= 0 & (error_flag == "" | error_flag == "true")) {
+  attempt <- attempt + 1
+  tryCatch({
+    loggit("INFO", paste("Start of", script_name, chunk_name, "chunk"), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+    
+    write_to_flag(paste0(flag_log_path, "flag_log.csv"), process_title, script_end_id, run_id, Sys.time())
+
+    file.remove(paste0(flag_log_path, "R Conf Ex Running.log"))
+    file.create(paste0(flag_log_path, "R Conf Ex Finished.log"))
+
+  # Set error_flag to false (to break retry loop in the event of no error)
+  error_flag <- "false"
+  
+  },
+  # Error handling - can add error conditions here
+  error = function(e){
+          # Set error_flag to true (to continue retry loop in the event of an error, up to max number of retries)
+          error_flag <<- "true"
+          error_msg <<- e
+    
+          loggit("ERROR", paste("One or more errors occurred in the", script_name, chunk_name, "chunk. The first error encountered was - ", gsub(":", "-", e)), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+  },
+  # Finally specifies handling that occurs irrespective of error status (in this instance, log that the end of the rmd chunk was reached)
+  finally = {
+          loggit("INFO", paste("End of", script_name, chunk_name, "chunk"), script = script_name, script_chunk = chunk_name, attempt_number = attempt, r_environment = r_environment, version = version)
+  }
+  )
+}
+
+if (error_flag == "true"){
+  script_chunk <- chunk_name
+  script_name <- script_name
+  rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = FALSE)
+  render_connect_email(input = "error_report.Rmd") %>%
+    attach_connect_email(subject = paste0("[", version,"]", " Error Detected"))
+  
+  knitr::knit_exit()
+}else{
+  rmarkdown::output_metadata$set(rsc_email_suppress_scheduled = TRUE)
+}
+
+```
