@@ -40,6 +40,8 @@ All workshop materials are organized at [Workshops at rstudio::conf(2022)](https
 
 
 
+
+
 July 27 at 09:00:00 EDT 
 
 **Good practices for applied machine learning - from model development to model deployment** 
@@ -76,7 +78,7 @@ July 27 at 11:00:00 EDT
 
 💬 Speaker: Kelly Bodwin [Twitter](https://twitter.com/kellybodwin) | [GitHub](https://github.com/kbodwin) | [LinkedIn]() 
 
-📁 [Materials]()
+📁 [Materials](https://www.kelly-bodwin.com/talks/rsconf22/)
 
 
 
@@ -86,7 +88,7 @@ July 27 at 11:00:00 EDT
 
 💬 Speaker: Hannah Frick [Twitter](https://twitter.com/hfcfrick) | [GitHub](https://github.com/hfrick) | [LinkedIn](https://www.linkedin.com/in/hannah-frick) 
 
-📁 [Materials]()
+📁 [Materials](https://hfrick.github.io/rstudio-conf-2022)
 
 
 
@@ -186,7 +188,7 @@ July 27 at 13:30:00 EDT
 
 💬 Speaker: Kelly O'Briant [Twitter](https://twitter.com/kellrstats) | [GitHub](https://github.com/kellobri) | [LinkedIn](https://www.linkedin.com/in/kellyobriant/) 
 
-📁 [Materials]()
+📁 [Materials](https://kelly.quarto.pub/rstudioconf-talk-2022/)
 
 
 
@@ -336,7 +338,7 @@ July 27 at 15:20:00 EDT
 
 💬 Speaker: Rebecca Hadi [Twitter](https://twitter.com/beehadi26) | [GitHub](https://github.com/bhadi26) | [LinkedIn](https://www.linkedin.com/in/rebeccahadi/) 
 
-📁 [Materials]()
+📁 [Materials](~https://github.com/bhadi26/rstudio-conf-2022-slides/blob/main/rebecca-hadi-r-studio-presentation-2022.pptx)
 
 
 
@@ -356,7 +358,7 @@ July 27 at 15:20:00 EDT
 
 💬 Speaker: Tom Mock [Twitter](https://twitter.com/thomas_mock) | [GitHub](https://github.com/jthomasmock) | [LinkedIn](https://www.linkedin.com/in/jthomasmock/) 
 
-📁 [Materials]()
+📁 [Materials](https://jthomasmock.github.io/quarto-presentation)
 
 
 
@@ -396,7 +398,7 @@ July 27 at 15:40:00 EDT
 
 💬 Speaker: Lewis Kirvan [Twitter]() | [GitHub](https://lmkirvan.github.io/index.html) | [LinkedIn](https://www.linkedin.com/in/lewis-kirvan-9013392b/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/lmkirvan/presentation)
 
 
 
@@ -596,7 +598,7 @@ July 28 at 11:00:00 EDT
 
 💬 Speaker: Beatriz Milz [Twitter](https://twitter.com/BeaMilz) | [GitHub](https://github.com/beatrizmilz) | [LinkedIn](https://www.linkedin.com/in/beatrizmilz/) 
 
-📁 [Materials](https://beatrizmilz.github.io/rstudioconf2022/)
+📁 [Materials](https://beamilz.com/talks/en/2022-rstudio-conf/)
 
 
 
@@ -726,7 +728,7 @@ July 28 at 11:35:00 EDT
 
 💬 Speaker: Matthew Kay [Twitter](https://twitter.com/mjskay) | [GitHub](https://github.com/mjskay) | [LinkedIn]() 
 
-📁 [Materials]()
+📁 [Materials](https://www.mjskay.com/presentations/rstudio-conf-2022-talk.pdf)
 
 
 
@@ -1006,7 +1008,7 @@ July 28 at 16:00:00 EDT
 
 💬 Speaker: Mike Cheng [Twitter](https://twitter.com/coolbutuseless) | [GitHub](https://github.com/coolbutuseless) | [LinkedIn](https://www.linkedin.com/in/michael-cheng-8782632b) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/coolbutuseless/RStudioConf-2022)
 
 
 
