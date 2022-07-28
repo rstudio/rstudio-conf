@@ -40,8 +40,6 @@ All workshop materials are organized at [Workshops at rstudio::conf(2022)](https
 
 
 
-
-
 July 27 at 09:00:00 EDT 
 
 **Good practices for applied machine learning - from model development to model deployment** 
@@ -358,7 +356,7 @@ July 27 at 15:20:00 EDT
 
 💬 Speaker: Tom Mock [Twitter](https://twitter.com/thomas_mock) | [GitHub](https://github.com/jthomasmock) | [LinkedIn](https://www.linkedin.com/in/jthomasmock/) 
 
-📁 [Materials](https://jthomasmock.github.io/quarto-presentation)
+📁 [Materials](https://thomasmock.quarto.pub/quarto-curious/)
 
 
 
@@ -488,7 +486,7 @@ July 28 at 10:30:00 EDT
 
 💬 Speaker: Jamie Ralph [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/jamie-r-ralph) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/jamie-ralph/rstudio-conf-2022)
 
 
 
@@ -578,7 +576,7 @@ July 28 at 10:50:00 EDT
 
 💬 Speakers: Weihuang Wong [Twitter](https://twitter.com/weihuang) | [GitHub](https://github.com/weihuangwong) | [LinkedIn]() & Kiegan Rice [Twitter](https://twitter.com/kieganer) | [GitHub](https://github.com/kiegan) | [LinkedIn]() 
 
-📁 [Materials]()
+📁 [Materials](https://rsconnect.norc.org/rstudioconf-pollinator)
 
 
 
@@ -718,7 +716,7 @@ July 28 at 11:30:00 EDT
 
 💬 Speaker: Tanya Cashorali [Twitter](https://twitter.com/tanyacash21) | [GitHub](https://github.com/tcash21) | [LinkedIn](https://www.linkedin.com/in/tanyacashorali/) 
 
-📁 [Materials]()
+📁 [Materials](https://docs.google.com/presentation/d/e/2PACX-1vTE7Ee2QIUGDUmfEKmF8l_WTQPVgnGaLJLGuuMquio57bXojeeb5YYSjuzO-xzYxMHxuX2cm_QNC2y-/pub?start=false&loop=false&delayms=60000&slide=id.gbb68c6dbe2_1_44)
 
 
 
@@ -948,7 +946,7 @@ July 28 at 15:40:00 EDT
 
 💬 Speaker: Bryan Shalloway [Twitter](https://twitter.com/brshallo) | [GitHub](https://github.com/brshallo) | [LinkedIn](https://www.linkedin.com/in/bryanshalloway) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/brshallo/funspotr-rstudioconf2022)
 
 
 
