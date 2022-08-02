@@ -166,7 +166,7 @@ July 27 at 11:40:00 EDT
 
 💬 Speaker: Isabel Zimmerman [Twitter](https://twitter.com/isabelizimm) | [GitHub](https://github.com/isabelizimm) | [LinkedIn](https://www.linkedin.com/in/isabel-zimmerman/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/isabelizimm/rstudioconf2022-mlops)
 
 
 
