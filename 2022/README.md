@@ -54,7 +54,7 @@ July 27 at 11:00:00 EDT
 
 **Tidyverse and Power BI:  A Match Made in Heaven** 
 
-💬 Speaker: Ryan E Wade [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/mrdatageek/) 
+💬 Speaker: Ryan E Wade [Twitter](https://twitter.com/MrDataGeek) | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/mrdatageek/) 
 
 📁 [Materials]()
 
@@ -96,7 +96,7 @@ July 27 at 11:20:00 EDT
 
 💬 Speaker: James Blair [Twitter](https://twitter.com/Blair09M) | [GitHub](https://github.com/blairj09) | [LinkedIn](https://www.linkedin.com/in/blairjm/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/blairj09-talks/r-python-and-tableau)
 
 
 
@@ -116,7 +116,7 @@ July 27 at 11:20:00 EDT
 
 💬 Speaker: Aleksander Dietrichson [Twitter]() | [GitHub](https://github.com/dietrichson) | [LinkedIn](https://www.linkedin.com/in/dietrichson/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/dietrichson/rstudio-conf-2022)
 
 
 
@@ -336,7 +336,7 @@ July 27 at 15:20:00 EDT
 
 💬 Speaker: Rebecca Hadi [Twitter](https://twitter.com/beehadi26) | [GitHub](https://github.com/bhadi26) | [LinkedIn](https://www.linkedin.com/in/rebeccahadi/) 
 
-📁 [Materials](~https://github.com/bhadi26/rstudio-conf-2022-slides/blob/main/rebecca-hadi-r-studio-presentation-2022.pptx)
+📁 [Materials](https://github.com/bhadi26/rstudio-conf-2022-slides/blob/main/rebecca-hadi-r-studio-presentation-2022.pptx)
 
 
 
@@ -636,7 +636,7 @@ July 28 at 11:10:00 EDT
 
 💬 Speakers: Eric Wanjau [Twitter](https://twitter.com/ericntay) | [GitHub](https://github.com/R-icntay) | [LinkedIn]() & Ian Muchiri [Twitter](https://twitter.com/Entity_4004) | [GitHub](https://github.com/ian011) | [LinkedIn]() 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/R-icntay/rstudio_conf22_R_in_robotics)
 
 
 
@@ -756,7 +756,7 @@ July 28 at 13:30:00 EDT
 
 💬 Speaker: Ileana Fenwick [Twitter](https://twitter.com/_ileanaf) | [GitHub](https://github.com/IleanaF) | [LinkedIn](https://www.linkedin.com/in/ileana-fenwick-0238ba132/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/IleanaF/rstudio-conf22)
 
 
 
@@ -806,7 +806,7 @@ July 28 at 13:50:00 EDT
 
 💬 Speaker: Greg Swinehart [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/gregswinehart/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/rstudio/rstudio-conf/blob/master/2022/gregswinehart/Designing%20for%20people%20is%20hard.pdf)
 
 
 
@@ -856,7 +856,7 @@ July 28 at 14:10:00 EDT
 
 💬 Speaker: E. David Aja [Twitter](https://twitter.com/peeltothepity) | [GitHub](https://github.com/edavidaja) | [LinkedIn](https://linkedin.com/in/edavidaja) 
 
-📁 [Materials]()
+📁 [Materials](https://edavidaja.github.io/you-should-use-renv/#/section)
 
 
 
@@ -936,7 +936,7 @@ July 28 at 15:20:00 EDT
 
 💬 Speaker: Tracy Teal [Twitter](https://twitter.com/tracykteal) | [GitHub](https://github.com/tracykteal) | [LinkedIn](https://www.linkedin.com/in/tracy-teal-059136b/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/tracykteal/rstudioconf-quarto-presentation)
 
 
 
