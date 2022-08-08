@@ -54,7 +54,7 @@ July 27 at 11:00:00 EDT
 
 **Tidyverse and Power BI:  A Match Made in Heaven** 
 
-💬 Speaker: Ryan E Wade [Twitter](https://twitter.com/MrDataGeek) | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/mrdatageek/) 
+💬 Speaker: Ryan E Wade [Twitter](https://twitter.com/MrDataGeek) | [GitHub](https://github.com/DieselAnalytics/) | [LinkedIn](https://www.linkedin.com/in/mrdatageek/) 
 
 📁 [Materials]()
 
@@ -126,9 +126,7 @@ July 27 at 11:20:00 EDT
 
 💬 Speaker: Emil Hvitfeldt [Twitter](https://twitter.com/Emil_Hvitfeldt) | [GitHub](https://github.com/emilhvitfeldt) | [LinkedIn](https://www.linkedin.com/in/emilhvitfeldt/) 
 
-📁 [Materials]()
-
-
+📁 [Materials](https://emilhvitfeldt.github.io/rstudioconf2022-tidyclust/#/section)
 
 July 27 at 11:40:00 EDT 
 
@@ -306,7 +304,7 @@ July 27 at 14:30:00 EDT
 
 💬 Speaker: David Maguire [Twitter]() | [GitHub](https://github.com/davemaguire) | [LinkedIn](https://www.linkedin.com/in/david-maguire-30636956/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/davemaguire/presentations/blob/master/2022_rstudio_conn/slides.pdf)
 
 
 
@@ -346,7 +344,7 @@ July 27 at 15:20:00 EDT
 
 💬 Speaker: Sigrid Keydana [Twitter](https://twitter.com/zkajdan) | [GitHub](https://github.com/skeydan) | [LinkedIn](https://de.linkedin.com/in/sigrid-keydana-9a16b410) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/skeydan/dissecting_the_quick_fix)
 
 
 
@@ -416,7 +414,7 @@ July 27 at 16:00:00 EDT
 
 💬 Speaker: David Robinson [Twitter](https://twitter.com/drob) | [GitHub](https://github.com/dgrtwo) | [LinkedIn](https://www.linkedin.com/in/david-robinson-3584642a) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/dgrtwo/dgrtwo.github.com/blob/master/files/dbcooper-rstudio-conf-2022.pdf)
 
 
 
@@ -574,7 +572,7 @@ July 28 at 10:50:00 EDT
 
 **How to be a pollinatoR** 
 
-💬 Speakers: Weihuang Wong [Twitter](https://twitter.com/weihuang) | [GitHub](https://github.com/weihuangwong) | [LinkedIn]() & Kiegan Rice [Twitter](https://twitter.com/kieganer) | [GitHub](https://github.com/kiegan) | [LinkedIn]() 
+💬 Speakers: Weihuang Wong [Twitter](https://twitter.com/weihuang) | [GitHub](https://github.com/weihuangwong) | [LinkedIn]() & Kiegan Rice [Twitter](https://twitter.com/kieganer) | [GitHub](https://github.com/kiegan) | [LinkedIn](https://www.linkedin.com/in/kiegan-rice-612a4195) 
 
 📁 [Materials](https://rsconnect.norc.org/rstudioconf-pollinator)
 
