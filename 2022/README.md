@@ -464,7 +464,7 @@ July 28 at 09:00:00 EDT
 
 💬 Speakers: Mine Çetinkaya-Rundel [Twitter](https://twitter.com/minebocek) | [GitHub](https://github.com/mine-cetinkaya-rundel) | [LinkedIn]() & Julia Stewart Lowndes [Twitter](https://twitter.com/juliesquid) | [GitHub](https://github.com/jules32) | [LinkedIn](https://www.linkedin.com/in/julia-stewart-lowndes) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/mine-cetinkaya-rundel/hello-quarto)
 
 
 
