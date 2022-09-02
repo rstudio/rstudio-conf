@@ -534,7 +534,7 @@ July 28 at 10:45:00 EDT
 
 💬 Speaker: Shelmith Nyagathiri Kariuki [Twitter](https://twitter.com/Shel_Kariuki) | [GitHub](https://github.com/Shelmith-Kariuki) | [LinkedIn](https://www.linkedin.com/in/shelmith-kariuki-44351363/) 
 
-📁 [Materials](https://docs.google.com/presentation/d/1HKcMBQiFo6oC5Cj3OFf6wlGuSGQxADyxJMG_74cNwaU/edit#slide=id.g116406a1a2a_2_135)
+📁 [Materials](https://github.com/rstudio/rstudio-conf/blob/master/2022/shelmithnyagathirikariuki/Shel%20Kariuki%20rstudioconf2022_finalversion%20-%20Shel%20Kariuki.pdf)
 
 
 
