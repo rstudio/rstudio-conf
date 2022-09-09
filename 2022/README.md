@@ -814,7 +814,7 @@ July 28 at 13:50:00 EDT
 
 💬 Speaker: Dan Caley [Twitter]() | [GitHub](https://github.com/dcaley5005?tab=repositories) | [LinkedIn](https://www.linkedin.com/in/daniel-caley/) 
 
-📁 [Materials]()
+📁 [Materials](https://docs.google.com/presentation/d/1Ce15FFd8v_ZIMThQAbyAMDOs0jP5Wq6D/edit#slide=id.p1)
 
 
 
