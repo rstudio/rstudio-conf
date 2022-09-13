@@ -374,7 +374,7 @@ July 27 at 15:40:00 EDT
 
 💬 Speaker: Kirill Müller [Twitter](https://twitter.com/krlmlr) | [GitHub](https://github.com/krlmlr/) | [LinkedIn](https://www.linkedin.com/in/kirill-m%C3%BCller/) 
 
-📁 [Materials]()
+📁 [Materials](https://github.com/rstudio/rstudio-conf/blob/master/2022/kirillmuller/dm-rstudioconf2022.pdf)
 
 
 
