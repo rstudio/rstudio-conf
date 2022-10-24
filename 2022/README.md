@@ -72,7 +72,7 @@ trained in R.</p>
 
 July 27 at 04:30pm EDT 
 
-## The Past and Future of Shiny** 
+## The Past and Future of Shiny 
 
 💬 Speaker: Joe Cheng [Twitter](https://twitter.com/jcheng) | [GitHub](https://github.com/jcheng5) | [LinkedIn]() 
 
@@ -102,7 +102,7 @@ July 28 at 09:00am EDT
 
 July 28 at 04:30pm EDT 
 
-## Data science training in communities with limited technology resources and opportunities** 
+## Data science training in communities with limited technology resources and opportunities 
 
 💬 Speaker: Jeff Leek [Twitter](https://twitter.com/jtleek) | [GitHub](https://github.com/jtleek) | [LinkedIn]() 
 
@@ -122,7 +122,7 @@ Finally, I will highlight opportunities to be a part of our DataTrail community 
 
 July 28 at 10:30am EDT 
 
-## Exploratory Spatial Data Analysis in the tidyverse** 
+## Exploratory Spatial Data Analysis in the tidyverse 
 
 💬 Speaker: Josiah Parry [Twitter](https://twitter.com/josiahParry/) | [GitHub](https://github.com/josiahparry) | [LinkedIn](https://www.linkedin.com/in/josiahparry/) 
 
@@ -144,7 +144,7 @@ package as well as implements other common exploratory spatial statistics.</p>
 
 July 28 at 10:35am EDT 
 
-## WebR: R compiled for WebAssembly and running in the browser** 
+## WebR: R compiled for WebAssembly and running in the browser 
 
 💬 Speaker: George Stagg [Twitter](https://twitter.com/gwstagg) | [GitHub](https://github.com/georgestagg) | [LinkedIn]() 
 
@@ -164,7 +164,7 @@ is demonstrated, with package and plotting support.</p>
 
 July 28 at 10:40am EDT 
 
-## It's about time** 
+## It's about time 
 
 💬 Speaker: Davis Vaughan [Twitter](https://twitter.com/dvaughan32) | [GitHub](https://github.com/DavisVaughan) | [LinkedIn]() 
 
@@ -185,7 +185,7 @@ own work.</p>
 
 July 28 at 10:45am EDT 
 
-## Let your mobile shine - Leveraging CSS concepts to make shiny apps mobile responsive** 
+## Let your mobile shine - Leveraging CSS concepts to make shiny apps mobile responsive 
 
 💬 Speaker: Shelmith Nyagathiri Kariuki [Twitter](https://twitter.com/Shel_Kariuki) | [GitHub](https://github.com/Shelmith-Kariuki) | [LinkedIn](https://www.linkedin.com/in/shelmith-kariuki-44351363/) 
 
@@ -207,7 +207,7 @@ will highlight a few css tricks that I used to achieve this.</p>
 
 July 28 at 10:50am EDT 
 
-## Accelerating geospatial computing using Apache Arrow** 
+## Accelerating geospatial computing using Apache Arrow 
 
 💬 Speaker: Dewey Dunnington [Twitter](https://twitter.com/paleolimbot) | [GitHub](https://github.com/paleolimbot/) | [LinkedIn](https://www.linkedin.com/in/deweydunnington/) 
 
@@ -230,7 +230,7 @@ Rust, Python, or other R packages for further analysis.</p>
 
 July 28 at 10:55am EDT 
 
-## Zero-setup R workshops with GitHub Codespaces** 
+## Zero-setup R workshops with GitHub Codespaces 
 
 💬 Speaker: David Smith [Twitter](https://twitter.com/revodavid) | [GitHub](https://github.com/revodavid) | [LinkedIn](https://www.linkedin.com/in/dmsmith/) 
 
@@ -253,7 +253,7 @@ repository for an R-based workshop to take advantage of GitHub Codespaces.</p>
 
 July 28 at 11:00am EDT 
 
-## Making awesome automations with GitHub Actions** 
+## Making awesome automations with GitHub Actions 
 
 💬 Speaker: Beatriz Milz [Twitter](https://twitter.com/BeaMilz) | [GitHub](https://github.com/beatrizmilz) | [LinkedIn](https://www.linkedin.com/in/beatrizmilz/) 
 
@@ -271,7 +271,7 @@ are helpful to learn how to start automating tasks in R projects and packages.</
 
 July 28 at 11:05am EDT 
 
-## {shinyslack}: Connecting Slack Teams to Shiny Apps** 
+## {shinyslack}: Connecting Slack Teams to Shiny Apps 
 
 💬 Speaker: Jon Harmon [Twitter](https://twitter.com/JonTheGeek) | [GitHub](https://github.com/jonthegeek/) | [LinkedIn](https://www.linkedin.com/in/jonthegeek/) 
 
@@ -290,7 +290,7 @@ how other R users might make the most of their Slack workspaces.</p>
 
 July 28 at 11:10am EDT 
 
-## leafdown: Interactive multi-layer maps in Shiny apps** 
+## leafdown: Interactive multi-layer maps in Shiny apps 
 
 💬 Speaker: Andreas Hofheinz [Twitter]() | [GitHub](https://github.com/andreash0) | [LinkedIn](https://www.linkedin.com/in/andreas-hofheinz-3b686913b/) 
 
@@ -311,7 +311,7 @@ in Shiny apps.</p>
 
 July 28 at 11:15am EDT 
 
-## Say Hello! to Multilingual Shiny Apps** 
+## Say Hello! to Multilingual Shiny Apps 
 
 💬 Speaker: Nicola Rennie [Twitter](https://twitter.com/nrennie35) | [GitHub](https://github.com/nrennie) | [LinkedIn](https://www.linkedin.com/in/nicola-rennie-076511b3/) 
 
@@ -339,7 +339,7 @@ audience.</p>
 
 July 28 at 11:20am EDT 
 
-## Let's start at the beginning - bits to character encoding in R** 
+## Let's start at the beginning - bits to character encoding in R 
 
 💬 Speaker: Alex Farach [Twitter]() | [GitHub](https://github.com/farach) | [LinkedIn](https://www.linkedin.com/in/alex-farach/) 
 
@@ -358,7 +358,7 @@ the tidyverse.</p>
 
 July 28 at 11:25am EDT 
 
-## Implications of R syntax in intro stats** 
+## Implications of R syntax in intro stats 
 
 💬 Speaker: Amelia McNamara [Twitter](https://twitter.com/AmeliaMN) | [GitHub](https://github.com/AmeliaMN) | [LinkedIn]() 
 
@@ -380,7 +380,7 @@ much time they spent on their assignments in each class.</p>
 
 July 28 at 11:30am EDT 
 
-## Comparing package versions with Diffify** 
+## Comparing package versions with Diffify 
 
 💬 Speaker: Colin Gillespie [Twitter](https://twitter.com/csgillespie) | [GitHub](https://github.com/csgillespie/) | [LinkedIn](https://www.linkedin.com/in/colin-gillespie-25028332/) 
 
@@ -404,7 +404,7 @@ the front-end. Expected launch: ~May 1st</p>
 
 July 28 at 11:35am EDT 
 
-## Visualizing distributions and uncertainty using ggdist** 
+## Visualizing distributions and uncertainty using ggdist 
 
 💬 Speaker: Matthew Kay [Twitter](https://twitter.com/mjskay) | [GitHub](https://github.com/mjskay) | [LinkedIn]() 
 
@@ -426,7 +426,7 @@ graphics and (2) an understanding of how to actually do it using ggdist.</p>
 
 July 28 at 11:40am EDT 
 
-## The Future of missing data** 
+## The Future of missing data 
 
 💬 Speaker: Nicholas Tierney [Twitter](https://twitter.com/nj_tierney) | [GitHub](https://github.com/njtierney) | [LinkedIn](https://www.linkedin.com/in/nj-tierney/) 
 
@@ -449,7 +449,7 @@ planned advances.</p>
 
 July 27 at 11:00am EDT 
 
-## The R integration in Power BI:  Why R developers should be Interested** 
+## The R integration in Power BI:  Why R developers should be Interested 
 
 💬 Speaker: Ryan E Wade [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/mrdatageek/) 
 
@@ -468,7 +468,7 @@ functionality.</p>
 
 July 27 at 11:20am EDT 
 
-## R, Python, and Tableau: A Love Triangle** 
+## R, Python, and Tableau: A Love Triangle 
 
 💬 Speaker: James Blair [Twitter](https://twitter.com/Blair09M) | [GitHub](https://github.com/blairj09) | [LinkedIn](https://www.linkedin.com/in/blairjm/) 
 
@@ -507,7 +507,7 @@ you know you have an interesting topic for rstudio::conf.</p>
 
 July 27 at 11:00am EDT 
 
-## censored - Survival Analysis in tidymodels** 
+## censored - Survival Analysis in tidymodels 
 
 💬 Speaker: Hannah Frick [Twitter](https://twitter.com/hfcfrick) | [GitHub](https://github.com/hfrick) | [LinkedIn](https://www.linkedin.com/in/hannah-frick) 
 
@@ -526,7 +526,7 @@ modelling instead of details of the syntax. Happy modelling!</p>
 
 July 27 at 11:20am EDT 
 
-## tidyclust - expanding tidymodels to clustering** 
+## tidyclust - expanding tidymodels to clustering 
 
 💬 Speaker: Emil Hvitfeldt [Twitter](https://twitter.com/Emil_Hvitfeldt) | [GitHub](https://github.com/emilhvitfeldt) | [LinkedIn](https://www.linkedin.com/in/emilhvitfeldt/) 
 
@@ -545,7 +545,7 @@ models equally approachable.</p>
 
 July 27 at 11:40am EDT 
 
-## Demystifying MLOps** 
+## Demystifying MLOps 
 
 💬 Speaker: Isabel Zimmerman [Twitter](https://twitter.com/isabelizimm) | [GitHub](https://github.com/isabelizimm) | [LinkedIn](https://www.linkedin.com/in/isabel-zimmerman/) 
 
@@ -566,7 +566,7 @@ MLOps deployment of a model-aware REST API using Vetiver.</p>
 
 July 27 at 11:00am EDT 
 
-## R Package Assessment: Lessons from Pharma** 
+## R Package Assessment: Lessons from Pharma 
 
 💬 Speaker: Becca Krouse [Twitter]() | [GitHub]() | [LinkedIn]() 
 
@@ -588,7 +588,7 @@ considering the ecosystem as a whole.</p>
 
 July 27 at 11:20am EDT 
 
-## Dive Deep into Metadata with Tplyr** 
+## Dive Deep into Metadata with Tplyr 
 
 💬 Speaker: Mike Stackhouse [Twitter](https://twitter.com/mike_at_atorus) | [GitHub](https://github.com/mstackhouse) | [LinkedIn](https://www.linkedin.com/in/michael-s-stackhouse/) 
 
@@ -610,7 +610,7 @@ are useful in the clinical world and beyond.</p>
 
 July 27 at 11:40am EDT 
 
-## Packages and Process** 
+## Packages and Process 
 
 💬 Speaker: Ellis Hughes [Twitter](https://twitter.com/ellis_hughes) | [GitHub](https://github.com/thebioengineer) | [LinkedIn](https://linkedin.com/in/ellishughes) 
 
@@ -631,7 +631,7 @@ my talk with leave with an understanding of how to do the same.</p>
 
 July 27 at 11:00am EDT 
 
-## Translating from {tidymodels} and scikit-learn: Lessons from a 'bilingual' course.** 
+## Translating from {tidymodels} and scikit-learn: Lessons from a 'bilingual' course. 
 
 💬 Speaker: Kelly Bodwin [Twitter](https://twitter.com/kellybodwin) | [GitHub](https://github.com/kbodwin) | [LinkedIn]() 
 
@@ -658,7 +658,7 @@ our modeling decisions to increase cross-language reproducibility.</p>
 
 July 27 at 11:20am EDT 
 
-## Mobile, Low-Bandwidth and Low-Tech. The Story of Chi-Square Mobile.** 
+## Mobile, Low-Bandwidth and Low-Tech. The Story of Chi-Square Mobile. 
 
 💬 Speaker: Aleksander Dietrichson [Twitter]() | [GitHub](https://github.com/dietrichson) | [LinkedIn](https://www.linkedin.com/in/dietrichson/) 
 
@@ -680,7 +680,7 @@ integrated with google cloud and the Andoid ecosystem.</p>
 
 July 27 at 11:40am EDT 
 
-## Designing a Socially-Critical Data Science Course** 
+## Designing a Socially-Critical Data Science Course 
 
 💬 Speaker: Brian Danielak [Twitter](https://twitter.com/Capbri) | [GitHub](https://github.com/briandk/) | [LinkedIn](https://www.linkedin.com/in/briandanielak/) 
 
@@ -702,7 +702,7 @@ reflective learning environments.</p>
 
 July 27 at 01:30pm EDT 
 
-## Do It For Yourself: Creating a data input platform using R** 
+## Do It For Yourself: Creating a data input platform using R 
 
 💬 Speaker: Hezi Buba [Twitter](https://twitter.com/hezi_bu) | [GitHub](https://github.com/hezibu/) | [LinkedIn]() 
 
@@ -723,7 +723,7 @@ processing workflow - from the data input stage.</p>
 
 July 27 at 01:50pm EDT 
 
-## Oddly Satisfying - Find delight in the mundane** 
+## Oddly Satisfying - Find delight in the mundane 
 
 💬 Speaker: Liz Roten [Twitter](https://twitter.com/LizRoten) | [GitHub](https://github.com/eroten) | [LinkedIn](https://www.linkedin.com/in/eroten) 
 
@@ -743,7 +743,7 @@ Learn how to take the messy project you dread and make it inexplicably satisfyin
 
 July 27 at 02:10pm EDT 
 
-## Advocating for Automation: Adapting Current Tools in Environmental Science through R** 
+## Advocating for Automation: Adapting Current Tools in Environmental Science through R 
 
 💬 Speaker: Hannah Podzorski [Twitter](https://www.twitter.com/hpodz) | [GitHub](https://github.com/hannahpodzorski) | [LinkedIn](https://www.linkedin.com/in/hannah-podzorski) 
 
@@ -757,7 +757,7 @@ July 27 at 02:10pm EDT
 
 July 27 at 02:30pm EDT 
 
-## Saving 1,000 hours with RStudio: selling R in your workplace** 
+## Saving 1,000 hours with RStudio: selling R in your workplace 
 
 💬 Speaker: Tiger Tang [Twitter](https://twitter.com/tigerloveslobs1) | [GitHub](https://github.com/CodingTigerTang) | [LinkedIn](https://www.linkedin.com/in/chongtaitang/) 
 
@@ -773,7 +773,7 @@ July 27 at 02:30pm EDT
 
 July 27 at 01:30pm EDT 
 
-## Remote Content Execution with RStudio Connect and Kubernetes** 
+## Remote Content Execution with RStudio Connect and Kubernetes 
 
 💬 Speaker: Kelly O'Briant [Twitter](https://twitter.com/kellrstats) | [GitHub](https://github.com/kellobri) | [LinkedIn](https://www.linkedin.com/in/kellyobriant/) 
 
@@ -795,7 +795,7 @@ publishers and administrators should expect by addressing the anticipated FAQs.<
 
 July 27 at 01:50pm EDT 
 
-## Data science in your customers hands on a budget and a deadline: Publishing Customer Facing Products with RStudio Connect** 
+## Data science in your customers hands on a budget and a deadline: Publishing Customer Facing Products with RStudio Connect 
 
 💬 Speaker: Benjamin Braun [Twitter](https://twitter.com/Ben_G_Braun) | [GitHub](https://github.com/bpbraun) | [LinkedIn](https://www.linkedin.com/in/benjybraun/) 
 
@@ -817,7 +817,7 @@ iterate with more features overtime.</p>
 
 July 27 at 02:10pm EDT 
 
-## R Shiny - From Conception to the Cloud** 
+## R Shiny - From Conception to the Cloud 
 
 💬 Speaker: Ivonne Carrillo Dominguez [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/ivonne-carrillo-dominguez/) 
 
@@ -840,7 +840,7 @@ are ready to deploy new R Shiny applications quickly and focus on data analysis.
 
 July 27 at 02:30pm EDT 
 
-## Robust R Deployments: Building a Pipeline from RStudio to Production** 
+## Robust R Deployments: Building a Pipeline from RStudio to Production 
 
 💬 Speaker: David Maguire [Twitter]() | [GitHub](https://github.com/davemaguire) | [LinkedIn](https://www.linkedin.com/in/david-maguire-30636956/) 
 
@@ -862,7 +862,7 @@ in production environments.</p>
 
 July 27 at 01:30pm EDT 
 
-## How Anchorage Built Alaska’s Vaccine Finder with R** 
+## How Anchorage Built Alaska’s Vaccine Finder with R 
 
 💬 Speaker: Ben Matheson [Twitter](https://twitter.com/benmatheson) | [GitHub](https://github.com/benmatheson) | [LinkedIn](https://www.linkedin.com/in/benmatheson) 
 
@@ -887,7 +887,7 @@ vaccine.</p>
 
 July 27 at 01:50pm EDT 
 
-## Scaling and automating R workflows with Kubernetes and Airflow** 
+## Scaling and automating R workflows with Kubernetes and Airflow 
 
 💬 Speaker: Isaac Florence [Twitter](https://twitter.com/isaacatflorence) | [GitHub](https://github.com/isaac-florence) | [LinkedIn](https://uk.linkedin.com/in/isaacflorence) 
 
@@ -908,7 +908,7 @@ how we did it.</p>
 
 July 27 at 02:10pm EDT 
 
-## An Integrated Workflow: Microsoft Azure DevOps, RStudio Workbench, RStudio Connect** 
+## An Integrated Workflow: Microsoft Azure DevOps, RStudio Workbench, RStudio Connect 
 
 💬 Speaker: Lawrence Y. Tello [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/lytello) 
 
@@ -928,7 +928,7 @@ to deploy and automate mission critical procedures and products.</p>
 
 July 27 at 02:30pm EDT 
 
-## Optimal allocation of COVID-19 vaccines in west Africa - A Shiny success story** 
+## Optimal allocation of COVID-19 vaccines in west Africa - A Shiny success story 
 
 💬 Speaker: Anubhuti Mishra [Twitter]() | [GitHub](https://github.com/anu87) | [LinkedIn](https://www.linkedin.com/in/anubhuti-mishra-1958298/) 
 
@@ -950,7 +950,7 @@ sites. (App development will end on May 31)</p>
 
 July 27 at 01:30pm EDT 
 
-## Making Data Pipelines in R: A Story From A “Self-Taught” Perspective** 
+## Making Data Pipelines in R: A Story From A “Self-Taught” Perspective 
 
 💬 Speaker: Meghan S Harris [Twitter](https://twitter.com/meghansharris) | [GitHub](https://github.com/Meghansaha) | [LinkedIn](https://www.linkedin.com/in/meghan-harris/) 
 
@@ -978,7 +978,7 @@ health department. Specifically, this talk will touch on the following concepts:
 
 July 27 at 01:50pm EDT 
 
-## Garbage Data, And What To Do About Them** 
+## Garbage Data, And What To Do About Them 
 
 💬 Speaker: Jim Kloet [Twitter](https://twitter.com/JimKloet) | [GitHub](https://github.com/jimtheflash) | [LinkedIn](https://www.linkedin.com/in/jimkloet/) 
 
@@ -999,7 +999,7 @@ concrete steps you can take to overcome those challenges now and in the future.<
 
 July 27 at 02:10pm EDT 
 
-## Project Immortality: Using GitHub To Make Your Work Live Forever** 
+## Project Immortality: Using GitHub To Make Your Work Live Forever 
 
 💬 Speaker: Tan Ho [Twitter](https://twitter.com/_TanHo) | [GitHub](https://github.com/tanho63) | [LinkedIn]() 
 
@@ -1042,7 +1042,7 @@ to a Shiny app to enhance process monitoring.</p>
 
 July 27 at 03:20pm EDT 
 
-## Quarto for the Curious** 
+## Quarto for the Curious 
 
 💬 Speaker: Tom Mock [Twitter](https://twitter.com/thomas_mock) | [GitHub](https://github.com/jthomasmock) | [LinkedIn](https://www.linkedin.com/in/jthomasmock/) 
 
@@ -1055,7 +1055,7 @@ July 27 at 03:20pm EDT
 
 July 27 at 03:40pm EDT 
 
-## Sometimes you just need words** 
+## Sometimes you just need words 
 
 💬 Speaker: Lewis Kirvan [Twitter]() | [GitHub](https://lmkirvan.github.io/index.html) | [LinkedIn](https://www.linkedin.com/in/lewis-kirvan-9013392b/) 
 
@@ -1078,7 +1078,7 @@ dynamically generate text.</p>
 
 July 27 at 04:00pm EDT 
 
-## Highlights of the knitr package from the past two years** 
+## Highlights of the knitr package from the past two years 
 
 💬 Speaker: Yihui Xie [Twitter](https://twitter.com/xieyihui) | [GitHub](https://github.com/yihui) | [LinkedIn]() 
 
@@ -1099,7 +1099,7 @@ new features can help both knitr users and developers make better use of knitr.<
 
 July 27 at 03:20pm EDT 
 
-## Dissecting the quick fix: Analysing tech-solutionist solutions** 
+## Dissecting the quick fix: Analysing tech-solutionist solutions 
 
 💬 Speaker: Sigrid Keydana [Twitter](https://twitter.com/zkajdan) | [GitHub](https://github.com/skeydan) | [LinkedIn](https://de.linkedin.com/in/sigrid-keydana-9a16b410) 
 
@@ -1122,7 +1122,7 @@ tech solutionism.</p>
 
 July 27 at 03:40pm EDT 
 
-## Introducing workboots: Generate prediction intervals from tidymodel workflows** 
+## Introducing workboots: Generate prediction intervals from tidymodel workflows 
 
 💬 Speaker: Mark Rieke [Twitter](https://twitter.com/markjrieke) | [GitHub](https://github.com/markjrieke) | [LinkedIn](https://www.linkedin.com/in/mark-j-rieke-ab4b0ab4/) 
 
@@ -1144,7 +1144,7 @@ tidymodel workflow with the workboots package.</p>
 
 July 27 at 04:00pm EDT 
 
-## The tidysynthesis R package** 
+## The tidysynthesis R package 
 
 💬 Speaker: Aaron R. Williams [Twitter](https://twitter.com/awunderground) | [GitHub](https://github.com/awunderground) | [LinkedIn](https://www.linkedin.com/in/aaronrwilliams100) 
 
@@ -1166,7 +1166,7 @@ noise and enforcing logical constraints.</p>
 
 July 27 at 03:20pm EDT 
 
-## What they forgot to teach you about starting a business with R** 
+## What they forgot to teach you about starting a business with R 
 
 💬 Speaker: David Keyes [Twitter](@dgkeyes/@rfortherest) | [GitHub](https://github.com/dgkeyes) | [LinkedIn](https://www.linkedin.com/in/dgkeyes/) 
 
@@ -1190,7 +1190,7 @@ this talk will help you get started with the next chapter of your career.</p>
 
 July 27 at 03:40pm EDT 
 
-## What they forgot to teach you about becoming an open source contributor** 
+## What they forgot to teach you about becoming an open source contributor 
 
 💬 Speaker: Nic Crane [Twitter](https://twitter.com/nic_crane) | [GitHub](https://github.com/thisisnic/) | [LinkedIn]() 
 
@@ -1211,7 +1211,7 @@ a contributor versus a maintainer?</p>
 
 July 27 at 04:00pm EDT 
 
-## What they forgot to teach you about industry transitions from academia (WTF AITA)** 
+## What they forgot to teach you about industry transitions from academia (WTF AITA) 
 
 💬 Speaker: Travis Gerke [Twitter](https://twitter.com/travisgerke) | [GitHub](https://github.com/tgerke/) | [LinkedIn](https://www.linkedin.com/in/travisgerke/) 
 
@@ -1229,7 +1229,7 @@ is open to further community contributions.</p>
 
 July 27 at 03:20pm EDT 
 
-## Exploring Query Optimization: How a few lines of code can save hours of time** 
+## Exploring Query Optimization: How a few lines of code can save hours of time 
 
 💬 Speaker: Rebecca Hadi [Twitter](https://twitter.com/beehadi26) | [GitHub](https://github.com/bhadi26) | [LinkedIn](https://www.linkedin.com/in/rebeccahadi/) 
 
@@ -1245,7 +1245,7 @@ In this talk, you'll learn about minor code changes that can dramatically improv
 
 July 27 at 03:40pm EDT 
 
-## dm: Analyze, build and deploy relational data models** 
+## dm: Analyze, build and deploy relational data models 
 
 💬 Speaker: Kirill Müller [Twitter](https://twitter.com/krlmlr) | [GitHub](https://github.com/krlmlr/) | [LinkedIn](https://www.linkedin.com/in/kirill-m%C3%BCller/) 
 
@@ -1262,7 +1262,7 @@ analysis and ETL processes, and highlight recent developments.</p>
 
 July 27 at 04:00pm EDT 
 
-## dbcooper: Turn any database into an R or Python package** 
+## dbcooper: Turn any database into an R or Python package 
 
 💬 Speaker: David Robinson [Twitter](https://twitter.com/drob) | [GitHub](https://github.com/dgrtwo) | [LinkedIn](https://www.linkedin.com/in/david-robinson-3584642a) 
 
@@ -1284,7 +1284,7 @@ insights from a database.</p>
 
 July 28 at 10:30am EDT 
 
-## Developing internal tools for multi-lingual teams** 
+## Developing internal tools for multi-lingual teams 
 
 💬 Speaker: Jamie Ralph [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/jamie-r-ralph) 
 
@@ -1303,7 +1303,7 @@ wider organisation.</p>
 
 July 28 at 10:50am EDT 
 
-## Achieving a seamless workflow between R, Python and SAS from within RStudio** 
+## Achieving a seamless workflow between R, Python and SAS from within RStudio 
 
 💬 Speaker: Melissa Van Bussel [Twitter]() | [GitHub](https://github.com/melissavanbussel) | [LinkedIn](https://www.linkedin.com/in/melissavanbussel/) 
 
@@ -1339,7 +1339,7 @@ July 28 at 11:10am EDT
 
 July 28 at 11:30am EDT 
 
-## Running Shiny without a server** 
+## Running Shiny without a server 
 
 💬 Speaker: Winston Chang [Twitter](https://twitter.com/winston_chang) | [GitHub](https://github.com/wch) | [LinkedIn]() 
 
@@ -1353,7 +1353,7 @@ July 28 at 11:30am EDT
 
 July 28 at 10:30am EDT 
 
-## The Benefit of Talking to the "Non-Datas"** 
+## The Benefit of Talking to the "Non-Datas" 
 
 💬 Speaker: Caro Buck [Twitter](https://twitter.com/caroissilly) | [GitHub](https://github.com/carobuck) | [LinkedIn](https://www.linkedin.com/in/caro-buck/) 
 
@@ -1400,7 +1400,7 @@ diverse data ecosystems.</p>
 
 July 28 at 11:10am EDT 
 
-## Enterprise-Level Data Science Success** 
+## Enterprise-Level Data Science Success 
 
 💬 Speaker: Prabhakar Thanikasalam [Twitter]() | [GitHub](https://github.com/prabhakar1978) | [LinkedIn](https://www.linkedin.com/in/prabhakart/) 
 
@@ -1422,7 +1422,7 @@ topics in the data science journey at Flex.</p>
 
 July 28 at 11:30am EDT 
 
-## Cross-Industry Anomaly Detection Solutions with R and Shiny** 
+## Cross-Industry Anomaly Detection Solutions with R and Shiny 
 
 💬 Speaker: Tanya Cashorali [Twitter](https://twitter.com/tanyacash21) | [GitHub](https://github.com/tcash21) | [LinkedIn](https://www.linkedin.com/in/tanyacashorali/) 
 
@@ -1445,7 +1445,7 @@ users may not have in-depth machine learning knowledge.</p>
 
 July 28 at 10:30am EDT 
 
-## I made an entire e-commerce platform on Shiny** 
+## I made an entire e-commerce platform on Shiny 
 
 💬 Speaker: Jacqueline Nolis [Twitter](https://twitter.com/skyetetra) | [GitHub](https://github.com/jnolis/ggirl) | [LinkedIn](https://linkedin.com/in/jnolis) 
 
@@ -1468,7 +1468,7 @@ knowledge to monetize your existing dashboards!</p>
 
 July 28 at 10:50am EDT 
 
-## The worlds smallest R environment? Running R on a $15 computer** 
+## The worlds smallest R environment? Running R on a $15 computer 
 
 💬 Speaker: Mark Sellors [Twitter](https://twitter.com/sellorm) | [GitHub](https://github.com/sellorm) | [LinkedIn](https://www.linkedin.com/in/msellors/) 
 
@@ -1507,7 +1507,7 @@ actuate a Robotic arm using R and Arduino.</p>
 
 July 28 at 11:30am EDT 
 
-## An Introduction to the Apple Health Export** 
+## An Introduction to the Apple Health Export 
 
 💬 Speaker: John Goldin [Twitter](https://twitter.com/johngoldin) | [GitHub](https://github.com/johngoldin) | [LinkedIn]() 
 
@@ -1530,7 +1530,7 @@ pretty neat and actually turned out to be helpful.</p>
 
 July 28 at 01:30pm EDT 
 
-## Model Migration: from Excel to R** 
+## Model Migration: from Excel to R 
 
 💬 Speaker: Johnny Breen [Twitter](https://twitter.com/johnnyb1694) | [GitHub](https://github.com/johnnyb1694) | [LinkedIn](https://www.linkedin.com/in/johnnybreen/) 
 
@@ -1550,7 +1550,7 @@ common pitfalls that they may encounter during the model migration process.</p>
 
 July 28 at 01:50pm EDT 
 
-## Tidy Transit: Real Life Data Modeling for Public Transportation** 
+## Tidy Transit: Real Life Data Modeling for Public Transportation 
 
 💬 Speaker: Hunter Owens [Twitter](https://twitter.com/hunter_owens) | [GitHub](https://github.com/hunterowens) | [LinkedIn]() 
 
@@ -1572,7 +1572,7 @@ those serving entire metropolitan areas.</p>
 
 July 28 at 02:10pm EDT 
 
-## Digging a Pit of Success for Your Organization: Embracing a R-based ecosystem in the US federal government** 
+## Digging a Pit of Success for Your Organization: Embracing a R-based ecosystem in the US federal government 
 
 💬 Speaker: Aaron Chafetz [Twitter](https://twitter.com/achafetz) | [GitHub](https://github.com/achafetz) | [LinkedIn](https://www.linkedin.com/in/aaron-chafetz) 
 
@@ -1594,7 +1594,7 @@ of success' that organizations would benefit from.</p>
 
 July 28 at 02:30pm EDT 
 
-## Save an ocean of time: streamline data wrangling with R** 
+## Save an ocean of time: streamline data wrangling with R 
 
 💬 Speaker: Danielle Dempsey [Twitter](https://twitter.com/Dr_DDempsey) | [GitHub](https://github.com/dempsey-CMAR) | [LinkedIn](https://www.linkedin.com/in/danielledempsey/) 
 
@@ -1617,7 +1617,7 @@ to industry leaders looking to invest in Nova Scotia’s coastal resources.</p>
 
 July 28 at 01:30pm EDT 
 
-## A new way to build your Shiny app's UI** 
+## A new way to build your Shiny app's UI 
 
 💬 Speaker: Nick Strayer [Twitter](https://twitter.com/NicholasStrayer) | [GitHub](https://github.com/nstrayer) | [LinkedIn](https://www.linkedin.com/in/nickstrayer/) 
 
@@ -1630,7 +1630,7 @@ July 28 at 01:30pm EDT
 
 July 28 at 01:50pm EDT 
 
-## Designing for people is hard** 
+## Designing for people is hard 
 
 💬 Speaker: Greg Swinehart [Twitter]() | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/gregswinehart/) 
 
@@ -1645,7 +1645,7 @@ Shiny's UI, as well as some new functionality.</p>
 
 July 28 at 02:10pm EDT 
 
-## Creating a Design System for Shiny and RMarkdown** 
+## Creating a Design System for Shiny and RMarkdown 
 
 💬 Speaker: Maya Gans [Twitter](https://twitter.com/Mayacelium) | [GitHub](https://github.com/MayaGans) | [LinkedIn](https://www.linkedin.com/in/mayagans/) 
 
@@ -1664,7 +1664,7 @@ used by yourself, your brand, or your company.</p>
 
 July 28 at 02:30pm EDT 
 
-## Dashboard-Builder: Building Shiny Apps without writing any code** 
+## Dashboard-Builder: Building Shiny Apps without writing any code 
 
 💬 Speaker: Peter Gandenberger [Twitter]() | [GitHub](https://github.com/petergandenberger/) | [LinkedIn](https://www.linkedin.com/in/peter-gandenberger-a7a2ba172/) 
 
@@ -1685,7 +1685,7 @@ July 28 at 02:30pm EDT
 
 July 28 at 01:30pm EDT 
 
-## A Journey to Data Science: Tools for Equity and Diversity in STEM** 
+## A Journey to Data Science: Tools for Equity and Diversity in STEM 
 
 💬 Speaker: Ileana Fenwick [Twitter](https://twitter.com/_ileanaf) | [GitHub](https://github.com/IleanaF) | [LinkedIn](https://www.linkedin.com/in/ileana-fenwick-0238ba132/) 
 
@@ -1706,7 +1706,7 @@ for equity and diversity in STEM, now more than ever.</p>
 
 July 28 at 01:50pm EDT 
 
-## Building Accessible Lessons with R and Friends** 
+## Building Accessible Lessons with R and Friends 
 
 💬 Speaker: Zhian N. Kamvar [Twitter](https://twitter.com/zkamvar) | [GitHub](https://github.com/zkamvar) | [LinkedIn](https://linkedin.com/in/zkamvar) 
 
@@ -1729,7 +1729,7 @@ accessible sites for their own lessons or tutorials.</p>
 
 July 28 at 02:10pm EDT 
 
-## Everything I learned about community building, I learned from growing up in a restaurant** 
+## Everything I learned about community building, I learned from growing up in a restaurant 
 
 💬 Speaker: Rachael Dempsey [Twitter](https://twitter.com/_RachaelDempsey) | [GitHub]() | [LinkedIn](https://linkedin.com/in/rachaeldempsey) 
 
@@ -1752,7 +1752,7 @@ what you want to do.</p>
 
 July 28 at 02:30pm EDT 
 
-## We R KaggleRs - At the Intersection of Data Science Communities** 
+## We R KaggleRs - At the Intersection of Data Science Communities 
 
 💬 Speaker: Martin Henze [Twitter](https://twitter.com/heads0rtai1s) | [GitHub]() | [LinkedIn](https://www.linkedin.com/in/martin-henze/) 
 
@@ -1774,7 +1774,7 @@ the creativity of the participants.</p>
 
 July 28 at 01:30pm EDT 
 
-## Cultivating Your Own R Ecosystem as a Solo Contributor** 
+## Cultivating Your Own R Ecosystem as a Solo Contributor 
 
 💬 Speaker: Meghan Hall [Twitter](https://twitter.com/meghanmhall) | [GitHub](https://github.com/meghall06/) | [LinkedIn]() 
 
@@ -1797,7 +1797,7 @@ how you get your data or in which tool it is ultimately presented.</p>
 
 July 28 at 01:50pm EDT 
 
-## Demystifying the art of creating custom libraries for your organization** 
+## Demystifying the art of creating custom libraries for your organization 
 
 💬 Speaker: Dan Caley [Twitter]() | [GitHub](https://github.com/dcaley5005?tab=repositories) | [LinkedIn](https://www.linkedin.com/in/daniel-caley/) 
 
@@ -1819,7 +1819,7 @@ features we've created.</p>
 
 July 28 at 02:10pm EDT 
 
-## You should be using renv** 
+## You should be using renv 
 
 💬 Speaker: E. David Aja [Twitter](https://twitter.com/peeltothepity) | [GitHub](https://github.com/edavidaja) | [LinkedIn](https://linkedin.com/in/edavidaja) 
 
@@ -1834,7 +1834,7 @@ with other R users.</p>
 
 July 28 at 02:30pm EDT 
 
-## Small Team Large Organization: Building Impactful Shiny Dashboards at NIH** 
+## Small Team Large Organization: Building Impactful Shiny Dashboards at NIH 
 
 💬 Speaker: Jon Nye [Twitter]() | [GitHub]() | [LinkedIn]() 
 
@@ -1847,7 +1847,7 @@ July 28 at 02:30pm EDT
 
 July 28 at 03:20pm EDT 
 
-## These are a few of my favorite things (about Quarto presentations)** 
+## These are a few of my favorite things (about Quarto presentations) 
 
 💬 Speaker: Tracy Teal [Twitter](https://twitter.com/tracykteal) | [GitHub](https://github.com/tracykteal) | [LinkedIn](https://www.linkedin.com/in/tracy-teal-059136b/) 
 
@@ -1868,7 +1868,7 @@ template.</p>
 
 July 28 at 03:40pm EDT 
 
-## Literate Programming With Jupyter Notebooks and Quarto** 
+## Literate Programming With Jupyter Notebooks and Quarto 
 
 💬 Speaker: Hamel Husain [Twitter](https://twitter.com/HamelHusain) | [GitHub](https://github.com/hamelsmu) | [LinkedIn](https://www.linkedin.com/in/hamelhusain/) 
 
@@ -1883,7 +1883,7 @@ July 28 at 03:40pm EDT
 
 July 28 at 04:00pm EDT 
 
-## Websites & Books & Blogs, oh my! Creating Rich Content with Quarto** 
+## Websites & Books & Blogs, oh my! Creating Rich Content with Quarto 
 
 💬 Speaker: Devin Pastoor [Twitter]() | [GitHub](https://github.com/dpastoor) | [LinkedIn]() 
 
@@ -1903,7 +1903,7 @@ organization and to the whole community.</p>
 
 July 28 at 03:20pm EDT 
 
-## Introducing Rhino: Shiny application framework for enterprise** 
+## Introducing Rhino: Shiny application framework for enterprise 
 
 💬 Speaker: Kamil Zyla [Twitter]() | [GitHub](https://github.com/kamilzyla) | [LinkedIn](https://www.linkedin.com/in/kamil-zyla/) 
 
@@ -1925,7 +1925,7 @@ project!</p>
 
 July 28 at 03:40pm EDT 
 
-## A Robust Framework for Automated Shiny App Testing** 
+## A Robust Framework for Automated Shiny App Testing 
 
 💬 Speaker: Sydeaka Watson [Twitter](https://twitter.com/SydeakaWatson) | [GitHub](https://github.com/sydeaka) | [LinkedIn](https://www.linkedin.com/in/sydeakawatson/) 
 
@@ -1947,7 +1947,7 @@ Selenium code.</p>
 
 July 28 at 04:00pm EDT 
 
-## {shinytest2}: Regression testing for Shiny applications** 
+## {shinytest2}: Regression testing for Shiny applications 
 
 💬 Speaker: Barret Schloerke [Twitter](https://twitter.com/schloerke) | [GitHub](https://github.com/schloerke) | [LinkedIn](https://www.linkedin.com/in/schloerke/) 
 
@@ -1970,7 +1970,7 @@ bugs and more confidence in future development.</p>
 
 July 28 at 03:20pm EDT 
 
-## Becoming Creative: How I Designed a Quilt with R** 
+## Becoming Creative: How I Designed a Quilt with R 
 
 💬 Speaker: Alice Walsh [Twitter](https://twitter.com/sciencealice) | [GitHub](https://github.com/awalsh17) | [LinkedIn](https://www.linkedin.com/in/alice-walsh/) 
 
@@ -1992,7 +1992,7 @@ creative muscles to improve their performance and enjoyment of their day jobs.</
 
 July 28 at 03:40pm EDT 
 
-## Building a ggplot2 rollercoaster: Creating amazing 3D data visualizations in R** 
+## Building a ggplot2 rollercoaster: Creating amazing 3D data visualizations in R 
 
 💬 Speaker: Tyler Morgan-Wall [Twitter](https://twitter.com/tylermorganwall) | [GitHub](https://github.com/tylermorganwall) | [LinkedIn](https://www.linkedin.com/in/tyler-morgan-wall-88227015/) 
 
@@ -2013,7 +2013,7 @@ to the vast reaches of space, in only a few lines of code.</p>
 
 July 28 at 04:00pm EDT 
 
-## The Polygons of Another World - realtime interactive rendering in R** 
+## The Polygons of Another World - realtime interactive rendering in R 
 
 💬 Speaker: Mike Cheng [Twitter](https://twitter.com/coolbutuseless) | [GitHub](https://github.com/coolbutuseless) | [LinkedIn](https://www.linkedin.com/in/michael-cheng-8782632b) 
 
@@ -2030,7 +2030,7 @@ July 28 at 04:00pm EDT
 
 July 28 at 03:20pm EDT 
 
-## Cracking open ggplot internals with {ggtrace}** 
+## Cracking open ggplot internals with {ggtrace} 
 
 💬 Speaker: June Choe [Twitter](https://twitter.com/yjunechoe) | [GitHub](https://github.com/yjunechoe/ggtrace) | [LinkedIn]() 
 
@@ -2053,7 +2053,7 @@ the internals through trial-and-error.</p>
 
 July 28 at 03:40pm EDT 
 
-## From summarizing projects to setting tags, uses of parsing R files** 
+## From summarizing projects to setting tags, uses of parsing R files 
 
 💬 Speaker: Bryan Shalloway [Twitter](https://twitter.com/brshallo) | [GitHub](https://github.com/brshallo) | [LinkedIn](https://www.linkedin.com/in/bryanshalloway) 
 
@@ -2073,7 +2073,7 @@ July 28 at 03:40pm EDT
 
 July 28 at 04:00pm EDT 
 
-## An introduction to R7** 
+## An introduction to R7 
 
 💬 Speaker: Hadley Wickham [Twitter](https://twitter.com/hadleywickham/) | [GitHub](https://github.com/hadley) | [LinkedIn]() 
 
