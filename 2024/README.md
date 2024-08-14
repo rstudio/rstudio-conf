@@ -75,7 +75,7 @@ Slides | GitHub Repo
 ### Data Contracts: Keep Your Weekend Work-Free!
 💬 Nick Pelikan
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1R9nm_8LHJpkc32XAf3LYRbh9Sr97-Y8OFHHE7Ds5L18/edit#slide=id.g28004ec81db_0_5) | [GitHub Repo](https://github.com/npelikan/positconf2024-datacontracts)
 
 ### Demystifying Data Modeling
 💬 Kshitij Aranke
@@ -571,7 +571,7 @@ Slides | GitHub Repo
 ### From idea to code to image: Creative data visualizations in R
 💬 Georgios Karamanis
 
-Slides | GitHub Repo
+Slides | [GitHub Repo](https://github.com/gkaramanis/posit_conf_2024)
 
 ### Be Kind, Rewind
 💬 Ellis Hughes
