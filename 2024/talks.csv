@@ -1,0 +1,121 @@
+speaker,title
+Allen Downey,A Future of Data Science
+Sean Nguyen,"Beyond Dashboards: Dynamic Data Storytelling with Python, R, and Quarto Emails"
+Tyler Morgan-Wall,Reclaiming My Time with Quarto: A Journey from WordPress to Simplicity
+Orla Doyle,Creating reproducible static reports.
+Joshua Cook,Quarto: A Multifaceted Publishing Powerhouse for Medical Researchers
+Richard Iannone,"Adequate Tables? No, We Want Great Tables."
+Shannon Pileggi,Context is King
+Daniel Sjoberg,gtsummary: Streamlining Summary Tables for Research and Regulatory Submissions
+Becca Krouse,Stitch by Stitch: The Art of Engaging New Users
+Gabriel Morrison,Open Source Software in Action: Expanding the Spatial Equity Data Tool
+Regina Lionheart,"Making Waves with R, Python, and Quarto"
+Adam Wang,"Why You Should Think Like an End-to-end Data Scientist, and How"
+Luis Lopez,"earthaccess: Accelerating NASA Earthdata science through open, collaborative development"
+Hannel Mühleisen,Data Wrangling [for Python or R] Like a Boss With DuckDB
+Nick Pelikan,Data Contracts: Keep Your Weekend Work-Free!
+Kshitij Aranke,Demystifying Data Modeling
+Charlie Gao ,"{mirai} and {crew}: next-generation async to supercharge {promises}, Plumber, Shiny, and {targets}"
+Will Landau,"{mirai} and {crew}: next-generation async to supercharge {promises}, Plumber, Shiny, and {targets}"
+Alex Chisholm,Deploying data applications and documents to the cloud
+Christine Parker,Data Wrangling for Advocacy: Tidy Data to Support the Affordable Connectivity Program
+Joseph Richey,Leveraging Data in a Volunteer Fire Department
+Nick Pratap,Novice to data scientist: how a pediatric anesthesiologist used R Studio to help disadvantaged kids access surgical care
+Brendan Graham,A Machine Learning Approach to Protect Patients from Blood Tube Mix-Ups
+Nicole Jones,Breaking Barriers: Adopting R in Biotech with Posit
+Mark Bynens,Mastering the Art of Adopting R and Python: Innovative Strategies for Effective Change Management
+Eric Nantz,A New Era for Shiny-based Clinical Submissions using WebAssembly
+Nicholas Masel,Open-Source Initiatives in Pharma - What's Out There and Why You Should Join
+Keaton Wilson,Modernizing the Data Science Toolkit of a 40-year-old Market Research Company
+Karishma Srikanth,Building scalable data pipelines through R and global health information systems' API
+Marcin Dubel,Shiny in Action: Transforming Film Production with TARS
+Regis A. James,Computing and recommending company-wide employee training pair decisions at scale via an AI matching and administrative workflow platform developed completely in-house
+Kiegan Rice,"Wait, that’s Shiny? Building feature-full, user-friendly interactive data explorers with Shiny and friends"
+Greg Swinehart,Shiny Templates
+Andrew Bates (replacing Mike Stackhouse),Making an App a System
+Lovekumar Patel,Empowering Decisions: Advanced Portfolio Analysis and Management through Shiny
+Meghan Harris,"""Please Let Me Merge Before I Start Crying"": And Other Things I've Said at The Git Terminal"
+Edgar Ruiz,Easing the pain of connecting to databases
+Joe Roberts,Saving time (and pain) with Posit Public Package Manager
+Aaron Jacobs,"Auth is the product, making data access simple with Posit Workbench"
+Shannon Pileggi,Balancing Global Infrastructure and Local Autonomy: Lessons from R-Ladies Global
+Alena Reynolds,bRewing code: Ingredients for successful tribal collaboration
+Angie Reed,bRewing code: Ingredients for successful tribal collaboration
+Hubert Halun,Art of R Packages: Forging Community with Hex Stickers
+Tyler McInnes,Converting Posit-Enthusiasm into Posit-Action
+Alenka Frim,"Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"
+Nic Crane,"Mixing R, Python, and Quarto: Crafting the Perfect Open Source Cocktail"
+Emily Riederer,Python Rgonomics
+"
+Christoph Scheuch",Empowering Reproducible Finance through Tidy Finance with R and Python
+Phillip Cloud,CI madness with Ibis: testing 20 query engines on every commit
+Seth Colbert-Pollack,Level up! Empowering industry R users with different levels of experience
+SAUMIITHA LEELAKRISHNAN,Partnering with Posit for progress on Environmental Stewardship
+Lee Durbin,Coding in a Cyclone: open-source and the public sector in the birthplace of R
+Cynthia Huang,Quarto for Knowledge Management
+Ella Kaye,"rainbowR - a community that supports, connects and promotes LGBTQ+ people who code in R"
+Albert Rapp,Breaking data identities: Making a case for language-agnosticity
+Richie Moluno,JSquarto: Bridging JavaScript Documentation with Quarto's Power
+Richard Ngamita,Detecting Coordinated Disinformation Networks with R
+Ava Hoffman,Ten Simple Rules for Teaching an Introduction to R
+Eric Leung,R Scripts to Databricks: Lessons in Production Workflow
+Benjamin Arancibia,The Expanse - Navigating the R Package Universe
+Claire Bai,Translating clinical guidance to actionable insights with R
+Christopher T. Kenny,"Templated Analyses within R Packages for Collaborative, Reproducible Research"
+Andrew Gard,Teaching and learning data science in the era of AI
+Luis D. Verde Arregoitia,Why’d you load that package for?
+Mika Braginsky,DataPages for interactive data sharing using Quarto
+Kelly O'Briant,Event Automation with Posit Connect
+Stefanie Butland,"Using the Kyber R package to connect Google Sheets, RMarkdown, GitHub, and Agenda docs for open education"
+Demetri Pananos,Making sense of marginal effects
+Bryan Shalloway,"Understanding, Generating, and Evaluating Prediction Intervals"
+Tomasz Kalinowski,Keras 3: Deep Learning made easy
+Vasant Marur,Quality Control to avoid GIGO in Deep Learning Models.
+Brennan Antone,Democratizing Organization Surveys with Quarto and Shiny
+Sep Dadsetan,CONNECTing with our clients
+James Black,Giving your scientific computing environment (SCE) a voice: experiences and learnings leveraging operational data from our SCE and Posit products to help us serve our users better
+Erin Bugbee,To Explore or To Exploit: Decoding Human Decision Making with R and Python
+Brandon Sucher,Beyond the Classroom: Unspoken Realities of a Data Science Career
+Abigail Haddad,GitHub: How To Tell Your Professional Story
+Alan Schussman,Getting Data Done with a Pragmatic Data Team
+Andrew Holz,Oops I'm A Manager - Finding your Minimal Viable Process
+Zac Davies,Elevating enterprise data through open source LLMs
+Mark Wang,Using GitHub Copilot in R Shiny Development
+Laura Gast,Uniquely Human: Data Storytelling in the Age of AI
+Alok Pattani,Using Generative AI to Increase the Impact of Your Data Science Work
+Julia Silge,Introducing Positron
+Isabel Zimmerman,Introducing Positron
+Tom Mock,Introducing Positron
+Jonathan McPherson,Introducing Positron
+Lionel Henry,Introducing Positron
+Davis Vaughan,Introducing Positron
+Jenny Bryan,Introducing Positron
+David Keyes,Report Design in R: Small Tweaks that Make a Big Difference
+Mine Cetinkaya-Rundel,"Reproducible, dynamic, and elegant books with Quarto"
+Meghan Hall,Designing and Deploying Internal Quarto Templates
+Andrew Bray,Closeread: bringing Scrollytelling to Quarto
+Melissa van Bussel,Practical Tips for using Generative AI in Data Science Workflows
+Joe Cheng,Bending the Shiny learning curve with Shiny Express
+Barret Schloerke,Editable data frames in Py-Shiny: Updating original data in real-time
+Winston Chang,Building ML and AI apps with Shiny for Python
+Carson Sievert,Supercharge Your Shiny (for Python) App: Unleashing Jupyter Widgets for Interactivity
+Colin Gillespie,20+ Years of Reading Data into R
+Heather Turner,Contributing to the R Project
+Dave Slager,What I learned resurrecting an R package
+Kelly Bodwin,Building sustainable open-source ecosystems: Lessons from the #rstats community and an NSF grant.
+Chelsea Parlett-Pelleriti,Deep Learning is Just LEGO: and Other Hands on Machine Learning Activities
+James Wade,Posit Academy in the Age of Generative AI - Lessons from the Frontlines
+Carrie Wright,Supporting Social Good Through Community-Based Data Science Education
+Aleksander Dietrichson,AI for Gaming: How I Built a Bot to Play a Video-Game with R and Python
+Hadley Wickham,Updates from Posit
+James Blair,Updates from Posit
+Charlotte Wickham,Updates from Posit
+George Stagg,Updates from Posit
+James Goldie,Animated web graphics in Quarto with Svelte and other tools
+Thomas Lin Pedersen,Creating multi-figure visualizations with Patchwork
+Georgios Karamanis,From idea to code to image: Creative data visualizations in R
+Ellis Hughes,"Be Kind, Rewind"
+Simon Couch,Fair machine learning
+Hannah Frick,Survival analysis is coming to tidymodels!
+Max Kuhn,Evaluating Censored Regression Models is Hard
+Emil Hvitfeldt,"Tidypredict with recipes, turn workflow to SQL, spark, duckdb and beyond"
