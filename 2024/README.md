@@ -516,7 +516,7 @@ Slides | GitHub Repo
 ### Building sustainable open-source ecosystems: Lessons from the #rstats community and an NSF grant.
 💬 Kelly Bodwin
 
-Slides | [GitHub Repo](https://github.com/kbodwin/positconf_2024)
+[Slides](kbodwin.github.io/positconf_2024) | [GitHub Repo](https://github.com/kbodwin/positconf_2024)
 
 ### Deep Learning is Just LEGO: and Other Hands on Machine Learning Activities
 💬 Chelsea Parlett-Pelleriti
