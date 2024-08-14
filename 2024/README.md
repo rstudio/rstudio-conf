@@ -266,7 +266,7 @@ Slides | GitHub Repo
 ### Quarto for Knowledge Management
 💬 Cynthia Huang
 
-Slides | GitHub Repo
+[Slides](https://github.com/cynthiahqy/positconf2024/blob/main/slides.pdf) | [GitHub Repo](https://github.com/cynthiahqy/positconf2024)
 
 ### rainbowR - a community that supports, connects and promotes LGBTQ+ people who code in R
 💬 Ella Kaye
@@ -456,17 +456,17 @@ Slides | GitHub Repo
 ### Report Design in R: Small Tweaks that Make a Big Difference
 💬 David Keyes
 
-Slides | GitHub Repo
+[Slides](https://positconf2024.rfortherestofus.com/slides.html) | [GitHub Repo](https://github.com/rfortherestofus/report-design)
 
 ### Reproducible, dynamic, and elegant books with Quarto
 💬 Mine Cetinkaya-Rundel
 
-Slides | GitHub Repo
+[Slides](https://mine-cetinkaya-rundel.github.io/quarto-books-conf24) | [GitHub Repo](https://github.com/mine-cetinkaya-rundel/quarto-books-conf24)
 
 ### Designing and Deploying Internal Quarto Templates
 💬 Meghan Hall
 
-Slides | GitHub Repo
+Slides | GitHub Repo | [Text of talk](https://meghan.rbind.io/blog/2024-08-14-quarto-templates/)
 
 ### Closeread: bringing Scrollytelling to Quarto
 💬 Andrew Bray
