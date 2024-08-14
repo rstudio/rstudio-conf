@@ -376,7 +376,7 @@ Slides | GitHub Repo
 ### To Explore or To Exploit: Decoding Human Decision Making with R and Python
 💬 Erin Bugbee
 
-Slides | GitHub Repo
+[Slides](https://erinbugbee.quarto.pub/2024positconf-decoding-decisions/) | [GitHub Repo](https://github.com/erinbugbee/2024positconf-decoding-decisions)
 
 ### Beyond the Classroom: Unspoken Realities of a Data Science Career
 💬 Brandon Sucher
@@ -476,7 +476,7 @@ Slides | GitHub Repo
 ### Practical Tips for using Generative AI in Data Science Workflows
 💬 Melissa van Bussel
 
-Slides | GitHub Repo
+[Slides](https://github.com/melissavanbussel/posit-conf-2024/blob/main/slides.pdf) | [GitHub Repo](https://github.com/melissavanbussel/posit-conf-2024)
 
 ### Bending the Shiny learning curve with Shiny Express
 💬 Joe Cheng
@@ -486,7 +486,7 @@ Slides | GitHub Repo
 ### Editable data frames in Py-Shiny: Updating original data in real-time
 💬 Barret Schloerke
 
-Slides | GitHub Repo
+[Slides](http://schloerke.com/presentation-2024-08-13-posit-shiny-data-frame/) | [GitHub Repo](https://github.com/schloerke/presentation-2024-08-13-posit-shiny-data-frame)
 
 ### Building ML and AI apps with Shiny for Python
 💬 Winston Chang
@@ -496,7 +496,7 @@ Slides | GitHub Repo
 ### Supercharge Your Shiny (for Python) App: Unleashing Jupyter Widgets for Interactivity
 💬 Carson Sievert
 
-Slides | GitHub Repo
+Slides | [GitHub Repo](https://github.com/cpsievert/talks/tree/gh-pages/20240814)
 
 ### 20+ Years of Reading Data into R
 💬 Colin Gillespie
@@ -506,7 +506,7 @@ Slides | GitHub Repo
 ### Contributing to the R Project
 💬 Heather Turner
 
-Slides | GitHub Repo
+Slides | [GitHub Repo](https://github.com/hturner/positconf2024)
 
 ### What I learned resurrecting an R package
 💬 Dave Slager
@@ -516,7 +516,7 @@ Slides | GitHub Repo
 ### Building sustainable open-source ecosystems: Lessons from the #rstats community and an NSF grant.
 💬 Kelly Bodwin
 
-Slides | GitHub Repo
+Slides | [GitHub Repo](https://github.com/kbodwin/positconf_2024)
 
 ### Deep Learning is Just LEGO: and Other Hands on Machine Learning Activities
 💬 Chelsea Parlett-Pelleriti
@@ -576,27 +576,27 @@ Slides | GitHub Repo
 ### Be Kind, Rewind
 💬 Ellis Hughes
 
-Slides | GitHub Repo
+Slides | [GitHub Repo](https://github.com/thebioengineer/posit_conf_2024_be_kind_rewind)
 
 ### Fair machine learning
 💬 Simon Couch
 
-Slides | GitHub Repo
+[Slides](https://simonpcouch.github.io/conf-24) | [GitHub Repo](https://github.com/simonpcouch/conf-24)
 
 ### Survival analysis is coming to tidymodels!
 💬 Hannah Frick
 
-Slides | GitHub Repo
+[Slides](https://hfrick.github.io/2024-posit-conf/) | [GitHub Repo](https://github.com/hfrick/2024-posit-conf)
 
 ### Evaluating Censored Regression Models is Hard
 💬 Max Kuhn
 
-Slides | GitHub Repo
+Slides | [GitHub Repo](https://github.com/topepo/2024-posit-conf)
 
 ### Tidypredict with recipes, turn workflow to SQL, spark, duckdb and beyond
 💬 Emil Hvitfeldt
 
-Slides | GitHub Repo
+[Slides](https://emilhvitfeldt.github.io/talk-orbital-positconf/) | [GitHub Repo](https://github.com/EmilHvitfeldt/talk-orbital-positconf/tree/main)
 
 
 
