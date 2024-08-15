@@ -421,7 +421,7 @@ Slides | GitHub Repo
 ### Introducing Positron
 💬 Julia Silge
 
-Slides | GitHub Repo
+[Slides](https://speakerdeck.com/juliasilge/introducing-positron) | GitHub Repo
 
 ### Introducing Positron
 💬 Isabel Zimmerman
