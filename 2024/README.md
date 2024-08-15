@@ -451,7 +451,7 @@ Slides | GitHub Repo
 ### Introducing Positron
 💬 Jenny Bryan
 
-Slides | GitHub Repo
+[Slides](https://speakerdeck.com/jennybc/positron-for-r-and-rstudio-users) | GitHub Repo
 
 ### Report Design in R: Small Tweaks that Make a Big Difference
 💬 David Keyes
