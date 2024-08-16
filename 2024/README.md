@@ -65,7 +65,7 @@ Slides | GitHub Repo
 ### earthaccess: Accelerating NASA Earthdata science through open, collaborative development
 💬 Luis Lopez
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1Ot879tfrjhok3BzSwSUr2Xpd26dX-hyVGHQzATLVRTo/) | [GitHub Repo](https://github.com/nsidc/earthaccess)
 
 ### Data Wrangling [for Python or R] Like a Boss With DuckDB
 💬 Hannel Mühleisen
@@ -336,7 +336,7 @@ Slides | GitHub Repo
 ### Using the Kyber R package to connect Google Sheets, RMarkdown, GitHub, and Agenda docs for open education
 💬 Stefanie Butland
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1p_EXdYEVGY07VVMGdcvvwjjbwFihHsC_5oXRPW_8tVU/) | [GitHub Repo](https://github.com/openscapes/kyber)
 
 ### Making sense of marginal effects
 💬 Demetri Pananos
