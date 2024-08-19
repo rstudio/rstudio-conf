@@ -321,7 +321,7 @@ Slides | GitHub Repo
 ### Why’d you load that package for?
 💬 Luis D. Verde Arregoitia
 
-Slides | GitHub Repo
+[Slides](https://liomys.mx/posit24.html) | GitHub Repo
 
 ### DataPages for interactive data sharing using Quarto
 💬 Mika Braginsky
