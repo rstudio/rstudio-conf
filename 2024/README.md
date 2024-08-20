@@ -160,7 +160,7 @@ Slides | GitHub Repo
 ### Wait, that’s Shiny? Building feature-full, user-friendly interactive data explorers with Shiny and friends
 💬 Kiegan Rice
 
-Slides | GitHub Repo
+[GitHub Repo](https://github.com/kiegan/wait-thats-shiny)
 
 ### Shiny Templates
 💬 Greg Swinehart
