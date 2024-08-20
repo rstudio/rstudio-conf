@@ -5,7 +5,7 @@ This is where we will store all of the materials and links for posit::conf(2024)
 ### A Future of Data Science
 💬 Allen Downey
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/e/2PACX-1vSdoq58S1DbhSKikfu3m52B4oMB5DFgyvxr0qy4Rhilojq6G2oRqTLmWMKuKtEBQVoDEr-XXv0--10H/pub#slide=id.p)
 
 ### Beyond Dashboards: Dynamic Data Storytelling with Python, R, and Quarto Emails
 💬 Sean Nguyen
@@ -35,7 +35,7 @@ Slides | GitHub Repo
 ### Context is King
 💬 Shannon Pileggi
 
-Slides | GitHub Repo
+[Slides](shannonpileggi.github.io/context-is-king/#/title-slide) | [GitHub Repo](https://github.com/shannonpileggi/context-is-king)
 
 ### gtsummary: Streamlining Summary Tables for Research and Regulatory Submissions
 💬 Daniel Sjoberg
@@ -65,7 +65,7 @@ Slides | GitHub Repo
 ### earthaccess: Accelerating NASA Earthdata science through open, collaborative development
 💬 Luis Lopez
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1Ot879tfrjhok3BzSwSUr2Xpd26dX-hyVGHQzATLVRTo/) | [GitHub Repo](https://github.com/nsidc/earthaccess)
 
 ### Data Wrangling [for Python or R] Like a Boss With DuckDB
 💬 Hannel Mühleisen
@@ -95,7 +95,7 @@ Slides | GitHub Repo
 ### Deploying data applications and documents to the cloud
 💬 Alex Chisholm
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1zulnuaT2Dm_vM0l9Gd3vS26KWJuAf0gJ1pcFKjTUNbI/edit?usp=sharing)
 
 ### Data Wrangling for Advocacy: Tidy Data to Support the Affordable Connectivity Program
 💬 Christine Parker
@@ -210,7 +210,7 @@ Slides | GitHub Repo
 ### bRewing code: Ingredients for successful tribal collaboration
 💬 Angie Reed
 
-Slides | GitHub Repo
+Slides | GitHub Repo | [Volunteer Form](https://docs.google.com/forms/d/e/1FAIpQLSdHj47P0OAbPunyP6zbIihVeOOthiKsrCXWXoUQym_v9XdUog/viewform?pli=1)
 
 ### Art of R Packages: Forging Community with Hex Stickers
 💬 Hubert Halun
@@ -321,7 +321,7 @@ Slides | GitHub Repo
 ### Why’d you load that package for?
 💬 Luis D. Verde Arregoitia
 
-Slides | GitHub Repo
+[Slides](https://liomys.mx/posit24.html) | GitHub Repo
 
 ### DataPages for interactive data sharing using Quarto
 💬 Mika Braginsky
@@ -336,7 +336,7 @@ Slides | GitHub Repo
 ### Using the Kyber R package to connect Google Sheets, RMarkdown, GitHub, and Agenda docs for open education
 💬 Stefanie Butland
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1p_EXdYEVGY07VVMGdcvvwjjbwFihHsC_5oXRPW_8tVU/) | [GitHub Repo](https://github.com/openscapes/kyber)
 
 ### Making sense of marginal effects
 💬 Demetri Pananos
@@ -351,7 +351,7 @@ Slides | GitHub Repo
 ### Keras 3: Deep Learning made easy
 💬 Tomasz Kalinowski
 
-Slides | GitHub Repo
+[GitHub Repo](https://github.com/t-kalinowski/posit-conf-2024)
 
 ### Quality Control to avoid GIGO in Deep Learning Models.
 💬 Vasant Marur
@@ -421,7 +421,7 @@ Slides | GitHub Repo
 ### Introducing Positron
 💬 Julia Silge
 
-Slides | GitHub Repo
+[Slides](https://speakerdeck.com/juliasilge/introducing-positron) | GitHub Repo
 
 ### Introducing Positron
 💬 Isabel Zimmerman
@@ -448,10 +448,10 @@ Slides | GitHub Repo
 
 Slides | GitHub Repo
 
-### Introducing Positron
+### Positron for R and RStudio Users
 💬 Jenny Bryan
 
-Slides | GitHub Repo
+[Slides](https://speakerdeck.com/jennybc/positron-for-r-and-rstudio-users) | GitHub Repo
 
 ### Report Design in R: Small Tweaks that Make a Big Difference
 💬 David Keyes
@@ -496,7 +496,7 @@ Slides | GitHub Repo
 ### Supercharge Your Shiny (for Python) App: Unleashing Jupyter Widgets for Interactivity
 💬 Carson Sievert
 
-Slides | [GitHub Repo](https://github.com/cpsievert/talks/tree/gh-pages/20240814)
+[Slides](https://talks.cpsievert.me/20240814/) | [GitHub Repo](https://github.com/cpsievert/talks/tree/gh-pages/20240814)
 
 ### 20+ Years of Reading Data into R
 💬 Colin Gillespie
