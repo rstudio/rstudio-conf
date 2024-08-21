@@ -481,7 +481,7 @@ Slides | GitHub Repo
 ### Bending the Shiny learning curve with Shiny Express
 💬 Joe Cheng
 
-Slides | GitHub Repo
+[GitHub Repo](https://github.com/jcheng5/py-sidebot)
 
 ### Editable data frames in Py-Shiny: Updating original data in real-time
 💬 Barret Schloerke
