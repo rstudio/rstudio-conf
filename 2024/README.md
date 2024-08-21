@@ -396,7 +396,7 @@ Slides | GitHub Repo
 ### Oops I'm A Manager - Finding your Minimal Viable Process
 💬 Andrew Holz
 
-Slides | GitHub Repo
+[Slides](https://icarusz.github.io/OopsImAManager-MVP/#/title-slide) | [GitHub Repo](https://github.com/icarusz/OopsImAManager-MVP)
 
 ### Elevating enterprise data through open source LLMs
 💬 Zac Davies
