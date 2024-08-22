@@ -30,7 +30,7 @@ Slides | GitHub Repo
 ### Adequate Tables? No, We Want Great Tables.
 💬 Richard Iannone
 
-Slides | GitHub Repo
+[Slides](https://github.com/rich-iannone/presentations/blob/main/2024-08-13-posit_conf_adequate_tables/gt_GT_talk_posit_conf.pdf) | [GitHub Repo](https://github.com/rich-iannone/presentations/tree/main/2024-08-13-posit_conf_adequate_tables)
 
 ### Context is King
 💬 Shannon Pileggi
