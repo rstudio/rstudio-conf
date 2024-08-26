@@ -180,7 +180,7 @@ Slides | GitHub Repo
 ### "Please Let Me Merge Before I Start Crying": And Other Things I've Said at The Git Terminal
 💬 Meghan Harris
 
-Slides | GitHub Repo
+[Slides](https://meghansaha.github.io/please_let_me_merge/) | [GitHub Repo](https://github.com/Meghansaha/please_let_me_merge)
 
 ### Easing the pain of connecting to databases
 💬 Edgar Ruiz
