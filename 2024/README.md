@@ -40,7 +40,7 @@ Slides | GitHub Repo
 ### gtsummary: Streamlining Summary Tables for Research and Regulatory Submissions
 💬 Daniel Sjoberg
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/19bjd9wuo6zVjBzvCGHmHJ3a49GbEXpf4Wcs1tEXzycw/pub?start=false&loop=false&delayms=3000)
 
 ### Stitch by Stitch: The Art of Engaging New Users
 💬 Becca Krouse
