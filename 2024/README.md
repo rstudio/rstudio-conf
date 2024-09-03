@@ -10,10 +10,11 @@ In the hype cycle of data science, I suggest that the "peak of inflated expectat
 [Slides](https://docs.google.com/presentation/d/e/2PACX-1vSdoq58S1DbhSKikfu3m52B4oMB5DFgyvxr0qy4Rhilojq6G2oRqTLmWMKuKtEBQVoDEr-XXv0--10H/pub#slide=id.p)
 
 ### Beyond Dashboards: Dynamic Data Storytelling with Python, R, and Quarto Emails
+💬 Sean Nguyen
 
 In this talk, I’ll confront the traditional dependence on dashboards for business intelligence, pointing out their shortcomings in delivering prompt insights to business professionals. I will propose a shift in strategy that employs Python and R to generate dynamic, customized emails, utilizing Quarto and Posit Connect for seamless automation. This technique guarantees direct and effective delivery of actionable insights to users' inboxes, enhancing informed decision-making and boosting engagement. This recommendation not only redefines the method of data delivery for optimal impact but also prompts a fundamental change in mindset among data practitioners, urging them towards a more engaged and individualized form of data narration.
 
-💬 Sean Nguyen
+
 
 Slides | GitHub Repo
 
