@@ -76,7 +76,7 @@ The Urban Institute’s Spatial Equity Data Tool enables users to upload their o
 
 In this talk, I will share how we've expanded access to the tool using multi-language software. I'll discuss our updates to Python-based tool and API; R package wrapping the API; and Quarto-based documentation. I will also share how our partners in the City of Los Angeles have used the API and RShiny to build a custom budget equity tool.
 
-Slides | GitHub Repo
+[Slides](https://urbanorg.box.com/s/vecuwuwhtj1zkha09nznq9p0qxdttl9r) | [GitHub Repo](https://github.com/UrbanInstitute/ui-equity-tool)
 
 ### Making Waves with R, Python, and Quarto
 💬 Regina Lionheart
