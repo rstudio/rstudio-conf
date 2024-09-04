@@ -524,7 +524,8 @@ Every day, we face decisions, such as when to purchase a flight ticket to Seattl
 💬 Brandon Sucher
 
 Embarking on a data science career extends well beyond academic knowledge. In many ways, the learning has just begun. Soft skills have become increasingly valuable, with effective collaboration being essential for success. Additionally, there may be moments when advocating for your own work is crucial, turning data scientists into persuasive salespeople for their own insights and contributions. In this talk, I'll touch on some of the aspects of a data science job that aren't talked about as frequently, including onboarding successfully, becoming a subject matter expert, and understanding the end-to-end data workflow.
-Slides | GitHub Repo
+
+[Slides](https://github.com/rstudio/rstudio-conf/blob/master/2024/brandonsucher/Posit_Conf_2024_Slides.pdf)
 
 ### GitHub: How To Tell Your Professional Story
 💬 Abigail Haddad
