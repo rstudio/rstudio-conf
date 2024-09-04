@@ -53,7 +53,7 @@ While we have made great strides and unlocked new table-making possibilities for
 
 The quality of data science insights is predicated on the practitioner’s understanding of the data. Data documentation is the key to unlocking this understanding; with minimal effort, this documentation can be natively embedded in R data frames via variable labels. Variable labels seamlessly provide valuable data context that reduces human error, fosters collaboration, and ultimately elevates the overall data analysis experience. As an avid, daily user of variable labels, I am excited to help you discover new workflows to create and leverage variable labels in R!
 
-[Slides](shannonpileggi.github.io/context-is-king/#/title-slide) | [GitHub Repo](https://github.com/shannonpileggi/context-is-king)
+[Slides](https://shannonpileggi.github.io/context-is-king/#/title-slide) | [GitHub Repo](https://github.com/shannonpileggi/context-is-king)
 
 ### gtsummary: Streamlining Summary Tables for Research and Regulatory Submissions
 💬 Daniel Sjoberg
@@ -299,7 +299,7 @@ Slides | GitHub Repo
 
 As a global non-profit established in 2016, R-Ladies has more than 100k members from 233 chapters in 63 countries to support the mission of increasing gender diversity in the R community. Empowering local chapters is challenging as accessibility and awareness of communication methods, software choices, social platforms, and support avenues varies internationally. Join us for insights into our journey of developing a global, technical, and social infrastructure while fostering collaboration and growth and granting chapters the freedom to tailor their activities to local contexts. Walk away with practical, technical, and social strategies to empower and diversify your own data science communities based on learning from continuous feedback.
 
-Slides | GitHub Repo
+[Slides](https://github.com/rladies/rladies_global_presentations/blob/master/20240813_positconf/posit_conf2024.pdf) | [GitHub Repo](https://github.com/rladies/rladies_global_presentations/blob/master/20240813_positconf/README.md)
 
 ### bRewing code: Ingredients for successful tribal collaboration
 💬 Alena Reynolds and Angie Reed
