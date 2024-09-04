@@ -720,12 +720,12 @@ Slides | GitHub Repo
 
 Please join us for our first Posit keynote, where we’ll tell you about our mission, our products, and some of the exciting things we’ve been working on over the last year. Hadley Wickham, Chief Scientist, will talk briefly about Posit’s mission and products, before introducing the three speakers who will update you on some of the coolest projects we’ve worked on over the last year. James Blair, Senior Product Manager, will give you the latest on our partnerships with Databricks and Snowflake, and how we’re building seamless integrations that let you focus on data science instead of dealing with technical details. Charlotte Wickham, Developer Educator, will show you what’s new in Quarto, focusing on new ways to build beautiful PDFs with Typst. Finally, George Stagg, Senior Software Engineer, will tell you about the latest innovations in teaching using webR, a tool that lets you compile your R code into standalone HTML files.
 
-### Animated web graphics in Quarto with Svelte and other tools
+### Your journey from data science to animated web graphics
 💬 James Goldie
 
 Quarto makes web graphics accessible to data scientists, letting them write Observable JavaScript (OJS) right alongside the languages they already use, like R and Python. OJS is powerful, but making graphics that animate and transition can be a challenge. In this talk I'll demonstrate ways to use Quarto and OJS with graphics libraries to make them react and animate according to your data. We'll even look at making bespoke, reactive graphics with Svelte and D3.js using Sverto, a Quarto extension designed to help you on your web graphics journey.
 
-Slides | GitHub Repo
+[Slides](https://positconf2024.talks.jamesgoldie.dev) | [GitHub Repo](https://github.com/jimjam-slam/talk-positconf-aug2024)
 
 ### Creating multi-figure visualizations with Patchwork
 💬 Thomas Lin Pedersen
