@@ -488,14 +488,16 @@ Deep Learning models help answer scientific questions, but they are only as accu
 
 Slides | GitHub Repo
 
-### Democratizing Organization Surveys with Quarto and Shiny
+### Democratizing Organizational Surveys with Quarto and Shiny
 💬 Brennan Antone
 
-When gathering data from groups (e.g., surveys), where does it go, and who does it help? How do we consider the privacy of respondents and power dynamics in who can access and benefit from data?
+When gathering data from groups (e.g., surveys), where does it go, and who does it help? How can we deliver value directly back to all survey participants, not just top organizational decision-makers?
 
-In this talk, I describe the creation of tools to let respondents get personalized feedback from the data they provide. This shifts the balance of power, allowing everyone to benefit directly, rather than providing information to only top decision-makers. I examine how Quarto and Shiny enable the creation of such tools, and describe takeaways from implementing them with two Fortune 500 companies. This talk teaches how personalized tools can make data accessible to all, and how to alter the power dynamics of how organizations gather and use data.
+In this talk, I discuss re-designing how we report on organizational feedback surveys, moving from a top-down to a bottom-up approach to organizational change. Interactive dashboards can make data and feedback accessible to all. This tackles challenges with data quality, privacy, and power - allowing everyone to benefit directly from their data. I examine how Quarto and Shiny enable the creation of "flipped reports", and describe takeaways from implementing them with two Fortune 500 companies.
 
-Slides | GitHub Repo
+This talk teaches how personalized tools can make data accessible to all, and can alter the power dynamics around how organizations enact change.
+
+[Slides](https://github.com/BrennanAntone/positconf24) | [Professional Website](https://brennanantone.com/)
 
 ### CONNECTing with our clients
 💬 Sep Dadsetan
