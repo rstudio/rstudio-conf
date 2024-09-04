@@ -145,9 +145,9 @@ Creating engaging data content has never been easier, yet easily sharing remains
 ### Data Wrangling for Advocacy: Tidy Data to Support the Affordable Connectivity Program
 💬 Christine Parker
 
-We sought to create a dashboard to highlight some frequently asked statistics about the Affordable Connectivity Program. To accomplish this goal, I transformed the program data which consist of enrollment and claims summarized over different geographies and updated at different times (tidyverse); collected demographic data from the Census Bureau (tidycensus); modeled future enrollment and expenditure scenarios (lme4, plotly); and created geospatial datasets to illustrate our findings in maps (tigris, arcgisbinding). The messy datasets posed a steep learning curve. We were among the few organizations that worked with these data to translate them into meaningful insights and I'd like to share how we were able to create such a useful resource.
+We sought to create a dashboard to highlight some frequently asked statistics about the Affordable Connectivity Program. Although the program data were "available" to the public, they were not accessible. Wrangling messy datasets is not new to data scientists, and our work included pretty straightforward summary statistics, yet this work became a leading resource for advocacy groups, academics, policy makers, and ultimately led us to a meeting where we shared guidance about the program funding needs with the White House. While I give a shout out to a few of my favorite R packages, in this talk I focus on the strategies you can employ to make your data tool have an impact. 
 
-Slides | GitHub Repo
+[Slides](https://www.canva.com/design/DAGKFckt2-Y/Lkf8VC3nCfYfwD1hYOydDg/view?utm_content=DAGKFckt2-Y&utm_campaign=designshare&utm_medium=link&utm_source=editor) | [ACP Dashboard](https://acpdashboard.com/)
 
 ### Leveraging Data in a Volunteer Fire Department
 💬 Joseph Richey
@@ -472,7 +472,7 @@ For many problems concerning prediction, providing intervals is more useful than
 
 While I will touch on some similar topics as Max Kuhn’s posit::conf(2023) talk on conformal inference, my talk will cover different points and have a broader focus. I hope attendees gain an understanding of some of the key tools and concepts related to prediction intervals and that they leave inspired to learn more.
 
-[Slides](https://github.com/brshallo/posit-2024/blob/main/shalloway-posit-conf.pdf) | [GitHub Repo](https://github.com/brshallo/posit-2024)
+Slides | GitHub Repo
 
 ### Keras 3: Deep Learning made easy
 💬 Tomasz Kalinowski
@@ -722,12 +722,12 @@ Slides | GitHub Repo
 
 Please join us for our first Posit keynote, where we’ll tell you about our mission, our products, and some of the exciting things we’ve been working on over the last year. Hadley Wickham, Chief Scientist, will talk briefly about Posit’s mission and products, before introducing the three speakers who will update you on some of the coolest projects we’ve worked on over the last year. James Blair, Senior Product Manager, will give you the latest on our partnerships with Databricks and Snowflake, and how we’re building seamless integrations that let you focus on data science instead of dealing with technical details. Charlotte Wickham, Developer Educator, will show you what’s new in Quarto, focusing on new ways to build beautiful PDFs with Typst. Finally, George Stagg, Senior Software Engineer, will tell you about the latest innovations in teaching using webR, a tool that lets you compile your R code into standalone HTML files.
 
-### Your journey from data science to animated web graphics
+### Animated web graphics in Quarto with Svelte and other tools
 💬 James Goldie
 
 Quarto makes web graphics accessible to data scientists, letting them write Observable JavaScript (OJS) right alongside the languages they already use, like R and Python. OJS is powerful, but making graphics that animate and transition can be a challenge. In this talk I'll demonstrate ways to use Quarto and OJS with graphics libraries to make them react and animate according to your data. We'll even look at making bespoke, reactive graphics with Svelte and D3.js using Sverto, a Quarto extension designed to help you on your web graphics journey.
 
-[Slides](https://positconf2024.talks.jamesgoldie.dev) | [GitHub Repo](https://github.com/jimjam-slam/talk-positconf-aug2024)
+Slides | GitHub Repo
 
 ### Creating multi-figure visualizations with Patchwork
 💬 Thomas Lin Pedersen
