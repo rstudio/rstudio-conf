@@ -402,7 +402,9 @@ Slides | GitHub Repo
 ### Ten Simple Rules for Teaching an Introduction to R
 💬 Ava Hoffman
 
-Slides | GitHub Repo
+Many of us feel unprepared to teach R, either because of lack of guidance or time to prepare. We’ve distilled our award winning teaching experience into our top 10 takeaways so you can get up and running teaching R quickly. This includes advice for setting yourself up for success, keeping it practical, and knowing your learners. To see our tips in more detail, check out our paper: https://doi.org/10.1371/journal.pcbi.1012018
+
+[Slides](https://docs.google.com/presentation/d/1TjilsiAIltuZINSuMvhVhiNIfgguMXMRRIPA_fkKDGI/edit?usp=sharing) | [GitHub Repo](https://github.com/jhudsl/Intro_to_r)
 
 ### R Scripts to Databricks: Lessons in Production Workflow
 💬 Eric Leung
