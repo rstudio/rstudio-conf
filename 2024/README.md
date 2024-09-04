@@ -226,9 +226,9 @@ Slides | GitHub Repo
 ### Computing and recommending company-wide employee training pair decisions at scale via an AI matching and administrative workflow platform developed completely in-house
 💬 Regis A. James
 
-Regis A. James developed an innovative tool that automates at-scale generation of high-quality mentor/mentee matches at Regeneron. Built using R, Python, LLMs, shiny, MySQL, Neo4j, JavaScript, CSS, HTML, and bash, it transforms months of manual collaborative work into days. The reticulate, bs4dash, DT, plumber API, dbplyr, and neo4r packages were particularly helpful in enabling its full-stack data science. The patent-pending expert recommendation engine of the AI tool has been successfully used for training a 400-member data science community of practice, and also for larger career development mentoring cohorts for thousands of employees across the company, demonstrating its practical value and potential for wider application.
+Regis A. James developed MAGNETRON AI, an innovative, patent-pending tool that automates at-scale generation of high-quality mentor/mentee matches at Regeneron to enable rapid, yet accurate, company-wide pairings between employees seeking skill training/growth in any domain and others specifically capable of facilitating it. Built using R, Python, LLMs, shiny, MySQL, Neo4j, JavaScript, CSS, HTML, and bash, it transforms months of manual collaborative work into days. The reticulate, bs4dash, DT, plumber API, dbplyr, and neo4r packages were particularly helpful in enabling its full-stack data science. The patent-pending expert recommendation engine of the AI tool has been successfully used for training a 400-member data science community of practice, and also for larger career development mentoring cohorts for thousands of employees across the company, demonstrating its practical value and potential for wider application.
 
-Slides | GitHub Repo
+[Slides]( https://drive.google.com/file/d/1jq-WjuFz1Lp3m6v0SYjNoW1WcCBKPMs3/view?usp=sharing ), [Referenced talks]( https://www.youtube.com/@datadrivendecisionmaking )
 
 ### Wait, that’s Shiny? Building feature-full, user-friendly interactive data explorers with Shiny and friends
 💬 Kiegan Rice
