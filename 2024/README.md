@@ -727,10 +727,10 @@ Quarto makes web graphics accessible to data scientists, letting them write Obse
 
 Slides | GitHub Repo
 
-### Creating multi-figure visualizations with Patchwork
+### API-first package design — and learning patchwork in the process
 💬 Thomas Lin Pedersen
 
-While many visualization frameworks focus on facilitating the creation of a single plot, combining multiple plots into a single coherent figure is often the end goal when creating a visualization. There is no shortage of packages in R for doing this but they often lack in flexibility or are cumbersome to use. Because of this, the patchwork package has become the tool of choice for many, with it's clear API and flexible customizations. This talk will guide the audience through the core concepts of the patchwork package, starting with simple compositional tasks and moving all the way up to advanced nested layouts and insets, preparing them to use the package in their day-to-day work when they come home.
+Data visualisation frameworks have an inherent need for good API design in order to be effective due to the potential for unbounded features their creative problem space holds. This talk will go through some of the ways taking an API-first approach to package development can play out, drawing on the experience developing and maintaining the patchwork package over many years. Through the talk the audience will also get an introduction to the use of patchwork, a package designed to make it effortlss to combine multiple plots into a single composite figure.
 
 Slides | GitHub Repo
 
