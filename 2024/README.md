@@ -497,7 +497,7 @@ In this talk, I discuss re-designing how we report on organizational feedback su
 
 This talk teaches how personalized tools can make data accessible to all, and can alter the power dynamics around how organizations enact change.
 
-[Slides] (https://github.com/BrennanAntone/positconf24) | [Professional Website] (https://brennanantone.com/)
+[Slides](https://github.com/BrennanAntone/positconf24) | [Professional Website](https://brennanantone.com/)
 
 ### CONNECTing with our clients
 💬 Sep Dadsetan
