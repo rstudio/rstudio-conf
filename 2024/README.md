@@ -502,7 +502,7 @@ Slides | GitHub Repo
 
 Leveraging Posit Connect, our company transforms client engagement by providing direct support, extensive documentation (built with Quarto), and no-code applications for data exploration and analysis of real-world oncology data. This strategy provides us the greatest flexibility for subject matter experts to deliver client value, provide client assistance, enhance self-service learning, and to lower the technical barrier for data insights. Our commitment to client success and innovation is evidenced by our use of Posit Connect, providing tools for a competitive edge and data-driven culture.
 
-Slides | GitHub Repo
+[Slides](https://drive.google.com/file/d/1let_qEC94x3GS5E_hjLkqp0F4GrqLkwe/view?usp=sharing) | GitHub Repo
 
 ### Giving your scientific computing environment (SCE) a voice: experiences and learnings leveraging operational data from our SCE and Posit products to help us serve our users better
 💬 James Black
