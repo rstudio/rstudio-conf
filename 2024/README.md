@@ -339,9 +339,9 @@ Slides | GitHub Repo
 ### Empowering Reproducible Finance through Tidy Finance with R and Python
 💬 Christoph Scheuch
 
-Tidy Finance merges financial economics research with the principles of transparency and reproducibility, offering a novel open-source toolkit in R and Python. Our multi-language approach simplifies empirical studies in finance and teaches reproducible research with clean, understandable code. In my talk, I'll showcase how Tidy Finance improves finance research and education, aiding finance professionals in applying its principles for better teaching and research. Attendees from diverse backgrounds will learn about fostering open-source initiatives in their fields. Join us to support a transparent, reproducible research environment.
+Tidy Finance merges cutting-edge research in financial economics with the principles of transparency and reproducibility, providing a novel, open-source toolkit available in both R and Python. This multi-language approach simplifies financial data analysis while teaching best practices for reproducible research, integrating narrative with clean, easy-to-read code and replicable results. By promoting transparent code, public sharing, and multi-language support, Tidy Finance equips researchers, educators, and students with critical tools that foster a more reproducible academic environment. This talk will explore the development and impact of Tidy Finance, offering inspiration for attendees from various fields to advance open-source and reproducibility in their own work.
 
-Slides | GitHub Repo
+[Slides](https://talks.tidy-finance.org/#positconf2024) | [GitHub Repo](https://github.com/tidy-finance/website)
 
 ### CI madness with Ibis: testing 20 query engines on every commit
 💬 Phillip Cloud
