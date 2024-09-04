@@ -472,7 +472,7 @@ For many problems concerning prediction, providing intervals is more useful than
 
 While I will touch on some similar topics as Max Kuhn’s posit::conf(2023) talk on conformal inference, my talk will cover different points and have a broader focus. I hope attendees gain an understanding of some of the key tools and concepts related to prediction intervals and that they leave inspired to learn more.
 
-Slides | GitHub Repo
+[Slides](https://github.com/brshallo/posit-2024/blob/main/shalloway-posit-conf.pdf) | [GitHub Repo](https://github.com/brshallo/posit-2024)
 
 ### Keras 3: Deep Learning made easy
 💬 Tomasz Kalinowski
