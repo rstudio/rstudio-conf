@@ -739,7 +739,7 @@ Slides | GitHub Repo
 
 In this talk, we will walk through the process of converting an idea into a creative visualization in R and ggplot2, from finding inspiration to writing the code. We’ll look at handy tips to make the creative and coding process smoother, how to create more personal plots, as well as the importance (and fun!) of sharing your work with a great community.
 
-Slides | [GitHub Repo](https://github.com/gkaramanis/posit_conf_2024)
+[Slides](https://github.com/gkaramanis/posit_conf_2024/blob/main/From%20idea%20to%20code%20to%20image%20-%20creative%20data%20visualizations%20in%20R%20-%20Georgios%20Karamanis.pdf) | [GitHub Repo](https://github.com/gkaramanis/posit_conf_2024)
 
 ### Be Kind, Rewind
 💬 Ellis Hughes
