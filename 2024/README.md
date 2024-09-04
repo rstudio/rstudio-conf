@@ -582,12 +582,11 @@ Over the past year plus, generative AI has taken the world by storm. While use c
 [Slides](https://docs.google.com/presentation/d/18lS3d3pn-ImyOO0gE0DSLreH4iA6-YSZbRJq-I44j0c/) | [GitHub Repo](https://github.com/alokpattani/gcp-datascience/tree/master/olympics-medals-analysis) | [Blog Post](https://medium.com/google-cloud/achieving-gold-medal-level-data-science-communication-with-gemini-and-vertex-ai-536078880191)
 
 ### Introducing Positron, a new data science IDE
-💬 Julia Silge, Isabel Zimmerman, Tom Mock, Jonathan McPherson, Lionel Henry, Davis Vaughan, and Positron for R and RStudio Users
+💬 Julia Silge, Isabel Zimmerman, Tom Mock, Jonathan McPherson, Lionel Henry, Davis Vaughan, and Jenny Bryan
 
-Positron is a next generation data science IDE that is newly available to the community for early beta testing. This new IDE is an extensible tool built to facilitate exploratory data analysis, reproducible authoring, and publishing data artifacts. Positron currently supports these data workflows in either or both Python and/or R, and is designed with a forward-looking architecture that can support other data science languages in the future. In this session, learn from the team building Positron about how and why it is designed the way it is, what will feel familiar or new coming from other IDEs, and whether it might be a good fit for your own work.
+Positron is a next generation data science IDE that is newly available to the community for early beta testing. This new IDE is an extensible tool built to facilitate exploratory data analysis, reproducible authoring, and publishing data artifacts. Positron currently supports these data workflows in either or both Python and R, and is designed with a forward-looking architecture that can support other data science languages in the future. In this session, learn from the team building Positron about how and why it is designed the way it is, what will feel familiar or new coming from other IDEs, and whether it might be a good fit for your own work.
 
-Positron walk-through slides: https://speakerdeck.com/juliasilge/introducing-positron
-Slides for Positron for R and RStudio Users, Jenny Bryan: https://speakerdeck.com/jennybc/positron-for-r-and-rstudio-users
+[Slide deck 1](https://speakerdeck.com/juliasilge/introducing-positron) | [Slide deck 6](https://speakerdeck.com/jennybc/positron-for-r-and-rstudio-users)
 
 ### Report Design in R: Small Tweaks that Make a Big Difference
 💬 David Keyes
