@@ -382,7 +382,13 @@ Have you ever considered using the power and flexibility of Quarto for note-taki
 ### rainbowR - a community that supports, connects and promotes LGBTQ+ people who code in R
 💬 Ella Kaye
 
-Slides | GitHub Repo
+rainbowR's mission is to connect, support and promote LGBTQ+ people in the R community and to spread awareness of LGBTQ+ issues through data-driven activism.
+
+In this lightning talk, you'll learn about the community, our activities, and how you can get involved, whether as a member of the LGBTQ+ community or an ally. 
+
+For more, see <https://rainbow.org>.
+
+[Slides](https://r-lgbtq.github.io/posit-conf-2024/) | [GitHub Repo](https://github.com/r-lgbtq/posit-conf-2024)
 
 ### Breaking data identities: Making a case for language-agnosticity
 💬 Albert Rapp
