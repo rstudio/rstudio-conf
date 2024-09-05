@@ -145,9 +145,9 @@ Creating engaging data content has never been easier, yet easily sharing remains
 ### Data Wrangling for Advocacy: Tidy Data to Support the Affordable Connectivity Program
 💬 Christine Parker
 
-We sought to create a dashboard to highlight some frequently asked statistics about the Affordable Connectivity Program. To accomplish this goal, I transformed the program data which consist of enrollment and claims summarized over different geographies and updated at different times (tidyverse); collected demographic data from the Census Bureau (tidycensus); modeled future enrollment and expenditure scenarios (lme4, plotly); and created geospatial datasets to illustrate our findings in maps (tigris, arcgisbinding). The messy datasets posed a steep learning curve. We were among the few organizations that worked with these data to translate them into meaningful insights and I'd like to share how we were able to create such a useful resource.
+We sought to create a dashboard to highlight some frequently asked statistics about the Affordable Connectivity Program. Although the program data were "available" to the public, they were not accessible. Wrangling messy datasets is not new to data scientists, and our work included pretty straightforward summary statistics, yet this work became a leading resource for advocacy groups, academics, policy makers, and ultimately led us to a meeting where we shared guidance about the program funding needs with the White House. While I give a shout out to a few of my favorite R packages, in this talk I focus on the strategies you can employ to make your data tool have an impact. 
 
-Slides | GitHub Repo
+[Slides](https://www.canva.com/design/DAGKFckt2-Y/Lkf8VC3nCfYfwD1hYOydDg/view?utm_content=DAGKFckt2-Y&utm_campaign=designshare&utm_medium=link&utm_source=editor) | [ACP Dashboard](https://acpdashboard.com/)
 
 ### Leveraging Data in a Volunteer Fire Department
 💬 Joseph Richey
@@ -787,6 +787,3 @@ Censoring in data can frequently occur when we have a time-to-event. For example
 Tidypredict is one of my favorite packages. Being able to turn a fitted model object into an equation is very powerful! However in tidymodels, we use recipes more and more to do preprocessing. So far, tidypredict didn’t have support for recipes, which severely limited its uses. This talk is about how I fixed that issue. Spending a couple of years thinking about this problem, I finally found a way! Being able to turn a tidymodels workflow into a series of equations for prediction is super powerful. For some uses, being able to turn a model to predict inside SQL, spark or duckdb allows us to handle some problems with more ease.
 
 [Slides](https://emilhvitfeldt.github.io/talk-orbital-positconf/) | [GitHub Repo](https://github.com/EmilHvitfeldt/talk-orbital-positconf/tree/main)
-
-
-
