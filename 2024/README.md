@@ -226,7 +226,7 @@ Slides | GitHub Repo
 ### Computing and recommending company-wide employee training pair decisions at scale via an AI matching and administrative workflow platform developed completely in-house
 💬 Regis A. James
 
-Regis A. James developed MAGNETRON AI, an innovative, patent-pending tool that automates at-scale generation of high-quality mentor/mentee matches at Regeneron to enable rapid, yet accurate, company-wide pairings between employees seeking skill training/growth in any domain and others specifically capable of facilitating it. Built using R, Python, LLMs, shiny, MySQL, Neo4j, JavaScript, CSS, HTML, and bash, it transforms months of manual collaborative work into days. The reticulate, bs4dash, DT, plumber API, dbplyr, and neo4r packages were particularly helpful in enabling its full-stack data science. The patent-pending expert recommendation engine of the AI tool has been successfully used for training a 400-member data science community of practice, and also for larger career development mentoring cohorts for thousands of employees across the company, demonstrating its practical value and potential for wider application.
+Regis A. James developed MAGNETRON AI, an innovative, patent-pending tool that automates at-scale generation of high-quality mentor/mentee matches at Regeneron to enable rapid, yet accurate, company-wide pairings between employees seeking skill training/growth in any domain and others specifically capable of facilitating it. Built using R, Python, LLMs, shiny, MySQL, Neo4j, JavaScript, CSS, HTML, and bash, it transforms months of manual collaborative work into days. The reticulate, bs4dash, DT, plumber API, dbplyr, and neo4r packages were particularly helpful in enabling its full-stack data science. The expert recommendation engine of the AI tool has been successfully used for training a 400-member data science community of practice, and also for larger career development mentoring cohorts for thousands of employees across the company, demonstrating its practical value and potential for wider application.
 
 [Slides]( https://drive.google.com/file/d/1jq-WjuFz1Lp3m6v0SYjNoW1WcCBKPMs3/view?usp=sharing ), [Referenced talks]( https://www.youtube.com/@datadrivendecisionmaking )
 
@@ -382,7 +382,13 @@ Have you ever considered using the power and flexibility of Quarto for note-taki
 ### rainbowR - a community that supports, connects and promotes LGBTQ+ people who code in R
 💬 Ella Kaye
 
-Slides | GitHub Repo
+rainbowR's mission is to connect, support and promote LGBTQ+ people in the R community and to spread awareness of LGBTQ+ issues through data-driven activism.
+
+In this lightning talk, you'll learn about the community, our activities, and how you can get involved, whether as a member of the LGBTQ+ community or an ally. 
+
+For more, see <https://rainbow.org>.
+
+[Slides](https://r-lgbtq.github.io/posit-conf-2024/) | [GitHub Repo](https://github.com/r-lgbtq/posit-conf-2024)
 
 ### Breaking data identities: Making a case for language-agnosticity
 💬 Albert Rapp
@@ -472,7 +478,7 @@ For many problems concerning prediction, providing intervals is more useful than
 
 While I will touch on some similar topics as Max Kuhn’s posit::conf(2023) talk on conformal inference, my talk will cover different points and have a broader focus. I hope attendees gain an understanding of some of the key tools and concepts related to prediction intervals and that they leave inspired to learn more.
 
-Slides | GitHub Repo
+[Slides](https://github.com/brshallo/posit-2024/blob/main/shalloway-posit-conf.pdf) | [GitHub Repo](https://github.com/brshallo/posit-2024)
 
 ### Keras 3: Deep Learning made easy
 💬 Tomasz Kalinowski
@@ -488,14 +494,16 @@ Deep Learning models help answer scientific questions, but they are only as accu
 
 Slides | GitHub Repo
 
-### Democratizing Organization Surveys with Quarto and Shiny
+### Democratizing Organizational Surveys with Quarto and Shiny
 💬 Brennan Antone
 
-When gathering data from groups (e.g., surveys), where does it go, and who does it help? How do we consider the privacy of respondents and power dynamics in who can access and benefit from data?
+When gathering data from groups (e.g., surveys), where does it go, and who does it help? How can we deliver value directly back to all survey participants, not just top organizational decision-makers?
 
-In this talk, I describe the creation of tools to let respondents get personalized feedback from the data they provide. This shifts the balance of power, allowing everyone to benefit directly, rather than providing information to only top decision-makers. I examine how Quarto and Shiny enable the creation of such tools, and describe takeaways from implementing them with two Fortune 500 companies. This talk teaches how personalized tools can make data accessible to all, and how to alter the power dynamics of how organizations gather and use data.
+In this talk, I discuss re-designing how we report on organizational feedback surveys, moving from a top-down to a bottom-up approach to organizational change. Interactive dashboards can make data and feedback accessible to all. This tackles challenges with data quality, privacy, and power - allowing everyone to benefit directly from their data. I examine how Quarto and Shiny enable the creation of "flipped reports", and describe takeaways from implementing them with two Fortune 500 companies.
 
-Slides | GitHub Repo
+This talk teaches how personalized tools can make data accessible to all, and can alter the power dynamics around how organizations enact change.
+
+[Slides](https://github.com/BrennanAntone/positconf24) | [Professional Website](https://brennanantone.com/)
 
 ### CONNECTing with our clients
 💬 Sep Dadsetan
@@ -722,12 +730,12 @@ Slides | GitHub Repo
 
 Please join us for our first Posit keynote, where we’ll tell you about our mission, our products, and some of the exciting things we’ve been working on over the last year. Hadley Wickham, Chief Scientist, will talk briefly about Posit’s mission and products, before introducing the three speakers who will update you on some of the coolest projects we’ve worked on over the last year. James Blair, Senior Product Manager, will give you the latest on our partnerships with Databricks and Snowflake, and how we’re building seamless integrations that let you focus on data science instead of dealing with technical details. Charlotte Wickham, Developer Educator, will show you what’s new in Quarto, focusing on new ways to build beautiful PDFs with Typst. Finally, George Stagg, Senior Software Engineer, will tell you about the latest innovations in teaching using webR, a tool that lets you compile your R code into standalone HTML files.
 
-### Animated web graphics in Quarto with Svelte and other tools
+### Your journey from data science to animated web graphics
 💬 James Goldie
 
 Quarto makes web graphics accessible to data scientists, letting them write Observable JavaScript (OJS) right alongside the languages they already use, like R and Python. OJS is powerful, but making graphics that animate and transition can be a challenge. In this talk I'll demonstrate ways to use Quarto and OJS with graphics libraries to make them react and animate according to your data. We'll even look at making bespoke, reactive graphics with Svelte and D3.js using Sverto, a Quarto extension designed to help you on your web graphics journey.
 
-Slides | GitHub Repo
+[Slides](https://positconf2024.talks.jamesgoldie.dev) | [GitHub Repo](https://github.com/jimjam-slam/talk-positconf-aug2024)
 
 ### Creating multi-figure visualizations with Patchwork
 💬 Thomas Lin Pedersen
@@ -779,6 +787,3 @@ Censoring in data can frequently occur when we have a time-to-event. For example
 Tidypredict is one of my favorite packages. Being able to turn a fitted model object into an equation is very powerful! However in tidymodels, we use recipes more and more to do preprocessing. So far, tidypredict didn’t have support for recipes, which severely limited its uses. This talk is about how I fixed that issue. Spending a couple of years thinking about this problem, I finally found a way! Being able to turn a tidymodels workflow into a series of equations for prediction is super powerful. For some uses, being able to turn a model to predict inside SQL, spark or duckdb allows us to handle some problems with more ease.
 
 [Slides](https://emilhvitfeldt.github.io/talk-orbital-positconf/) | [GitHub Repo](https://github.com/EmilHvitfeldt/talk-orbital-positconf/tree/main)
-
-
-
