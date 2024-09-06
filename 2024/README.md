@@ -440,7 +440,9 @@ Slides | GitHub Repo
 ### Why’d you load that package for?
 💬 Luis D. Verde Arregoitia
 
-[Slides](https://liomys.mx/posit24.html) | GitHub Repo
+Packages enhance programming languages, and working with code makes workflows repeatable. However, the number of existing packages can be overwhelming to the point of obscuring their roles within projects. This talk discusses the importance of scripts, and introduces ways to enhance package load calls. First, by building annotations with the annotater R package and also by learning from code comments across GitHub. The value of recording information such as package source, version, title, or even which functions or data are used in a script is discussed in both data science and teaching environments.
+
+[Slides](https://liomys.mx/posit24.html) | GitHub Repo | [annotater](https://annotater.liomys.mx/)  
 
 ### DataPages for interactive data sharing using Quarto
 💬 Mika Braginsky
