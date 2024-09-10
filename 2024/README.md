@@ -776,7 +776,7 @@ Time-to-event data can show up in a broad variety of contexts: the event may be 
 
 [Slides](https://hfrick.github.io/2024-posit-conf/) | [GitHub Repo](https://github.com/hfrick/2024-posit-conf)
 
-### Evaluating Censored Regression Models is Hard
+### Evaluating Time-to-Event Models is Hard
 💬 Max Kuhn
 
 Censoring in data can frequently occur when we have a time-to-event. For example, if we order a pizza that has not yet arrived after 5 minutes, it is censored; we don't know the final delivery time, but we know it is at least 5 minutes. Censored values can appear in clinical trials, customer churn analysis, pet adoption statistics, or anywhere a duration of time is used. I'll describe different ways to assess models for censored data and focus on metrics requiring an evaluation time (i.e., how well does the model work at 5 minutes?). I'll also describe how you can use tidymodel's expanded features for these data to tell if your model fits the data well.This talk is designed to be paired with the other tidymodels talk by Hannah Frick.
