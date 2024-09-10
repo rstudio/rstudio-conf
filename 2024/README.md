@@ -368,9 +368,9 @@ Slides | GitHub Repo
 ### Coding in a Cyclone: open-source and the public sector in the birthplace of R
 💬 Lee Durbin
 
-Lee Durbin's journey at Auckland Council transitions from Excel reliance to R, highlighting data analysis evolution in the public sector. Emphasising proficiency and sustainability, he leverages R's rich ecosystem and community support to foster a mature data culture. Despite initial inexperience, resources like R For Data Science and TidyTuesday rapidly enhanced his skill set. Addressing the sustainability challenge, he implemented the RAP framework and {renv} and {targets} packages, emphasising collaboration and continuous improvement. This talk outlines transforming data practices through R, ensuring organisational resilience even when responding to natural disasters.
+When I started working at Te Kaunihera o Tāmaki Makaurau Auckland Council, I knew that R had been invented at the University of Auckland, and I knew that using R for data wrangling was a better way than using Excel. So I set about learning how to code with R, supported by the generosity of the R community and a plethora of freely-available online resources. During my journey I discovered that a mature data culture is underpinned by three components, but when I was asked to use my data skills to help out during a cyclone I realised that I was missing one of the three. In this talk I discuss how I reached that point, and what I did about it.
 
-Slides | GitHub Repo
+[Slides](https://effervescent-yeot-53625b.netlify.app/#/title-slide) | [GitHub Repo](https://github.com/lddurbin/coding_in_a_cyclone)
 
 ### Quarto for Knowledge Management
 💬 Cynthia Huang
