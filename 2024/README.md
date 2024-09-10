@@ -769,14 +769,14 @@ In recent years, high-profile analyses have called attention to many contexts wh
 
 [Slides](https://simonpcouch.github.io/conf-24) | [GitHub Repo](https://github.com/simonpcouch/conf-24)
 
-### Survival analysis is coming to tidymodels!
+### tidymodels for time-to-event data
 💬 Hannah Frick
 
-Survival analysis is a part of statistical modeling (and machine learning) specifically for time-to-event data. This is common in medical research but has broad applications across industries, e.g. for analyzing customer churn. The tidymodels framework is a collection of R packages for safe, performant, and expressive predictive modeling. We added models for survival analysis a while ago. Now we are back with the rest, including performance metrics specifically for these types of models. I'd like to show how you can now leverage the entire framework for survival analysis: for all steps of the modeling process, from data prep to tuning. We are so excited to show you all of this!
+Time-to-event data can show up in a broad variety of contexts: the event may be a customer churning, a machine needing repairs or replacement, a pet being adopted, or a complaint being dealt with. Survival analysis is methodology which allows you to model both aspects, the time and the event status, at the same time. tidymodels now provides support for this kind of data across the framework.
 
 [Slides](https://hfrick.github.io/2024-posit-conf/) | [GitHub Repo](https://github.com/hfrick/2024-posit-conf)
 
-### Evaluating Censored Regression Models is Hard
+### Evaluating Time-to-Event Models is Hard
 💬 Max Kuhn
 
 Censoring in data can frequently occur when we have a time-to-event. For example, if we order a pizza that has not yet arrived after 5 minutes, it is censored; we don't know the final delivery time, but we know it is at least 5 minutes. Censored values can appear in clinical trials, customer churn analysis, pet adoption statistics, or anywhere a duration of time is used. I'll describe different ways to assess models for censored data and focus on metrics requiring an evaluation time (i.e., how well does the model work at 5 minutes?). I'll also describe how you can use tidymodel's expanded features for these data to tell if your model fits the data well.This talk is designed to be paired with the other tidymodels talk by Hannah Frick.
