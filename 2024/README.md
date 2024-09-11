@@ -444,10 +444,12 @@ Packages enhance programming languages, and working with code makes workflows re
 
 [Slides](https://liomys.mx/posit24.html) | GitHub Repo | [annotater](https://annotater.liomys.mx/)  
 
-### DataPages for interactive data sharing using Quarto
+### Datapages for interactive data sharing using Quarto
 💬 Mika Braginsky
 
-Slides | GitHub Repo
+Findable, accessible, interoperable, and reusable (FAIR) data sharing is a key component of open science, but presents a challenge for researchers, especially those with limited technical expertise or resources. If datasets are shared, it's most often as static files, restricting the FAIRness of the data. We use Quarto and Observable JS to develop Datapages, tools and templates that bridge this gap. Datapages enables researchers and other data distributors to easily share versioned datasets along with interactive visualizations, rich documentation, and user-friendly access functionality.
+
+[Slides](https://docs.google.com/presentation/d/106HdcsSveZa7j52HLue_sa6iEl-YuToMZC8yUYZo2M4/pub?start=false&loop=false&delayms=60000) | [GitHub Repo](https://github.com/datapages/datapage) | [Website](https://datapages.github.io/)
 
 ### Event Automation with Posit Connect
 💬 Kelly O'Briant
