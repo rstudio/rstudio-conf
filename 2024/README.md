@@ -191,7 +191,7 @@ Slides | GitHub Repo
 
 In life sciences, Shiny has enabled tremendous innovations to produce web interfaces as front-ends to sophisticated analyses, interactive visualizations, and clinical reporting. While industry sponsors have widely adopted Shiny, a relatively unexplored frontier has been the inclusion of a Shiny application inside a submission package to the FDA. The R Consortium R-Submissions Working Group has continued the momentum of previous submission pilots, such as the successful Shiny app submission to FDA in 2023. In this talk, I will share the journey of how we used containers and WebAssembly for a new and innovative approach to sharing a Shiny application directly with the FDA, paving the way for new innovation in the clinical submission process.
 
-Slides | GitHub Repo
+[Slides](https://github.com/rpodcast/shiny-webr-posit2024) | [GitHub Repo](https://github.com/RConsortium/submissions-pilot4-webR)
 
 ### Open-Source Initiatives in Pharma - What's Out There and Why You Should Join
 💬 Nicholas Masel
