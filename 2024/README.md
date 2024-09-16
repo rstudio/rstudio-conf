@@ -154,7 +154,7 @@ We sought to create a dashboard to highlight some frequently asked statistics ab
 
 The majority of fire departments in the United States are volunteer based organizations. As an emerging professional in the field of data science, I was able to help my local fire department track, manage, and analyze data using R shiny, Python, and AWS. This has allowed for increased efficiency within the department, and better transparency for fire department and local government officials.
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1JjjjfDBox7W1MK6CwBmu3cIFpzSEnLu_/edit?usp=sharing&ouid=117509225446346298730&rtpof=true&sd=true) | [GitHub Repo](https://github.com/JosephRichey/fire-data)
 
 ### Novice to data scientist: how a pediatric anesthesiologist used R Studio to help disadvantaged kids access surgical care
 💬 Nick Pratap
