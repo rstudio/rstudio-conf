@@ -662,8 +662,6 @@ Most Python packages that provide interactive web-based visualizations (e.g., al
 
 For the last 20+ years, I've been reading data into R. It all started with the humble scan() function. Then, I used fancy new-fangled file formats, such as parquet and arrow, before progressing onto trendy databases, such as duckdb, for analytics. Besides the fun you can have by messing around with new technologies, when should you consider the above formats? In this talk, I'll cover a variety of methods for importing data and highlight the good, the bad, and the annoying.
 
-Slides | GitHub Repo
-
 ### Contributing to the R Project
 💬 Heather Turner
 
