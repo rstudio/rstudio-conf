@@ -730,9 +730,7 @@ Slides | GitHub Repo
 ### API-first package design — and learning patchwork in the process
 💬 Thomas Lin Pedersen
 
-Data visualisation frameworks have an inherent need for good API design in order to be effective due to the potential for unbounded features their creative problem space holds. This talk will go through some of the ways taking an API-first approach to package development can play out, drawing on the experience developing and maintaining the patchwork package over many years. Through the talk the audience will also get an introduction to the use of patchwork, a package designed to make it effortlss to combine multiple plots into a single composite figure.
-
-Slides | GitHub Repo
+Data visualisation frameworks have an inherent need for good API design in order to be effective due to the potential for unbounded features their creative problem space holds. This talk will go through some of the ways taking an API-first approach to package development can play out, drawing on the experience of developing and maintaining the patchwork package over many years. Through the talk, the audience will also get an introduction to the use of patchwork, a package designed to make it effortless to combine multiple plots into a single composite figure.
 
 ### From idea to code to image: Creative data visualizations in R
 💬 Georgios Karamanis
