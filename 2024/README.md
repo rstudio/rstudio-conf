@@ -631,7 +631,7 @@ Scrollytelling is a style of web design that transitions graphics and text as a 
 
 Finally, Closeread allows authors with experience in Observable JS to write their own animated graphics that update smoothly as scrolling progresses.
 
-Slides | GitHub Repo
+Slides | GitHub Repo | [Closeread Docs](https://closeread.netlify.app/)
 
 ### Practical Tips for using Generative AI in Data Science Workflows
 💬 Melissa van Bussel
