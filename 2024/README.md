@@ -349,11 +349,11 @@ Tidy Finance merges financial economics research with the principles of transpar
 [Slides](https://ibis-project.org/presentations/positconf2024/talk) | [GitHub Repo](https://github.com/ibis-project/ibis/blob/main/docs/presentations/positconf2024/talk.qmd)
 
 ### Level up! Empowering industry R users with different levels of experience
-💬 Seth Colbert-Pollack
+💬 Seth Copolnix
 
 How can we level up the R skills of a team with varied backgrounds and levels of experience in R? At PicnicHealth, a health tech company that collects and abstracts patient medical records for use in research, we've come up with a number of strategies to share. We'll discuss building internal packages that assist with common tasks and distributing them with Posit Package Manager, hosting dashboards on Posit Connect and integrating them with other internal apps, maintaining a wiki, and holding regular Office HouRs to give folks a place to ask for advice. We'll share examples and show some projects that have benefited from this approach. This talk is suitable for anyone who has at least one coworker using R.
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1sQWLRhRdJ47P8j-KpzXZC3MyGMKu_2z-uB2q1Qzi_8s/edit?usp=sharing)
 
 ### Partnering with Posit for progress on Environmental Stewardship
 💬 Saumiitha Leelakrishnan
