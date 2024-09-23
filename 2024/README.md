@@ -304,7 +304,7 @@ As a global non-profit established in 2016, R-Ladies has more than 100k members 
 
 Everyone will have their own recipe for bRewing a great collaboration, but we wanted to share ours. Ingredients: equal parts learner and teacher, 90 kg of supportive management, 1 whole database, complete or incomplete, a dash of creativity, 60 hours of time (recipe included in the main presentation), fun to taste. First, make sure your ingredients are organized, and the prep area is tidy. Sift data into a central database and simmer and stir into separate R scripts. In a large cauldron, combine scripts and narrative into one giant Rmarkdown. Lubridate your pan and knit into the desired format. We want to share the rest of our recipe to make a delicious report that builds confidence in the learner, new and strong friendships, and lifelong skills.
 
-Slides | GitHub Repo | [Volunteer Form](https://docs.google.com/forms/d/e/1FAIpQLSdHj47P0OAbPunyP6zbIihVeOOthiKsrCXWXoUQym_v9XdUog/viewform?pli=1)
+[Slides](https://drive.google.com/file/d/1B3DbooimgrWqLONui_6sh12tam4mqJYW/view?usp=drive_link) | [Volunteer Form](https://docs.google.com/forms/d/e/1FAIpQLSdHj47P0OAbPunyP6zbIihVeOOthiKsrCXWXoUQym_v9XdUog/viewform?pli=1)
 
 ### Art of R Packages: Forging Community with Hex Stickers
 💬 Hubert Halun
