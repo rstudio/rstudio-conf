@@ -110,7 +110,7 @@ Open science is a collaborative effort; it involves people from different techni
 
 Data wrangling is the thorny hedge that higher powers have placed in front of the enjoyable task of actually analyzing or visualizing data. Common struggles come from importing data from ill-mannered CSV files, the tedious task of orchestrating efficient data transformation, or the inevitable management of changes to tables. Data wrangling is rife with questionable ad-hoc solutions, which can sometimes even make things worse. The design rationale of DuckDB is to support the task of data wrangling by bringing the best of decades of data management research and best practices to the world of interactive data analysis in R or Python. For example, DuckDB has one of the world's most advanced CSV readers, native support for Parquet files and Arrow structures, an efficient parallel vectorized query processing engine, and support for efficient atomic updates to tables. All of this is wrapped up in a zero-dependency package available in a programming language near you for free. In my talk, I will discuss the above as well as the design rationale of DuckDB, which was designed and built in collaboration with the Data Science community in the first place.
 
-[Slides](https://blobs.duckdb.org/posit-conf-2024-keynote-hannes-muehleisen-data-wrangling-duckdb.pdf) | GitHub Repo
+[Slides](https://blobs.duckdb.org/posit-conf-2024-keynote-hannes-muehleisen-data-wrangling-duckdb.pdf)
 
 ### Data Contracts: Keep Your Weekend Work-Free!
 💬 Nick Pelikan
