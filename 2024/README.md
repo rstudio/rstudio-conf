@@ -686,7 +686,7 @@ Posit provides an amazing set of products to support data science, and we will l
 
 In this talk I will address this question in the context of the R project. I will give an overview of the ways we can contribute as individuals or companies/organizations, both financially and in kind. Together we can build a more sustainable future for R!
 
-Slides | [GitHub Repo](https://github.com/hturner/positconf2024)
+[Slides](https://hturner.github.io/positconf2024/) | [GitHub Repo](https://github.com/hturner/positconf2024) | [R Contributor Site](https://contributor.r-project.org/)
 
 ### What I learned resurrecting an R package
 💬 Dave Slager
