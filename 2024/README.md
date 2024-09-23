@@ -94,7 +94,7 @@ In this talk, I'll walk through an end-to-end ML solution we built for transplan
 
 You will take away specific examples of why thinking end-to-end can enhance your ML solutions and how to start applying these principles in your own organization.
 
-Slides | GitHub Repo
+[Slides](https://github.com/adamwangdata/posit-conf-2024/blob/main/talk.pdf)
 
 ### earthaccess: Accelerating NASA Earthdata science through open, collaborative development
 💬 Luis Lopez
