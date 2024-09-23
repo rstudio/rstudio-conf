@@ -94,7 +94,7 @@ In this talk, I'll walk through an end-to-end ML solution we built for transplan
 
 You will take away specific examples of why thinking end-to-end can enhance your ML solutions and how to start applying these principles in your own organization.
 
-Slides | GitHub Repo
+[Slides](https://github.com/adamwangdata/posit-conf-2024/blob/main/talk.pdf)
 
 ### earthaccess: Accelerating NASA Earthdata science through open, collaborative development
 💬 Luis Lopez
@@ -110,7 +110,7 @@ Open science is a collaborative effort; it involves people from different techni
 
 Data wrangling is the thorny hedge that higher powers have placed in front of the enjoyable task of actually analyzing or visualizing data. Common struggles come from importing data from ill-mannered CSV files, the tedious task of orchestrating efficient data transformation, or the inevitable management of changes to tables. Data wrangling is rife with questionable ad-hoc solutions, which can sometimes even make things worse. The design rationale of DuckDB is to support the task of data wrangling by bringing the best of decades of data management research and best practices to the world of interactive data analysis in R or Python. For example, DuckDB has one of the world's most advanced CSV readers, native support for Parquet files and Arrow structures, an efficient parallel vectorized query processing engine, and support for efficient atomic updates to tables. All of this is wrapped up in a zero-dependency package available in a programming language near you for free. In my talk, I will discuss the above as well as the design rationale of DuckDB, which was designed and built in collaboration with the Data Science community in the first place.
 
-[Slides](https://blobs.duckdb.org/posit-conf-2024-keynote-hannes-muehleisen-data-wrangling-duckdb.pdf) | GitHub Repo
+[Slides](https://blobs.duckdb.org/posit-conf-2024-keynote-hannes-muehleisen-data-wrangling-duckdb.pdf)
 
 ### Data Contracts: Keep Your Weekend Work-Free!
 💬 Nick Pelikan
@@ -631,7 +631,7 @@ Scrollytelling is a style of web design that transitions graphics and text as a 
 
 Finally, Closeread allows authors with experience in Observable JS to write their own animated graphics that update smoothly as scrolling progresses.
 
-Slides | GitHub Repo | [Closeread Docs](https://closeread.netlify.app/)
+Slides | GitHub Repo | [Closeread Docs](https://closeread.netlify.app/) | [GitHub Repo](https://github.com/qmd-lab/closeread)
 
 ### Practical Tips for using Generative AI in Data Science Workflows
 💬 Melissa van Bussel
@@ -686,7 +686,7 @@ Posit provides an amazing set of products to support data science, and we will l
 
 In this talk I will address this question in the context of the R project. I will give an overview of the ways we can contribute as individuals or companies/organizations, both financially and in kind. Together we can build a more sustainable future for R!
 
-Slides | [GitHub Repo](https://github.com/hturner/positconf2024)
+[Slides](https://hturner.github.io/positconf2024/) | [R Contributor Site](https://contributor.r-project.org/)
 
 ### What I learned resurrecting an R package
 💬 Dave Slager
@@ -728,7 +728,7 @@ In this data-centric era, the demand for responsible data science practitioners 
 
 I recently undertook to build a robot to play a video game online. Using reinforcement learning, a custom computer vision model, and browser automation –all implemented in R/Python– I was able to create an AI that played the game to perfection. In this presentation, I will share the lessons learned as I went through this process and some hints to avoid the pitfalls I tackled. I will present some real-world business cases to answer the obvious why-question. For colleagues who teach Data Science and AI, I will show how an activity such as this can provide the entry point and basis for discussion for more than half a dozen topics, ranging from formal logic, game theory, and empirical inference, all the way to Shiny and Quarto.
 
-Slides | GitHub Repo
+[Write-up](https://chi2labs.github.io/x-mas-3/q/) | [GitHub Repo](https://github.com/chi2labs/x-mas-3) (Presentation in docs/preso)
 
 ### Updates from Posit
 💬 Hadley Wickham, James Blair, Charlotte Wickham, and George Stagg
