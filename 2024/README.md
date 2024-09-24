@@ -16,7 +16,7 @@ In this talk, I’ll confront the traditional dependence on dashboards for busin
 
 
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1L0-Xou6MSeqgl3vvKY8HONeX9SvvqyuRxqDisk6MlfY/edit?usp=sharing)
 
 ### Quarto, AI, and the Art of Getting Your Life Back
 💬 Tyler Morgan-Wall
