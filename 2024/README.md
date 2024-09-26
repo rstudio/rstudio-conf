@@ -397,7 +397,9 @@ Slides | GitHub Repo
 ### JSquarto: Bridging JavaScript Documentation with Quarto's Power
 💬 Richie Moluno
 
-Slides | GitHub Repo
+In this talk, Richie Moluno introduces a new tool called JSquarto which solves common challenges developers face when documenting JavaScript projects, like the lack of support for multilingualism (especially for right-to-left languages and non-Latin scripts), limited design flexibility. Inspired by quartodoc, Richie shows how Quarto can be used to solve these problems by generating flexible, multilingual JavaScript documentation. He also walks through how the whole process can be automated using GitHub, making it easier to keep docs up to date across different languages and formats & how it can be integrated with Crowdin, translation management system.
+
+[Slides][https://github.com/Open-Science-Community-Saudi-Arabia/posit-conf-2024/blob/main/POSIT%20slide%20(1).pptx] | [GitHub Repo](https://github.com/Open-Science-Community-Saudi-Arabia/JSquarto)
 
 ### Detecting Coordinated Disinformation Networks with R
 💬 Richard Ngamita
