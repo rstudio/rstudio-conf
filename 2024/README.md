@@ -548,7 +548,7 @@ Embarking on a data science career extends well beyond academic knowledge. In ma
 
 GitHub is more than just a version control tool, it's a way of explaining your professional identity to prospective employers and collaborators – and you can build your profile now, before you're looking for new opportunities. This talk is about how to think of GitHub as an opportunity, not a chore, and how to represent yourself well without making developing your GitHub profile into a part-time job. I'll talk about why GitHub adds value beyond a personal website, what kinds of projects are helpful to share, and some good development practices to get in the habit of, regardless of your project specifics.
 
-Slides | GitHub Repo
+[Slides](https://github.com/rstudio/rstudio-conf/tree/master/2024/abigailhaddad/haddad_2024_posit_slides.pdf)
 
 ### Getting Data Done with a Pragmatic Data Team
 💬 Alan Schussman
