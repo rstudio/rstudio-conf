@@ -557,7 +557,7 @@ GitHub is more than just a version control tool, it's a way of explaining your p
 
 Data work comes in lots of forms, and large organizations with reliable pipelines of similar problems can be very specialized in how they tackle this work. My contention is that many organizations doing data work don't get to be so picky: Instead of specialized roles in focused parts of a data process, many of us work from end to end, and projects often differ in the tools and domain knowledge they require. Identifying and making use of good, reusable practices in this environment is hard, and there's not a consistent supply of some of the work that's most appealing to ambitious data people. This talk explores some successes and failures in building flexible, effective, empowered teams in this environment.
 
-Slides | GitHub Repo
+[Slides](https://github.com/ats/posit_conf_2024_ats/blob/main/alan_schussman-pragmatic_data_team-posit_conf_2024.pdf)
 
 ### Oops I'm A Manager - Finding your Minimal Viable Process
 💬 Andrew Holz
