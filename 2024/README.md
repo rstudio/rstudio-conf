@@ -578,9 +578,13 @@ Slides | GitHub Repo
 ### Using GitHub Copilot in R Shiny Development
 💬 Mark Wang
 
-Generative AI tools, like the GitHub Copilot, are revolutionizing software development, and R Shiny is no exception. However, some important features of Shiny, including modularization, reactivity, interaction with CSS/JavaScript, and simulation-based testing, pose unique opportunities and challenges to the use of GitHub Copilot. The talk will start with integrating CoPilot with local and cloud Shiny development environments. Then, it will discuss best practices around context information and prompt engineering to improve the accuracy and specificity of Copilot suggestions. It will then demonstrate how Copilot can assist in various use cases of Shiny development, including UI/UX design, interactions with front-end languages, and testing.
+Generative AI tools, like the GitHub Copilot, are revolutionizing software development, by automating routine tasks and boosting programmers' productivity. R Shiny development is uniquely positioned to benefit from GitHub Copilot. Copilot can accelerate the process by automating front-end tasks, especially those involving HTML and JavaScript, as well as testing and documentation, thus letting R Shiny developers focus more on the value-added aspects of data science and statistics.
 
-Slides | GitHub Repo
+The basic workflow of using GitHub copilot in R Shiny development has three parts: prompt, context and iteration. Three types of prompts: command, question and lead-in, all have strong use cases in R development. Specific prompts create more helpful results as compared to vague ones, and Copilot can help add more specificity to your prompts when you are not familiar with the domain topic. The most important source of context for Copilot is typically your codebase, which should be well-organized and open in your IDE. Additionally, knowledge on the internet, as well as simple and concrete examples, can also be valuable contexts. However, sensitive personal information in your context can stop Copilot from generating appropriate responses. Iteration is modifying and enriching your prompt and context to improve the quality of Copilot's responses. Function and module documentation is a valuable step of iteration. As R Shiny is often used with fast-hanging data, Copilot serves as a powerful tool in the iteration from static to dynamic app testing in the shinytest2 framework. 
+
+As we iterate over our prompt and context to generate better responses from Copilot, it is worthwhile to build an internal knowledge base in the form of prompt dictionaries. A Copilot knowledge base can include information specific to your organization, which can be reused across projects, such as security and compliance conventions, code and documentation standards and employment process and environment.
+
+[Slides](https://1drv.ms/b/c/fd70c8a06be32527/ER8WuxYEw_NKksTI6t5wCDgBrO9slTr0HaumYp1eg2xYYA?e=KwQSfb) | [GitHub Repo](https://github.com/ZIBOWANGKANGYU/posit_2024_prez/tree/master/presentation)
 
 ### Uniquely Human: Data Storytelling in the Age of AI
 💬 Laura Gast
