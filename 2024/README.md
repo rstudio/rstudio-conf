@@ -254,7 +254,7 @@ Slides | GitHub Repo
 
 This talk explores the creation of an advanced portfolio analysis system using Shiny and Plumber API. Focused on delivering real-time insights and interactive tools, the system transforms financial analysis with user-centric design and reusable Shiny modules. The talk will delve into how complex financial data is made dynamic and interactive via an internal R package integrating with an ag-grid javascript library to enhance user engagement and decision-making efficiency. A highlight is the Plumber API's dual role: powering the current system and hosting other enterprise applications in other languages (python), demonstrating remarkable cross-platform integration. This system exemplifies the innovative potential of R in financial analytics.
 
-Slides | GitHub Repo
+[Slides](https://docs.google.com/presentation/d/1dJJRBTxPL4x6anK_b8ya3iU4aIoFrC-z/edit?usp=sharing&ouid=110604780241045194549&rtpof=true&sd=true) | [GitHub Repo](https://github.com/lkptl)
 
 ### "Please Let Me Merge Before I Start Crying": And Other Things I've Said at The Git Terminal
 💬 Meghan Harris
