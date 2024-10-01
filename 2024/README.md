@@ -184,7 +184,7 @@ Mastering the Art of Adopting R and Python: Innovative Strategies for Effective 
 
 As we embark on a journey to weave R and Python into the fabric of our organization, let's keep these insights and strategies at the forefront. Together, we can redefine what it means to be adaptable and resilient in an ever-changing world.
 
-Slides | GitHub Repo
+[Slides](https://github.com/rstudio/rstudio-conf/blob/master/2024/markbynens/POSIT_Presentation_with_notes.pptx)
 
 ### A New Era for Shiny-based Clinical Submissions using WebAssembly
 💬 Eric Nantz
