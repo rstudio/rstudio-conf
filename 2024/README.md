@@ -14,8 +14,6 @@ In the hype cycle of data science, I suggest that the "peak of inflated expectat
 
 In this talk, I’ll confront the traditional dependence on dashboards for business intelligence, pointing out their shortcomings in delivering prompt insights to business professionals. I will propose a shift in strategy that employs Python and R to generate dynamic, customized emails, utilizing Quarto and Posit Connect for seamless automation. This technique guarantees direct and effective delivery of actionable insights to users' inboxes, enhancing informed decision-making and boosting engagement. This recommendation not only redefines the method of data delivery for optimal impact but also prompts a fundamental change in mindset among data practitioners, urging them towards a more engaged and individualized form of data narration.
 
-
-
 [Slides](https://docs.google.com/presentation/d/1L0-Xou6MSeqgl3vvKY8HONeX9SvvqyuRxqDisk6MlfY/edit?usp=sharing)
 
 ### Quarto, AI, and the Art of Getting Your Life Back
@@ -145,7 +143,7 @@ Creating engaging data content has never been easier, yet easily sharing remains
 ### Data Wrangling for Advocacy: Tidy Data to Support the Affordable Connectivity Program
 💬 Christine Parker
 
-We sought to create a dashboard to highlight some frequently asked statistics about the Affordable Connectivity Program. Although the program data were "available" to the public, they were not accessible. Wrangling messy datasets is not new to data scientists, and our work included pretty straightforward summary statistics, yet this work became a leading resource for advocacy groups, academics, and policymakers, and ultimately led us to a meeting where we shared guidance about the program funding needs with the White House. While I give a shout-out to a few of my favorite R packages, in this talk, I focus on the strategies you can employ to make your data tool has an impact. 
+We sought to create a dashboard to highlight some frequently asked statistics about the Affordable Connectivity Program. Although the program data were "available" to the public, they were not accessible. Wrangling messy datasets is not new to data scientists, and our work included pretty straightforward summary statistics, yet this work became a leading resource for advocacy groups, academics, and policymakers, and ultimately led us to a meeting where we shared guidance about the program funding needs with the White House. While I give a shout-out to a few of my favorite R packages, in this talk, I focus on the strategies you can employ to make your data tool have an impact. 
 
 [Slides](https://www.canva.com/design/DAGKFckt2-Y/Lkf8VC3nCfYfwD1hYOydDg/view?utm_content=DAGKFckt2-Y&utm_campaign=designshare&utm_medium=link&utm_source=editor) | [ACP Dashboard](https://acpdashboard.com/)
 
@@ -397,9 +395,9 @@ Slides | GitHub Repo
 ### JSquarto: Bridging JavaScript Documentation with Quarto's Power
 💬 Richie Moluno
 
-In this talk, Richie Moluno introduces a new tool called JSquarto which solves common challenges developers face when documenting JavaScript projects, like the lack of support for multilingualism (especially for right-to-left languages and non-Latin scripts), limited design flexibility. Inspired by quartodoc, Richie shows how Quarto can be used to solve these problems by generating flexible, multilingual JavaScript documentation. He also walks through how the whole process can be automated using GitHub, making it easier to keep docs up to date across different languages and formats & how it can be integrated with Crowdin, translation management system.
+In this talk, Richie Moluno introduces a new tool called JSquarto, which solves common challenges developers face when documenting JavaScript projects, like the lack of support for multilingualism (especially for right-to-left languages and non-Latin scripts) and limited design flexibility. Inspired by quartodoc, Richie shows how Quarto can be used to solve these problems by generating flexible, multilingual JavaScript documentation. He also walks through how the whole process can be automated using GitHub, making it easier to keep docs up to date across different languages and formats & how it can be integrated with Crowdin, a translation management system.
 
-[Slides][https://github.com/Open-Science-Community-Saudi-Arabia/posit-conf-2024/blob/main/POSIT%20slide%20(1).pptx] | [GitHub Repo](https://github.com/Open-Science-Community-Saudi-Arabia/JSquarto)
+[Slides](https://github.com/Open-Science-Community-Saudi-Arabia/posit-conf-2024/blob/main/POSIT%20slide%20(1).pptx) | [GitHub Repo](https://github.com/Open-Science-Community-Saudi-Arabia/JSquarto)
 
 ### Detecting Coordinated Disinformation Networks with R
 💬 Richard Ngamita
@@ -447,7 +445,7 @@ Slides | GitHub Repo
 
 Packages enhance programming languages, and working with code makes workflows repeatable. However, the number of existing packages can be overwhelming to the point of obscuring their roles within projects. This talk discusses the importance of scripts, and introduces ways to enhance package load calls. First, by building annotations with the annotater R package and also by learning from code comments across GitHub. The value of recording information such as package source, version, title, or even which functions or data are used in a script is discussed in both data science and teaching environments.
 
-[Slides](https://liomys.mx/posit24.html) | GitHub Repo | [annotater](https://annotater.liomys.mx/)  
+[Slides](https://liomys.mx/posit24.html) | [annotater](https://annotater.liomys.mx/)  
 
 ### Datapages for interactive data sharing using Quarto
 💬 Mika Braginsky
@@ -494,11 +492,11 @@ While I will touch on some similar topics as Max Kuhn’s posit::conf(2023) talk
 ### Keras 3: Deep Learning made easy
 💬 Tomasz Kalinowski
 
-Keras 3 is a ground-up rewrite of Keras 2, keeping everything that was already great the same, while refining and simplifying parts of the API based on lessons accumulated over the past few years. Come to this talk to learn about all the features (new and old) in Keras that make it easy to build, train, evaluate and deploy deep learning models.
+Keras 3 is a ground-up rewrite of Keras 2, keeping everything that was already great the same while refining and simplifying parts of the API based on lessons accumulated over the past few years. Come to this talk to learn about all the features (new and old) in Keras that make it easy to build, train, evaluate, and deploy deep learning models.
 
 [GitHub Repo](https://github.com/t-kalinowski/posit-conf-2024)
 
-### Quality Control to avoid GIGO in Deep Learning Models.
+### Quality Control to Avoid GIGO in Deep Learning Models.
 💬 Vasant Marur
 
 Deep Learning models help answer scientific questions, but they are only as accurate as the data we feed them. To ensure accurate models, we can implement quality control (QC) methods to ensure only high-quality data is used in training these models. Scientists generate thousands of images as part of Image-Based High Content Screening assays. To help them quickly assess the quality of these images before considerable time is spent analyzing them, we developed an interactive tool using Shiny that displays which images were flagged as part of QC. In this talk, I’ll explain how we created this QC tool and share ideas on how you could leverage your existing code and turn it into a stand-alone web app your stakeholders can use.
@@ -528,7 +526,7 @@ Leveraging Posit Connect, our company transforms client engagement by providing 
 
 Platform owners often ask questions like ‘how quickly do users migrate to new versions of R’, ‘what programming languages are used’, and ‘how are internal packages, dashboards and outputs consumed’?
 
-The answer to these questions and many more lives within the operational logs collected by systems like Posit Connect, Github, and AWS. I’ll share examples of how we use this data at Roche to shape our product roadmap. I’ll also share some ideas we are exploring to use this data to help empower our data scientists to understand the hidden consequence of how they work through feeding back personal cost and environmental impact - enabling informed decisions, e.g. what it means to schedule a pin to update daily, or request 2 vs 8 cores.
+The answer to these questions and many more lives within the operational logs collected by systems like Posit Connect, Github, and AWS. I’ll share examples of how we use this data at Roche to shape our product roadmap. I’ll also share some ideas we are exploring to use this data to help empower our data scientists to understand the hidden consequence of how they work through feeding back personal cost and environmental impact - enabling informed decisions, e.g., what it means to schedule a pin to update daily, or request 2 vs 8 cores.
 
 Slides | GitHub Repo
 
@@ -582,9 +580,9 @@ Slides | GitHub Repo
 
 Generative AI tools, like the GitHub Copilot, are revolutionizing software development, by automating routine tasks and boosting programmers' productivity. R Shiny development is uniquely positioned to benefit from GitHub Copilot. Copilot can accelerate the process by automating front-end tasks, especially those involving HTML and JavaScript, as well as testing and documentation, thus letting R Shiny developers focus more on the value-added aspects of data science and statistics.
 
-The basic workflow of using GitHub copilot in R Shiny development has three parts: prompt, context and iteration. Three types of prompts: command, question and lead-in, all have strong use cases in R development. Specific prompts create more helpful results as compared to vague ones, and Copilot can help add more specificity to your prompts when you are not familiar with the domain topic. The most important source of context for Copilot is typically your codebase, which should be well-organized and open in your IDE. Additionally, knowledge on the internet, as well as simple and concrete examples, can also be valuable contexts. However, sensitive personal information in your context can stop Copilot from generating appropriate responses. Iteration is modifying and enriching your prompt and context to improve the quality of Copilot's responses. Function and module documentation is a valuable step of iteration. As R Shiny is often used with fast-hanging data, Copilot serves as a powerful tool in the iteration from static to dynamic app testing in the shinytest2 framework. 
+The basic workflow of using GitHub copilot in R Shiny development has three parts: prompt, context, and iteration. Three types of prompts: command, question, and lead-in, all have strong use cases in R development. Specific prompts create more helpful results as compared to vague ones, and Copilot can help add more specificity to your prompts when you are not familiar with the domain topic. The most important source of context for Copilot is typically your codebase, which should be well-organized and open in your IDE. Additionally, knowledge on the internet, as well as simple and concrete examples, can also be valuable contexts. However, sensitive personal information in your context can stop Copilot from generating appropriate responses. Iteration is modifying and enriching your prompt and context to improve the quality of Copilot's responses. Function and module documentation is a valuable step of iteration. As R Shiny is often used with fast-hanging data, Copilot serves as a powerful tool in the iteration from static to dynamic app testing in the shinytest2 framework. 
 
-As we iterate over our prompt and context to generate better responses from Copilot, it is worthwhile to build an internal knowledge base in the form of prompt dictionaries. A Copilot knowledge base can include information specific to your organization, which can be reused across projects, such as security and compliance conventions, code and documentation standards and employment process and environment.
+As we iterate over our prompt and context to generate better responses from Copilot, it is worthwhile to build an internal knowledge base in the form of prompt dictionaries. A Copilot knowledge base can include information specific to your organization that can be reused across projects, such as security and compliance conventions, code and documentation standards, and employment process and environment.
 
 [Slides](https://1drv.ms/b/c/fd70c8a06be32527/ER8WuxYEw_NKksTI6t5wCDgBrO9slTr0HaumYp1eg2xYYA?e=KwQSfb) | [GitHub Repo](https://github.com/ZIBOWANGKANGYU/posit_2024_prez/tree/master/presentation)
 
@@ -630,7 +628,7 @@ Building on my experience writing books with Quarto for various audiences (R lea
 
 Quarto is a game-changer for creating reproducible, parameterized documents. But the beauty of Quarto—that it has so many different use cases with various output formats—can lead to disarray with numerous .qmd files floating around an organization and too much copy-paste when creating something new. Quarto templates are perfect for easing the burden of developing a report and instead standardizing the structure, style, and initial content of your projects, no matter the output format. We’ll discuss tips and tricks for implementing enough HTML and CSS to create beautiful documents that match your organization’s branding and also explore how easy it can be to deploy those Quarto templates with a single function within an internal R package.
 
-Slides | GitHub Repo | [Text of talk](https://meghan.rbind.io/blog/2024-08-14-quarto-templates/)
+[Text of talk](https://meghan.rbind.io/blog/2024-08-14-quarto-templates/)
 
 ### Closeread: bringing Scrollytelling to Quarto
 💬 Andrew Bray
@@ -641,7 +639,7 @@ Finally, Closeread allows authors with experience in Observable JS to write thei
 
 [Closeread Docs](https://closeread.netlify.app/) | [GitHub Repo](https://github.com/qmd-lab/closeread)
 
-### Practical Tips for using Generative AI in Data Science Workflows
+### Practical Tips for Using Generative AI in Data Science Workflows
 💬 Melissa van Bussel
 
 Now that we're a couple of years into the age of Generative AI, it's clear that this technology has the power to transform the way that we work. As Generative AI continues to evolve, the ways that we use these models should evolve, too. In this talk, we'll explore how we, as data professionals, can maximize the benefits of these tools in 2024 and how they can be incorporated into our everyday workflows. We'll also look at creative use cases that might not seem immediately obvious, but that will allow us to combine Generative AI with other data science tools that we already know and love, like Quarto and Shiny.
