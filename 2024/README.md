@@ -433,7 +433,7 @@ COTA’s team of oncologists and data scientists curate real-world data used by 
 ### Templated Analyses within R Packages for Collaborative, Reproducible Research
 💬 Christopher T. Kenny
 
-Slides | GitHub Repo
+[Post](https://alarm-redist.org/fifty-states/) | [GitHub Repo](https://github.com/alarm-redist/fifty-states)
 
 ### Teaching and learning data science in the era of AI
 💬 Andrew Gard
