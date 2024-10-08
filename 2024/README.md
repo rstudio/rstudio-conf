@@ -489,10 +489,10 @@ While I will touch on some similar topics as Max Kuhn’s posit::conf(2023) talk
 
 [Slides](https://github.com/brshallo/posit-2024/blob/main/shalloway-posit-conf.pdf) | [GitHub Repo](https://github.com/brshallo/posit-2024)
 
-### Keras 3: Deep Learning made easy
+### Keras 3: Deep Learning Made Easy
 💬 Tomasz Kalinowski
 
-Keras 3 is a ground-up rewrite of Keras 2, keeping everything that was already great the same while refining and simplifying parts of the API based on lessons accumulated over the past few years. Come to this talk to learn about all the features (new and old) in Keras that make it easy to build, train, evaluate, and deploy deep learning models.
+Keras 3 is a ground-up rewrite of Keras 2 that refines the API and reintroduces multi-backend support. In this talk, learn about all the features (new and old) in Keras that make it easy to build, train, evaluate, and deploy deep learning models.
 
 [GitHub Repo](https://github.com/t-kalinowski/posit-conf-2024)
 
