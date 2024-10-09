@@ -210,7 +210,7 @@ Slides | GitHub Repo
 
 Efficient and scalable analytics workflows are critical for an adaptive and data-driven organization. How can we scale systems to support an office charged with implementing USAID's $6 billion HIV/AIDS program? Our team leveraged R and global health APIs to build more efficient workflows through automation by developing custom R packages to access health program data. Our investment in creating an automated data infrastructure with flexible, open-source tools like R enabled us to build reproducible workflows for analysts in over 50 partner countries. We would like to share our experience in a federal agency integrating APIs with R to develop scalable data pipelines, as inspiration for organizations facing similar resource & data challenges.
 
-Slides | GitHub Repo
+[Slides](https://usaid-oha-si.github.io/presentations/2024/08/14/posit-conf-simple-machines.html)
 
 ### Shiny in Action: Transforming Film Production with TARS
 💬 Marcin Dubel
