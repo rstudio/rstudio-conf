@@ -573,7 +573,7 @@ In an era where data privacy and security are paramount, many organizations are 
 
 Attendees of this talk will gain valuable insights into constructing and deploying LLM-powered applications using their enterprise data. By the end of the session, you will have a clear understanding of how to leverage Databricks for optimal data management and LLM operations, alongside Posit's streamlined development and deployment processes. This knowledge will empower you to deliver secure, effective, and scalable LLM-powered applications, driving innovation and value from your enterprise data while upholding the highest standards of data privacy and security.
 
-Slides | GitHub Repo
+[Slides](https://github.com/zacdav-db/presentations)
 
 ### Using GitHub Copilot in R Shiny Development
 💬 Mark Wang
