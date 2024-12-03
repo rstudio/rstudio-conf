@@ -14,7 +14,7 @@ In the hype cycle of data science, I suggest that the "peak of inflated expectat
 
 In this talk, I’ll confront the traditional dependence on dashboards for business intelligence, pointing out their shortcomings in delivering prompt insights to business professionals. I will propose a shift in strategy that employs Python and R to generate dynamic, customized emails, utilizing Quarto and Posit Connect for seamless automation. This technique guarantees direct and effective delivery of actionable insights to users' inboxes, enhancing informed decision-making and boosting engagement. This recommendation not only redefines the method of data delivery for optimal impact but also prompts a fundamental change in mindset among data practitioners, urging them towards a more engaged and individualized form of data narration.
 
-[Slides](https://docs.google.com/presentation/d/1L0-Xou6MSeqgl3vvKY8HONeX9SvvqyuRxqDisk6MlfY/edit?usp=sharing)
+[Slides](https://docs.google.com/presentation/d/1L0-Xou6MSeqgl3vvKY8HONeX9SvvqyuRxqDisk6MlfY/edit?usp=sharing) | [GitHub Gist](https://gist.github.com/sean-S2G/2b6fc6d1445c989dc72c383466df93bc)
 
 ### Quarto, AI, and the Art of Getting Your Life Back
 💬 Tyler Morgan-Wall
