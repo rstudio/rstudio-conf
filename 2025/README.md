@@ -4,7 +4,7 @@ This is where we will store all of the materials and links for posit::conf(2025)
 
 <hr>
 
-**Lightning Talks**
+## Lightning Talks
 
 Use Your Data Skills for Good: Ideas for Community Service
 
