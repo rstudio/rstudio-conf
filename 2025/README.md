@@ -6,18 +6,18 @@ This is where we will store all of the materials and links for posit::conf(2025)
 
 **Lightning Talks**
 
-<li> Use Your Data Skills for Good: Ideas for Community Service </li>
-<li> Mapping sub-daily fire detections of historical California wildfires on demand with Sfarrow </li>
-<li> Multiple Console Sessions in Positron </li>
-<li> Approaching Positron from VS Code or RStudio </li>
-<li> Brand YML in Quarto </li>
-<li> Automating Event Scheduling with Python in Positron </li>
-<li> Putting an {ellmer} AI in production with the blessing of IT </li>
-<li> Enabling geospatial workflow management with targets: an R package origin story </li>
-<li> Plotgardener – Genomic Data Visualization Made Easy </li>
-<li> What we're doing to make Quarto fast(er) </li>
-<li> It's all fun and games til your analysis code is finished: the player package in R </li>
-<li> Birthing the pregnancy package </li>
+ Use Your Data Skills for Good: Ideas for Community Service
+ Mapping sub-daily fire detections of historical California wildfires on demand with Sfarrow
+ Multiple Console Sessions in Positron
+ Approaching Positron from VS Code or RStudio
+ Brand YML in Quarto
+ Automating Event Scheduling with Python in Positron
+ Putting an {ellmer} AI in production with the blessing of IT
+ Enabling geospatial workflow management with targets: an R package origin story
+ Plotgardener – Genomic Data Visualization Made Easy
+ What we're doing to make Quarto fast(er)
+ It's all fun and games til your analysis code is finished: the player package in R
+ Birthing the pregnancy package
 
 
 <hr>
@@ -33,13 +33,13 @@ This is where we will store all of the materials and links for posit::conf(2025)
 <br><br>
 Attend this session to hear about:
 <ul>
-<li> Audited jobs, Positron Pro sessions, and GenAI in Workbench </li>
-<li> Auth and integrations with RStudio Pro sessions in Package Manager </li>
-<li> An intro to Chronicle for Posit Team </li>
-<li> Building container images in Connect </li>
-<li> Organization plans in Connect Cloud </li>
-<li> A Snowflake Native App offering for Connect and Workbench </li> 
-<li> An intro to Posit Team Dedicated </li>
+ Audited jobs, Positron Pro sessions, and GenAI in Workbench
+ Auth and integrations with RStudio Pro sessions in Package Manager
+ An intro to Chronicle for Posit Team
+ Building container images in Connect
+ Organization plans in Connect Cloud
+ A Snowflake Native App offering for Connect and Workbench 
+ An intro to Posit Team Dedicated
 </ul> 
 
   📁 Materials
@@ -1344,18 +1344,5 @@ Quarto provides an efficient solution to address these needs.  This presentatio
 The goal of brand.yml is to create a portable and unified interface for brand-related theming that can be used anywhere that data science artifacts are produced. As a collaboration between the Shiny and Quarto teams, brand.yml provides a single interface to setting baseline themes in reports and apps across the R and Python ecosystems.
 <br><br>
 In this talk, I’ll introduce brand.yml and showcase the many ways that brand.yml can bring consistent styles to your data science outputs. 
-
-  📁 Materials
-
-<hr>
-
-
-  ## Keynote Session 
-
-   
-
-  💬 Speaker(s): NA 
-
-  Session details will be released soon, stay tuned! 
 
   📁 Materials
