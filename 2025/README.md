@@ -6,18 +6,29 @@ This is where we will store all of the materials and links for posit::conf(2025)
 
 **Lightning Talks**
 
- Use Your Data Skills for Good: Ideas for Community Service
- Mapping sub-daily fire detections of historical California wildfires on demand with Sfarrow
- Multiple Console Sessions in Positron
- Approaching Positron from VS Code or RStudio
- Brand YML in Quarto
- Automating Event Scheduling with Python in Positron
- Putting an {ellmer} AI in production with the blessing of IT
- Enabling geospatial workflow management with targets: an R package origin story
- Plotgardener – Genomic Data Visualization Made Easy
- What we're doing to make Quarto fast(er)
- It's all fun and games til your analysis code is finished: the player package in R
- Birthing the pregnancy package
+Use Your Data Skills for Good: Ideas for Community Service
+
+Mapping sub-daily fire detections of historical California wildfires on demand with Sfarrow
+
+Multiple Console Sessions in Positron
+
+Approaching Positron from VS Code or RStudio
+
+Brand YML in Quarto
+
+Automating Event Scheduling with Python in Positron
+
+Putting an {ellmer} AI in production with the blessing of IT
+
+Enabling geospatial workflow management with targets: an R package origin story
+
+Plotgardener – Genomic Data Visualization Made Easy
+
+What we're doing to make Quarto fast(er)
+
+It's all fun and games til your analysis code is finished: the player package in R
+
+Birthing the pregnancy package
 
 
 <hr>
