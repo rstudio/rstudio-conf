@@ -1217,3 +1217,30 @@ The goal of brand.yml is to create a portable and unified interface for brand-re
 In this talk, I’ll introduce brand.yml and showcase the many ways that brand.yml can bring consistent styles to your data science outputs. 
 
 📁 Materials
+
+
+## Lightning Talks
+
+Use Your Data Skills for Good: Ideas for Community Service
+ 
+Mapping sub-daily fire detections of historical California wildfires on demand with Sfarrow
+
+Multiple Console Sessions in Positron
+
+Approaching Positron from VS Code or RStudio
+
+Brand YML in Quarto
+
+Automating Event Scheduling with Python in Positron
+
+Putting an {ellmer} AI in production with the blessing of IT
+
+Enabling geospatial workflow management with targets: an R package origin story
+
+Plotgardener – Genomic Data Visualization Made Easy
+
+What we're doing to make Quarto fast(er)
+
+It's all fun and games til your analysis code is finished: the player package in R
+
+Birthing the pregnancy package 
