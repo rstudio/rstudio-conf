@@ -1094,7 +1094,7 @@ It has transparent governance, and it operates in a collaborative and open way.
 
     
 
-### SAS to R: It’s more than just coding 
+### Ripples of Change with R: It’s more than just coding
 
 💬 Speaker(s): Yvonne Kienast
 
