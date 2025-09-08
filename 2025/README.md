@@ -129,19 +129,6 @@ As Shiny applications grow in complexity, comprehensive testing becomes crucial 
 Data science courses tend to teach students reproducible workflows.  However, the origin of the data used in these workflows and definitions of the variables used are often not emphasized.  This talk addresses this gap by focusing on how to teach students effective data sharing through the creation of R data packages.  We’ll explore how to leverage key packages, such as devtools and usethis, and will demonstrate how to guide students in generating appropriate documentation through ReadMes, help files, and vignettes.  Furthermore, we’ll discuss common pitfalls encountered when first learning to create R packages and will propose how to structure a project assignment where an R data package serves as the primary deliverable. 
 
 📁 Materials
-
-    
-
-### Playing nice with ecosystems: cross-platform anywidgets for interactive computing 
-
-💬 Speaker(s): Trevor Manz
-
- 📝 Abstract: 
-
-anywidget is a specification and toolkit for authoring reusable interactive widgets, bridging modern web technologies with Python. It defines a standard for interactive elements that work across Jupyter, VS Code, Positron IDE, and web frameworks like Shiny for Python and Solara. While many platforms integrate anywidget through a Jupyter-compatibility layer, others have adopted it natively, extending its reach beyond Jupyter. This decoupling has also enabled early experiments with non-Python runtimes like R and Deno. By prioritizing flexibility and interoperability, anywidget helps library developers make their tools more widely usable and enables framework authors to bootstrap rich interactive ecosystems without platform lock-in. 
-
-📁 Materials
-
     
 
 ### From Solo to Social: Making Coding a Collaborative Adventure 
@@ -176,7 +163,7 @@ Teaching an Artificial Intelligence (AI) to utilize a newly developed Python pac
 
  📝 Abstract: 
 
-Working with code can be deeply rewarding, but learning to code can be daunting; similarly, changing the code habits of a team may feel monstrous. For the last three years, the Posit Academy team has been working to teach adults to code in a way that sticks with individual learners, scales within organizations, and leaves individuals with the ability to adapt in an evolving technological landscape. In this talk I will share some lessons we’ve learned, speak to the importance of communities of practice, and share some thoughts on where AI fits -- and doesn't - in learning. 
+Working with code can be deeply rewarding, but learning to code can be daunting; similarly, changing the code habits of a team may feel monstrous. For the last three years, the Posit Academy team has been working to teach adults to code in a way that sticks with individual learners, scales within organizations, and leaves individuals able to adapt in an evolving technological landscape. In this talk, I will share some lessons we’ve learned, speak to the importance of communities of practice, and provide actionable steps for effectively connecting learners and code.
 
 📁 Materials
 
@@ -547,13 +534,13 @@ The ellmer package has enabled R users to build all sorts of powerful LLM-enable
 
     
 
-### Death by Dropdown? How to Build Shiny Apps That Guide—Not Overwhelm—Your Users 
+### Death by Dropdown? Engineer Insightful Shiny Apps with Behavioral Science
 
 💬 Speaker(s): Jeremy Winget, PhD
 
  📝 Abstract: 
 
-Opening a Shiny app to endless dropdowns leads to disengagement and decision fatigue—“death by dropdown”. This talk introduces the Behavioral Insights Design (BID) Framework, a structured, psychology-driven approach to reducing cognitive overload and enhance usability. The five stages—Notice the Problem, Interpret Needs, Structure UI, Anticipate Behavior, and Validate & Empower Users—leverage concepts like Cognitive Load Theory, Processing Fluency, and Data Storytelling to guide users toward insights. Attendees seeking to build intuitive, engaging, and impactful applications will leave with a clear roadmap for reducing friction in data exploration, along with practical techniques they can apply using tools like {reactable} or {echarts4r}. 
+Opening a Shiny app to endless dropdowns and scattered filters leads to immediate disengagement and feeling like "death by dropdown". This talk introduces the Behavioral Insights Design (BID) Framework, a behavioral science roadmap that transforms overwhelming dashboards into guided user journeys. Using the "Interfaces Need A Smart Vision" mnemonic, we'll explore five stages: Interpret user needs through data storytelling, Notice cognitive friction points, Anticipate user behavior, Structure the application, and Validate & empower users. Drawing from established theories and real-world production examples, attendees will see how applying behavioral science can dramatically reduce the time between "Where do I even start?" and "Aha, now I get it!". You'll leave with practical techniques using the new {bidux} package to help transform user confusion into confident exploration and build dashboards that guide users toward better decisions (and fewer ghosted users).
 
 📁 Materials
 
@@ -633,13 +620,13 @@ During the COVID-19 pandemic, the COVID Symptom Study Sweden collected over 20 m
 
     
 
-### Self-sufficient deployment: using paired programming to have fun and sell your solutions 
+### Self-sufficient deployment: using pair programming to have fun and sell your solutions
 
 💬 Speaker(s): Kris Fabick; Kristin Carr
 
  📝 Abstract: 
 
-Are you on a business team lacking resources to get data science projects actually deployed for your non-technical end users? Join us on a case study journey involving Posit Connect, Vetiver, and Streamlit. We will discuss how to successfully deploy "department-level", bilingual data science solutions quickly enough to solve problems before they become obsolete by focusing on how to harness the power of paired programming. Come see how to make your work life simpler, more fulfilling, and more fun! 
+Are you on a business team lacking resources to get data science projects actually deployed for your non-technical end users? Join us on a case study journey involving Posit Connect, Vetiver, and Streamlit. We will discuss how to successfully deploy "department-level", bilingual data science solutions quickly enough to solve problems before they become obsolete by focusing on how to harness the power of pair programming. Come see how to make your work life simpler, more fulfilling, and more fun!
 
 📁 Materials
 
@@ -665,7 +652,7 @@ In 2024, I participated in the Du Bois challenge to recreate W.E.B Du Bois’s i
 
 Over the past 18 months, I've used large language models (LLMs) in a series of experiments to improve my productivity as a developer on open source projects in R. I wanted to see if these tools could help with the repetitive, frustrating, or time-consuming parts of development, freeing me up to focus on the interesting problems. The results were mixed: some of these experiments were wildly successful, but others were clear failures.
 <br><br>
-In this talk, I'll share what worked, what didn't, and what I learned. I'll explore important questions to ask around the kinds of tasks LLMs are good for and where they fall short, how to use LLMs to build lasting skills, and why in some cases, investing in human connection pays off more than AI assistance. 
+In this talk, I'll share what worked, what didn't, and what I learned. I'll explore important questions to ask around the kinds of tasks LLMs are good for and where they fall short, how to use LLMs to build lasting skills, and why in some cases, investing in human connection pays off more than AI assistance.
 
 📁 Materials
 
@@ -724,7 +711,7 @@ This talk focuses on embracing coding assistants as imperfect companions and suc
 
     
 
-### Precision Medicine for All: Using Tidymodels to Validate PRS in Brazil 
+### Precision Medicine for All: Using Tidymodels to Validate Breast Cancer PRS in Brazil
 
 💬 Speaker(s): Flávia E. Rius
 
@@ -1221,26 +1208,74 @@ In this talk, I’ll introduce brand.yml and showcase the many ways that brand.y
 
 ## Lightning Talks
 
-Use Your Data Skills for Good: Ideas for Community Service
- 
-Mapping sub-daily fire detections of historical California wildfires on demand with Sfarrow
+### Use Your Data Skills for Good: Ideas for Community Service
 
-Multiple Console Sessions in Positron
+💬 Speaker(s): Sharon Machlis
 
-Approaching Positron from VS Code or RStudio
+📁 Materials
 
-Brand YML in Quarto
+### Make Big Geospatial Data Accessible with Arrow
 
-Automating Event Scheduling with Python in Positron
+💬 Speaker(s): Cari Gostic
 
-Putting an {ellmer} AI in production with the blessing of IT
+📁 Materials
 
-Enabling geospatial workflow management with targets: an R package origin story
+### Multiple Console Sessions in Positron
 
-Plotgardener – Genomic Data Visualization Made Easy
+💬 Speaker(s): Dhruvi Sompura
 
-What we're doing to make Quarto fast(er)
+📁 Materials
 
-It's all fun and games til your analysis code is finished: the player package in R
+### Approaching Positron from RStudio
 
-Birthing the pregnancy package 
+💬 Speaker(s): Mauro Lepore
+
+📁 Materials
+
+### Brand YML and Dark Mode in Quarto
+
+💬 Speaker(s): Gordon Woodhull
+
+📁 Materials
+
+### Automating Event Scheduling with Python in Positron
+
+💬 Speaker(s): Becky Hodge
+
+📁 Materials
+
+### Putting an {ellmer} AI in production with the blessing of IT
+
+💬 Speaker(s): Andrie de Vries
+
+📁 Materials
+
+### Enabling geospatial workflow management with targets: an R package origin story
+
+💬 Speaker(s): Eric Scott
+
+📁 Materials
+
+### Plotgardener – Genomic Data Visualization Made Easy
+
+💬 Speaker(s): Rishabh Sharma Vemuri & Abiye Berhanu
+
+📁 Materials
+
+### What we're doing to make Quarto fast(er)
+
+💬 Speaker(s): Carlos Scheidegger
+
+📁 Materials
+
+### It's all fun and games til your analysis code is finished: the player package in R
+
+💬 Speaker(s): Alex Rossell Hayes
+
+📁 Materials
+
+### Birthing the pregnancy package
+
+💬 Speaker(s): Ella Kaye
+
+📁 Materials
