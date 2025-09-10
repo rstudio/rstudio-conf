@@ -903,7 +903,7 @@ Starting with data sourced from the Snowflake marketplace, we will import, trans
 
     
 
-### From Data to Dollars: Improving Medical Billing Accuracy Using Natural Language Processing 
+### Protecting our Healthcare Heroes: Using Natural Language Processing to Prevent Billing Mistakes in Healthcare
 
 💬 Speaker(s): Julianne Gent
 
