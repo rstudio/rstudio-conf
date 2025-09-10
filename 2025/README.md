@@ -106,7 +106,17 @@ Data science is full of complex topics—Bayesian statistics, neural networks, d
 
 📁 Materials
 
-    
+
+### Web applications with Shiny and React (and AI)
+
+💬 Speaker(s): Winston Chang
+
+If you've ever wanted to have complete control over the UI for a Shiny application, this talk might be for you. In this talk I'll show how to integrate a back end written in Shiny (for R or Python) with a front end written in React.js. This lets you combine Shiny's reactivity with the flexibility of the React web development ecosystem.
+
+In the past, writing a front end in React was a large time investment, and would be reserved only for a serious project. However, with today's agentic AI coding tools, it can make sense to create a React front end even for smaller-scale applications. But even with AI involved, you will still need to know some React or be willing to learn about it.
+
+📁 Materials
+
 
 ### Old Apps, New Tricks: How AI can write Automated Tests for your Shiny Apps 
 
@@ -187,7 +197,8 @@ Shiny is being used more regularly as a front end to sophisticated workflows in 
 
  📝 Abstract: 
 
-For a model to provide value in production, it must be fit for purpose and deployable into the MLOps environment. We know that R provides a host of tools and packages for building good models; this talk will demonstrate one way we've had success assembling R and R-packaging features to provide a stable foundation for model deployment and governance after production. Those attending this talk will learn how, by centering model development on packages, writing tests as we go, creating intuitive S3 methods, and more, we can build modularized, testable code that separates operations from modeling, making our models easier to deploy, monitor, and update, whether the environment incorporates CI/CD, model registries, schedulers, or anything else. 
+For a model to provide value in production, it must be fit for purpose, deployable, and maintainable over time. We know that R provides a host of tools and packages for building good models, but the language and ecosystem also provide tools to help us build these kinds of maintainable production systems. This talk will present techniques, adapted from software engineering, that provide a stable foundation for building models and writing all the accompanying code that's often needed to train, test, and update models over time. Those attending this talk will learn how, by centering model development on packages, writing tests, creating intuitive S3 methods, and more, we can build modularized, testable code that makes our models easier to monitor and update over time.
+
 
 📁 Materials
 
@@ -769,7 +780,16 @@ MLOps is the process of setting up a Machine Learning lifecycle, including model
 
 📁 Materials
 
+### Data Science in Production Has Never Been So Easy | Feat: Posit Connect
+
+💬 Speaker(s):Adam Wang
+
+ 📝 Abstract: 
+
+Data science is most impactful when it's in production — automatically delivering reproducible insights to the right person at the right time. However, there's often a disconnect between local development in your favorite IDE and a production system that makes deployment to production a daunting task.
+In this talk, I'll show how to leverage Posit Connect to reduce the friction between development and production, automate and reproduce your data science at scale, and empower decision makers — all with minimal changes to your workflow. We’ll uncover the production architecture that powers data science at NMDP, and how you can implement a similar system in your own organization.
     
+📁 Materials
 
 ### Data Science Hangout at posit::conf(2025) 
 
