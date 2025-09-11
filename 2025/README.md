@@ -155,13 +155,17 @@ By reimagining how we teach technical skills, I'm not just delivering education�
 
     
 
-### Teaching Shiny Assistant Kung-Fu 
+### Observability at scale: Monitoring Shiny Applications with OpenTelemetry
 
 💬 Speaker(s): Barret Schloerke
 
  📝 Abstract: 
 
-Teaching an Artificial Intelligence (AI) to utilize a newly developed Python package is nearly impossible without access to the system prompt. Large Language Models (LLMs) excel at code generation, but they lack the knowledge to interact seamlessly with new, untrained packages. In this presentation, I will demonstrate how Shiny Assistant automatically enhances its system prompt based on the required Python packages for the user’s Shiny Application. This generated prompt leverages the packages’ existing documentation and computed strong types. Providing this additional dynamic context delivers a custom Shiny Assistant experience, tailored to the user's needs. 
+Understanding what happens behind the scenes in production Shiny applications has always been challenging. When users experience slow response times or unexpected behavior, developers are left guessing where bottlenecks occur. This talk introduces OpenTelemetry integration for Shiny for R, a new approach to profiling code and understanding application behavior.
+
+Through a chat-enabled weather application, we'll explore how complex user interactions trigger cascading events across multiple processes. You'll learn how OpenTelemetry's "high-quality, ubiquitous, and portable telemetry" can provide complete visibility into your Shiny application's performance with minimal setup... just a few environment variables!
+
+After walking through the chat app, you'll have a taste of how to implement comprehensive monitoring for your Shiny applications in production, enabling you to proactively identify and resolve unexpected performance issues.
 
 📁 Materials
 
@@ -669,7 +673,7 @@ In this talk, I'll share what worked, what didn't, and what I learned. I'll expl
 
     
 
-### An R package to run millions of models 
+### Breaking Barriers: Making Ecological Modelling Accessible with EcoCommons
 
 💬 Speaker(s): Jenna Wraith
 
@@ -695,7 +699,7 @@ TruDiagnostic develops precision health tools using DNA methylation-based diagno
 
     
 
-### Visualizing Nuuk: Finding Narrative in Public Registers 
+### Uncharted Nuuk: Data Exploration in Search of the Unexpected
 
 💬 Speaker(s): Emil Malta
 
