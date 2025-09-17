@@ -115,7 +115,7 @@ If you've ever wanted to have complete control over the UI for a Shiny applicati
 
 In the past, writing a front end in React was a large time investment, and would be reserved only for a serious project. However, with today's agentic AI coding tools, it can make sense to create a React front end even for smaller-scale applications. But even with AI involved, you will still need to know some React or be willing to learn about it.
 
-📁 Materials
+📁 [GitHub Repo](https://github.com/wch/shiny-react) | [CLI tool](https://github.com/wch/create-shiny-react-app) | [Anthropic Dashboard](https://github.com/wch/anthropic_dashboard)
 
 
 ### Old Apps, New Tricks: How AI can write Automated Tests for your Shiny Apps 
@@ -240,7 +240,7 @@ The duckplyr package is now stable, version 1.0.0 has been published on CRAN. Le
 
 This talk introduces the surveydown R package and survey platform, which leverages the Quarto publication system and R shiny web framework to create reproducible and interactive surveys. While most survey platforms rely on graphical interfaces or spreadsheets to define survey content, surveydown uses plain text (markdown and R code chunks), enabling version control and collaboration via tools like GitHub. It supports complex features like conditional skip logic, dynamic questions, and complex randomization as well as a diverse set of question types and formatting options. The open-source package gives researchers full control over survey implementation and data storage, with reproducible workflows that integrate with R data analysis. 
 
-📁 Materials
+📁 [GitHub Repo](https://github.com/surveydown-dev/surveydown) | [Materials](https://github.com/jhelvy/2025-posit-conf-surveydown)
 
     
 
@@ -296,7 +296,7 @@ I will show how a web app (such as Shiny for Python) using just a few hundred me
 
 This presentation showcases how KS&R’s Decision Sciences and Innovation (DSI) team modernized a legacy reporting pipeline to automate and scale custom survey report generation. Using tidyverse and Quarto, the team produced hundreds of personalized PDFs weekly over three months. Hosted on GitHub, the project integrated version control and streamlined collaboration while documentation ensured easy onboarding and adaptability. Attendees will gain insights into automating report workflows, overcoming implementation challenges, integrating custom formatting and fostering collaboration using tidyverse, Quarto, and GitHub. 
 
-📁 Materials
+📁 [Materials](https://github.com/ksrinc/posit_conf_2025_quarto_automation)
 
     
 
@@ -455,7 +455,7 @@ In this talk, I'll show how I’ve used these AI tools in RStudio, Positron, and
 To improve government supervision in the healthcare space, we have designed a Shiny dashboard that enables us to adhere to GDPR and other regulations and share different bits of information with different types of stakeholders. For that, we have implemented a ‘layout-as-code’ system where each user can have its own layout of pages and modules, stored as json in the database. Users have the option to drag and drop modules to different locations or change the layout altogether, adding and removing modules as needed! 
 <br>For developers, this system of loosely coupled modules helps to quickly contribute to the project as a new module needs only a couple of lines of code to integrate it within the framework. 
 
-📁 Materials
+📁 [Materials](https://github.com/KSchouten/elemental)
 
     
 
@@ -483,7 +483,7 @@ Whether you’re just getting started or already using Positron, these tips will
 
 We present ChalkTalk, an open-source tool that converts Quarto documents into engaging educational videos with AI-powered voices and avatars. By adding simple text-to-speech (TTS) and text-to-video (TTV) attributes to markdown files, educators can automatically generate multilingual video content while maintaining the reproducibility benefits of Quarto. At The GRAPH Courses, where we've trained over 3,000 learners globally, we are testing out this tool to scale our video content creation. We'll demonstrate its integration with Quarto and present preliminary findings from our A/B testing with students. 
 
-📁 Materials
+📁 [Materials](https://github.com/the-graph-courses/chalktalk_studio)
 
     
 
@@ -519,7 +519,7 @@ In the UK, we are required to make public sector websites accessible to all user
 
 Ever run out of memory or time when crunching data, making a visualization, or training a model? As computational demands and data sizes grow, many practitioners find their laptops behaving more like cranky toddlers than high-performance machines. In this talk, we’ll demo how the Positron IDE helps you scale your development without losing your sanity or your data. You’ll learn how Positron can integrate into different setups and see how lazy-evaluated libraries like Ibis can manage data too big for memory. Whether you're building AI models, running complex simulations, or working with large-scale datasets, you’ll walk away with techniques for doing it better with Positron. 
 
-📁 Materials
+📁 [Materials](https://github.com/austin3dickey/ssh-demo)
 
     
 
