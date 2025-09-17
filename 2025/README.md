@@ -167,7 +167,7 @@ Through a chat-enabled weather application, we'll explore how complex user inter
 
 After walking through the chat app, you'll have a taste of how to implement comprehensive monitoring for your Shiny applications in production, enabling you to proactively identify and resolve unexpected performance issues.
 
-📁 Materials
+📁 [Materials](https://github.com/schloerke/presentation-2025-09-17-posit-conf-otel)
 
     
 
@@ -191,7 +191,7 @@ Working with code can be deeply rewarding, but learning to code can be daunting;
 
 Shiny is being used more regularly as a front end to sophisticated workflows in data science, often with a large number of inputs and intricate reactivity. End users desire a way to save their progress through the application workflow and share their state of the application with others for review. For small applications, the existing Shiny bookmarkable state feature is a valid approach. However, many of the production Shiny applications I've created require more granular control. Enter {shinystate}, my new R package that offers an intuitive class system and integration with {pins} to let developers choose where to save application state, ability to save multiple sessions at once, and bring collaboration to new heights for end users. 
 
-📁 Materials
+📁 [Materials](https://rpodcast.github.io/shinystate-positconf2025/)
 
     
 
