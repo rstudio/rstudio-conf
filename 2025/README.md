@@ -402,7 +402,7 @@ We’ll explore Quarto's unique Lua support, including custom AST nodes and help
 <br><br>
 Join us to elevate your Quarto projects and contribute to its growing ecosystem! 
 
-📁 Materials
+📁 [Materials](https://cderv.quarto.pub/posit-conf-2025-quarto-lua/)
 
     
 
