@@ -607,7 +607,7 @@ This talk will present a framework for evaluating and monitoring LLM systems, dr
 
 Donald Norman’s Design of Everyday Things shows how even smart people struggle with bad design—flipping the wrong switch, pushing a door instead of pulling. The same issues exist in Shiny apps, where function often outweighs experience. But as a Shiny developer, you are the door designer, and it’s your responsibility to create user-friendly tools. Not to worry—good design isn’t just for designers. You don’t need an art degree to build intuitive, visually appealing apps. This talk covers composition, color theory, scale, and proportion—practical rules to improve usability. We’ll show real-world examples and code-based strategies to bring these principles to life. Because good design isn’t a luxury—it’s a necessity. 
 
-📁 Materials
+📁 [Materials](https://github.com/caseyag/Posit-Conf-25)
 
     
 
