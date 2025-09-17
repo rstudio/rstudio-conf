@@ -533,7 +533,7 @@ WebR, Pyodide, and Quarto are powerful technologies that let you run code exerci
 <br><br>
 Careful exercise design with WebR/Pyodide can make the difference between empowering learners and demotivating them. With our R-Bootcamp and other exercises as examples, I show scaffolding methods for teaching data science concepts gradually, as well as other design considerations. I'll finish up with showing you how to set up WebR up in your slides and websites for your Data Science Learners. 
 
-📁 Materials
+📁 [Slides](https://laderast.github.io/degrees_of_freedom ) | [Repo](https://github.com/laderast/degrees_of_freedom)
 
     
 
