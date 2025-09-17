@@ -1236,7 +1236,7 @@ In this talk, I’ll introduce brand.yml and showcase the many ways that brand.y
 
 💬 Speaker(s): Sharon Machlis
 
-📁 Materials
+📁 [Materials](https://github.com/smach/positconf_2025)
 
 ### Make Big Geospatial Data Accessible with Arrow
 
