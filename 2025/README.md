@@ -43,7 +43,7 @@ This presentation explores the complex and often contradictory nature of large l
 
 In this talk, I'll reflect on a decade of work on RStudio and the principles of tool-building that have led it to become the standard data science environment for R. We'll talk about how those same principles have guided the development of Positron, a new data science environment from Posit, and how you can apply them to your own tool-building work. 
 
-📁 Materials
+📁 [Slides](https://github.com/rstudio/rstudio-conf/blob/master/2025/jonathanmcpherson/10%20Years%20of%20Data%20Science%20Tools.key)
 
 
 ### Trustworthy Data Visualization 
