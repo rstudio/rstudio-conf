@@ -138,7 +138,7 @@ As Shiny applications grow in complexity, comprehensive testing becomes crucial 
 
 Data science courses tend to teach students reproducible workflows.  However, the origin of the data used in these workflows and definitions of the variables used are often not emphasized.  This talk addresses this gap by focusing on how to teach students effective data sharing through the creation of R data packages.  We’ll explore how to leverage key packages, such as devtools and usethis, and will demonstrate how to guide students in generating appropriate documentation through ReadMes, help files, and vignettes.  Furthermore, we’ll discuss common pitfalls encountered when first learning to create R packages and will propose how to structure a project assignment where an R data package serves as the primary deliverable. 
 
-📁 Materials
+📁 [Materials](https://mcconvil.github.io/r-data-package-talk-f25/data_packages_talk)
     
 
 ### From Solo to Social: Making Coding a Collaborative Adventure 
