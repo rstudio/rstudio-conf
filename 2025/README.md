@@ -1067,7 +1067,7 @@ Data preparation requires substantial time and subject matter expertise but is o
 
 Many data scientists find themselves building Shiny apps for one-off presentations, client meetings, or teaching demonstrations. These "disposable" apps can suffer from overengineering, leading to unnecessary development time and complexity. Or, the apps never get built because the development hill is too high to climb. This talk covers disposable Shiny apps - intentionally minimal applications designed for specific, short-term needs. We'll explore strategies for rapid development, including reusable templates, coding assistants, efficient styling, and design principles that prioritize speed and clarity. This talk will show how this approach can transform a typical week-long development process into a few hours while maintaining polish. 
 
-📁 Materials
+📁 [Materials](https://github.com/JamesHWade/posit-conf-2025)
 
     
 
