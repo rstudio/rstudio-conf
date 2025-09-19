@@ -179,7 +179,7 @@ After walking through the chat app, you'll have a taste of how to implement comp
 
 Working with code can be deeply rewarding, but learning to code can be daunting; similarly, changing the code habits of a team may feel monstrous. For the last three years, the Posit Academy team has been working to teach adults to code in a way that sticks with individual learners, scales within organizations, and leaves individuals able to adapt in an evolving technological landscape. In this talk, I will share some lessons we’ve learned, speak to the importance of communities of practice, and provide actionable steps for effectively connecting learners and code.
 
-📁 Materials
+📁 [Materials](https://github.com/RhoBott/posit-conf-2025)
 
     
 
