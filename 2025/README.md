@@ -1260,7 +1260,7 @@ In this talk, I’ll introduce brand.yml and showcase the many ways that brand.y
 
 💬 Speaker(s): Gordon Woodhull
 
-📁 Materials
+📁 [Materials](https://gordonwoodhull.github.io/brand-yml-lightning-talk/)
 
 ### Automating Event Scheduling with Python in Positron
 
