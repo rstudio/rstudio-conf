@@ -1227,7 +1227,7 @@ The goal of brand.yml is to create a portable and unified interface for brand-re
 <br><br>
 In this talk, I’ll introduce brand.yml and showcase the many ways that brand.yml can bring consistent styles to your data science outputs. 
 
-📁 Materials
+[📁 Materials](https://github.com/gadenbuie/brand-yml-posit-conf-2025) | [🛝 Slides](https://pkg.garrickadenbuie.com/brand-yml-posit-conf-2025)
 
 
 ## Lightning Talks
