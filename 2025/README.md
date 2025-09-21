@@ -428,7 +428,7 @@ Understanding these trade-offs helps you find the best fit. By the end of the se
 
 When teaching a programming course, we may want to employ several different modes of content delivery. First, slides. (And it should be easy to integrate code and code output into them.) Second, practical exercises, where students can try out programming concepts in a guided manner. Third, an in-class live programming environment, to ad-lib during lectures. Fourth, a framework for graded assignments. Fifth, a class website. All of these components can be created with Quarto and webR. I will explain how I used these technologies for my data visualization class at UT Austin, covering how the different components work, what issues I encountered, and what I think best practices are if you want to create a similar course yourself. 
 
-📁 Materials
+📁 [Materials](https://github.com/clauswilke/PositConf2025)
 
     
 
@@ -758,7 +758,7 @@ In pharma, our data can be limited, inconsistent or incomplete, and data cleanin
 
 maidr is a Python package that transforms visualizations into accessible multimodal representations. Designed for both blind/low-vision and sighted users, it integrates with libraries like matplotlib and seaborn and supports interactive environments such as Quarto, Jupyter Notebooks, Google Colab, Streamlit, and Shiny. With a simple function call, maidr synchronizes visual, tactile (Braille), textual, audible (sonification), and conversational outputs, enabling reproducible, inclusive workflows. By creating, modifying and sharing accessible visualizations, maidr fosters collaborative insights by bridging the gap between blind/low-vision and sighted users, empowering inclusive, data-driven decision-making that leverages diverse perspectives. 
 
-📁 Materials
+📁 [GitHub Repo](https://github.com/xability/py-maidr)
 
     
 
@@ -815,7 +815,7 @@ The Data Science Hangout has been a weekly online gathering for the data science
 
 In 2024, our team participated in a data challenge to recreate a visualization from W.E.B. Du Bois’s 1900 Paris Exposition using modern tools. We split into two groups—one using R and the other Python—to compare their strengths and limitations. Both teams used census and geographic data to map county-level populations for 1870 and 1880. Team R used ggplot2 and grid for precise layout control, while Team Python used matplotlib’s subplot system for structuring. This challenge pushed us beyond more traditional data science visualizations, requiring creative approaches to mimic Du Bois’s design. Attendees will gain insights into data wrangling, visualization techniques, and layout design to guide their own projects. 
 
-📁 Materials
+📁 [Materials](https://github.com/summitllc/Du-Bois-Challenge-2024)
 
     
 
@@ -1151,7 +1151,7 @@ Clinicians and data professionals have different approaches to data which can le
 
 The {renv} package aims to *help* users create reproducible environments for R projects. In theory, this is great! In practice, restoring a package environment can be a frustrating process due to overlooked R configuration requirements. Join me to better understand the source of environment restoration issues and learn strategies for successful  maintenance of {renv}-backed projects. 
 
-📁 Materials
+📁 [Materials](https://github.com/shannonpileggi/practical-renv) | [Example](https://github.com/shannonpileggi/jsonlite-example)
 
     
 
@@ -1302,4 +1302,4 @@ In this talk, I’ll introduce brand.yml and showcase the many ways that brand.y
 
 💬 Speaker(s): Ella Kaye
 
-📁 Materials
+📁 [Slides](https://github.com/EllaKaye/pregnancy-lightning-talk)
