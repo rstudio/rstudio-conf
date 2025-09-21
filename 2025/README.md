@@ -619,7 +619,7 @@ Donald Norman’s Design of Everyday Things shows how even smart people struggle
 
 Python as a language is known for being explicit, simple, readable, and beautiful. At the same time, the tooling around using and writing this language has not always made people feel productive and delighted. I know this has been true for me! In this talk, learn about recent improvements in tooling for Python that have finally addressed my own persistent challenges. Posit’s new IDE, Positron, provides a next generation environment for Python data practice, and this new IDE plays nicely with modern language tooling from the Python community. Whether you are Python curious or looking for ways to improve your Python workflows, hear about how I finally got myself unstuck with the most popular programming language in the world. 
 
-📁 Materials
+📁 [Materials](https://github.com/juliasilge/get-unstuck-with-python)
 
     
 
