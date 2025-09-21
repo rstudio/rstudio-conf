@@ -94,7 +94,48 @@ Attend this session to hear about:
 
 📁 Materials
 
-    
+### Deploy with Confidence: Strategies to Minimize Failure and Maximize Success (on Posit Connect)
+
+💬 Speaker(s):  Ryszard Szymański
+
+📝 Abstract: 
+
+Release day has arrived - you’re eager to share the latest version of your app with users. You deploy it, ready to celebrate…
+Then everything breaks. The app won’t load, and the errors make no sense. Despite all your efforts - testing locally, verifying in staging - production still surprises you.
+Deployments are tricky, full of hidden challenges that can derail even the best preparations. But with the right strategies, you can reduce risk and increase the likelihood of a successful release
+In this talk, we’ll explore deployment techniques such as blue/green deployments and feature flags, showing how they can be applied when working with Posit Connect. You’ll also learn what to do when the unexpected happens.
+
+📁 [Example](https://gist.github.com/rszymanski/65b140a2a2f03369d26a9fe86d01602e) | [Package](https://github.com/szymanskir/featureflag) | [Links](https://gist.github.com/rszymanski/4b17170a9630dd8e9af191d7e5d6b2c7)
+
+### Building Web Apps and APIs in R with Ambiorix
+
+💬 Speaker(s): Kennedy Mwavu & John Coene
+
+📝 Abstract: 
+
+Ambiorix reimagines web development in R, offering a flexible, autonomy-driven alternative. It gives developers full control over the request-response cycle, while providing essential web features like routing and middleware out of the box—ideal for developing large web applications and APIs. This talk will cover what sets Ambiorix apart, its key advantages for developers, and how it streamlines building web products & services in R. Whether you're an R developer looking to build web apps with more flexibility, or exploring new tools for APIs, this session will show you why Ambiorix is worth considering.
+
+📁 [GitHub](https://github.com/ambiorix-web/ambiorix) | [Website](https://ambiorix.dev/) | [Talk Repo](https://github.com/ambiorix-web/positconf2025)
+
+### From messy to meaningful data: LLM-powered classification in R
+
+💬 Speaker(s):  Dylan Pieper
+
+📝 Abstract: 
+
+Transform messy, unstructured data into meaningful, structured data using ellmer, Posit's R package for interacting with large language models (LLMs). LLMs can quickly convert thousands of texts, PDFs, and images into the data you need for your analysis. This talk demonstrates the practical benefits and addresses the common pitfalls of using LLMs through three examples: classifying images of Iris flowers and text descriptions of disease symptoms and crimes. Learn structured outputs, prompting strategies, model accuracy and confidence measurements, and validation techniques that blend generative AI with traditional ML concepts. Perfect for both AI-curious beginners and experienced data scientists.
+
+📁 [Materials](https://github.com/dylanpieper/posit-25)
+
+### Who are 'the ggplot2 extenders' and how to become one
+
+💬 Speaker(s):  Evangeline 'Gina' Reynolds
+
+📝 Abstract: 
+
+The ggplot2 extension ecosystem is large and robust. Still, even for the most competent ggplot2 users, jumping into *writing* extensions may not feel straightforward. But the extension-interested should know, it is a great time to get into extension. New efforts exist to support and connect extenders! This talk will discuss some new getting-started resources for extenders and will highlight the ggplot2 extenders meetup and discussions.
+
+📁 [YouTube Playlist](https://www.youtube.com/playlist?list=PLpUeWjs9wDGc4C_Db_u4T7g_rDmw9ZkXE) | [Join Form](https://docs.google.com/forms/d/e/1FAIpQLSe3M1KwUPrmTfEGuuQp0fZ0J7dZkk_82gb310JCvdouMTa_7Q/viewform) | [Website](https://ggplot2-extenders.github.io/ggplot-extension-club/)
 
 ### Positron for Babies: Communicating Technical Concepts to all Audiences 
 
