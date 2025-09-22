@@ -167,9 +167,7 @@ In the past, writing a front end in React was a large time investment, and would
 
 As Shiny applications grow in complexity, comprehensive testing becomes crucial yet often overlooked. Many developers struggle to implement proper testing due to time constraints and technical barriers. To address this challenge, we're introducing an innovative solution that automatically generates regression tests for existing Shiny apps. By leveraging AI models trained on testing best practices, the Shiny package will streamline the testing process, making it more accessible and efficient for developers of all skill levels. 
 
-📁 Materials
-
-    
+📁 [Materials](https://docs.google.com/presentation/d/130bJNGp3XIlKPaouA8K0Lv0O3P7OFesW/edit?usp=sharing&ouid=105060716153365836674&rtpof=true&sd=true)
 
 ### Teaching Data Sharing through R Data Packages 
 
