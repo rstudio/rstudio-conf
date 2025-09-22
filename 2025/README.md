@@ -483,7 +483,7 @@ AI coding assistants like ChatGPT, GitHub Copilot, and Codeium promise to revolu
 <br><br>
 In this talk, I'll show how I’ve used these AI tools in RStudio, Positron, and VS Code to speed up both my advanced R workflows as well as my learning experience as an intermediate Python programmer, providing examples, pitfalls, and best practices. 
 
-📁 Materials
+📁 [Materials](https://rlbarter.github.io/posit-conf-2025/#0)
 
     
 
