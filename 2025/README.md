@@ -1002,7 +1002,7 @@ Navigating the vast array of AI and data science tools can be daunting. This tal
 
 Over one billion people worldwide use spreadsheets to manage and analyse data, often styling cells and their contents to highlight or distinguish values. This formatting is often used to encode additional data (for example, indicating groups with colors) but most data science tools are unaware of data expressed as formatting. This talk summarizes my progress addressing the gap between formatted spreadsheets and the modern data stack. First, by championing data organization best practices, then by bringing spreadsheet contents and their formatting together into R for further analyses (unheadr package), and finally how translating format to data helped me develop tools (forgts package) for converting formatted spreadsheets to gt objects. 
 
-📁 Materials
+📁 [Slides](https://liomys.mx/posit25.html)
 
     
 
