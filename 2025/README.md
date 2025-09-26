@@ -1226,7 +1226,7 @@ Translating data and analytics to diverse audiences is a vital part of any data 
 
 Election night reporting (ENR) is often clunky, outdated, and overpriced. The Idaho Secretary of State’s office leveraged R and Quarto to create a better ENR product for the end user while driving down costs using the open-source software we all know and love. With help from Dr. Andrew Heiss, R was used in every step of the process—from {dbplyr} backend to visualizing the results using {reactable} tables and {leaflet} maps, combining the output into a visually appealing Quarto website. Quarto was the ideal solution due to its scalability, quick deployment, responsive design, and easy navigation. In addition, Dr. Heiss will discuss the advantages of using a {targets} pipeline and creating programmatic code chunks in Quarto. 
 
-📁 Materials
+📁 Materials: [GitHub Repo](https://github.com/andrewheiss/election-desk)
 
     
 
