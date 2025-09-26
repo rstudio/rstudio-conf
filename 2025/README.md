@@ -66,12 +66,31 @@ Visualizations are the most widespread, the most immediately accessible, and in 
 
 Technology teams are struggling to be heard. Technologists are grappling with high turnover, high burnout, and low resilience in the face of rapidly-accelerating technological change. Even though effective technical teams are an essential part of our world continuing to work, many organizations struggle to understand their technical teams, stuck in old stereotypes that treat technical people like isolated machines. To build a thriving future, we need a new way of working together and understanding our own minds as we build technology. In my empirical research across thousands of developers, technical managers and their teams, we've explored what a psychologically-rich environment looks like for modern technologists and found important signals that can guide teams toward greater resilience, innovation, and thriving. In this keynote we'll unlock access to the psychological sciences and evidence that you can use to make your every day more human. 
 
-📁 Materials
+🔗 Links:
+
+[Dr. Cat Hicks](https://www.drcathicks.com/)
+
+[Catharsis Consulting ](https://www.catharsisinsight.com/)
+
+[Center for Open Science (COS)](https://www.cos.io/)
+
+[Fight for the Human Newsletter](https://www.fightforthehuman.com/)
+
+📜 Papers:
+
+[A Cumulative Culture Theory for Developer Problem-Solving](https://www.catharsisinsight.com/science)
+
+[The Learning Debt Project](https://www.catharsisinsight.com/science)
+
+[Developer Thriving](https://www.drcathicks.com/developer-thriving)
+
+[The New Developer: AI Skill Threat, Identity Change & Developer Thinking in the Transition to AI-Assisted Software Development](https://www.drcathicks.com/new-developer/)
+
+[No Silver Bullets: Why Understanding Software Cycle Time is Messy, Not Magic](https://arxiv.org/abs/2503.05040)
+
+[How Can We Understand and Mitigate Code Review Anxiety for Software Developers?](https://www.drcathicks.com/code-review-anxiety/)
 
 ## Talks
-
-
-    
 
 ### Get the Latest on Posit's Commercial Products 
 
