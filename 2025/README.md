@@ -701,7 +701,7 @@ During the COVID-19 pandemic, the COVID Symptom Study Sweden collected over 20 m
 
 Are you on a business team lacking resources to get data science projects actually deployed for your non-technical end users? Join us on a case study journey involving Posit Connect, Vetiver, and Streamlit. We will discuss how to successfully deploy "department-level", bilingual data science solutions quickly enough to solve problems before they become obsolete by focusing on how to harness the power of pair programming. Come see how to make your work life simpler, more fulfilling, and more fun!
 
-📁 Materials
+📁 [Materials](https://github.com/kfabick03/positconf2025)
 
     
 
