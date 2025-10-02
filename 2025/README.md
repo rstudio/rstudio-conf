@@ -54,7 +54,7 @@ In this talk, I'll reflect on a decade of work on RStudio and the principles of 
 
 Visualizations are the most widespread, the most immediately accessible, and in some ways the most authoritative-looking way to present results to audiences, including when the audience is just yourself. In this talk I ask: what makes a visualization trustworthy? How do tools like R and ggplot to help us achieve that goal? And what are their limits, especially now that it's easier than it has ever been to do untrustworthy things with data? 
 
-📁 Materials
+🔗 Link: [Kieran Healy's website](https://kieranhealy.org)
 
     
 
