@@ -1113,7 +1113,7 @@ Let us show you how distributed computing is no longer the preserve of those wit
 
 Data preparation requires substantial time and subject matter expertise but is often tailored to a single-use deadline rather than encouraging reusable workflows across a team. We developed a framework that acknowledges the time and expertise invested in data preparation and maximizes its value. Our data-as-a-product suite of R packages promotes joint code and data version control, standardizes metadata capture, tracks R package versioning, and encourages best practices such as adherence to functional programming. I'm excited to share my experience onboarding collaborators to this reproducible research framework, highlighting key challenges and lessons learned from advocating for good development practices in a dynamic research environment. 
 
-📁 Materials
+📁 [GitHub Repo](https://github.com/amashadihossein/daapr)
 
     
 
