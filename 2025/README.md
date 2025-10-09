@@ -1061,7 +1061,7 @@ Hi, I’m Claudia Peñaloza, a Data Scientist at Continental Tires, where going 
 
 Databricks offers a rich ecosystem of packages for R and Python developers. This session explores the key tools available—like {ellmer}, {brickster}, and the Databricks SDKs—helping developers build scalable workflows and AI-powered applications. Whether you're working in R or Python, you'll learn how to integrate your IDE, leverage Databricks-hosted LLMs, and build agentic workflows. We’ll cover practical implementations, best practices, and how to scale your projects using Databricks’ robust infrastructure. Whether you're automating workflows or deploying AI-driven solutions, this talk provides the essential toolkit for success. 
 
-📁 Materials
+📁 [Materials](https://github.com/zacdav-db/presentations/tree/main/posit-conf-2025)
 
     
 
