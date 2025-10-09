@@ -392,7 +392,7 @@ However, I argue it's good to be doing this! People are benefitting from these a
 
 Building cloud-based data applications that evolve over time requires persistent storage solutions. Without a way to record new information or modify datasets, applications like Shiny or Streamlit would reset after each session, losing potentially valuable information. This talk explores persistent storage options ranging from lightweight solutions like Google Sheets to scalable services like Amazon S3 and MotherDuck. We’ll also cover securing connections to these services using Posit Connect Cloud’s secret variable management. By the end, you’ll understand common persistent storage solutions, their trade-offs, and how to choose the best approach for your specific project. 
 
-📁 Materials
+📁 [Aquarium Search App](https://github.com/alex-chisholm/aquarium-search)
 
     
 
