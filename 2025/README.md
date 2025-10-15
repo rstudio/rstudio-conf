@@ -1336,19 +1336,19 @@ In this talk, I’ll introduce brand.yml and showcase the many ways that brand.y
 
 💬 Speaker(s): Eric Scott
 
-📁 Materials
+📁 [geotargets documentation](https://docs.ropensci.org/geotargets/)
 
 ### Plotgardener – Genomic Data Visualization Made Easy
 
 💬 Speaker(s): Rishabh Sharma Vemuri & Abiye Berhanu
 
-📁 Materials
+📁 [plotgardener repo](https://phanstiellab.github.io/plotgardener/)
 
 ### What we're doing to make Quarto fast(er)
 
 💬 Speaker(s): Carlos Scheidegger
 
-📁 Materials
+📁 [Quarto markdown repo](github.com/quarto-dev/quarto-markdown)
 
 ### It's all fun and games til your analysis code is finished: the player package in R
 
