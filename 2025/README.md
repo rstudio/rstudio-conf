@@ -1354,7 +1354,7 @@ In this talk, I’ll introduce brand.yml and showcase the many ways that brand.y
 
 💬 Speaker(s): Alex Rossell Hayes
 
-📁 Materials
+📁 [player repo](https://github.com/rossellhayes/player)
 
 ### Birthing the pregnancy package
 
