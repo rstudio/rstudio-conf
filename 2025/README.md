@@ -603,7 +603,7 @@ Careful exercise design with WebR/Pyodide can make the difference between empowe
 
 The ellmer package has enabled R users to build all sorts of powerful LLM-enabled tools. How do you test these features, though? How do you know whether a change to your prompt made any difference, or if a much cheaper model would work just as well for your users? This talk introduces an R port of Inspect, a Python framework for LLM evaluation that has been widely adopted by both LLM developers and tool builders. Attendees will learn about the process of—and importance of—evaluating LLM-enabled apps empirically. 
 
-📁 Materials
+📁 [Materials](https://github.com/simonpcouch/conf-25)
 
     
 
