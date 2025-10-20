@@ -615,7 +615,7 @@ The ellmer package has enabled R users to build all sorts of powerful LLM-enable
 
 Opening a Shiny app to endless dropdowns and scattered filters leads to immediate disengagement and feeling like "death by dropdown". This talk introduces the Behavioral Insights Design (BID) Framework, a behavioral science roadmap that transforms overwhelming dashboards into guided user journeys. Using the "Interfaces Need A Smart Vision" mnemonic, we'll explore five stages: Interpret user needs through data storytelling, Notice cognitive friction points, Anticipate user behavior, Structure the application, and Validate & empower users. Drawing from established theories and real-world production examples, attendees will see how applying behavioral science can dramatically reduce the time between "Where do I even start?" and "Aha, now I get it!". You'll leave with practical techniques using the new {bidux} package to help transform user confusion into confident exploration and build dashboards that guide users toward better decisions (and fewer ghosted users).
 
-📁 Materials
+📁 [BID Framework](https://github.com/jrwinget/bid-framework) | [bidux docs](https://github.com/jrwinget/bidux)
 
     
 
