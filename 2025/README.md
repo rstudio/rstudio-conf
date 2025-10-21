@@ -935,7 +935,7 @@ In this talk, I’ll discuss the litmusverse. A suite of packages for assessing 
 
 How can open-source collaboration help make data science more accessible and expand Posit’s global impact? The book "R for Data Science" by Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund is a key resource for learning R and the tidyverse. In a collaborative effort, volunteers from the R community translated the second edition into Brazilian Portuguese, making it freely available online. This talk explores the translation journey, the challenges of adapting technical content, and key lessons learned to support future translation teams. 
 
-📁 Materials
+📁 [Materials](https://beamilz.com/talks/en/2025-posit-conf/)
 
     
 
