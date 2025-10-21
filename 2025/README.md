@@ -541,7 +541,7 @@ Whether you’re just getting started or already using Positron, these tips will
 
 We present ChalkTalk, an open-source tool that converts Quarto documents into engaging educational videos with AI-powered voices and avatars. By adding simple text-to-speech (TTS) and text-to-video (TTV) attributes to markdown files, educators can automatically generate multilingual video content while maintaining the reproducibility benefits of Quarto. At The GRAPH Courses, where we've trained over 3,000 learners globally, we are testing out this tool to scale our video content creation. We'll demonstrate its integration with Quarto and present preliminary findings from our A/B testing with students. 
 
-📁 [Materials](https://github.com/the-graph-courses/chalktalk_studio)
+📁 [GitHub](https://github.com/the-graph-courses/chalktalk_studio) | [Slides](https://www.dropbox.com/scl/fi/flsb81eznl8ypuwpxi53t/Posit-Conf-Prezi-Chalktalk-Kene-David-Nwosu.pptx?rlkey=hxmeyb9vijp0ucgpjqmod5qwt&e=4&dl=0)
 
     
 
