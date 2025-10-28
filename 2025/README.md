@@ -306,7 +306,7 @@ You’re just a data scientist, self-taught in R, trying to find your way in the
 
 The duckplyr package is now stable, version 1.0.0 has been published on CRAN. Learn how to use this package to speed up your existing dplyr codes with little to no changes, and how to work with larger-than-memory data using a syntax that not only feels like dplyr for data frames, but behaves exactly like that. 
 
-📁 Materials [GitHub](https://github.com/cynkra/posit-conf-2025)
+📁 [Materials](https://github.com/cynkra/posit-conf-2025)
 
     
 
