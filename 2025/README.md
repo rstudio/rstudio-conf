@@ -13,16 +13,36 @@ Whether you’re a dedicated open source user or one of the many people and team
 
 Please find the materials below (if available).
 
+* [Workshops](#workshops)
 * [Keynotes](#keynotes)
 * [Talks](#talks)
 * [Lightning Talks](#lightning-talks)
 
-All workshop materials are organized at the [workshop GitHub repo](https://github.com/posit-conf-2025).
+## Workshops
+
+All workshop materials are organized on the [workshop website](https://posit-conf-2025.github.io/workshops/). Find the source code on [GitHub](https://github.com/posit-conf-2025).
+
+|                                     Workshop                                    |                           Instructor(s)                           | Links             |
+|:-------------------------------------------------------------------------------:|:-----------------------------------------------------------------:|-------------------|
+| Branded Websites, Presentations, Dashboards, and PDFs with Quarto               | Isabella Velasquez, Sara Altman                                   | [repo](https://github.com/posit-conf-2025/quarto-brand) \| [website](https://posit-conf-2025.github.io/quarto-brand/) |
+| Causal Inference in R                                                           | Malcolm Barrett, Lucy D'Agostino McGowan                          | [repo](https://github.com/r-causal/causal_inference_r_workshop) \| [website](https://r-causal.github.io/causal_workshop_website/) |
+| Data Science Workflows with Posit Tools - R Focus                               | Sam Edwardes, Ryan Johnson                                        | [repo](https://github.com/posit-conf-2025/ds-workflows-r) |
+| Data Talks: How to make your data science accessible                            | Acacia Duncan, Blythe Coons                                       | [materials](https://drive.google.com/drive/folders/1YAjnNGi-L8K_Dp1jQb-RYguJDac5sYsA) |
+| Deploying reproducible analytics environments for regulated use cases           | James Black, Doug Kelkhoff, Michael Mayer, Rafael Pereira         | [repo](https://github.com/posit-conf-2025/reproducible-environments) \| [slides](https://posit-conf-2025.github.io/reproducible-environments/#/title-slide) |
+| End-to-End Submissions in R with the Pharmaverse                                | Daniel D. Sjoberg, Becca Krouse, Ben Straub, Rammprasad Ganapathy | [repo](https://github.com/posit-conf-2025/pharmaverse) \| [website](https://posit-conf-2025.github.io/pharmaverse/) |
+| Extending Quarto                                                                | Mine Çetinkaya-Rundel, Charlotte Wickham                          | [repo](https://github.com/posit-conf-2025/quarto-extend) \| [website](https://posit-conf-2025.github.io/quarto-extend/) |
+| From R User to R Programmer                                                     | Emma Rand, Ian Lyttle                                             | [repo](https://github.com/posit-conf-2025/r-programming) \| [materials](https://posit-conf-2025.github.io/r-programming/) |
+| Getting More Out of Feature Engineering and Tuning for Machine Learning         | Max Kuhn, Emil Hvitfeldt                                          | [website](https://workshops.tidymodels.org/) |
+| Introduction to machine learning in R with tidymodels                           | Simon Couch                                                       | [website](https://workshops.tidymodels.org/) |
+| Machine learning with scikit-learn in Python                                    | Tiffany Timbers, Katie Burak                                      | [repo](https://github.com/posit-conf-2025/scikit-learn) \| [website](https://posit-conf-2025.github.io/scikit-learn/) |
+| Mastering Data Visualization with ggplot2: Latest Techniques and Best Practices | Thomas Pedersen, Teun Van den Brand                               | [repo](https://github.com/posit-conf-2025/ggplot2) \| [website](https://posit-conf-2025.github.io/ggplot2/) |
+| Package Development: The Rest of the Owl                                        | Jenny Bryan                                                       | [repo](https://github.com/posit-conf-2025/pkg-dev) |
+| Programming with LLM APIs: A Beginner’s Guide in R and Python                   | Joe Cheng, Garrick Aden-Buie                                      | [repo](https://github.com/posit-conf-2025/llm) \| [materials](https://posit-conf-2025.github.io/llm/) |
+| R in Production                                                                 | Hadley Wickham                                                    | [repo](github.com/posit-conf-2025/r-production) |
+| Shiny for Python                                                                | Daniel Chen                                                       | [repo](https://github.com/posit-conf-2025/shiny-py) \| [website](https://posit-conf-2025.github.io/shiny-py/) |
+| Shiny for R                                                                     | Colin Rundel                                                      | [repo](https://github.com/posit-conf-2025/shiny-r) \| [website](https://posit-conf-2025.github.io/shiny-r/) |
 
 ## Keynotes
-
-
-    
 
 ### Making the most of artificial and human intelligence for data science 
 
