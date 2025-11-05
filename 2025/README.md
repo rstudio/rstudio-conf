@@ -549,7 +549,7 @@ We’ll cover key navigation concepts, helpful features for different workflows,
 <br><br>
 Whether you’re just getting started or already using Positron, these tips will help you settle into your data science workflow and get the most out of everything Positron has to offer. 
 
-📁 Materials
+📁 [Materials](https://github.com/sharon-wang/positron-tips-and-tricks)
 
     
 
