@@ -88,6 +88,8 @@ Visualizations are the most widespread, the most immediately accessible, and in 
 
 Technology teams are struggling to be heard. Technologists are grappling with high turnover, high burnout, and low resilience in the face of rapidly-accelerating technological change. Even though effective technical teams are an essential part of our world continuing to work, many organizations struggle to understand their technical teams, stuck in old stereotypes that treat technical people like isolated machines. To build a thriving future, we need a new way of working together and understanding our own minds as we build technology. In my empirical research across thousands of developers, technical managers and their teams, we've explored what a psychologically-rich environment looks like for modern technologists and found important signals that can guide teams toward greater resilience, innovation, and thriving. In this keynote we'll unlock access to the psychological sciences and evidence that you can use to make your every day more human. 
 
+📹 [YouTube Link](https://youtu.be/B-bMX_l3nkk)
+
 🔗 Links:
 
 [Dr. Cat Hicks](https://www.drcathicks.com/)
@@ -133,7 +135,7 @@ Attend this session to hear about:
 <li> An intro to Posit Team Dedicated </li>
 </ul> 
 
-📁 Materials
+📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/N5h2JlTOsUo)
 
 ### Deploy with Confidence: Strategies to Minimize Failure and Maximize Success (on Posit Connect) 
 
@@ -249,11 +251,9 @@ What if coding were not an exclusive skill but an accessible adventure? Through 
 
  📝 Abstract: 
 
-Understanding what happens behind the scenes in production Shiny applications has always been challenging. When users experience slow response times or unexpected behavior, developers are left guessing where bottlenecks occur. This talk introduces **OpenTelemetry integration for Shiny for R**, a new approach to profiling code and understanding application behavior. Through a chat-enabled weather application, we'll explore how complex user interactions trigger cascading events across multiple processes. You'll learn how OpenTelemetry's high-quality 
+Understanding what happens behind the scenes in production Shiny applications has always been challenging. When users experience slow response times or unexpected behavior, developers are left guessing where bottlenecks occur. This talk introduces **OpenTelemetry integration for Shiny for R**, a new approach to profiling code and understanding application behavior. Through a chat-enabled weather application, we'll explore how complex user interactions trigger cascading events across multiple processes. You'll learn how OpenTelemetry's high-quality ubiquitous, and portable telemetry can provide complete visibility into your Shiny application's performance with minimal setup... just a few environment variables! After walking through the chat app, you'll have a taste of how to implement comprehensive **monitoring for your Shiny applications in production**.
 
-📁 ubiquitous, and portable telemetry" can provide complete visibility into your Shiny application's performance with minimal setup... just a few environment variables! After walking through the chat app, you'll have a taste of how to implement comprehensive **monitoring for your Shiny applications in production**.","[Materials](https://github.com/schloerke/presentation-2025-09-17-posit-conf-otel)" | 📹 [YouTube Link](https://youtu.be/zwxhFKRlQLs)
-
-    
+📁 [Materials](https://github.com/schloerke/presentation-2025-09-17-posit-conf-otel) | 📹 [YouTube Link](https://youtu.be/zwxhFKRlQLs)
 
 ### On teaching adults to code 
 
@@ -1333,15 +1333,3 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 
 📁 [Slides](https://github.com/EllaKaye/pregnancy-lightning-talk) | 📹 [YouTube Link](https://youtu.be/d2KYt1JMjzQ)
-
-
-
-### Get the Latest on Posit's Commercial Products 
-
-💬 Speaker(s): Kelly O'Briant; Tom Mock; Joe Roberts; Kara Woo; Alex Chisholm; Chetan Thapar; Steve Nolen 
-
- 📝 Abstract: 
-
-Join us for an overview of the latest developments across Posit’s commercial product ecosystem. This session will cover **Posit Workbench**, **Package Manager**, **Connect**, **Connect Cloud**, and our growing portfolio of **managed services** including **Snowflake** and beyond. Hear directly from the product managers and engineers who are building these tools, and get insights into what’s coming next. <br><br> Attend this session to hear about:<ul><li> Audited jobs, Positron Pro sessions, and GenAI in Workbench </li><li> Auth and integrations with RStudio Pro sessions in Package Manager </li><li> An intro to Chronicle for Posit Team </li><li> Building container images in Connect </li><li> Organization plans in Connect Cloud </li><li> A Snowflake Native App offering for Connect and Workbench </li><li> An intro to Posit Team Dedicated </li></ul> 
-
-📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/N5h2JlTOsUo)
