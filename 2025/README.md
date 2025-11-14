@@ -1241,7 +1241,18 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 ### Use Your Data Skills for Good: Ideas for Community Service 
 
-💬 Speaker(s): Sharon Machlis 
+💬 Speaker(s): Sharon Machlis
+
+
+ 📝 Abstract: 
+
+ Community service doesn't have to mean finding a group where your skills match their needs. You can also see a data-related need and jump in to fill it.
+
+Are there interesting things to do in your town, but no one place to find them? You could create a searchable, auto-updating local events calendar.
+
+Do you live someplace where local election results aren't published the way you'd like people to see them? If  data is publicly available, you could analyze and publish it yourself.
+
+You'll leave this session with some ideas on how your data skills can help your community -- even if you're not ready to commit to formal volunteering with an outside organization.
 
 📁 [Materials](https://github.com/smach/positconf_2025) | 📹 [YouTube Link](https://youtu.be/fSAoCcZD--Y)
 
@@ -1251,6 +1262,10 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 💬 Speaker(s): Cari Gostic 
 
+ 📝 Abstract: 
+
+ Firelytics is a methodology that computes sub-daily wildfire growth metrics for over 22,000 wildfires that burned in California since 2012. The Firelytics dataset is used in studies funded by NOAA and NASA to better understand wildfire behavior and health implications of wildfire smoke. The accompanying Firelytics Dashboard lets a user map the sub-daily timeseries of fire progression for any wildfire in the dataset. Firelytics is a novel tool for historical fire analysis in California which will help to better predict and plan for future wildfires. Sfarrow, the spatial extension of the Arrow package, facilitates the real-time querying of big spatial data that is necessary to share the Firelytics dataset in this accessible, visual format.
+
 📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/EHygzKGK854)
 
     
@@ -1258,6 +1273,10 @@ The **Canadian Institute for Health Information** is diving into **open source**
 ### Multiple Console Sessions in Positron 
 
 💬 Speaker(s): Dhruvi Sompura 
+
+ 📝 Abstract: 
+
+ When it comes to everyday data science work, having access to one interactive R or Python session is often just not enough to get meaningful work done. Having access to multiple interactive sessions has proven useful across a wide variety of data science IDEs, and it has recently become available in Positron! In this talk, learn why data science practitioners need to be able to fluently access more than one interactive session, the specifics of when you might reach for an additional console session to solve a problem, and how to manage multiple console sessions in Positron.
 
 📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/sItCFWvLDJQ)
 
@@ -1267,6 +1286,12 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 💬 Speaker(s): Mauro Lepore 
 
+ 📝 Abstract: 
+
+ Many data science teams that traditionally worked with R and RStudio are now attracting developers with experience in Python and VS Code. Positron is a polyglot IDE supporting both R and Python and incorporating tools from both RStudio and VS Code. However, jumping straight from one familiar IDE to an unfamiliar one can be intimidating, slow down productivity, and impair adoption. 
+
+In this talk, I’ll show some tools and techniques you can use in RStudio and VS Code to start your transition to Positron today—with minimal friction—while staying productive in your preferred IDE.
+
 📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/X6PZ_RiZp44)
 
     
@@ -1274,6 +1299,11 @@ The **Canadian Institute for Health Information** is diving into **open source**
 ### Brand YML and Dark Mode in Quarto 
 
 💬 Speaker(s): Gordon Woodhull
+
+ 📝 Abstract: 
+
+Brand YML is a specification to provide consistent color themes, typography, and logos across all applications and packages that support it. Quarto currently implements Brand YML for its HTML and Typst formats. This talk will introduce Brand YML and get into a few of the interesting technical details about how we implemented Brand YML in Quarto. Specifically, I'll talk about the layering of SCSS styles in our HTML format, and the Typst CSS layer which translates CSS properties into Typst properties. Time and progress permitting, I'll also talk about applying Dark Mode to your documents by specifying both light and dark brands.
+
 
 📁 [Materials](https://gordonwoodhull.github.io/brand-yml-lightning-talk/) | 📹 [YouTube Link](https://youtu.be/WNwsgS-klMA)
 
@@ -1283,6 +1313,10 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 💬 Speaker(s): Becky Hodge 
 
+ 📝 Abstract: 
+
+ For years, scheduling for the Atlanta Writers Conference—where 200+ writers meet literary agents and editors—was a manual, time-consuming process using Excel and individual emails. For the May 2025 conference, we automated scheduling with Python in Positron, vastly reducing the amount of time spent preparing for this conference in such a way that these massive time-savings will carry forward to future conferences too. This talk will cover our transition, lessons learned, and how we’re planning to integrate MailerLite, Cvent, and TablesReady APIs next for the November 2025 conference to further streamline the process. Attendees will gain insights into using Python for event management automation and optimizing logistical workflows.
+
 📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/9z5Gu0NfTPQ)
 
     
@@ -1290,6 +1324,22 @@ The **Canadian Institute for Health Information** is diving into **open source**
 ### Putting an {ellmer} AI in production with the blessing of IT 
 
 💬 Speaker(s): Andrie de Vries 
+
+ 📝 Abstract: 
+
+I had an idea to automate a process by letting an AI extract information from PDF attachments. 
+
+Writing the 20 lines of  {ellmer} code was very simple.
+
+My users loved the idea.
+
+But IT had different feelings, especially initially.
+
+It took multiple design changes to get IT comfortable with running experiments in our financial system. They need a solution that is secure, with guardrails, wouldn’t leak sensitive information and could be easily maintained.
+
+We wrote a simple browser extension to reduce the friction of copy/paste between different systems.
+
+If you want to put an AI in production, make sure you consider the impact on other teams, in particular IT and Information security.
 
 📁 Materials Not Available | 📹 [YouTube Link](https://youtu.be/5jQ7UjegpP0)
 
@@ -1299,6 +1349,12 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 💬 Speaker(s): Eric Scott
 
+
+ 📝 Abstract: 
+
+ {geotargets} is the latest addition to the ‘targetopia’ of extensions for the workflow management package {targets} allowing integration of geospatial packages such as {terra}.  {geotargets} provides custom target constructors for raster and vector objects as well as ‘target factories’ for common geospatial workflows such as iterating over tiles or creating spatial datasets. {geotargets} is currently under review at rOpenSci.
+In addition to discussing features of {geotargets} and some technical challenges we experienced, I’m excited to talk about how {geotargets} was made possible by the extensible design of {targets} and a group of developers from across the globe brought together by the same cryptic error message.
+
 📁 [geotargets documentation](https://docs.ropensci.org/geotargets/) | 📹 [YouTube Link](https://youtu.be/RmTtugX1CoE)
 
     
@@ -1306,6 +1362,10 @@ The **Canadian Institute for Health Information** is diving into **open source**
 ### Plotgardener – Genomic Data Visualization Made Easy 
 
 💬 Speaker(s): Rishabh Sharma Vemuri & Abiye Berhanu 
+
+ 📝 Abstract: 
+
+ Plotgardener is an R package with over 10,000 downloads that empowers users to programmatically generate complex, publication-quality figures based on genomic data. However, its reliance on R creates a significant barrier for users with limited coding experience. We developed an intuitive desktop application that uses Python to structure and load Plotgardener’s features, providing a seamless experience for users, including non-programmers. Built with Electron—the framework behind VSCode and Slack—the Plotgardener app provides a friendly interface allowing users to create, edit, and visualize genomic data, demonstrating how R and Python can work in harmony to expand the reach of data science tools to new audiences.
 
 📁 [plotgardener repo](https://phanstiellab.github.io/plotgardener/) | 📹 [YouTube Link](https://youtu.be/PW_liIFne2g)
 
@@ -1315,6 +1375,10 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 💬 Speaker(s): Carlos Scheidegger 
 
+ 📝 Abstract: 
+
+Quarto is a powerful system, but its performance leaves much to be desired. In this talk, I'll go through the things that make Quarto slow, and I will describe the journey I'm taking in 2025 to fix the issues. This is going to be a deeper technical talk on performance analysis, profiling, and will include discussing the custom tooling we've had to build to measure performance in a system as complex as Quarto.
+
 📁 [Quarto markdown repo](github.com/quarto-dev/quarto-markdown) | 📹 [YouTube Link](https://youtu.be/OBHppBRztO4)
 
     
@@ -1323,6 +1387,11 @@ The **Canadian Institute for Health Information** is diving into **open source**
 
 💬 Speaker(s): Alex Rossell Hayes 
 
+
+ 📝 Abstract: 
+
+ The player package is a set of games built entirely in R that you can play in the R console. This lighthearted, humor-filled talk will introduce the package and demo some of its games, including opportunities for audience participation. If selected for a full talk, this will also include a demonstration of how the package code comes together, including approachable introductions to concepts like object-oriented programming with R6 and message handling with cli. The talk will show how playing around with R can be one of the best ways to learn new techniques (some of which can even be carried over into more serious programming).
+
 📁 [player repo](https://github.com/rossellhayes/player) | 📹 [YouTube Link](https://youtu.be/LYqYZd4IaJk)
 
     
@@ -1330,6 +1399,10 @@ The **Canadian Institute for Health Information** is diving into **open source**
 ### Birthing the pregnancy package 
 
 💬 Speaker(s): Ella Kaye 
+
+ 📝 Abstract: 
+
+ When I was pregnant, I wrote a personal, private package for date and medication calculations, hard-coded with my data. I thought it would be easy to adapt for general use, but no! I wanted the user experience to be excellent, but how to avoid them repeatedly entering the same due date and meds? How to print useful, nicely formatted, grammatically correct information to the console? How to test a package that relies on the current date? Using the pregnancy package as a case study, I'll show how to take advantage of base R features such as global options and %||%, how the cli and rlang packages came to the rescue for messages and how testthat's new mocking features saved the day (literally!) to create a package that's a pleasure to use.
 
 
 📁 [Slides](https://github.com/EllaKaye/pregnancy-lightning-talk) | 📹 [YouTube Link](https://youtu.be/d2KYt1JMjzQ)
